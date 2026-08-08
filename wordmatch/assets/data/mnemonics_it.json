@@ -1,0 +1,2384 @@
+{
+  "mnemonics": [
+    {
+      "wordId": "acid_it",
+      "type": "story",
+      "content": "ACID=原子性一致性隔离性持久性，数据库四大原则"
+    },
+    {
+      "wordId": "agile_it",
+      "type": "homophone",
+      "content": "agile谐音阿吉，敏捷的阿吉跑得快"
+    },
+    {
+      "wordId": "algorithm_it",
+      "type": "story",
+      "content": "阿里(algo)跟着节奏(rhythm)跳舞——算法就是有节奏的计算步骤"
+    },
+    {
+      "wordId": "annotation_it",
+      "type": "story",
+      "content": "ann年+otation标注→年度标注→注解"
+    },
+    {
+      "wordId": "ansible_it",
+      "type": "homophone",
+      "content": "Ansible谐音安塞，安全部署自动化"
+    },
+    {
+      "wordId": "api_it",
+      "type": "story",
+      "content": "API就像餐厅的菜单(Application Menu)，点菜(调用)就能得到美食(数据)"
+    },
+    {
+      "wordId": "architecture_it",
+      "type": "story",
+      "content": "建筑(arch)师的技术(tech)——架构就是软件的地基和框架"
+    },
+    {
+      "wordId": "array_it",
+      "type": "story",
+      "content": "a+rray(排列)——数据排成一排，数组"
+    },
+    {
+      "wordId": "artifact_it",
+      "type": "story",
+      "content": "arti技巧+fact事实→技巧造出的事实→制品"
+    },
+    {
+      "wordId": "assertion_it",
+      "type": "story",
+      "content": "assert断言+ion，断言程序条件必须为真"
+    },
+    {
+      "wordId": "async_it",
+      "type": "story",
+      "content": "a不+sync同步→不同步→异步"
+    },
+    {
+      "wordId": "authentication_it",
+      "type": "story",
+      "content": "authen(真实)+tic+ation——验证你是真的你，认证"
+    },
+    {
+      "wordId": "authorization_it",
+      "type": "story",
+      "content": "author(授权)+iz+ation——给你权限，授权"
+    },
+    {
+      "wordId": "autoscaling_it",
+      "type": "story",
+      "content": "auto自动+scaling扩缩容→自动扩缩容"
+    },
+    {
+      "wordId": "await_it",
+      "type": "story",
+      "content": "a+wait等→等待异步结果返回"
+    },
+    {
+      "wordId": "b-tree_it",
+      "type": "story",
+      "content": "B=Balanced平衡，平衡多路搜索树"
+    },
+    {
+      "wordId": "backbone_it",
+      "type": "story",
+      "content": "back背+bone骨→脊梁骨→骨干框架"
+    },
+    {
+      "wordId": "backend_it",
+      "type": "story",
+      "content": "back(后)+end(端)——后端，幕后的技术支撑"
+    },
+    {
+      "wordId": "bandwidth_it",
+      "type": "story",
+      "content": "带(band)子越宽(width)，能运的货越多——带宽决定网速"
+    },
+    {
+      "wordId": "batch_it",
+      "type": "homophone",
+      "content": "batch谐音白痴，批量处理不用动脑"
+    },
+    {
+      "wordId": "binary_it",
+      "type": "story",
+      "content": "双(bi)个选择(nary)——0或1，二进制的世界只有两个数"
+    },
+    {
+      "wordId": "boolean_it",
+      "type": "story",
+      "content": "发明人Boole，布尔逻辑只有true/false"
+    },
+    {
+      "wordId": "breach_it",
+      "type": "story",
+      "content": "break的变体→突破防线→安全违规"
+    },
+    {
+      "wordId": "browser_it",
+      "type": "story",
+      "content": "浏览(browse)器(r)——网上冲浪的浏览器"
+    },
+    {
+      "wordId": "bucket_it",
+      "type": "story",
+      "content": "bucket桶，S3存储桶像水桶装东西"
+    },
+    {
+      "wordId": "buffer_it",
+      "type": "homophone",
+      "content": "buffer谐音八佛，八佛缓冲众生之苦"
+    },
+    {
+      "wordId": "bug_it",
+      "type": "story",
+      "content": "最早真的是虫子爬进了计算机导致故障——从此bug就成了程序的代名词"
+    },
+    {
+      "wordId": "bundle_it",
+      "type": "story",
+      "content": "bun面包+dle→一捆面包→打包捆绑"
+    },
+    {
+      "wordId": "cache_it",
+      "type": "homophone",
+      "content": "cache谐音'卡什'——把常用的卡(卡什)放在手边，不用每次都去翻包"
+    },
+    {
+      "wordId": "callback_it",
+      "type": "story",
+      "content": "call调用+back回来→调用后回来→回调函数"
+    },
+    {
+      "wordId": "cd_it",
+      "type": "story",
+      "content": "CD=Continuous Deployment持续部署"
+    },
+    {
+      "wordId": "cdn_it",
+      "type": "story",
+      "content": "CDN=Content Delivery Network内容分发网络"
+    },
+    {
+      "wordId": "certificate_it",
+      "type": "story",
+      "content": "cert确定+ificate→确定身份的→证书"
+    },
+    {
+      "wordId": "ci_it",
+      "type": "story",
+      "content": "CI=Continuous Integration持续集成"
+    },
+    {
+      "wordId": "cipher_it",
+      "type": "homophone",
+      "content": "cipher谐音赛佛，赛过佛陀的密码术"
+    },
+    {
+      "wordId": "class_it",
+      "type": "story",
+      "content": "OOP中定义对象的蓝图模板→类"
+    },
+    {
+      "wordId": "closure_it",
+      "type": "story",
+      "content": "close关闭+ure→关闭包裹→闭包封存变量"
+    },
+    {
+      "wordId": "cloud_it",
+      "type": "story",
+      "content": "数据飘在云(cloud)端——不用存在本地，随时随地访问"
+    },
+    {
+      "wordId": "cluster_it",
+      "type": "story",
+      "content": "clust丛+er→一丛→集群多节点协同"
+    },
+    {
+      "wordId": "collection_it",
+      "type": "story",
+      "content": "collect收集+ion→收集在一起→集合容器"
+    },
+    {
+      "wordId": "compile_it",
+      "type": "story",
+      "content": "com(一起)+pile(堆)——把代码堆在一起翻译"
+    },
+    {
+      "wordId": "compiler_it",
+      "type": "story",
+      "content": "com(一起)+pile(堆)——把源代码堆在一起翻译成机器码"
+    },
+    {
+      "wordId": "component_it",
+      "type": "story",
+      "content": "com(共同)+ponent(放置)——组件就是可以一起放置的独立模块"
+    },
+    {
+      "wordId": "concurrency_it",
+      "type": "story",
+      "content": "con(共同)+current(流动)——多条水流同时流动，并发执行"
+    },
+    {
+      "wordId": "config_it",
+      "type": "story",
+      "content": "config=configuration缩写→配置"
+    },
+    {
+      "wordId": "constant_it",
+      "type": "story",
+      "content": "con一起+stant站→一直站着不变→常量"
+    },
+    {
+      "wordId": "constructor_it",
+      "type": "story",
+      "content": "construct建造+or→建造者→构造函数"
+    },
+    {
+      "wordId": "container_it",
+      "type": "story",
+      "content": "contain(包含)+er——集装箱(container)装应用，到哪都能跑"
+    },
+    {
+      "wordId": "containerization_it",
+      "type": "story",
+      "content": "container容器+ization化→容器化技术"
+    },
+    {
+      "wordId": "csrf_it",
+      "type": "story",
+      "content": "CSRF=Cross-Site Request Forgery跨站请求伪造"
+    },
+    {
+      "wordId": "css_it",
+      "type": "story",
+      "content": "CSS=Cascading Style Sheets层叠样式表"
+    },
+    {
+      "wordId": "cursor_it",
+      "type": "story",
+      "content": "cur跑+sor→跑动的指针→游标遍历数据"
+    },
+    {
+      "wordId": "database_it",
+      "type": "story",
+      "content": "data(数据)+base(基地)——数据的基地，所有信息的大本营"
+    },
+    {
+      "wordId": "dataset_it",
+      "type": "story",
+      "content": "data数据+set集合→数据集"
+    },
+    {
+      "wordId": "ddos_it",
+      "type": "story",
+      "content": "DDoS=Distributed Denial of Service分布式拒绝服务"
+    },
+    {
+      "wordId": "debug_it",
+      "type": "story",
+      "content": "de(去掉)+bug(虫子)——调试就是消灭程序里的虫子"
+    },
+    {
+      "wordId": "decorator_it",
+      "type": "story",
+      "content": "decor装饰+ator→装饰者→装饰器增强函数"
+    },
+    {
+      "wordId": "dependency_it",
+      "type": "story",
+      "content": "de(向下)+pend(挂)+ency——挂在别人下面，依赖"
+    },
+    {
+      "wordId": "deploy_it",
+      "type": "story",
+      "content": "de(展开)+ploy(折叠)——把折叠的代码展开部署到服务器"
+    },
+    {
+      "wordId": "deprecated_it",
+      "type": "story",
+      "content": "de向下+precat祈祷→不推荐使用→已废弃"
+    },
+    {
+      "wordId": "devops_it",
+      "type": "story",
+      "content": "Dev开发+Ops运维→开发运维一体化"
+    },
+    {
+      "wordId": "dns_it",
+      "type": "story",
+      "content": "DNS=Domain Name System域名解析系统"
+    },
+    {
+      "wordId": "document_it",
+      "type": "story",
+      "content": "doc教+ument→教导的记录→文档"
+    },
+    {
+      "wordId": "dom_it",
+      "type": "story",
+      "content": "DOM=Document Object Model文档对象模型"
+    },
+    {
+      "wordId": "domain_it",
+      "type": "story",
+      "content": "dom(统治)+ain——域名就是你在互联网上的领地"
+    },
+    {
+      "wordId": "download_it",
+      "type": "story",
+      "content": "down下+load加载→从服务器下载到本地"
+    },
+    {
+      "wordId": "elastic_it",
+      "type": "story",
+      "content": "elastic弹性→Elasticsearch弹性伸缩搜索"
+    },
+    {
+      "wordId": "embedding_it",
+      "type": "story",
+      "content": "embed嵌入+ding→嵌入表示，AI向量化"
+    },
+    {
+      "wordId": "encrypt_it",
+      "type": "story",
+      "content": "en(使)+crypt(密)——加密，让数据变成密文"
+    },
+    {
+      "wordId": "endpoint_it",
+      "type": "story",
+      "content": "end(端)+point(点)——API的终点站，请求到这里获取数据"
+    },
+    {
+      "wordId": "enum_it",
+      "type": "story",
+      "content": "enum=enumeration缩写→枚举一一列举"
+    },
+    {
+      "wordId": "exception_it",
+      "type": "story",
+      "content": "ex(出)+cept(拿)+ion——拿出来的例外，程序运行中的意外情况"
+    },
+    {
+      "wordId": "failover_it",
+      "type": "story",
+      "content": "fail失败+over切换→故障自动切换到备用"
+    },
+    {
+      "wordId": "feature_it",
+      "type": "story",
+      "content": "feat功绩+ure→功能特性"
+    },
+    {
+      "wordId": "firewall_it",
+      "type": "story",
+      "content": "fire(火)+wall(墙)——防火墙，挡住网络上的火焰(攻击)"
+    },
+    {
+      "wordId": "float_it",
+      "type": "story",
+      "content": "float漂浮→小数点漂浮不定→浮点数"
+    },
+    {
+      "wordId": "framework_it",
+      "type": "story",
+      "content": "frame(框架)+work(工作)——框架帮你搭好骨架，你负责填充内容"
+    },
+    {
+      "wordId": "frontend_it",
+      "type": "story",
+      "content": "front(前)+end(端)——前端，用户看得见的界面"
+    },
+    {
+      "wordId": "function_it",
+      "type": "story",
+      "content": "fun(功能)+ction——函数就是一段有特定功能的代码块"
+    },
+    {
+      "wordId": "gateway_it",
+      "type": "story",
+      "content": "gate门+way路→网关，网络的出入口"
+    },
+    {
+      "wordId": "generics_it",
+      "type": "story",
+      "content": "gener产生+ics→产生多种类型→泛型"
+    },
+    {
+      "wordId": "git_it",
+      "type": "story",
+      "content": "Linus创造的分布式版本控制系统"
+    },
+    {
+      "wordId": "gradient_it",
+      "type": "story",
+      "content": "grad步+ient→一步步变化→梯度下降"
+    },
+    {
+      "wordId": "handshake_it",
+      "type": "story",
+      "content": "hand手+shake握→握手协议建立连接"
+    },
+    {
+      "wordId": "hardware_it",
+      "type": "story",
+      "content": "hard硬+ware器物→硬件"
+    },
+    {
+      "wordId": "hash_it",
+      "type": "homophone",
+      "content": "hash谐音哈希，散列函数算出唯一值"
+    },
+    {
+      "wordId": "heap_it",
+      "type": "story",
+      "content": "heap堆积如山→内存堆区动态分配"
+    },
+    {
+      "wordId": "helm_it",
+      "type": "story",
+      "content": "Helm舵手→掌舵K8s应用部署"
+    },
+    {
+      "wordId": "hmac_it",
+      "type": "story",
+      "content": "HMAC=Hash-based MAC哈希消息认证码"
+    },
+    {
+      "wordId": "host_it",
+      "type": "story",
+      "content": "host主机/宿主→运行服务的机器"
+    },
+    {
+      "wordId": "http_it",
+      "type": "story",
+      "content": "HTTP=HyperText Transfer Protocol超文本传输协议"
+    },
+    {
+      "wordId": "hydration_it",
+      "type": "story",
+      "content": "hydration水合→服务端数据注入客户端"
+    },
+    {
+      "wordId": "icmp_it",
+      "type": "story",
+      "content": "ICMP=Internet Control Message Protocol控制报文"
+    },
+    {
+      "wordId": "index_it",
+      "type": "story",
+      "content": "in进入+dex指示→指向位置→索引加速查询"
+    },
+    {
+      "wordId": "infrastructure_it",
+      "type": "story",
+      "content": "infra在下+structure结构→底层基础设施"
+    },
+    {
+      "wordId": "inheritance_it",
+      "type": "story",
+      "content": "in进入+herit继承+ance→继承父类属性方法"
+    },
+    {
+      "wordId": "instance_it",
+      "type": "story",
+      "content": "in在+stance站→站出来的具体→实例"
+    },
+    {
+      "wordId": "integer_it",
+      "type": "story",
+      "content": "in不+teger触碰→完整不可分割→整数"
+    },
+    {
+      "wordId": "interface_it",
+      "type": "story",
+      "content": "inter之间+face面→之间的面→接口契约"
+    },
+    {
+      "wordId": "ip_it",
+      "type": "story",
+      "content": "IP=Internet Protocol互联网协议地址"
+    },
+    {
+      "wordId": "iteration_it",
+      "type": "story",
+      "content": "iter(反复)+ation——反复做同一件事，迭代"
+    },
+    {
+      "wordId": "jenkins_it",
+      "type": "story",
+      "content": "Jenkins=Java编写的CI持续集成服务器"
+    },
+    {
+      "wordId": "join_it",
+      "type": "story",
+      "content": "join连接→SQL连表查询/线程等待合并"
+    },
+    {
+      "wordId": "kernel_it",
+      "type": "story",
+      "content": "kernel(内核)——像坚果的仁，操作系统的核心"
+    },
+    {
+      "wordId": "kubectl_it",
+      "type": "story",
+      "content": "kube库伯+ctl控制→K8s命令行管理工具"
+    },
+    {
+      "wordId": "kubernetes_it",
+      "type": "story",
+      "content": "K8s源自希腊语舵手→容器编排平台"
+    },
+    {
+      "wordId": "label_it",
+      "type": "homophone",
+      "content": "label谐音来波，来波标签标记一下"
+    },
+    {
+      "wordId": "lambda_it",
+      "type": "story",
+      "content": "Lambda=λ匿名函数，AWS无服务器计算"
+    },
+    {
+      "wordId": "latency_it",
+      "type": "story",
+      "content": "late(迟)+ncy——延迟，数据迟到了"
+    },
+    {
+      "wordId": "lazy_it",
+      "type": "story",
+      "content": "lazy懒→懒加载延迟初始化，用到才创建"
+    },
+    {
+      "wordId": "library_it",
+      "type": "story",
+      "content": "libr(书)+ary——代码的图书馆，里面有各种工具书"
+    },
+    {
+      "wordId": "load_it",
+      "type": "homophone",
+      "content": "load谐音漏的，负载太重漏了"
+    },
+    {
+      "wordId": "loadbalancer_it",
+      "type": "story",
+      "content": "load负载+balancer均衡器→负载均衡"
+    },
+    {
+      "wordId": "logistic_it",
+      "type": "story",
+      "content": "logistic回归→逻辑回归用于二分类问题"
+    },
+    {
+      "wordId": "logs_it",
+      "type": "story",
+      "content": "log原木→记录如刻木→系统日志"
+    },
+    {
+      "wordId": "loop_it",
+      "type": "homophone",
+      "content": "loop谐音路普，反复走同一条路→循环"
+    },
+    {
+      "wordId": "malware_it",
+      "type": "story",
+      "content": "mal恶+ware软件→恶意软件"
+    },
+    {
+      "wordId": "microservice_it",
+      "type": "story",
+      "content": "micro微+service服务→微服务小而独立"
+    },
+    {
+      "wordId": "middleware_it",
+      "type": "story",
+      "content": "middle(中间)+ware(件)——站在请求和响应之间的中间人"
+    },
+    {
+      "wordId": "migration_it",
+      "type": "story",
+      "content": "migr迁移+ation→数据库迁移变更结构"
+    },
+    {
+      "wordId": "module_it",
+      "type": "story",
+      "content": "mod(模式)+ule——模块化，像积木一样拼装"
+    },
+    {
+      "wordId": "monitor_it",
+      "type": "story",
+      "content": "monit警告+or→警告者→监控系统状态"
+    },
+    {
+      "wordId": "multi-tenant_it",
+      "type": "story",
+      "content": "multi多+tenant租户→多租户共享资源"
+    },
+    {
+      "wordId": "multicast_it",
+      "type": "story",
+      "content": "multi多+cast播送→组播一对多发送"
+    },
+    {
+      "wordId": "namespace_it",
+      "type": "story",
+      "content": "name名+space空间→命名空间隔离作用域"
+    },
+    {
+      "wordId": "nat_it",
+      "type": "story",
+      "content": "NAT=Network Address Translation网络地址转换"
+    },
+    {
+      "wordId": "network_it",
+      "type": "story",
+      "content": "net网+work工作→网络连接通信"
+    },
+    {
+      "wordId": "neural_it",
+      "type": "story",
+      "content": "neur神经+al→神经网络模仿人脑"
+    },
+    {
+      "wordId": "nginx_it",
+      "type": "story",
+      "content": "Nginx=Engine X引擎X，高性能Web反向代理"
+    },
+    {
+      "wordId": "node_it",
+      "type": "story",
+      "content": "node节点→网络或树中的连接点"
+    },
+    {
+      "wordId": "nosql_it",
+      "type": "story",
+      "content": "NoSQL=Not Only SQL非关系型数据库"
+    },
+    {
+      "wordId": "null_it",
+      "type": "homophone",
+      "content": "null谐音纳，纳入虚无→空值"
+    },
+    {
+      "wordId": "oauth_it",
+      "type": "story",
+      "content": "OAuth=Open Authorization开放授权协议"
+    },
+    {
+      "wordId": "object_it",
+      "type": "story",
+      "content": "ob朝向+ject投→投向目标→对象封装数据行为"
+    },
+    {
+      "wordId": "orchestration_it",
+      "type": "story",
+      "content": "orchestra管弦乐队→协调指挥→容器编排"
+    },
+    {
+      "wordId": "overfitting_it",
+      "type": "story",
+      "content": "over过度+fitting拟合→过拟合模型死记硬背"
+    },
+    {
+      "wordId": "overflow_it",
+      "type": "story",
+      "content": "over溢出+flow流→溢出如栈溢出StackOverflow"
+    },
+    {
+      "wordId": "override_it",
+      "type": "story",
+      "content": "over覆盖+ride骑→重写覆盖父类方法"
+    },
+    {
+      "wordId": "packet_it",
+      "type": "story",
+      "content": "pack包+et小→小数据包网络传输单元"
+    },
+    {
+      "wordId": "parameter_it",
+      "type": "story",
+      "content": "para旁边+meter测量→参数，旁测的量"
+    },
+    {
+      "wordId": "parse_it",
+      "type": "story",
+      "content": "pars(部分)+e——拆成部分来理解，解析"
+    },
+    {
+      "wordId": "partition_it",
+      "type": "story",
+      "content": "part部分+ition→分区分片拆分数据"
+    },
+    {
+      "wordId": "patch_it",
+      "type": "homophone",
+      "content": "patch谐音拍去，拍上去的补丁修复漏洞"
+    },
+    {
+      "wordId": "payload_it",
+      "type": "story",
+      "content": "pay付+load载→有效载荷，实际传输的数据"
+    },
+    {
+      "wordId": "penetration_it",
+      "type": "story",
+      "content": "penetr穿透+ation→渗透测试找漏洞"
+    },
+    {
+      "wordId": "phishing_it",
+      "type": "homophone",
+      "content": "phishing谐音钓鱼，fish鱼+ing→钓鱼攻击"
+    },
+    {
+      "wordId": "ping_it",
+      "type": "story",
+      "content": "ping声纳探测拟声词→测试网络连通性"
+    },
+    {
+      "wordId": "pipeline_it",
+      "type": "story",
+      "content": "pipe管道+line线→流水线自动化执行"
+    },
+    {
+      "wordId": "platform_it",
+      "type": "story",
+      "content": "plat平+form形→平台提供运行环境"
+    },
+    {
+      "wordId": "plugin_it",
+      "type": "story",
+      "content": "plug插头+in入→插件即插即用扩展功能"
+    },
+    {
+      "wordId": "pointer_it",
+      "type": "story",
+      "content": "point指向+er→指针指向内存地址"
+    },
+    {
+      "wordId": "polymorphism_it",
+      "type": "story",
+      "content": "poly多+morph形态+ism→多态同一接口不同实现"
+    },
+    {
+      "wordId": "prediction_it",
+      "type": "story",
+      "content": "pre预+dict说+ion→预测推断未来"
+    },
+    {
+      "wordId": "prefetch_it",
+      "type": "story",
+      "content": "pre提前+fetch取→预取提前加载提高速度"
+    },
+    {
+      "wordId": "protocol_it",
+      "type": "story",
+      "content": "proto(首先)+col——先定规则(protocol)，再通信"
+    },
+    {
+      "wordId": "proxy_it",
+      "type": "story",
+      "content": "prox(接近)+y——代理，替你去接近服务器"
+    },
+    {
+      "wordId": "query_it",
+      "type": "story",
+      "content": "quer(询问)+y——向数据库提问，查询数据"
+    },
+    {
+      "wordId": "queue_it",
+      "type": "story",
+      "content": "Q——英式排队的Q，先进先出"
+    },
+    {
+      "wordId": "ransomware_it",
+      "type": "story",
+      "content": "ransom赎金+ware软件→勒索软件加密勒索"
+    },
+    {
+      "wordId": "recursive_it",
+      "type": "story",
+      "content": "re再+curs跑+ive→递归自己调用自己"
+    },
+    {
+      "wordId": "refactor_it",
+      "type": "story",
+      "content": "re(重新)+factor(做)——重新做，重构代码结构"
+    },
+    {
+      "wordId": "reference_it",
+      "type": "story",
+      "content": "refer指向+ence→引用指向数据的别名"
+    },
+    {
+      "wordId": "region_it",
+      "type": "story",
+      "content": "region区域→云服务的地理部署区域"
+    },
+    {
+      "wordId": "registry_it",
+      "type": "story",
+      "content": "registr注册+y→镜像仓库/注册表"
+    },
+    {
+      "wordId": "regression_it",
+      "type": "story",
+      "content": "re回+gress走+ion→回归统计学预测趋势"
+    },
+    {
+      "wordId": "reinforcement_it",
+      "type": "story",
+      "content": "reinforce加强+ment→强化学习奖惩优化"
+    },
+    {
+      "wordId": "render_it",
+      "type": "story",
+      "content": "ren(给)+der——把数据给(渲染)成画面"
+    },
+    {
+      "wordId": "replica-set_it",
+      "type": "story",
+      "content": "replica副本+set集→副本集保证高可用"
+    },
+    {
+      "wordId": "replica_it",
+      "type": "story",
+      "content": "re再+plica折叠→复制品副本备份数据"
+    },
+    {
+      "wordId": "repository_it",
+      "type": "story",
+      "content": "re(反复)+posit(放)+ory——反复放置代码的地方，代码仓库"
+    },
+    {
+      "wordId": "request_it",
+      "type": "story",
+      "content": "re(反复)+quest(寻求)——请求，向服务器寻求资源"
+    },
+    {
+      "wordId": "response_it",
+      "type": "story",
+      "content": "re(回)+sponse(承诺)——回应，服务器给你的答复"
+    },
+    {
+      "wordId": "responsive_it",
+      "type": "story",
+      "content": "respond响应+ive→响应式适配各种屏幕"
+    },
+    {
+      "wordId": "rollback_it",
+      "type": "story",
+      "content": "roll卷+back回→回滚恢复之前状态"
+    },
+    {
+      "wordId": "router_it",
+      "type": "story",
+      "content": "route(路线)+r——路由器，网络数据的交通警察"
+    },
+    {
+      "wordId": "runtime_it",
+      "type": "story",
+      "content": "run(跑)+time(时间)——程序跑起来的时间，运行时"
+    },
+    {
+      "wordId": "s3_it",
+      "type": "story",
+      "content": "S3=Simple Storage Service AWS对象存储"
+    },
+    {
+      "wordId": "salt_it",
+      "type": "story",
+      "content": "salt盐→加密盐值给密码加料防彩虹表"
+    },
+    {
+      "wordId": "sass_it",
+      "type": "story",
+      "content": "SASS=Syntactically Awesome Style Sheets CSS预处理器"
+    },
+    {
+      "wordId": "scalability_it",
+      "type": "story",
+      "content": "scal规模+ability→可扩展性应对增长"
+    },
+    {
+      "wordId": "schema_it",
+      "type": "story",
+      "content": "schem(计划)+a——数据库的蓝图，定义数据结构"
+    },
+    {
+      "wordId": "script_it",
+      "type": "story",
+      "content": "script(脚本)——写好的剧本，照着执行"
+    },
+    {
+      "wordId": "serialize_it",
+      "type": "story",
+      "content": "serial(连续)+ize——变成连续的数据流，序列化"
+    },
+    {
+      "wordId": "server_it",
+      "type": "story",
+      "content": "serve(服务)+r——服务器，专门为你服务的电脑"
+    },
+    {
+      "wordId": "serverless_it",
+      "type": "story",
+      "content": "server服务器+less无→无服务器不用管运维"
+    },
+    {
+      "wordId": "shard_it",
+      "type": "story",
+      "content": "shard碎片→数据分片水平拆分"
+    },
+    {
+      "wordId": "sharding_it",
+      "type": "story",
+      "content": "sharding分片技术→数据水平拆分到多节点"
+    },
+    {
+      "wordId": "singleton_it",
+      "type": "story",
+      "content": "single单一+ton→单例模式只创建一个实例"
+    },
+    {
+      "wordId": "snapshot_it",
+      "type": "story",
+      "content": "snap快照+shot拍→快照记录某时刻状态"
+    },
+    {
+      "wordId": "snippet_it",
+      "type": "story",
+      "content": "snip剪+pet→剪下的小片→代码片段"
+    },
+    {
+      "wordId": "socket_it",
+      "type": "story",
+      "content": "sock套+et→套接字通信端口"
+    },
+    {
+      "wordId": "software_it",
+      "type": "story",
+      "content": "soft软+ware器物→软件程序指令集合"
+    },
+    {
+      "wordId": "ssl_it",
+      "type": "story",
+      "content": "SSL=Secure Sockets Layer安全套接层"
+    },
+    {
+      "wordId": "stack_it",
+      "type": "story",
+      "content": "stack(堆叠)——一层一层堆起来，后进先出"
+    },
+    {
+      "wordId": "state_it",
+      "type": "story",
+      "content": "state状态→程序运行时的数据状态"
+    },
+    {
+      "wordId": "stateless_it",
+      "type": "story",
+      "content": "state状态+less无→无状态每次请求独立"
+    },
+    {
+      "wordId": "stream_it",
+      "type": "story",
+      "content": "stream流→数据流如流水线式处理"
+    },
+    {
+      "wordId": "string_it",
+      "type": "story",
+      "content": "string(串)——字符串在一起，字符串"
+    },
+    {
+      "wordId": "struct_it",
+      "type": "story",
+      "content": "struct=structure缩写→结构体组合不同类型"
+    },
+    {
+      "wordId": "subnet_it",
+      "type": "story",
+      "content": "sub子+net网→子网大网中的小网络"
+    },
+    {
+      "wordId": "syntax_it",
+      "type": "story",
+      "content": "syn(一起)+tax(排列)——把代码符号按规则排列，语法"
+    },
+    {
+      "wordId": "tcp_it",
+      "type": "story",
+      "content": "TCP=Transmission Control Protocol可靠传输协议"
+    },
+    {
+      "wordId": "template_it",
+      "type": "story",
+      "content": "templ(模板)+ate——模板，套用就能快速生成"
+    },
+    {
+      "wordId": "tensor_it",
+      "type": "story",
+      "content": "tens拉伸+or→多维数组张量，AI核心数据结构"
+    },
+    {
+      "wordId": "terraform_it",
+      "type": "story",
+      "content": "terra地+form造→造地→基础设施即代码"
+    },
+    {
+      "wordId": "thread_it",
+      "type": "story",
+      "content": "thread(线)——程序的执行线索，线程"
+    },
+    {
+      "wordId": "timeout_it",
+      "type": "story",
+      "content": "time时间+out出→超时操作超过时限"
+    },
+    {
+      "wordId": "tls_it",
+      "type": "story",
+      "content": "TLS=Transport Layer Security传输层安全协议"
+    },
+    {
+      "wordId": "token_it",
+      "type": "story",
+      "content": "token(令牌)——古代的令牌，持牌者通行无阻"
+    },
+    {
+      "wordId": "training_it",
+      "type": "story",
+      "content": "train训练+ing→模型训练学习数据模式"
+    },
+    {
+      "wordId": "transaction_it",
+      "type": "story",
+      "content": "trans跨越+action行动→事务ACID保证一致性"
+    },
+    {
+      "wordId": "transformer_it",
+      "type": "story",
+      "content": "transform变换+er→Transformer注意力机制模型"
+    },
+    {
+      "wordId": "tuple_it",
+      "type": "story",
+      "content": "tuple元组→Python不可变有序序列"
+    },
+    {
+      "wordId": "type_it",
+      "type": "story",
+      "content": "type类型→编程语言的数据类型系统"
+    },
+    {
+      "wordId": "udp_it",
+      "type": "story",
+      "content": "UDP=User Datagram Protocol无连接快速传输"
+    },
+    {
+      "wordId": "upload_it",
+      "type": "story",
+      "content": "up上+load加载→上传文件到服务器"
+    },
+    {
+      "wordId": "upsert_it",
+      "type": "story",
+      "content": "up更新+insert插入→更新或插入合二为一"
+    },
+    {
+      "wordId": "variable_it",
+      "type": "story",
+      "content": "vari(变化)+able(能)——能变化的量，变量"
+    },
+    {
+      "wordId": "vault_it",
+      "type": "story",
+      "content": "Vault金库→安全存储管理密钥密码"
+    },
+    {
+      "wordId": "vector_it",
+      "type": "story",
+      "content": "vect携带+or→携带方向的量→向量"
+    },
+    {
+      "wordId": "virtual_it",
+      "type": "story",
+      "content": "virtu(虚拟)+al——虚拟的，不是真实的但能用"
+    },
+    {
+      "wordId": "void_it",
+      "type": "homophone",
+      "content": "void谐音我意的，我意无→空无返回值"
+    },
+    {
+      "wordId": "volatile_it",
+      "type": "story",
+      "content": "volat飞+ile→飞走→易变的，防止缓存读取"
+    },
+    {
+      "wordId": "webpack_it",
+      "type": "story",
+      "content": "web+pack打包→前端模块打包工具"
+    },
+    {
+      "wordId": "websocket_it",
+      "type": "story",
+      "content": "web+socket→全双工持久通信协议"
+    },
+    {
+      "wordId": "widget_it",
+      "type": "story",
+      "content": "wid窗口+get→窗口小部件UI组件"
+    },
+    {
+      "wordId": "xss_it",
+      "type": "story",
+      "content": "XSS=Cross-Site Scripting跨站脚本攻击"
+    },
+    {
+      "wordId": "file_it",
+      "type": "association",
+      "content": "文件按“发爱”存档，电脑里的file就是文件。"
+    },
+    {
+      "wordId": "command_it",
+      "type": "association",
+      "content": "司令command一声令下，终端执行命令。"
+    },
+    {
+      "wordId": "program_it",
+      "type": "association",
+      "content": "程序program像“破格入梦”，运行后梦想成真。"
+    },
+    {
+      "wordId": "line_it",
+      "type": "association",
+      "content": "代码line一条线，串起程序逻辑。"
+    },
+    {
+      "wordId": "display_it",
+      "type": "association",
+      "content": "dis（分开）+play（播放），把内容展示到屏幕上。"
+    },
+    {
+      "wordId": "set_it",
+      "type": "association",
+      "content": "set“塞特”参数，设置到正确位置。"
+    },
+    {
+      "wordId": "key_it",
+      "type": "association",
+      "content": "key是钥匙也是键，关键字关键码全靠它。"
+    },
+    {
+      "wordId": "list_it",
+      "type": "association",
+      "content": "list就是“列示”，把项目排成表。"
+    },
+    {
+      "wordId": "press_it",
+      "type": "association",
+      "content": "press“扑来死”一按，按钮被按下。"
+    },
+    {
+      "wordId": "format_it",
+      "type": "association",
+      "content": "format“佛马特”，文件格式要统一。"
+    },
+    {
+      "wordId": "change_it",
+      "type": "association",
+      "content": "change“趁机”改变配置，系统焕然一新。"
+    },
+    {
+      "wordId": "directory_it",
+      "type": "association",
+      "content": "directory“带路可吹”，目录给文件指路。"
+    },
+    {
+      "wordId": "menu_it",
+      "type": "association",
+      "content": "menu“慢哟”，从菜单慢慢选择。"
+    },
+    {
+      "wordId": "option_it",
+      "type": "association",
+      "content": "option“偶扑神”，可选项任你挑。"
+    },
+    {
+      "wordId": "character_it",
+      "type": "association",
+      "content": "char（字符）+acter（演员），字符是代码小演员。"
+    },
+    {
+      "wordId": "screen_it",
+      "type": "association",
+      "content": "screen“死鬼人”盯屏幕，屏上信息看得清。"
+    },
+    {
+      "wordId": "specify_it",
+      "type": "association",
+      "content": "specify“死背细否”，指定细节要背清楚。"
+    },
+    {
+      "wordId": "move_it",
+      "type": "association",
+      "content": "move“木屋”搬动，移动文件到新目录。"
+    },
+    {
+      "wordId": "disk_it",
+      "type": "association",
+      "content": "disk“迪斯科”转盘，磁盘存储数据。"
+    },
+    {
+      "wordId": "text_it",
+      "type": "association",
+      "content": "text“泰克斯特”正文，文本内容看得见。"
+    },
+    {
+      "wordId": "drive_it",
+      "type": "association",
+      "content": "drive“拽夫”，驱动器拽着硬件跑。"
+    },
+    {
+      "wordId": "name_it",
+      "type": "association",
+      "content": "name就是名字，命名变量要见名知意。"
+    },
+    {
+      "wordId": "record_it",
+      "type": "association",
+      "content": "record“瑞考德”，数据库里存记录。"
+    },
+    {
+      "wordId": "box_it",
+      "type": "association",
+      "content": "box“盒子”，对话框把选择装盒里。"
+    },
+    {
+      "wordId": "help_it",
+      "type": "association",
+      "content": "help“嗨扑”，帮助按钮来救场。"
+    },
+    {
+      "wordId": "memory_it",
+      "type": "association",
+      "content": "memory“买猫瑞”，存储器记住数据。"
+    },
+    {
+      "wordId": "copy_it",
+      "type": "homophone",
+      "content": "copy“拷贝”，复制文件留备份。"
+    },
+    {
+      "wordId": "shell_it",
+      "type": "association",
+      "content": "shell“壳儿”，命令外壳保护内核。"
+    },
+    {
+      "wordId": "delete_it",
+      "type": "association",
+      "content": "delete“滴立特”，删除文件一扫光。"
+    },
+    {
+      "wordId": "enter_it",
+      "type": "association",
+      "content": "enter“按它”，回车把数据送进去。"
+    },
+    {
+      "wordId": "margin_it",
+      "type": "association",
+      "content": "margin“马进”，页面边缘留空白。"
+    },
+    {
+      "wordId": "mark_it",
+      "type": "association",
+      "content": "mark“马克”，做个标记好识别。"
+    },
+    {
+      "wordId": "information_it",
+      "type": "association",
+      "content": "information“硬佛没神”，信息以数据形式呈现。"
+    },
+    {
+      "wordId": "choose_it",
+      "type": "association",
+      "content": "choose“处子”精挑细选，选定最合适项。"
+    },
+    {
+      "wordId": "select_it",
+      "type": "association",
+      "content": "select“色来克特”，从列表中选择。"
+    },
+    {
+      "wordId": "group_it",
+      "type": "association",
+      "content": "group“各入普”，把成员归入一组。"
+    },
+    {
+      "wordId": "field_it",
+      "type": "association",
+      "content": "field“飞欧德”，字段像田地分块。"
+    },
+    {
+      "wordId": "procedure_it",
+      "type": "association",
+      "content": "procedure“破塞丢”，按流程步骤执行。"
+    },
+    {
+      "wordId": "print_it",
+      "type": "association",
+      "content": "print“普印特”，打印机输出纸张。"
+    },
+    {
+      "wordId": "return_it",
+      "type": "association",
+      "content": "return“瑞特恩”，函数返回值。"
+    },
+    {
+      "wordId": "number_it",
+      "type": "association",
+      "content": "number“南波万”，编号数字排成行。"
+    },
+    {
+      "wordId": "selected_it",
+      "type": "association",
+      "content": "selected“色来克替德”，已被选中的。"
+    },
+    {
+      "wordId": "window_it",
+      "type": "association",
+      "content": "window“温都”，窗口打开新视界。"
+    },
+    {
+      "wordId": "message_it",
+      "type": "association",
+      "content": "message“买塞鸡”，消息通知弹出来。"
+    },
+    {
+      "wordId": "dialog_it",
+      "type": "association",
+      "content": "dialog“戴鹅唠嗑”，对话框里聊选项。"
+    },
+    {
+      "wordId": "example_it",
+      "type": "association",
+      "content": "example“一哥赞婆”，例子帮助理解。"
+    },
+    {
+      "wordId": "create_it",
+      "type": "association",
+      "content": "create“可瑞爱特”，创建新文件。"
+    },
+    {
+      "wordId": "insert_it",
+      "type": "association",
+      "content": "insert“因色特”，插入数据到中间。"
+    },
+    {
+      "wordId": "related_it",
+      "type": "association",
+      "content": "related“瑞来提德”，两张表相关联。"
+    },
+    {
+      "wordId": "item_it",
+      "type": "association",
+      "content": "item“爱疼”，列表每项都要爱。"
+    },
+    {
+      "wordId": "position_it",
+      "type": "association",
+      "content": "破老师（po-si-tion）在标记光标位置。"
+    },
+    {
+      "wordId": "down_it",
+      "type": "homophone",
+      "content": "“倒”下的服务器，服务中断了。"
+    },
+    {
+      "wordId": "task_it",
+      "type": "association",
+      "content": "他死刻（task）一个任务，调度CPU。"
+    },
+    {
+      "wordId": "view_it",
+      "type": "association",
+      "content": "VIEW就是“微雨”后的视图，清新可见。"
+    },
+    {
+      "wordId": "switch_it",
+      "type": "homophone",
+      "content": "思维迟（switch）钝时，切换一下界面。"
+    },
+    {
+      "wordId": "default_it",
+      "type": "association",
+      "content": "得否特（default）是系统默认选项。"
+    },
+    {
+      "wordId": "structure_it",
+      "type": "association",
+      "content": "死抓壳（struc-ture）项目结构才稳固。"
+    },
+    {
+      "wordId": "path_it",
+      "type": "association",
+      "content": "怕死（path）也要记住文件路径。"
+    },
+    {
+      "wordId": "blank_it",
+      "type": "association",
+      "content": "不烂刻（blank）表单，空白处必填。"
+    },
+    {
+      "wordId": "open_it",
+      "type": "association",
+      "content": "OPEN像敞开的门，双击打开程序。"
+    },
+    {
+      "wordId": "add_it",
+      "type": "association",
+      "content": "ADD就是“爱得”多，点加号新增。"
+    },
+    {
+      "wordId": "enable_it",
+      "type": "association",
+      "content": "依呢抱（enable）住开关，启动功能。"
+    },
+    {
+      "wordId": "operation_it",
+      "type": "association",
+      "content": "噢拍瑞审（operation）每一次数据库操作。"
+    },
+    {
+      "wordId": "erase_it",
+      "type": "homophone",
+      "content": "一锐思（erase）全擦除，数据清零。"
+    },
+    {
+      "wordId": "filename_it",
+      "type": "association",
+      "content": "file+name，文件的名字就是文件名。"
+    },
+    {
+      "wordId": "search_it",
+      "type": "association",
+      "content": "搜驰（search）一下，全网检索结果。"
+    },
+    {
+      "wordId": "column_it",
+      "type": "association",
+      "content": "靠了木（column）表格一列列站好。"
+    },
+    {
+      "wordId": "prompt_it",
+      "type": "association",
+      "content": "破木条（prompt）弹出来提示你输入。"
+    },
+    {
+      "wordId": "execute_it",
+      "type": "association",
+      "content": "EXE可执行，execute就是执行命令。"
+    },
+    {
+      "wordId": "escape_it",
+      "type": "association",
+      "content": "一思给坡（escape），按ESC键逃离。"
+    },
+    {
+      "wordId": "error_it",
+      "type": "homophone",
+      "content": "爱惹（error）错误，代码报红叉。"
+    },
+    {
+      "wordId": "extension_it",
+      "type": "association",
+      "content": "ex向外+tension拉伸，扩展名拉长文件名。"
+    },
+    {
+      "wordId": "status_it",
+      "type": "association",
+      "content": "是他得死（status）盯着状态灯看。"
+    },
+    {
+      "wordId": "run_it",
+      "type": "association",
+      "content": "RUN就是“润”，让程序跑起来。"
+    },
+    {
+      "wordId": "argument_it",
+      "type": "association",
+      "content": "阿哥与门特（argument）在争论参数值。"
+    },
+    {
+      "wordId": "statement_it",
+      "type": "association",
+      "content": "state状态+ment名词，一行语句一种状态。"
+    },
+    {
+      "wordId": "shift_it",
+      "type": "association",
+      "content": "谁福特（shift）按住Shift换挡大小写。"
+    },
+    {
+      "wordId": "store_it",
+      "type": "association",
+      "content": "STORE是“仓库”，云端存文件。"
+    },
+    {
+      "wordId": "scroll_it",
+      "type": "association",
+      "content": "死肉（scroll）往下滚，页面往下翻。"
+    },
+    {
+      "wordId": "macro_it",
+      "type": "association",
+      "content": "macro=macro大，录一个宏批量做大动作。"
+    },
+    {
+      "wordId": "page_it",
+      "type": "association",
+      "content": "PAGE谐音“配齐”，首页内容要配齐。"
+    },
+    {
+      "wordId": "quit_it",
+      "type": "association",
+      "content": "QUIT快退，退出程序一身轻。"
+    },
+    {
+      "wordId": "define_it",
+      "type": "association",
+      "content": "得饭（define）吃前先定义好变量。"
+    },
+    {
+      "wordId": "pressing_it",
+      "type": "association",
+      "content": "press按+ing持续，紧急问题一直压着。"
+    },
+    {
+      "wordId": "restore_it",
+      "type": "association",
+      "content": "re重新+store存储，恢复数据重来。"
+    },
+    {
+      "wordId": "top_it",
+      "type": "association",
+      "content": "TOP就是头顶，导航栏置顶。"
+    },
+    {
+      "wordId": "color_it",
+      "type": "association",
+      "content": "COLOR=卡拉OK，颜色多彩像舞台。"
+    },
+    {
+      "wordId": "allow_it",
+      "type": "association",
+      "content": "额老（allow）准你通过防火墙。"
+    },
+    {
+      "wordId": "block_it",
+      "type": "association",
+      "content": "不老客（block）被拒之门外，数据块 blocked。"
+    },
+    {
+      "wordId": "decimal_it",
+      "type": "association",
+      "content": "desi十+mal，十进制正好十个数。"
+    },
+    {
+      "wordId": "main_it",
+      "type": "association",
+      "content": "MAIN就是“门面”函数，程序入口。"
+    },
+    {
+      "wordId": "definition_it",
+      "type": "association",
+      "content": "define定义加tion，定义越清晰越好。"
+    },
+    {
+      "wordId": "optional_it",
+      "type": "association",
+      "content": "option选项加al，可选可不选。"
+    },
+    {
+      "wordId": "date_it",
+      "type": "association",
+      "content": "DATE是“带它”记录每一天日期。"
+    },
+    {
+      "wordId": "remove_it",
+      "type": "association",
+      "content": "re一再+move移动，移除不要的文件。"
+    },
+    {
+      "wordId": "arrow_it",
+      "type": "association",
+      "content": "爱肉（arrow）形状像箭头，指向右边。"
+    },
+    {
+      "wordId": "issue_it",
+      "type": "association",
+      "content": "一休（issue）又发现一个问题要解决。"
+    },
+    {
+      "wordId": "returned_it",
+      "type": "association",
+      "content": "return返回加ed，函数返回值已收到。"
+    },
+    {
+      "wordId": "associate_it",
+      "type": "association",
+      "content": "as加强+soci社团+ate，关联成一伙。"
+    },
+    {
+      "wordId": "attribute_it",
+      "type": "association",
+      "content": "at在+tribute贡品，标签属性贴上去。"
+    },
+    {
+      "wordId": "order_it",
+      "type": "association",
+      "content": "order（欧德）按指令排序，欧洲德式整齐。"
+    },
+    {
+      "wordId": "modify_it",
+      "type": "association",
+      "content": "modify（莫迪费）修改配置莫非又要费时间。"
+    },
+    {
+      "wordId": "mouse_it",
+      "type": "story",
+      "content": "mouse（猫死）老鼠鼠标，猫来了老鼠死。"
+    },
+    {
+      "wordId": "note_it",
+      "type": "homophone",
+      "content": "note（弄特）注释要弄得特别清楚。"
+    },
+    {
+      "wordId": "locate_it",
+      "type": "story",
+      "content": "locate（喽凯特）定位功能喽一下就找到凯特。"
+    },
+    {
+      "wordId": "video_it",
+      "type": "homophone",
+      "content": "video（维迪欧）视频播放器维系迪欧的快乐。"
+    },
+    {
+      "wordId": "printer_it",
+      "type": "homophone",
+      "content": "printer（普林特）打印机印出普林特的报告。"
+    },
+    {
+      "wordId": "bar_it",
+      "type": "association",
+      "content": "bar（巴尔）进度条像一根巴尔金棒。"
+    },
+    {
+      "wordId": "bottom_it",
+      "type": "story",
+      "content": "bottom（爸疼）屏幕底部的状态栏爸爸看了头疼。"
+    },
+    {
+      "wordId": "carriage_it",
+      "type": "association",
+      "content": "carriage（开瑞几）回车滑架把光标开回几格。"
+    },
+    {
+      "wordId": "content_it",
+      "type": "homophone",
+      "content": "content（康泰特）网页内容健康泰然特别丰富。"
+    },
+    {
+      "wordId": "space_it",
+      "type": "association",
+      "content": "space（死佩思）空格键死命配合思考。"
+    },
+    {
+      "wordId": "editor_it",
+      "type": "homophone",
+      "content": "editor（爱得特）编辑器爱得特别顺手。"
+    },
+    {
+      "wordId": "exist_it",
+      "type": "story",
+      "content": "exist（一哥贼思特）文件存在一哥贼思特都知道。"
+    },
+    {
+      "wordId": "scope_it",
+      "type": "homophone",
+      "content": "scope（斯够普）作用域范围斯够普通。"
+    },
+    {
+      "wordId": "paragraph_it",
+      "type": "story",
+      "content": "paragraph（派拉格拉夫）段落分段派来格拉夫帮忙。"
+    },
+    {
+      "wordId": "clear_it",
+      "type": "homophone",
+      "content": "clear（克利尔）清除缓存克利尔最在行。"
+    },
+    {
+      "wordId": "exit_it",
+      "type": "homophone",
+      "content": "exit（一刻西特）退出命令一刻就西特。"
+    },
+    {
+      "wordId": "report_it",
+      "type": "homophone",
+      "content": "report（瑞泡特）生成报表瑞泡特最专业。"
+    },
+    {
+      "wordId": "execution_it",
+      "type": "homophone",
+      "content": "execution（艾克西裤深）脚本执行艾克西裤深。"
+    },
+    {
+      "wordId": "backup_it",
+      "type": "association",
+      "content": "backup（背壳普）备份就是给数据背上壳普及。"
+    },
+    {
+      "wordId": "version_it",
+      "type": "homophone",
+      "content": "version（我珍）每个软件版本我都珍惜。"
+    },
+    {
+      "wordId": "find_it",
+      "type": "story",
+      "content": "find（饭得）找到 bug 才能安心吃饭。"
+    },
+    {
+      "wordId": "subset_it",
+      "type": "story",
+      "content": "subset（萨布塞特）子集萨布塞特下面的一组。"
+    },
+    {
+      "wordId": "keyboard_it",
+      "type": "homophone",
+      "content": "keyboard（凯伯德）敲击键盘凯伯德最响。"
+    },
+    {
+      "wordId": "full_it",
+      "type": "homophone",
+      "content": "full（富哦）磁盘满了富哦。"
+    },
+    {
+      "wordId": "check_it",
+      "type": "association",
+      "content": "check（拆可）检查代码拆开了才可以。"
+    },
+    {
+      "wordId": "should_it",
+      "type": "homophone",
+      "content": "should（熟的）应当记住的安全习惯要滚瓜烂熟。"
+    },
+    {
+      "wordId": "single_it",
+      "type": "association",
+      "content": "single 单个，单打独斗不重复"
+    },
+    {
+      "wordId": "positioning_it",
+      "type": "association",
+      "content": "positioning 定位，位置摆正好运行"
+    },
+    {
+      "wordId": "provide_it",
+      "type": "association",
+      "content": "provide 提供，提前备好给出去"
+    },
+    {
+      "wordId": "title_it",
+      "type": "association",
+      "content": "title 标题，抬头一看是题目"
+    },
+    {
+      "wordId": "expression_it",
+      "type": "association",
+      "content": "expression 表达式，表达计算的式子"
+    },
+    {
+      "wordId": "toggle_it",
+      "type": "association",
+      "content": "toggle 切换，按钮一按来回换"
+    },
+    {
+      "wordId": "code_it",
+      "type": "association",
+      "content": "code 代码，程序员写代码"
+    },
+    {
+      "wordId": "such_it",
+      "type": "association",
+      "content": "such 这样的，搜索 such 就出现"
+    },
+    {
+      "wordId": "beginning_it",
+      "type": "association",
+      "content": "beginning 起点，开始的地方"
+    },
+    {
+      "wordId": "guide_it",
+      "type": "association",
+      "content": "guide 指南，盖着它当向导"
+    },
+    {
+      "wordId": "tree_it",
+      "type": "association",
+      "content": "tree 树形结构，根枝叶分明"
+    },
+    {
+      "wordId": "environment_it",
+      "type": "association",
+      "content": "environment 环境，围着你转的工作空间"
+    },
+    {
+      "wordId": "device_it",
+      "type": "association",
+      "content": "device 设备，设计用来帮你的器件"
+    },
+    {
+      "wordId": "highlight_it",
+      "type": "association",
+      "content": "highlight 高亮，高处点亮很醒目"
+    },
+    {
+      "wordId": "call_it",
+      "type": "association",
+      "content": "call 调用，一 call 就执行"
+    },
+    {
+      "wordId": "continue_it",
+      "type": "association",
+      "content": "continue 继续，肯替你能走下去"
+    },
+    {
+      "wordId": "indicate_it",
+      "type": "association",
+      "content": "indicate 指示，心里指出方向"
+    },
+    {
+      "wordId": "until_it",
+      "type": "association",
+      "content": "until 直到，直到才停"
+    },
+    {
+      "wordId": "begin_it",
+      "type": "association",
+      "content": "begin 开始，一开门就启动"
+    },
+    {
+      "wordId": "place_it",
+      "type": "association",
+      "content": "place 放置，摆到正确位置"
+    },
+    {
+      "wordId": "rename_it",
+      "type": "association",
+      "content": "rename 重命名，re（再）+name 名字"
+    },
+    {
+      "wordId": "swap_it",
+      "type": "association",
+      "content": "swap 交换，思维快换两值"
+    },
+    {
+      "wordId": "work_it",
+      "type": "association",
+      "content": "work 工作，我 work 故我在"
+    },
+    {
+      "wordId": "remain_it",
+      "type": "association",
+      "content": "remain 留下，瑞妹还在等"
+    },
+    {
+      "wordId": "close_it",
+      "type": "association",
+      "content": "close 关闭，可搂住门关上"
+    },
+    {
+      "wordId": "combination_it",
+      "type": "association",
+      "content": "combination 组合，拼到一块成整体"
+    },
+    {
+      "wordId": "profile_it",
+      "type": "association",
+      "content": "profile 简介，个人档案像剖面"
+    },
+    {
+      "wordId": "turn_it",
+      "type": "association",
+      "content": "turn 转动，特恩一下换方向"
+    },
+    {
+      "wordId": "section_it",
+      "type": "association",
+      "content": "section 章节，赛克神分区域"
+    },
+    {
+      "wordId": "follow_it",
+      "type": "association",
+      "content": "follow 跟随，跟我走不迷路"
+    },
+    {
+      "wordId": "split_it",
+      "type": "association",
+      "content": "split 分裂，死扑离它一分为二"
+    },
+    {
+      "wordId": "access_it",
+      "type": "association",
+      "content": "access 访问，阿克塞斯开门"
+    },
+    {
+      "wordId": "cancel_it",
+      "type": "association",
+      "content": "cancel 取消，看谁能拦住"
+    },
+    {
+      "wordId": "case_it",
+      "type": "association",
+      "content": "case 情况，开死想各种场景"
+    },
+    {
+      "wordId": "numeric_it",
+      "type": "association",
+      "content": "numeric 数字的，number 加 ic 变数值"
+    },
+    {
+      "wordId": "size_it",
+      "type": "association",
+      "content": "size 尺寸，赛兹量大小"
+    },
+    {
+      "wordId": "entire_it",
+      "type": "association",
+      "content": "entire 整个，因太饿全吃掉"
+    },
+    {
+      "wordId": "leave_it",
+      "type": "association",
+      "content": "leave 留下，离屋反把东西留"
+    },
+    {
+      "wordId": "history_it",
+      "type": "story",
+      "content": "history 历史，his 他的 story 故事"
+    },
+    {
+      "wordId": "reflow_it",
+      "type": "association",
+      "content": "reflow 重排，re（再）+flow 流动"
+    },
+    {
+      "wordId": "output_it",
+      "type": "association",
+      "content": "output 输出，out 出来 put 放"
+    },
+    {
+      "wordId": "install_it",
+      "type": "association",
+      "content": "install 安装，in（进）+stall 摊位装好"
+    },
+    {
+      "wordId": "source_it",
+      "type": "association",
+      "content": "source 源头，程序之源在代码"
+    },
+    {
+      "wordId": "assign_it",
+      "type": "association",
+      "content": "assign 赋值，a（一）+sign 签名指定"
+    },
+    {
+      "wordId": "support_it",
+      "type": "association",
+      "content": "support 支持，sup（下）+port 港口撑住"
+    },
+    {
+      "wordId": "expand_it",
+      "type": "association",
+      "content": "expand 扩展，ex（出）+pand 胖撑大"
+    },
+    {
+      "wordId": "diskette_it",
+      "type": "association",
+      "content": "diskette 软盘，disk 小 diskette"
+    },
+    {
+      "wordId": "skip_it",
+      "type": "association",
+      "content": "skip 跳过，死吉普飞跃过"
+    },
+    {
+      "wordId": "application_it",
+      "type": "association",
+      "content": "application 应用，app 就是应用"
+    },
+    {
+      "wordId": "confirmation_it",
+      "type": "association",
+      "content": "confirmation 确认，大家一致 firm 肯定"
+    },
+    {
+      "wordId": "hold_it",
+      "type": "association",
+      "content": "按住(hold)配置不放，保持当前状态。"
+    },
+    {
+      "wordId": "click_it",
+      "type": "homophone",
+      "content": "点击鼠标“click”一声就选中了。"
+    },
+    {
+      "wordId": "write_it",
+      "type": "association",
+      "content": "用“write”把数据写进文件里。"
+    },
+    {
+      "wordId": "byte_it",
+      "type": "homophone",
+      "content": "bite咬一口变byte，一个“字节”八位。"
+    },
+    {
+      "wordId": "show_it",
+      "type": "homophone",
+      "content": "show“秀”出来，把结果显示在屏幕上。"
+    },
+    {
+      "wordId": "working_it",
+      "type": "association",
+      "content": "working就是让系统运转工作的状态。"
+    },
+    {
+      "wordId": "delimiter_it",
+      "type": "homophone",
+      "content": "delimiter像“底丽米特”，划定字段边界。"
+    },
+    {
+      "wordId": "location_it",
+      "type": "homophone",
+      "content": "location就是“low-key审”，锁定位置。"
+    },
+    {
+      "wordId": "perform_it",
+      "type": "homophone",
+      "content": "perform“破峰”而出，高效执行任务。"
+    },
+    {
+      "wordId": "graphic_it",
+      "type": "homophone",
+      "content": "graphic发音像“哥来飞刻”，画出图形。"
+    },
+    {
+      "wordId": "read_it",
+      "type": "homophone",
+      "content": "read就是“瑞德”，把数据读进来。"
+    },
+    {
+      "wordId": "confirm_it",
+      "type": "homophone",
+      "content": "confirm“肯费姆”，确认无误才放行。"
+    },
+    {
+      "wordId": "sort_it",
+      "type": "homophone",
+      "content": "sort“扫特”，把数据分类排序。"
+    },
+    {
+      "wordId": "clause_it",
+      "type": "homophone",
+      "content": "clause“克劳斯”，合同条款要写清。"
+    },
+    {
+      "wordId": "extend_it",
+      "type": "homophone",
+      "content": "extend“一克斯疼得”向外扩展。"
+    },
+    {
+      "wordId": "starting_it",
+      "type": "homophone",
+      "content": "starting就是“死打挺”，一切刚开始。"
+    },
+    {
+      "wordId": "original_it",
+      "type": "homophone",
+      "content": "original“哦瑞吉诺”，原创原汁原味。"
+    },
+    {
+      "wordId": "correspond_it",
+      "type": "homophone",
+      "content": "correspond“靠瑞斯旁德”，相互对应通信。"
+    },
+    {
+      "wordId": "property_it",
+      "type": "homophone",
+      "content": "property“破泼梯”，对象的属性财产。"
+    },
+    {
+      "wordId": "bracket_it",
+      "type": "homophone",
+      "content": "bracket“布瑞克特”，像括号把内容包起来。"
+    },
+    {
+      "wordId": "omit_it",
+      "type": "homophone",
+      "content": "omit“欧密特”，“哦，没它”就省略了。"
+    },
+    {
+      "wordId": "running_it",
+      "type": "homophone",
+      "content": "running“润宁”，程序正在跑。"
+    },
+    {
+      "wordId": "edge_it",
+      "type": "homophone",
+      "content": "edge“爱知”，网络边缘贴近用户。"
+    },
+    {
+      "wordId": "form_it",
+      "type": "homophone",
+      "content": "form“佛母”，格式表格要填好。"
+    },
+    {
+      "wordId": "instruction_it",
+      "type": "homophone",
+      "content": "instruction“因斯抓克审”，按指令行动。"
+    },
+    {
+      "wordId": "standard_it",
+      "type": "homophone",
+      "content": "standard“斯丹德”，标准立起来。"
+    },
+    {
+      "wordId": "occurrence_it",
+      "type": "homophone",
+      "content": "occurrence“额克润斯”，事件发生的次数。"
+    },
+    {
+      "wordId": "lock_it",
+      "type": "homophone",
+      "content": "lock“洛克”，锁住资源防冲突。"
+    },
+    {
+      "wordId": "append_it",
+      "type": "homophone",
+      "content": "append“俄喷的”，把内容附加上去。"
+    },
+    {
+      "wordId": "destination_it",
+      "type": "homophone",
+      "content": "destination“带斯梯内审”，数据到达目的地。"
+    },
+    {
+      "wordId": "password_it",
+      "type": "homophone",
+      "content": "password“怕死我的”，密码要保密。"
+    },
+    {
+      "wordId": "point_it",
+      "type": "homophone",
+      "content": "point“破因特”，指向关键点。"
+    },
+    {
+      "wordId": "variety_it",
+      "type": "homophone",
+      "content": "variety“我瑞爱提”，种类繁多。"
+    },
+    {
+      "wordId": "useful_it",
+      "type": "homophone",
+      "content": "useful“油色否”，用了真有用。"
+    },
+    {
+      "wordId": "operating_it",
+      "type": "homophone",
+      "content": "operating“阿婆瑞婷”，操作系统来操控。"
+    },
+    {
+      "wordId": "carry_it",
+      "type": "homophone",
+      "content": "carry“开瑞”，把进位carry走。"
+    },
+    {
+      "wordId": "update_it",
+      "type": "homophone",
+      "content": "update“啊破戴特”，向上更新版本。"
+    },
+    {
+      "wordId": "moving_it",
+      "type": "homophone",
+      "content": "moving“木文”，移动中的部件。"
+    },
+    {
+      "wordId": "coprocessor_it",
+      "type": "homophone",
+      "content": "coprocessor“靠破塞斯”，协处理器一起算。"
+    },
+    {
+      "wordId": "overlay_it",
+      "type": "homophone",
+      "content": "overlay“欧佛累”，一层覆盖一层。"
+    },
+    {
+      "wordId": "practice_it",
+      "type": "homophone",
+      "content": "practice“普瑞克提斯”，实践出真知。"
+    },
+    {
+      "wordId": "navigation_it",
+      "type": "homophone",
+      "content": "navigation“耐维盖审”，导航带路不迷路。"
+    },
+    {
+      "wordId": "automatically_it",
+      "type": "homophone",
+      "content": "automatically“奥特麦特克里”，自动执行不用管。"
+    },
+    {
+      "wordId": "total_it",
+      "type": "homophone",
+      "content": "total“偷头”，加在一起是总数。"
+    },
+    {
+      "wordId": "shortcut_it",
+      "type": "homophone",
+      "content": "shortcut“哨特卡特”，短切路径走捷径。"
+    },
+    {
+      "wordId": "unique_it",
+      "type": "homophone",
+      "content": "unique“优妮克”，独一无二。"
+    },
+    {
+      "wordId": "updated_it",
+      "type": "homophone",
+      "content": "updated“啊破戴提德”，更新过的版本。"
+    },
+    {
+      "wordId": "internal_it",
+      "type": "homophone",
+      "content": "internal“因特耨”，内部的东西。"
+    },
+    {
+      "wordId": "basic_it",
+      "type": "homophone",
+      "content": "basic“背斯伊克”，基础最基本。"
+    },
+    {
+      "wordId": "edit_it",
+      "type": "homophone",
+      "content": "edit谐音爱的它，编辑心爱的代码。"
+    },
+    {
+      "wordId": "marked_it",
+      "type": "association",
+      "content": "mark标记+ed已…的，已被标记的项。"
+    },
+    {
+      "wordId": "area_it",
+      "type": "homophone",
+      "content": "area谐音哎锐啊，屏幕区域面积大。"
+    },
+    {
+      "wordId": "tab_it",
+      "type": "homophone",
+      "content": "tab谐音塔布，标签页像塔层叠布。"
+    },
+    {
+      "wordId": "active_it",
+      "type": "story",
+      "content": "act行动+ive，激活状态可行动。"
+    },
+    {
+      "wordId": "topic_it",
+      "type": "homophone",
+      "content": "topic谐音太皮克，消息主题要发布。"
+    },
+    {
+      "wordId": "start_it",
+      "type": "homophone",
+      "content": "start谐音死打它，启动服务开干。"
+    },
+    {
+      "wordId": "mode_it",
+      "type": "homophone",
+      "content": "mode谐音某的，某种模式操作方式。"
+    },
+    {
+      "wordId": "selection_it",
+      "type": "story",
+      "content": "select选择+ion，选区高亮显示。"
+    },
+    {
+      "wordId": "word_it",
+      "type": "association",
+      "content": "word字，CPU一个字长处理数据。"
+    },
+    {
+      "wordId": "value_it",
+      "type": "homophone",
+      "content": "value谐音歪柳，值歪了数值不对。"
+    },
+    {
+      "wordId": "button_it",
+      "type": "homophone",
+      "content": "button谐音巴疼，按钮一按弹出来。"
+    },
+    {
+      "wordId": "appear_it",
+      "type": "homophone",
+      "content": "appear谐音阿皮尔，界面元素出现了。"
+    },
+    {
+      "wordId": "save_it",
+      "type": "homophone",
+      "content": "save谐音塞物，保存数据塞进磁盘。"
+    },
+    {
+      "wordId": "control_it",
+      "type": "association",
+      "content": "con共同+trol滚，控制管理一切运转。"
+    },
+    {
+      "wordId": "user_it",
+      "type": "story",
+      "content": "use使用+er人，使用者就是用户。"
+    },
+    {
+      "wordId": "system_it",
+      "type": "homophone",
+      "content": "system谐音希斯特，系统运行管一切。"
+    },
+    {
+      "wordId": "contain_it",
+      "type": "story",
+      "content": "con共同+tain握，共同握住→包含。"
+    },
+    {
+      "wordId": "letter_it",
+      "type": "homophone",
+      "content": "letter谐音来特，字母打字特别来。"
+    },
+    {
+      "wordId": "data_it",
+      "type": "homophone",
+      "content": "data谐音大特，数据量大特别多。"
+    },
+    {
+      "wordId": "setting_it",
+      "type": "story",
+      "content": "set设置+ting，配置参数调设置。"
+    },
+    {
+      "wordId": "desire_it",
+      "type": "homophone",
+      "content": "desire谐音弟扎尔，期望达到目标状态。"
+    }
+  ]
+}

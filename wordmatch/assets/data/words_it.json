@@ -1,0 +1,5831 @@
+{
+  "words": [
+    {
+      "id": "acid_it",
+      "word": "acid",
+      "phonetic_us": "/ˈæsɪd/",
+      "phonetic_uk": "/ˈæsɪd/",
+      "definition": [
+        "n. ACID特性（原子性、一致性、隔离性、持久性）"
+      ],
+      "example": "Relational databases guarantee ACID compliance for transactions.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "agile_it",
+      "word": "agile",
+      "phonetic_us": "/ˈædʒəl/",
+      "phonetic_uk": "/ˈædʒaɪl/",
+      "definition": [
+        "adj. 敏捷的",
+        "n. 敏捷开发"
+      ],
+      "example": "The team follows agile methodology for software development.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "algorithm_it",
+      "word": "algorithm",
+      "phonetic_us": "/ˈælɡərɪðəm/",
+      "phonetic_uk": "/ˈælɡərɪðəm/",
+      "definition": [
+        "n. 算法；计算程序"
+      ],
+      "example": "The search algorithm returns results in milliseconds.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "annotation_it",
+      "word": "annotation",
+      "phonetic_us": "/ˌænəˈteɪʃn/",
+      "phonetic_uk": "/ˌænəˈteɪʃn/",
+      "definition": [
+        "n. 注解；注解标记"
+      ],
+      "example": "Use annotations to configure dependency injection.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "ansible_it",
+      "word": "ansible",
+      "phonetic_us": "/ˈænsɪbl/",
+      "phonetic_uk": "/ˈænsɪbl/",
+      "definition": [
+        "n. Ansible（自动化运维工具）"
+      ],
+      "example": "Ansible playbooks automate server configuration tasks.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "api_it",
+      "word": "API",
+      "phonetic_us": "/ˌeɪ piː ˈaɪ/",
+      "phonetic_uk": "/ˌeɪ piː ˈaɪ/",
+      "definition": [
+        "n. 应用程序接口"
+      ],
+      "example": "Developers integrate payment APIs into their apps.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "architecture_it",
+      "word": "architecture",
+      "phonetic_us": "/ˈɑːrkɪtektʃər/",
+      "phonetic_uk": "/ˈɑːkɪtektʃər/",
+      "definition": [
+        "n. 架构；体系结构"
+      ],
+      "example": "Microservices architecture improves system scalability.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "array_it",
+      "word": "array",
+      "phonetic_us": "/əˈreɪ/",
+      "phonetic_uk": "/əˈreɪ/",
+      "definition": [
+        "n. 数组；阵列"
+      ],
+      "example": "Store the values in an array for iteration.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "artifact_it",
+      "word": "artifact",
+      "phonetic_us": "/ˈɑːrtɪfækt/",
+      "phonetic_uk": "/ˈɑːtɪfækt/",
+      "definition": [
+        "n. 制品；构建产物"
+      ],
+      "example": "Store build artifacts in the repository for deployment.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "assertion_it",
+      "word": "assertion",
+      "phonetic_us": "/əˈsɜːrʃn/",
+      "phonetic_uk": "/əˈsɜːʃn/",
+      "definition": [
+        "n. 断言"
+      ],
+      "example": "Use assertions to verify expected behavior in tests.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "async_it",
+      "word": "async",
+      "phonetic_us": "/eɪˈsɪŋk/",
+      "phonetic_uk": "/eɪˈsɪŋk/",
+      "definition": [
+        "adj. 异步的"
+      ],
+      "example": "Use async functions to handle I/O operations efficiently.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "authentication_it",
+      "word": "authentication",
+      "phonetic_us": "/ɔːˌθentɪˈkeɪʃn/",
+      "phonetic_uk": "/ɔːˌθentɪˈkeɪʃn/",
+      "definition": [
+        "n. 认证；身份验证"
+      ],
+      "example": "Two-factor authentication enhances security.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "authorization_it",
+      "word": "authorization",
+      "phonetic_us": "/ˌɔːθərəˈzeɪʃn/",
+      "phonetic_uk": "/ˌɔːθəraɪˈzeɪʃn/",
+      "definition": [
+        "n. 授权"
+      ],
+      "example": "The user lacks authorization to access this resource.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "autoscaling_it",
+      "word": "autoscaling",
+      "phonetic_us": "/ˌɔːtoʊˈskeɪlɪŋ/",
+      "phonetic_uk": "/ˌɔːtəʊˈskeɪlɪŋ/",
+      "definition": [
+        "n. 自动扩缩容"
+      ],
+      "example": "Configure autoscaling to handle traffic spikes automatically.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "await_it",
+      "word": "await",
+      "phonetic_us": "/əˈweɪt/",
+      "phonetic_uk": "/əˈweɪt/",
+      "definition": [
+        "v. 等待（异步结果）"
+      ],
+      "example": "Await the promise before processing the result.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "b-tree_it",
+      "word": "b-tree",
+      "phonetic_us": "/ˈbiː triː/",
+      "phonetic_uk": "/ˈbiː triː/",
+      "definition": [
+        "n. B树（平衡多路查找树）"
+      ],
+      "example": "Most databases use B-tree indexes for efficient lookups.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "backbone_it",
+      "word": "backbone",
+      "phonetic_us": "/ˈbækboʊn/",
+      "phonetic_uk": "/ˈbækboʊn/",
+      "definition": [
+        "n. 骨干网；主干"
+      ],
+      "example": "The internet backbone carries data between networks.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "backend_it",
+      "word": "backend",
+      "phonetic_us": "/ˌbækˈend/",
+      "phonetic_uk": "/ˌbækˈend/",
+      "definition": [
+        "n. 后端"
+      ],
+      "example": "The backend handles data processing and storage.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "bandwidth_it",
+      "word": "bandwidth",
+      "phonetic_us": "/ˈbændwɪdθ/",
+      "phonetic_uk": "/ˈbændwɪdθ/",
+      "definition": [
+        "n. 带宽"
+      ],
+      "example": "Higher bandwidth allows faster data transmission.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "batch_it",
+      "word": "batch",
+      "phonetic_us": "/bætʃ/",
+      "phonetic_uk": "/bætʃ/",
+      "definition": [
+        "n. 批处理；批次"
+      ],
+      "example": "Process the records in batches of 1000.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "binary_it",
+      "word": "binary",
+      "phonetic_us": "/ˈbaɪnəri/",
+      "phonetic_uk": "/ˈbaɪnəri/",
+      "definition": [
+        "adj. 二进制的",
+        "n. 二进制"
+      ],
+      "example": "Computers process data in binary format.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "boolean_it",
+      "word": "boolean",
+      "phonetic_us": "/ˈbuːliən/",
+      "phonetic_uk": "/ˈbuːliən/",
+      "definition": [
+        "n. 布尔值",
+        "adj. 布尔的"
+      ],
+      "example": "The function returns a boolean value.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "breach_it",
+      "word": "breach",
+      "phonetic_us": "/briːtʃ/",
+      "phonetic_uk": "/briːtʃ/",
+      "definition": [
+        "n. 违规；数据泄露"
+      ],
+      "example": "The data breach exposed millions of user records.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "browser_it",
+      "word": "browser",
+      "phonetic_us": "/ˈbraʊzər/",
+      "phonetic_uk": "/ˈbraʊzər/",
+      "definition": [
+        "n. 浏览器"
+      ],
+      "example": "Chrome is the most widely used web browser.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "bucket_it",
+      "word": "bucket",
+      "phonetic_us": "/ˈbʌkɪt/",
+      "phonetic_uk": "/ˈbʌkɪt/",
+      "definition": [
+        "n. 存储桶"
+      ],
+      "example": "Upload the files to the S3 bucket for storage.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "buffer_it",
+      "word": "buffer",
+      "phonetic_us": "/ˈbʌfər/",
+      "phonetic_uk": "/ˈbʌfər/",
+      "definition": [
+        "n. 缓冲区",
+        "v. 缓冲"
+      ],
+      "example": "The buffer stores data temporarily during transfer.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "bug_it",
+      "word": "bug",
+      "phonetic_us": "/bʌɡ/",
+      "phonetic_uk": "/bʌɡ/",
+      "definition": [
+        "n. 漏洞；程序错误"
+      ],
+      "example": "The team fixed a critical bug before the release.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "bundle_it",
+      "word": "bundle",
+      "phonetic_us": "/ˈbʌndl/",
+      "phonetic_uk": "/ˈbʌndl/",
+      "definition": [
+        "n. 打包文件；捆绑包",
+        "v. 打包"
+      ],
+      "example": "Webpack generates a production bundle with minified code.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "cache_it",
+      "word": "cache",
+      "phonetic_us": "/kæʃ/",
+      "phonetic_uk": "/kæʃ/",
+      "definition": [
+        "n. 缓存",
+        "v. 缓存数据"
+      ],
+      "example": "Clearing the browser cache can resolve loading issues.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "callback_it",
+      "word": "callback",
+      "phonetic_us": "/ˈkɔːlbæk/",
+      "phonetic_uk": "/ˈkɔːlbæk/",
+      "definition": [
+        "n. 回调；回调函数"
+      ],
+      "example": "Register a callback to handle the response.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "cd_it",
+      "word": "CD",
+      "phonetic_us": "/ˌsiː ˈdiː/",
+      "phonetic_uk": "/ˌsiː ˈdiː/",
+      "definition": [
+        "n. 持续交付；持续部署"
+      ],
+      "example": "CD automates the release process to production.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "cdn_it",
+      "word": "CDN",
+      "phonetic_us": "/ˌsiː diː ˈen/",
+      "phonetic_uk": "/ˌsiː diː ˈen/",
+      "definition": [
+        "n. 内容分发网络"
+      ],
+      "example": "Serve static assets through a CDN for faster delivery.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "certificate_it",
+      "word": "certificate",
+      "phonetic_us": "/sərˈtɪfɪkət/",
+      "phonetic_uk": "/səˈtɪfɪkət/",
+      "definition": [
+        "n. 证书"
+      ],
+      "example": "Install an SSL certificate to enable HTTPS.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "ci_it",
+      "word": "CI",
+      "phonetic_us": "/ˌsiː ˈaɪ/",
+      "phonetic_uk": "/ˌsiː ˈaɪ/",
+      "definition": [
+        "n. 持续集成"
+      ],
+      "example": "CI runs automated tests on every code commit.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "cipher_it",
+      "word": "cipher",
+      "phonetic_us": "/ˈsaɪfər/",
+      "phonetic_uk": "/ˈsaɪfər/",
+      "definition": [
+        "n. 密码；加密算法"
+      ],
+      "example": "AES is a widely used symmetric cipher.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "class_it",
+      "word": "class",
+      "phonetic_us": "/klæs/",
+      "phonetic_uk": "/klɑːs/",
+      "definition": [
+        "n. 类；类别"
+      ],
+      "example": "Define a class to encapsulate data and behavior.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "closure_it",
+      "word": "closure",
+      "phonetic_us": "/ˈkloʊʒər/",
+      "phonetic_uk": "/ˈkləʊʒər/",
+      "definition": [
+        "n. 闭包"
+      ],
+      "example": "A closure captures variables from its outer scope.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "cloud_it",
+      "word": "cloud",
+      "phonetic_us": "/klaʊd/",
+      "phonetic_uk": "/klaʊd/",
+      "definition": [
+        "n. 云；云计算"
+      ],
+      "example": "Many companies have migrated their services to the cloud.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "cluster_it",
+      "word": "cluster",
+      "phonetic_us": "/ˈklʌstər/",
+      "phonetic_uk": "/ˈklʌstər/",
+      "definition": [
+        "n. 集群"
+      ],
+      "example": "The database cluster ensures high availability.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "collection_it",
+      "word": "collection",
+      "phonetic_us": "/kəˈlekʃn/",
+      "phonetic_uk": "/kəˈlekʃn/",
+      "definition": [
+        "n. 集合；文档集合"
+      ],
+      "example": "MongoDB stores documents in a collection.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "compile_it",
+      "word": "compile",
+      "phonetic_us": "/kəmˈpaɪl/",
+      "phonetic_uk": "/kəmˈpaɪl/",
+      "definition": [
+        "v. 编译"
+      ],
+      "example": "Compile the code before running it.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "compiler_it",
+      "word": "compiler",
+      "phonetic_us": "/kəmˈpaɪlər/",
+      "phonetic_uk": "/kəmˈpaɪlər/",
+      "definition": [
+        "n. 编译器"
+      ],
+      "example": "The compiler translates source code into machine code.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "component_it",
+      "word": "component",
+      "phonetic_us": "/kəmˈpoʊnənt/",
+      "phonetic_uk": "/kəmˈpəʊnənt/",
+      "definition": [
+        "n. 组件；组成部分"
+      ],
+      "example": "Each UI component should be reusable and testable.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "concurrency_it",
+      "word": "concurrency",
+      "phonetic_us": "/kənˈkɜːrənsi/",
+      "phonetic_uk": "/kənˈkʌrənsi/",
+      "definition": [
+        "n. 并发；并发性"
+      ],
+      "example": "Concurrency allows multiple tasks to run simultaneously.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "config_it",
+      "word": "config",
+      "phonetic_us": "/kənˈfɪɡ/",
+      "phonetic_uk": "/kənˈfɪɡ/",
+      "definition": [
+        "n. 配置；配置文件"
+      ],
+      "example": "Update the config file with the new database URL.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "constant_it",
+      "word": "constant",
+      "phonetic_us": "/ˈkɑːnstənt/",
+      "phonetic_uk": "/ˈkɒnstənt/",
+      "definition": [
+        "n. 常量",
+        "adj. 恒定的"
+      ],
+      "example": "Define constants for values that never change.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "constructor_it",
+      "word": "constructor",
+      "phonetic_us": "/kənˈstrʌktər/",
+      "phonetic_uk": "/kənˈstrʌktər/",
+      "definition": [
+        "n. 构造函数；构造器"
+      ],
+      "example": "The constructor initializes the object with default values.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "container_it",
+      "word": "container",
+      "phonetic_us": "/kənˈteɪnər/",
+      "phonetic_uk": "/kənˈteɪnər/",
+      "definition": [
+        "n. 容器"
+      ],
+      "example": "Docker containers ensure consistent deployment environments.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "containerization_it",
+      "word": "containerization",
+      "phonetic_us": "/kənˌteɪnəraɪˈzeɪʃn/",
+      "phonetic_uk": "/kənˌteɪnəraɪˈzeɪʃn/",
+      "definition": [
+        "n. 容器化"
+      ],
+      "example": "Containerization simplifies application deployment and scaling.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "csrf_it",
+      "word": "CSRF",
+      "phonetic_us": "/ˌsiː es ɑːr ˈef/",
+      "phonetic_uk": "/ˌsiː es ɑːr ˈef/",
+      "definition": [
+        "n. 跨站请求伪造"
+      ],
+      "example": "Implement CSRF tokens to prevent cross-site request forgery.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "css_it",
+      "word": "CSS",
+      "phonetic_us": "/ˌsiː es ˈes/",
+      "phonetic_uk": "/ˌsiː es ˈes/",
+      "definition": [
+        "n. 层叠样式表"
+      ],
+      "example": "CSS controls the layout and appearance of web pages.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "cursor_it",
+      "word": "cursor",
+      "phonetic_us": "/ˈkɜːrsər/",
+      "phonetic_uk": "/ˈkɜːsər/",
+      "definition": [
+        "n. 游标；光标"
+      ],
+      "example": "Use a cursor to iterate through large query results.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "database_it",
+      "word": "database",
+      "phonetic_us": "/ˈdeɪtəbeɪs/",
+      "phonetic_uk": "/ˈdeɪtəbeɪs/",
+      "definition": [
+        "n. 数据库"
+      ],
+      "example": "User records are stored in a relational database.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "dataset_it",
+      "word": "dataset",
+      "phonetic_us": "/ˈdeɪtəset/",
+      "phonetic_uk": "/ˈdeɪtəset/",
+      "definition": [
+        "n. 数据集"
+      ],
+      "example": "The model was trained on a large dataset.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "ddos_it",
+      "word": "DDoS",
+      "phonetic_us": "/ˌdiː dɒs/",
+      "phonetic_uk": "/ˌdiː dɒs/",
+      "definition": [
+        "n. 分布式拒绝服务攻击"
+      ],
+      "example": "The website was taken down by a DDoS attack.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "debug_it",
+      "word": "debug",
+      "phonetic_us": "/ˌdiːˈbʌɡ/",
+      "phonetic_uk": "/ˌdiːˈbʌɡ/",
+      "definition": [
+        "v. 调试；排除故障"
+      ],
+      "example": "It took hours to debug the memory leak issue.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "decorator_it",
+      "word": "decorator",
+      "phonetic_us": "/ˈdekəreɪtər/",
+      "phonetic_uk": "/ˈdekəreɪtər/",
+      "definition": [
+        "n. 装饰器"
+      ],
+      "example": "Use a decorator to add logging to the function.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "dependency_it",
+      "word": "dependency",
+      "phonetic_us": "/dɪˈpendənsi/",
+      "phonetic_uk": "/dɪˈpendənsi/",
+      "definition": [
+        "n. 依赖；依赖项"
+      ],
+      "example": "Update the project dependencies to the latest versions.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "deploy_it",
+      "word": "deploy",
+      "phonetic_us": "/dɪˈplɔɪ/",
+      "phonetic_uk": "/dɪˈplɔɪ/",
+      "definition": [
+        "v. 部署；发布"
+      ],
+      "example": "We deploy new features every Friday.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "deprecated_it",
+      "word": "deprecated",
+      "phonetic_us": "/ˈdeprəkeɪtɪd/",
+      "phonetic_uk": "/ˈdeprɪkeɪtɪd/",
+      "definition": [
+        "adj. 已弃用的"
+      ],
+      "example": "This API endpoint is deprecated and will be removed.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "devops_it",
+      "word": "DevOps",
+      "phonetic_us": "/ˈdevɒps/",
+      "phonetic_uk": "/ˈdevɒps/",
+      "definition": [
+        "n. 开发运维一体化"
+      ],
+      "example": "DevOps practices bridge the gap between development and operations.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "dns_it",
+      "word": "DNS",
+      "phonetic_us": "/ˌdiː en ˈes/",
+      "phonetic_uk": "/ˌdiː en ˈes/",
+      "definition": [
+        "n. 域名系统"
+      ],
+      "example": "DNS resolves domain names to IP addresses.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "document_it",
+      "word": "document",
+      "phonetic_us": "/ˈdɑːkjumənt/",
+      "phonetic_uk": "/ˈdɒkjumənt/",
+      "definition": [
+        "n. 文档；文档记录"
+      ],
+      "example": "Each record in MongoDB is stored as a document.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "dom_it",
+      "word": "DOM",
+      "phonetic_us": "/dɒm/",
+      "phonetic_uk": "/dɒm/",
+      "definition": [
+        "n. 文档对象模型"
+      ],
+      "example": "Manipulate the DOM to update the page dynamically.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "domain_it",
+      "word": "domain",
+      "phonetic_us": "/doʊˈmeɪn/",
+      "phonetic_uk": "/dəˈmeɪn/",
+      "definition": [
+        "n. 域名；领域"
+      ],
+      "example": "Register a domain name for your website.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "download_it",
+      "word": "download",
+      "phonetic_us": "/ˈdaʊnloʊd/",
+      "phonetic_uk": "/ˈdaʊnləʊd/",
+      "definition": [
+        "v. 下载",
+        "n. 下载"
+      ],
+      "example": "Download the latest version of the app.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "elastic_it",
+      "word": "elastic",
+      "phonetic_us": "/ɪˈlæstɪk/",
+      "phonetic_uk": "/ɪˈlæstɪk/",
+      "definition": [
+        "adj. 弹性的；可伸缩的"
+      ],
+      "example": "Elastic scaling adjusts resources based on demand.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "embedding_it",
+      "word": "embedding",
+      "phonetic_us": "/emˈbedɪŋ/",
+      "phonetic_uk": "/emˈbedɪŋ/",
+      "definition": [
+        "n. 嵌入；词嵌入"
+      ],
+      "example": "Word embeddings capture semantic meaning of text.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "encrypt_it",
+      "word": "encrypt",
+      "phonetic_us": "/ɪnˈkrɪpt/",
+      "phonetic_uk": "/ɪnˈkrɪpt/",
+      "definition": [
+        "v. 加密"
+      ],
+      "example": "All passwords must be encrypted before storage.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "endpoint_it",
+      "word": "endpoint",
+      "phonetic_us": "/ˈendpɔɪnt/",
+      "phonetic_uk": "/ˈendpɔɪnt/",
+      "definition": [
+        "n. 端点；接口地址"
+      ],
+      "example": "The API endpoint returns JSON-formatted data.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "enum_it",
+      "word": "enum",
+      "phonetic_us": "/ˈiːnəm/",
+      "phonetic_uk": "/ˈiːnəm/",
+      "definition": [
+        "n. 枚举类型"
+      ],
+      "example": "Define an enum for the possible status values.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "exception_it",
+      "word": "exception",
+      "phonetic_us": "/ɪkˈsepʃn/",
+      "phonetic_uk": "/ɪkˈsepʃn/",
+      "definition": [
+        "n. 异常；例外"
+      ],
+      "example": "Handle exceptions gracefully to prevent app crashes.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "failover_it",
+      "word": "failover",
+      "phonetic_us": "/ˈfeɪloʊvər/",
+      "phonetic_uk": "/ˈfeɪləʊvər/",
+      "definition": [
+        "n. 故障转移"
+      ],
+      "example": "Automatic failover ensures service continuity during outages.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "feature_it",
+      "word": "feature",
+      "phonetic_us": "/ˈfiːtʃər/",
+      "phonetic_uk": "/ˈfiːtʃər/",
+      "definition": [
+        "n. 特征；功能"
+      ],
+      "example": "Select the most relevant features for the model.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "firewall_it",
+      "word": "firewall",
+      "phonetic_us": "/ˈfaɪərwɔːl/",
+      "phonetic_uk": "/ˈfaɪərwɔːl/",
+      "definition": [
+        "n. 防火墙"
+      ],
+      "example": "The firewall blocks unauthorized network access.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "float_it",
+      "word": "float",
+      "phonetic_us": "/floʊt/",
+      "phonetic_uk": "/fləʊt/",
+      "definition": [
+        "n. 浮点数",
+        "v. 浮动"
+      ],
+      "example": "Use float for decimal number calculations.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "framework_it",
+      "word": "framework",
+      "phonetic_us": "/ˈfreɪmwɜːrk/",
+      "phonetic_uk": "/ˈfreɪmwɜːk/",
+      "definition": [
+        "n. 框架"
+      ],
+      "example": "React is a popular frontend framework.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "frontend_it",
+      "word": "frontend",
+      "phonetic_us": "/ˌfrʌntˈend/",
+      "phonetic_uk": "/ˌfrʌntˈend/",
+      "definition": [
+        "n. 前端"
+      ],
+      "example": "The frontend provides an interactive user interface.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "function_it",
+      "word": "function",
+      "phonetic_us": "/ˈfʌŋkʃn/",
+      "phonetic_uk": "/ˈfʌŋkʃn/",
+      "definition": [
+        "n. 函数；功能"
+      ],
+      "example": "This function calculates the total price.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "gateway_it",
+      "word": "gateway",
+      "phonetic_us": "/ˈɡeɪtweɪ/",
+      "phonetic_uk": "/ˈɡeɪtweɪ/",
+      "definition": [
+        "n. 网关"
+      ],
+      "example": "The API gateway routes requests to the appropriate service.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "generics_it",
+      "word": "generics",
+      "phonetic_us": "/dʒəˈnerɪks/",
+      "phonetic_uk": "/dʒəˈnerɪks/",
+      "definition": [
+        "n. 泛型"
+      ],
+      "example": "Generics enable type-safe reusable code.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "git_it",
+      "word": "git",
+      "phonetic_us": "/ɡɪt/",
+      "phonetic_uk": "/ɡɪt/",
+      "definition": [
+        "n. 分布式版本控制系统"
+      ],
+      "example": "Push your changes to the git repository.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "gradient_it",
+      "word": "gradient",
+      "phonetic_us": "/ˈɡreɪdiənt/",
+      "phonetic_uk": "/ˈɡreɪdiənt/",
+      "definition": [
+        "n. 梯度"
+      ],
+      "example": "Gradient descent optimizes the model parameters.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "handshake_it",
+      "word": "handshake",
+      "phonetic_us": "/ˈhændʃeɪk/",
+      "phonetic_uk": "/ˈhændʃeɪk/",
+      "definition": [
+        "n. 握手（通信协议）"
+      ],
+      "example": "The TLS handshake establishes a secure connection.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "hardware_it",
+      "word": "hardware",
+      "phonetic_us": "/ˈhɑːrdwer/",
+      "phonetic_uk": "/ˈhɑːdweər/",
+      "definition": [
+        "n. 硬件"
+      ],
+      "example": "Upgrade the hardware to improve performance.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "hash_it",
+      "word": "hash",
+      "phonetic_us": "/hæʃ/",
+      "phonetic_uk": "/hæʃ/",
+      "definition": [
+        "n. 哈希；散列",
+        "v. 哈希计算"
+      ],
+      "example": "Store password hashes instead of plain text.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "heap_it",
+      "word": "heap",
+      "phonetic_us": "/hiːp/",
+      "phonetic_uk": "/hiːp/",
+      "definition": [
+        "n. 堆（内存区域或数据结构）"
+      ],
+      "example": "Objects are allocated on the heap during runtime.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "helm_it",
+      "word": "helm",
+      "phonetic_us": "/helm/",
+      "phonetic_uk": "/helm/",
+      "definition": [
+        "n. Helm（Kubernetes包管理器）"
+      ],
+      "example": "Use Helm charts to manage Kubernetes deployments.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "hmac_it",
+      "word": "HMAC",
+      "phonetic_us": "/ˌeɪtʃ mæk/",
+      "phonetic_uk": "/ˌeɪtʃ mæk/",
+      "definition": [
+        "n. 基于哈希的消息认证码"
+      ],
+      "example": "HMAC verifies the integrity and authenticity of messages.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "host_it",
+      "word": "host",
+      "phonetic_us": "/hoʊst/",
+      "phonetic_uk": "/həʊst/",
+      "definition": [
+        "n. 主机；宿主",
+        "v. 托管；主机托管"
+      ],
+      "example": "The application is hosted on AWS.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "http_it",
+      "word": "HTTP",
+      "phonetic_us": "/ˌeɪtʃ tiː tiː ˈpiː/",
+      "phonetic_uk": "/ˌeɪtʃ tiː tiː ˈpiː/",
+      "definition": [
+        "n. 超文本传输协议"
+      ],
+      "example": "HTTP is the foundation of data communication on the web.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "hydration_it",
+      "word": "hydration",
+      "phonetic_us": "/haɪˈdreɪʃn/",
+      "phonetic_uk": "/haɪˈdreɪʃn/",
+      "definition": [
+        "n. 水合（前端渲染）"
+      ],
+      "example": "Hydration attaches event listeners to server-rendered HTML.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "icmp_it",
+      "word": "ICMP",
+      "phonetic_us": "/ˌaɪ siː em ˈpiː/",
+      "phonetic_uk": "/ˌaɪ siː em ˈpiː/",
+      "definition": [
+        "n. 互联网控制消息协议"
+      ],
+      "example": "ICMP is used by network diagnostics like ping.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "index_it",
+      "word": "index",
+      "phonetic_us": "/ˈɪndeks/",
+      "phonetic_uk": "/ˈɪndeks/",
+      "definition": [
+        "n. 索引",
+        "v. 建立索引"
+      ],
+      "example": "Create an index on the column to speed up queries.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "infrastructure_it",
+      "word": "infrastructure",
+      "phonetic_us": "/ˈɪnfrəstrʌktʃər/",
+      "phonetic_uk": "/ˈɪnfrəstrʌktʃər/",
+      "definition": [
+        "n. 基础设施"
+      ],
+      "example": "Cloud infrastructure reduces the need for physical hardware.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "inheritance_it",
+      "word": "inheritance",
+      "phonetic_us": "/ɪnˈherɪtəns/",
+      "phonetic_uk": "/ɪnˈherɪtəns/",
+      "definition": [
+        "n. 继承"
+      ],
+      "example": "Inheritance allows a class to reuse code from a parent class.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "instance_it",
+      "word": "instance",
+      "phonetic_us": "/ˈɪnstəns/",
+      "phonetic_uk": "/ˈɪnstəns/",
+      "definition": [
+        "n. 实例"
+      ],
+      "example": "Create a new instance of the class.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "integer_it",
+      "word": "integer",
+      "phonetic_us": "/ˈɪntɪdʒər/",
+      "phonetic_uk": "/ˈɪntɪdʒər/",
+      "definition": [
+        "n. 整数"
+      ],
+      "example": "The variable is declared as an integer type.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "interface_it",
+      "word": "interface",
+      "phonetic_us": "/ˈɪntərfeɪs/",
+      "phonetic_uk": "/ˈɪntəfeɪs/",
+      "definition": [
+        "n. 接口；界面"
+      ],
+      "example": "A user-friendly interface improves the experience.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "ip_it",
+      "word": "IP",
+      "phonetic_us": "/ˌaɪ ˈpiː/",
+      "phonetic_uk": "/ˌaɪ ˈpiː/",
+      "definition": [
+        "n. 互联网协议；IP地址"
+      ],
+      "example": "The server's IP address is 192.168.1.1.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "iteration_it",
+      "word": "iteration",
+      "phonetic_us": "/ˌɪtəˈreɪʃn/",
+      "phonetic_uk": "/ˌɪtəˈreɪʃn/",
+      "definition": [
+        "n. 迭代；循环"
+      ],
+      "example": "Each iteration refines the model's accuracy.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "jenkins_it",
+      "word": "jenkins",
+      "phonetic_us": "/ˈdʒɛŋkɪnz/",
+      "phonetic_uk": "/ˈdʒɛŋkɪnz/",
+      "definition": [
+        "n. Jenkins（持续集成工具）"
+      ],
+      "example": "Jenkins automates the build and test pipeline.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "join_it",
+      "word": "join",
+      "phonetic_us": "/dʒɔɪn/",
+      "phonetic_uk": "/dʒɔɪn/",
+      "definition": [
+        "n. 连接查询",
+        "v. 连接；加入"
+      ],
+      "example": "Use an inner join to combine data from two tables.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "kernel_it",
+      "word": "kernel",
+      "phonetic_us": "/ˈkɜːrnl/",
+      "phonetic_uk": "/ˈkɜːnl/",
+      "definition": [
+        "n. 内核"
+      ],
+      "example": "The Linux kernel manages system resources.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "kubectl_it",
+      "word": "kubectl",
+      "phonetic_us": "/kjuːbˈktl/",
+      "phonetic_uk": "/kjuːbˈktl/",
+      "definition": [
+        "n. kubectl（Kubernetes命令行工具）"
+      ],
+      "example": "Use kubectl to deploy and manage applications on Kubernetes.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "kubernetes_it",
+      "word": "kubernetes",
+      "phonetic_us": "/ˌkuːbərˈneɪtɪs/",
+      "phonetic_uk": "/ˌkuːbərˈneɪtɪs/",
+      "definition": [
+        "n. Kubernetes（容器编排平台）"
+      ],
+      "example": "Kubernetes manages containerized workloads at scale.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "label_it",
+      "word": "label",
+      "phonetic_us": "/ˈleɪbl/",
+      "phonetic_uk": "/ˈleɪbl/",
+      "definition": [
+        "n. 标签；标注",
+        "v. 标注"
+      ],
+      "example": "Assign labels to training data for supervised learning.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "lambda_it",
+      "word": "lambda",
+      "phonetic_us": "/ˈlæmdə/",
+      "phonetic_uk": "/ˈlæmdə/",
+      "definition": [
+        "n. Lambda表达式；匿名函数"
+      ],
+      "example": "Use a lambda function for short inline operations.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "latency_it",
+      "word": "latency",
+      "phonetic_us": "/ˈleɪtənsi/",
+      "phonetic_uk": "/ˈleɪtənsi/",
+      "definition": [
+        "n. 延迟；潜伏时间"
+      ],
+      "example": "Low latency is critical for real-time applications.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "lazy_it",
+      "word": "lazy",
+      "phonetic_us": "/ˈleɪzi/",
+      "phonetic_uk": "/ˈleɪzi/",
+      "definition": [
+        "adj. 懒加载的；延迟的"
+      ],
+      "example": "Lazy loading improves initial page performance.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "library_it",
+      "word": "library",
+      "phonetic_us": "/ˈlaɪbreri/",
+      "phonetic_uk": "/ˈlaɪbri/",
+      "definition": [
+        "n. 库；代码库"
+      ],
+      "example": "Import the math library to use advanced functions.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "load_it",
+      "word": "load",
+      "phonetic_us": "/loʊd/",
+      "phonetic_uk": "/ləʊd/",
+      "definition": [
+        "v. 加载；装载",
+        "n. 负载"
+      ],
+      "example": "The page takes too long to load.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "loadbalancer_it",
+      "word": "loadbalancer",
+      "phonetic_us": "/loʊdˈbælənsər/",
+      "phonetic_uk": "/ləʊdˈbælənsər/",
+      "definition": [
+        "n. 负载均衡器"
+      ],
+      "example": "The loadbalancer distributes traffic across multiple servers.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "logs_it",
+      "word": "log",
+      "phonetic_us": "/lɔːɡ/",
+      "phonetic_uk": "/lɒɡ/",
+      "definition": [
+        "n. 日志",
+        "v. 记录日志"
+      ],
+      "example": "Check the server logs for error details.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "logistic_it",
+      "word": "logistic",
+      "phonetic_us": "/ləˈdʒɪstɪk/",
+      "phonetic_uk": "/ləˈdʒɪstɪk/",
+      "definition": [
+        "adj. 逻辑的",
+        "n. 逻辑回归"
+      ],
+      "example": "Logistic regression is used for binary classification.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "loop_it",
+      "word": "loop",
+      "phonetic_us": "/luːp/",
+      "phonetic_uk": "/luːp/",
+      "definition": [
+        "n. 循环",
+        "v. 循环执行"
+      ],
+      "example": "Use a for loop to iterate over the array.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "malware_it",
+      "word": "malware",
+      "phonetic_us": "/ˈmælwer/",
+      "phonetic_uk": "/ˈmælweər/",
+      "definition": [
+        "n. 恶意软件"
+      ],
+      "example": "Antivirus software detects and removes malware.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "microservice_it",
+      "word": "microservice",
+      "phonetic_us": "/ˈmaɪkroʊsɜːrvɪs/",
+      "phonetic_uk": "/ˈmaɪkrəʊsɜːvɪs/",
+      "definition": [
+        "n. 微服务"
+      ],
+      "example": "Each microservice handles a specific business capability.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "middleware_it",
+      "word": "middleware",
+      "phonetic_us": "/ˈmɪdlwer/",
+      "phonetic_uk": "/ˈmɪdlweər/",
+      "definition": [
+        "n. 中间件"
+      ],
+      "example": "Authentication middleware verifies user tokens.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "migration_it",
+      "word": "migration",
+      "phonetic_us": "/maɪˈɡreɪʃn/",
+      "phonetic_uk": "/maɪˈɡreɪʃn/",
+      "definition": [
+        "n. 迁移"
+      ],
+      "example": "Database migration added the new column.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "module_it",
+      "word": "module",
+      "phonetic_us": "/ˈmɑːdʒuːl/",
+      "phonetic_uk": "/ˈmɒdjuːl/",
+      "definition": [
+        "n. 模块"
+      ],
+      "example": "Each module handles a specific feature.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "monitor_it",
+      "word": "monitor",
+      "phonetic_us": "/ˈmɑːnɪtər/",
+      "phonetic_uk": "/ˈmɒnɪtər/",
+      "definition": [
+        "n. 显示器；监控",
+        "v. 监控"
+      ],
+      "example": "Monitor the system performance in real time.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "multi-tenant_it",
+      "word": "multi-tenant",
+      "phonetic_us": "/ˌmʌltiˈtenənt/",
+      "phonetic_uk": "/ˌmʌltiˈtenənt/",
+      "definition": [
+        "adj. 多租户的"
+      ],
+      "example": "A multi-tenant architecture serves multiple customers on one platform.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "multicast_it",
+      "word": "multicast",
+      "phonetic_us": "/ˈmʌltikæst/",
+      "phonetic_uk": "/ˈmʌltikɑːst/",
+      "definition": [
+        "n. 多播；组播"
+      ],
+      "example": "Multicast sends data to a group of recipients simultaneously.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "namespace_it",
+      "word": "namespace",
+      "phonetic_us": "/ˈneɪmspeɪs/",
+      "phonetic_uk": "/ˈneɪmspeɪs/",
+      "definition": [
+        "n. 命名空间"
+      ],
+      "example": "Use namespaces to avoid naming conflicts in large projects.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "nat_it",
+      "word": "NAT",
+      "phonetic_us": "/næt/",
+      "phonetic_uk": "/næt/",
+      "definition": [
+        "n. 网络地址转换"
+      ],
+      "example": "NAT allows multiple devices to share a single public IP.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "network_it",
+      "word": "network",
+      "phonetic_us": "/ˈnetwɜːrk/",
+      "phonetic_uk": "/ˈnetwɜːk/",
+      "definition": [
+        "n. 网络"
+      ],
+      "example": "The network connection was interrupted.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "neural_it",
+      "word": "neural",
+      "phonetic_us": "/ˈnʊrəl/",
+      "phonetic_uk": "/ˈnjʊərəl/",
+      "definition": [
+        "adj. 神经的；神经网络的"
+      ],
+      "example": "Neural networks learn patterns from training data.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "nginx_it",
+      "word": "nginx",
+      "phonetic_us": "/ˈendʒɪn eks/",
+      "phonetic_uk": "/ˈendʒɪn eks/",
+      "definition": [
+        "n. Nginx（Web服务器）"
+      ],
+      "example": "Nginx serves as a reverse proxy and load balancer.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "node_it",
+      "word": "node",
+      "phonetic_us": "/noʊd/",
+      "phonetic_uk": "/nəʊd/",
+      "definition": [
+        "n. 节点"
+      ],
+      "example": "Each node in the cluster stores a copy of the data.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "nosql_it",
+      "word": "NoSQL",
+      "phonetic_us": "/noʊ ˌes kjuː ˈel/",
+      "phonetic_uk": "/nəʊ ˌes kjuː ˈel/",
+      "definition": [
+        "n. 非关系型数据库"
+      ],
+      "example": "NoSQL databases are optimized for flexible schema designs.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "null_it",
+      "word": "null",
+      "phonetic_us": "/nʌl/",
+      "phonetic_uk": "/nʌl/",
+      "definition": [
+        "n. 空值",
+        "adj. 空的"
+      ],
+      "example": "Check for null values before processing the data.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "oauth_it",
+      "word": "OAuth",
+      "phonetic_us": "/oʊˈɔːθ/",
+      "phonetic_uk": "/əʊˈɔːθ/",
+      "definition": [
+        "n. 开放授权协议"
+      ],
+      "example": "OAuth allows users to grant third-party access securely.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "object_it",
+      "word": "object",
+      "phonetic_us": "/ˈɑːbdʒekt/",
+      "phonetic_uk": "/ˈɒbdʒɪkt/",
+      "definition": [
+        "n. 对象；物体"
+      ],
+      "example": "Everything in Python is an object.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "orchestration_it",
+      "word": "orchestration",
+      "phonetic_us": "/ˌɔːrkɪˈstreɪʃn/",
+      "phonetic_uk": "/ˌɔːkɪˈstreɪʃn/",
+      "definition": [
+        "n. 编排；容器编排"
+      ],
+      "example": "Container orchestration manages deployment and scaling automatically.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "overfitting_it",
+      "word": "overfitting",
+      "phonetic_us": "/ˌoʊvərˈfɪtɪŋ/",
+      "phonetic_uk": "/ˌəʊvəˈfɪtɪŋ/",
+      "definition": [
+        "n. 过拟合"
+      ],
+      "example": "Regularization techniques help prevent overfitting.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "overflow_it",
+      "word": "overflow",
+      "phonetic_us": "/ˌoʊvərˈfloʊ/",
+      "phonetic_uk": "/ˌəʊvəˈfləʊ/",
+      "definition": [
+        "n. 溢出",
+        "v. 溢出"
+      ],
+      "example": "A stack overflow error crashed the program.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "override_it",
+      "word": "override",
+      "phonetic_us": "/ˌoʊvərˈraɪd/",
+      "phonetic_uk": "/ˌəʊvəˈraɪd/",
+      "definition": [
+        "v. 覆盖；重写"
+      ],
+      "example": "Override the method in the subclass to change its behavior.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "packet_it",
+      "word": "packet",
+      "phonetic_us": "/ˈpækɪt/",
+      "phonetic_uk": "/ˈpækɪt/",
+      "definition": [
+        "n. 数据包"
+      ],
+      "example": "Each packet contains a header and payload.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "parameter_it",
+      "word": "parameter",
+      "phonetic_us": "/pəˈræmɪtər/",
+      "phonetic_uk": "/pəˈræmɪtər/",
+      "definition": [
+        "n. 参数"
+      ],
+      "example": "Pass the correct parameters to the function.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "parse_it",
+      "word": "parse",
+      "phonetic_us": "/pɑːrs/",
+      "phonetic_uk": "/pɑːz/",
+      "definition": [
+        "v. 解析"
+      ],
+      "example": "The parser converts JSON text into objects.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "partition_it",
+      "word": "partition",
+      "phonetic_us": "/pɑːrˈtɪʃn/",
+      "phonetic_uk": "/pɑːˈtɪʃn/",
+      "definition": [
+        "n. 分区",
+        "v. 分区"
+      ],
+      "example": "Table partitioning improves query performance on large datasets.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "patch_it",
+      "word": "patch",
+      "phonetic_us": "/pætʃ/",
+      "phonetic_uk": "/pætʃ/",
+      "definition": [
+        "n. 补丁",
+        "v. 修补"
+      ],
+      "example": "Apply the security patch immediately.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "payload_it",
+      "word": "payload",
+      "phonetic_us": "/ˈpeɪloʊd/",
+      "phonetic_uk": "/ˈpeɪləʊd/",
+      "definition": [
+        "n. 载荷；有效载荷"
+      ],
+      "example": "The payload contains the actual data being transmitted.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "penetration_it",
+      "word": "penetration",
+      "phonetic_us": "/ˌpenəˈtreɪʃn/",
+      "phonetic_uk": "/ˌpenɪˈtreɪʃn/",
+      "definition": [
+        "n. 渗透；渗透测试"
+      ],
+      "example": "Penetration testing identifies security vulnerabilities.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "phishing_it",
+      "word": "phishing",
+      "phonetic_us": "/ˈfɪʃɪŋ/",
+      "phonetic_uk": "/ˈfɪʃɪŋ/",
+      "definition": [
+        "n. 钓鱼攻击"
+      ],
+      "example": "Educate employees to recognize phishing emails.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "ping_it",
+      "word": "ping",
+      "phonetic_us": "/pɪŋ/",
+      "phonetic_uk": "/pɪŋ/",
+      "definition": [
+        "v. ping（测试连通性）",
+        "n. ping命令"
+      ],
+      "example": "Ping the server to check if it is reachable.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "pipeline_it",
+      "word": "pipeline",
+      "phonetic_us": "/ˈpaɪplaɪn/",
+      "phonetic_uk": "/ˈpaɪplaɪn/",
+      "definition": [
+        "n. 管道；流水线"
+      ],
+      "example": "Set up a CI/CD pipeline for automated deployment.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "platform_it",
+      "word": "platform",
+      "phonetic_us": "/ˈplætfɔːrm/",
+      "phonetic_uk": "/ˈplætfɔːm/",
+      "definition": [
+        "n. 平台"
+      ],
+      "example": "iOS and Android are the two major mobile platforms.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "plugin_it",
+      "word": "plugin",
+      "phonetic_us": "/ˈplʌɡɪn/",
+      "phonetic_uk": "/ˈplʌɡɪn/",
+      "definition": [
+        "n. 插件"
+      ],
+      "example": "Install the plugin to add new features.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "pointer_it",
+      "word": "pointer",
+      "phonetic_us": "/ˈpɔɪntər/",
+      "phonetic_uk": "/ˈpɔɪntər/",
+      "definition": [
+        "n. 指针"
+      ],
+      "example": "A pointer stores the memory address of a variable.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "polymorphism_it",
+      "word": "polymorphism",
+      "phonetic_us": "/ˌpɑːliˈmɔːrfɪzəm/",
+      "phonetic_uk": "/ˌpɒliˈmɔːfɪzəm/",
+      "definition": [
+        "n. 多态"
+      ],
+      "example": "Polymorphism allows objects to be treated as instances of their parent class.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "prediction_it",
+      "word": "prediction",
+      "phonetic_us": "/prɪˈdɪkʃn/",
+      "phonetic_uk": "/prɪˈdɪkʃn/",
+      "definition": [
+        "n. 预测"
+      ],
+      "example": "The model generates predictions on new input data.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "prefetch_it",
+      "word": "prefetch",
+      "phonetic_us": "/priːˈfetʃ/",
+      "phonetic_uk": "/priːˈfetʃ/",
+      "definition": [
+        "v. 预取",
+        "n. 预取"
+      ],
+      "example": "Prefetch resources to reduce loading time for the next page.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "protocol_it",
+      "word": "protocol",
+      "phonetic_us": "/ˈproʊtəkɔːl/",
+      "phonetic_uk": "/ˈprəʊtəkɒl/",
+      "definition": [
+        "n. 协议"
+      ],
+      "example": "HTTPS is a secure communication protocol.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "proxy_it",
+      "word": "proxy",
+      "phonetic_us": "/ˈprɑːksi/",
+      "phonetic_uk": "/ˈprɒksi/",
+      "definition": [
+        "n. 代理；代理服务器"
+      ],
+      "example": "Configure the proxy server to access restricted resources.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "query_it",
+      "word": "query",
+      "phonetic_us": "/ˈkwɪri/",
+      "phonetic_uk": "/ˈkwɪəri/",
+      "definition": [
+        "n. 查询",
+        "v. 查询数据"
+      ],
+      "example": "Write an SQL query to retrieve user data.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "queue_it",
+      "word": "queue",
+      "phonetic_us": "/kjuː/",
+      "phonetic_uk": "/kjuː/",
+      "definition": [
+        "n. 队列",
+        "v. 排队"
+      ],
+      "example": "Messages are processed in a message queue.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "ransomware_it",
+      "word": "ransomware",
+      "phonetic_us": "/ˈrænsəmwer/",
+      "phonetic_uk": "/ˈrɑːnsəmweər/",
+      "definition": [
+        "n. 勒索软件"
+      ],
+      "example": "Ransomware encrypts files and demands payment for decryption.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "recursive_it",
+      "word": "recursive",
+      "phonetic_us": "/rɪˈkɜːrsɪv/",
+      "phonetic_uk": "/rɪˈkɜːsɪv/",
+      "definition": [
+        "adj. 递归的"
+      ],
+      "example": "A recursive function calls itself.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "refactor_it",
+      "word": "refactor",
+      "phonetic_us": "/riːˈfæktər/",
+      "phonetic_uk": "/riːˈfæktər/",
+      "definition": [
+        "v. 重构"
+      ],
+      "example": "Refactor the code to improve readability.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "reference_it",
+      "word": "reference",
+      "phonetic_us": "/ˈrefərəns/",
+      "phonetic_uk": "/ˈrefrəns/",
+      "definition": [
+        "n. 引用；参考"
+      ],
+      "example": "Pass the object by reference to avoid copying.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "region_it",
+      "word": "region",
+      "phonetic_us": "/ˈriːdʒən/",
+      "phonetic_uk": "/ˈriːdʒən/",
+      "definition": [
+        "n. 区域（云服务）"
+      ],
+      "example": "Deploy resources in the region closest to your users.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "registry_it",
+      "word": "registry",
+      "phonetic_us": "/ˈredʒɪstri/",
+      "phonetic_uk": "/ˈredʒɪstri/",
+      "definition": [
+        "n. 注册表；镜像仓库"
+      ],
+      "example": "Push the image to the container registry.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "regression_it",
+      "word": "regression",
+      "phonetic_us": "/rɪˈɡreʃn/",
+      "phonetic_uk": "/rɪˈɡreʃn/",
+      "definition": [
+        "n. 回归；回归分析"
+      ],
+      "example": "Linear regression models the relationship between variables.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "reinforcement_it",
+      "word": "reinforcement",
+      "phonetic_us": "/ˌriːɪnˈfɔːrsmənt/",
+      "phonetic_uk": "/ˌriːɪnˈfɔːsmənt/",
+      "definition": [
+        "n. 强化（学习）"
+      ],
+      "example": "Reinforcement learning trains agents through rewards and penalties.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "render_it",
+      "word": "render",
+      "phonetic_us": "/ˈrendər/",
+      "phonetic_uk": "/ˈrendər/",
+      "definition": [
+        "v. 渲染；呈现"
+      ],
+      "example": "The browser renders the HTML page.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "replica_it",
+      "word": "replica",
+      "phonetic_us": "/ˈreplɪkə/",
+      "phonetic_uk": "/ˈreplɪkə/",
+      "definition": [
+        "n. 副本；复制品"
+      ],
+      "example": "Read replicas distribute query load across multiple servers.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "replica-set_it",
+      "word": "replica-set",
+      "phonetic_us": "/ˈreplɪkə set/",
+      "phonetic_uk": "/ˈreplɪkə set/",
+      "definition": [
+        "n. 副本集"
+      ],
+      "example": "A replica set ensures high availability in MongoDB.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "repository_it",
+      "word": "repository",
+      "phonetic_us": "/rɪˈpɑːzətɔːri/",
+      "phonetic_uk": "/rɪˈpɒzɪtəri/",
+      "definition": [
+        "n. 仓库；代码仓库"
+      ],
+      "example": "Clone the repository to your local machine.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "request_it",
+      "word": "request",
+      "phonetic_us": "/rɪˈkwest/",
+      "phonetic_uk": "/rɪˈkwest/",
+      "definition": [
+        "n. 请求",
+        "v. 请求"
+      ],
+      "example": "The server processes each request within 100ms.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "response_it",
+      "word": "response",
+      "phonetic_us": "/rɪˈspɑːns/",
+      "phonetic_uk": "/rɪˈspɒns/",
+      "definition": [
+        "n. 响应；回应"
+      ],
+      "example": "The API response contains the requested data.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "responsive_it",
+      "word": "responsive",
+      "phonetic_us": "/rɪˈspɑːnsɪv/",
+      "phonetic_uk": "/rɪˈspɒnsɪv/",
+      "definition": [
+        "adj. 响应式的"
+      ],
+      "example": "A responsive layout adapts to different screen sizes.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "rollback_it",
+      "word": "rollback",
+      "phonetic_us": "/ˈroʊlbæk/",
+      "phonetic_uk": "/ˈrəʊlbæk/",
+      "definition": [
+        "n. 回滚",
+        "v. 回滚"
+      ],
+      "example": "Rollback the deployment if critical errors are detected.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "router_it",
+      "word": "router",
+      "phonetic_us": "/ˈraʊtər/",
+      "phonetic_uk": "/ˈruːtər/",
+      "definition": [
+        "n. 路由器；路由"
+      ],
+      "example": "The router directs traffic between networks.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "runtime_it",
+      "word": "runtime",
+      "phonetic_us": "/ˈrʌntaɪm/",
+      "phonetic_uk": "/ˈrʌntaɪm/",
+      "definition": [
+        "n. 运行时；运行时间"
+      ],
+      "example": "A runtime error occurred during execution.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "s3_it",
+      "word": "S3",
+      "phonetic_us": "/es ˈθriː/",
+      "phonetic_uk": "/es ˈθriː/",
+      "definition": [
+        "n. S3（简单存储服务）"
+      ],
+      "example": "Store backup files in S3 for durable object storage.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "salt_it",
+      "word": "salt",
+      "phonetic_us": "/sɔːlt/",
+      "phonetic_uk": "/sɒlt/",
+      "definition": [
+        "n. 盐值（密码学）"
+      ],
+      "example": "Add a random salt to each password before hashing.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "sass_it",
+      "word": "sass",
+      "phonetic_us": "/sæs/",
+      "phonetic_uk": "/sæs/",
+      "definition": [
+        "n. Sass（CSS预处理器）"
+      ],
+      "example": "Sass extends CSS with variables and nested rules.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "scalability_it",
+      "word": "scalability",
+      "phonetic_us": "/ˌskeɪləˈbɪləti/",
+      "phonetic_uk": "/ˌskeɪləˈbɪləti/",
+      "definition": [
+        "n. 可扩展性"
+      ],
+      "example": "Cloud infrastructure provides excellent scalability.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "schema_it",
+      "word": "schema",
+      "phonetic_us": "/ˈskiːmə/",
+      "phonetic_uk": "/ˈskiːmə/",
+      "definition": [
+        "n. 模式；架构定义"
+      ],
+      "example": "Update the database schema before migration.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "script_it",
+      "word": "script",
+      "phonetic_us": "/skrɪpt/",
+      "phonetic_uk": "/skrɪpt/",
+      "definition": [
+        "n. 脚本"
+      ],
+      "example": "Run the deployment script to update the server.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "serialize_it",
+      "word": "serialize",
+      "phonetic_us": "/ˈsɪriəlaɪz/",
+      "phonetic_uk": "/ˈsɪriəlaɪz/",
+      "definition": [
+        "v. 序列化"
+      ],
+      "example": "Serialize the object to JSON for storage.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "server_it",
+      "word": "server",
+      "phonetic_us": "/ˈsɜːrvər/",
+      "phonetic_uk": "/ˈsɜːvər/",
+      "definition": [
+        "n. 服务器"
+      ],
+      "example": "The server is temporarily unavailable.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "serverless_it",
+      "word": "serverless",
+      "phonetic_us": "/ˈsɜːrvərləs/",
+      "phonetic_uk": "/ˈsɜːvələs/",
+      "definition": [
+        "adj. 无服务器的",
+        "n. 无服务器架构"
+      ],
+      "example": "Serverless functions scale automatically with demand.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "shard_it",
+      "word": "shard",
+      "phonetic_us": "/ʃɑːrd/",
+      "phonetic_uk": "/ʃɑːd/",
+      "definition": [
+        "n. 分片",
+        "v. 分片"
+      ],
+      "example": "Each shard holds a subset of the total data.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "sharding_it",
+      "word": "sharding",
+      "phonetic_us": "/ˈʃɑːrdɪŋ/",
+      "phonetic_uk": "/ˈʃɑːdɪŋ/",
+      "definition": [
+        "n. 分片；数据分片"
+      ],
+      "example": "Sharding distributes data across multiple machines.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "singleton_it",
+      "word": "singleton",
+      "phonetic_us": "/ˈsɪŋɡltən/",
+      "phonetic_uk": "/ˈsɪŋɡltən/",
+      "definition": [
+        "n. 单例；单例模式"
+      ],
+      "example": "The singleton pattern ensures a class has only one instance.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "snapshot_it",
+      "word": "snapshot",
+      "phonetic_us": "/ˈsnæpʃɑːt/",
+      "phonetic_uk": "/ˈsnæpʃɒt/",
+      "definition": [
+        "n. 快照"
+      ],
+      "example": "Take a snapshot of the database before updating.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "snippet_it",
+      "word": "snippet",
+      "phonetic_us": "/ˈsnɪpɪt/",
+      "phonetic_uk": "/ˈsnɪpɪt/",
+      "definition": [
+        "n. 代码片段"
+      ],
+      "example": "Copy the code snippet into your project.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "socket_it",
+      "word": "socket",
+      "phonetic_us": "/ˈsɑːkɪt/",
+      "phonetic_uk": "/ˈsɒkɪt/",
+      "definition": [
+        "n. 套接字"
+      ],
+      "example": "Open a socket to establish a network connection.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "software_it",
+      "word": "software",
+      "phonetic_us": "/ˈsɔːftwer/",
+      "phonetic_uk": "/ˈsɒftweər/",
+      "definition": [
+        "n. 软件"
+      ],
+      "example": "This software helps manage project timelines.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "ssl_it",
+      "word": "SSL",
+      "phonetic_us": "/ˌes es ˈel/",
+      "phonetic_uk": "/ˌes es ˈel/",
+      "definition": [
+        "n. 安全套接层"
+      ],
+      "example": "SSL encrypts data transmitted between client and server.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "stack_it",
+      "word": "stack",
+      "phonetic_us": "/stæk/",
+      "phonetic_uk": "/stæk/",
+      "definition": [
+        "n. 栈；技术栈"
+      ],
+      "example": "Our tech stack includes React and Node.js.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "state_it",
+      "word": "state",
+      "phonetic_us": "/steɪt/",
+      "phonetic_uk": "/steɪt/",
+      "definition": [
+        "n. 状态"
+      ],
+      "example": "Manage component state to track user interactions.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "stateless_it",
+      "word": "stateless",
+      "phonetic_us": "/ˈsteɪtləs/",
+      "phonetic_uk": "/ˈsteɪtləs/",
+      "definition": [
+        "adj. 无状态的"
+      ],
+      "example": "A stateless service does not store session data between requests.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "stream_it",
+      "word": "stream",
+      "phonetic_us": "/striːm/",
+      "phonetic_uk": "/striːm/",
+      "definition": [
+        "n. 流",
+        "v. 流式传输"
+      ],
+      "example": "Video streaming requires a stable connection.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "string_it",
+      "word": "string",
+      "phonetic_us": "/strɪŋ/",
+      "phonetic_uk": "/strɪŋ/",
+      "definition": [
+        "n. 字符串"
+      ],
+      "example": "Concatenate two strings to form a sentence.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "struct_it",
+      "word": "struct",
+      "phonetic_us": "/strʌkt/",
+      "phonetic_uk": "/strʌkt/",
+      "definition": [
+        "n. 结构体"
+      ],
+      "example": "Define a struct to group related fields together.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "subnet_it",
+      "word": "subnet",
+      "phonetic_us": "/ˈsʌbnet/",
+      "phonetic_uk": "/ˈsʌbnet/",
+      "definition": [
+        "n. 子网"
+      ],
+      "example": "Divide the network into subnets for better management.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "syntax_it",
+      "word": "syntax",
+      "phonetic_us": "/ˈsɪntæks/",
+      "phonetic_uk": "/ˈsɪntæks/",
+      "definition": [
+        "n. 语法；句法"
+      ],
+      "example": "A syntax error prevents the code from compiling.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "tcp_it",
+      "word": "TCP",
+      "phonetic_us": "/ˌtiː siː ˈpiː/",
+      "phonetic_uk": "/ˌtiː siː ˈpiː/",
+      "definition": [
+        "n. 传输控制协议"
+      ],
+      "example": "TCP ensures reliable data delivery between applications.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "template_it",
+      "word": "template",
+      "phonetic_us": "/ˈtemplət/",
+      "phonetic_uk": "/ˈtempleɪt/",
+      "definition": [
+        "n. 模板"
+      ],
+      "example": "Use a template to speed up development.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "tensor_it",
+      "word": "tensor",
+      "phonetic_us": "/ˈtensər/",
+      "phonetic_uk": "/ˈtensər/",
+      "definition": [
+        "n. 张量"
+      ],
+      "example": "Tensors are the core data structure in deep learning frameworks.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "terraform_it",
+      "word": "terraform",
+      "phonetic_us": "/ˈterəfɔːrm/",
+      "phonetic_uk": "/ˈterəfɔːm/",
+      "definition": [
+        "n. Terraform（基础设施即代码工具）"
+      ],
+      "example": "Terraform provisions cloud resources from declarative configuration files.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "thread_it",
+      "word": "thread",
+      "phonetic_us": "/θred/",
+      "phonetic_uk": "/θred/",
+      "definition": [
+        "n. 线程"
+      ],
+      "example": "Multi-threading improves performance on multi-core CPUs.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "timeout_it",
+      "word": "timeout",
+      "phonetic_us": "/ˈtaɪmaʊt/",
+      "phonetic_uk": "/ˈtaɪmaʊt/",
+      "definition": [
+        "n. 超时"
+      ],
+      "example": "The request timed out after 30 seconds.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "tls_it",
+      "word": "TLS",
+      "phonetic_us": "/ˌtiː el ˈes/",
+      "phonetic_uk": "/ˌtiː el ˈes/",
+      "definition": [
+        "n. 传输层安全协议"
+      ],
+      "example": "TLS has replaced SSL as the standard for secure communication.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "token_it",
+      "word": "token",
+      "phonetic_us": "/ˈtoʊkən/",
+      "phonetic_uk": "/ˈtəʊkən/",
+      "definition": [
+        "n. 令牌；标记"
+      ],
+      "example": "The access token expires after 24 hours.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "training_it",
+      "word": "training",
+      "phonetic_us": "/ˈtreɪnɪŋ/",
+      "phonetic_uk": "/ˈtreɪnɪŋ/",
+      "definition": [
+        "n. 训练（模型）"
+      ],
+      "example": "Model training requires a large labeled dataset.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "transaction_it",
+      "word": "transaction",
+      "phonetic_us": "/trænˈzækʃn/",
+      "phonetic_uk": "/trænˈzækʃn/",
+      "definition": [
+        "n. 事务；交易"
+      ],
+      "example": "Wrap the operations in a transaction to ensure atomicity.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "transformer_it",
+      "word": "transformer",
+      "phonetic_us": "/trænsˈfɔːrmər/",
+      "phonetic_uk": "/trænsˈfɔːmər/",
+      "definition": [
+        "n. Transformer（深度学习模型架构）"
+      ],
+      "example": "The transformer architecture powers modern language models.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "tuple_it",
+      "word": "tuple",
+      "phonetic_us": "/ˈtʌpl/",
+      "phonetic_uk": "/ˈtʌpl/",
+      "definition": [
+        "n. 元组"
+      ],
+      "example": "A tuple is an immutable sequence of elements.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "type_it",
+      "word": "type",
+      "phonetic_us": "/taɪp/",
+      "phonetic_uk": "/taɪp/",
+      "definition": [
+        "n. 类型",
+        "v. 输入"
+      ],
+      "example": "Type checking catches errors at compile time.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "udp_it",
+      "word": "UDP",
+      "phonetic_us": "/ˌjuː diː ˈpiː/",
+      "phonetic_uk": "/ˌjuː diː ˈpiː/",
+      "definition": [
+        "n. 用户数据报协议"
+      ],
+      "example": "UDP is used for real-time streaming where speed matters more than reliability.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "upload_it",
+      "word": "upload",
+      "phonetic_us": "/ˈʌploʊd/",
+      "phonetic_uk": "/ˈʌpləʊd/",
+      "definition": [
+        "v. 上传",
+        "n. 上传"
+      ],
+      "example": "Upload the file to the server.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "upsert_it",
+      "word": "upsert",
+      "phonetic_us": "/ˈʌpsɜːrt/",
+      "phonetic_uk": "/ˈʌpsɜːt/",
+      "definition": [
+        "n. 插入或更新",
+        "v. 插入或更新"
+      ],
+      "example": "Use upsert to insert a new record or update an existing one.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "variable_it",
+      "word": "variable",
+      "phonetic_us": "/ˈveriəbl/",
+      "phonetic_uk": "/ˈveəriəbl/",
+      "definition": [
+        "n. 变量",
+        "adj. 可变的"
+      ],
+      "example": "Declare a variable to store the result.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "vault_it",
+      "word": "vault",
+      "phonetic_us": "/vɔːlt/",
+      "phonetic_uk": "/vɔːlt/",
+      "definition": [
+        "n. Vault（密钥管理工具）"
+      ],
+      "example": "Vault securely stores and manages API keys and secrets.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "vector_it",
+      "word": "vector",
+      "phonetic_us": "/ˈvektər/",
+      "phonetic_uk": "/ˈvektər/",
+      "definition": [
+        "n. 向量"
+      ],
+      "example": "Word vectors represent text as numerical arrays.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "virtual_it",
+      "word": "virtual",
+      "phonetic_us": "/ˈvɜːrtʃuəl/",
+      "phonetic_uk": "/ˈvɜːtʃuəl/",
+      "definition": [
+        "adj. 虚拟的"
+      ],
+      "example": "Virtual machines run multiple operating systems on one computer.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "void_it",
+      "word": "void",
+      "phonetic_us": "/vɔɪd/",
+      "phonetic_uk": "/vɔɪd/",
+      "definition": [
+        "n. 空类型",
+        "adj. 无返回值的"
+      ],
+      "example": "The function returns void when no value is needed.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "volatile_it",
+      "word": "volatile",
+      "phonetic_us": "/ˈvɑːlətl/",
+      "phonetic_uk": "/ˈvɒlətaɪl/",
+      "definition": [
+        "adj. 易变的；volatile关键字"
+      ],
+      "example": "Declare the variable as volatile to prevent compiler optimization.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "webpack_it",
+      "word": "webpack",
+      "phonetic_us": "/ˈwɛbpæk/",
+      "phonetic_uk": "/ˈwɛbpæk/",
+      "definition": [
+        "n. webpack（模块打包工具）"
+      ],
+      "example": "Webpack bundles JavaScript modules into a single file.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "websocket_it",
+      "word": "websocket",
+      "phonetic_us": "/ˈwɛbsɑːkɪt/",
+      "phonetic_uk": "/ˈwɛbsɒkɪt/",
+      "definition": [
+        "n. WebSocket（全双工通信协议）"
+      ],
+      "example": "WebSocket enables real-time bidirectional communication.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "widget_it",
+      "word": "widget",
+      "phonetic_us": "/ˈwɪdʒɪt/",
+      "phonetic_uk": "/ˈwɪdʒɪt/",
+      "definition": [
+        "n. 小部件；控件"
+      ],
+      "example": "Add a weather widget to the dashboard.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "xss_it",
+      "word": "XSS",
+      "phonetic_us": "/ˌeks es ˈes/",
+      "phonetic_uk": "/ˌeks es ˈes/",
+      "definition": [
+        "n. 跨站脚本攻击"
+      ],
+      "example": "Sanitize user input to prevent XSS attacks.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "file_it",
+      "word": "file",
+      "phonetic_us": "/faɪl/",
+      "phonetic_uk": "/faɪl/",
+      "definition": [
+        "n. 文件",
+        "v. 保存文件"
+      ],
+      "example": "Please save the file before closing the editor.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "command_it",
+      "word": "command",
+      "phonetic_us": "/kəˈmænd/",
+      "phonetic_uk": "/kəˈmɑːnd/",
+      "definition": [
+        "n. 命令，指令"
+      ],
+      "example": "Type the command in the terminal and press Enter.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "program_it",
+      "word": "program",
+      "phonetic_us": "/ˈproʊɡræm/",
+      "phonetic_uk": "/ˈprəʊɡræm/",
+      "definition": [
+        "n. 程序"
+      ],
+      "example": "This program handles user login and authentication.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "line_it",
+      "word": "line",
+      "phonetic_us": "/laɪn/",
+      "phonetic_uk": "/laɪn/",
+      "definition": [
+        "n. (数据，程序)行，线路"
+      ],
+      "example": "Each line of code should be clear and easy to read.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "display_it",
+      "word": "display",
+      "phonetic_us": "/dɪˈspleɪ/",
+      "phonetic_uk": "/dɪˈspleɪ/",
+      "definition": [
+        "vt. 显示，显示器"
+      ],
+      "example": "The monitor can display high-resolution images.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "set_it",
+      "word": "set",
+      "phonetic_us": "/set/",
+      "phonetic_uk": "/set/",
+      "definition": [
+        "v. 设置",
+        "n. 集合"
+      ],
+      "example": "Set the password before saving your changes.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "key_it",
+      "word": "key",
+      "phonetic_us": "/kiː/",
+      "phonetic_uk": "/kiː/",
+      "definition": [
+        "n. 键，关键字，关键码"
+      ],
+      "example": "Press any key to continue the installation.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "list_it",
+      "word": "list",
+      "phonetic_us": "/lɪst/",
+      "phonetic_uk": "/lɪst/",
+      "definition": [
+        "n. 列表，显示",
+        "v. 打印"
+      ],
+      "example": "The list shows all active users in the system.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "press_it",
+      "word": "press",
+      "phonetic_us": "/pres/",
+      "phonetic_uk": "/pres/",
+      "definition": [
+        "v. 按，压"
+      ],
+      "example": "Press the power button to restart the device.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "format_it",
+      "word": "format",
+      "phonetic_us": "/ˈfɔːrmæt/",
+      "phonetic_uk": "/ˈfɔːmæt/",
+      "definition": [
+        "n. 格式"
+      ],
+      "example": "Use the correct file format for the import process.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "change_it",
+      "word": "change",
+      "phonetic_us": "/tʃeɪndʒ/",
+      "phonetic_uk": "/tʃeɪndʒ/",
+      "definition": [
+        "v. 更换，改变，变动"
+      ],
+      "example": "Do not change system settings without permission.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "directory_it",
+      "word": "directory",
+      "phonetic_us": "/dəˈrektəri/",
+      "phonetic_uk": "/daɪˈrektəri/",
+      "definition": [
+        "n. 目录，索引簿"
+      ],
+      "example": "The directory contains many project files.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "menu_it",
+      "word": "menu",
+      "phonetic_us": "/ˈmenjuː/",
+      "phonetic_uk": "/ˈmenjuː/",
+      "definition": [
+        "n. 菜单，目录"
+      ],
+      "example": "Select an item from the main menu.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "option_it",
+      "word": "option",
+      "phonetic_us": "/ˈɑːpʃn/",
+      "phonetic_uk": "/ˈɒpʃn/",
+      "definition": [
+        "n. 任选，选择，可选项"
+      ],
+      "example": "This option is enabled by default.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "character_it",
+      "word": "character",
+      "phonetic_us": "/ˈkærəktər/",
+      "phonetic_uk": "/ˈkærəktə(r)/",
+      "definition": [
+        "n. 字符，符号，特性"
+      ],
+      "example": "The password must include a special character.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "screen_it",
+      "word": "screen",
+      "phonetic_us": "/skriːn/",
+      "phonetic_uk": "/skriːn/",
+      "definition": [
+        "n. 屏幕，屏",
+        "v. 屏蔽"
+      ],
+      "example": "The error message appears on the screen.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "specify_it",
+      "word": "specify",
+      "phonetic_us": "/ˈspesɪfaɪ/",
+      "phonetic_uk": "/ˈspesɪfaɪ/",
+      "definition": [
+        "v. 指定，规定，确定"
+      ],
+      "example": "Specify the output path in the configuration dialog.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "move_it",
+      "word": "move",
+      "phonetic_us": "/muːv/",
+      "phonetic_uk": "/muːv/",
+      "definition": [
+        "v. 移动"
+      ],
+      "example": "Move the file to another folder on the drive.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "disk_it",
+      "word": "disk",
+      "phonetic_us": "/dɪsk/",
+      "phonetic_uk": "/dɪsk/",
+      "definition": [
+        "n. 盘，磁盘"
+      ],
+      "example": "The system disk is almost full.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "text_it",
+      "word": "text",
+      "phonetic_us": "/tekst/",
+      "phonetic_uk": "/tekst/",
+      "definition": [
+        "n. 正文，文本"
+      ],
+      "example": "This text field cannot be left empty.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "drive_it",
+      "word": "drive",
+      "phonetic_us": "/draɪv/",
+      "phonetic_uk": "/draɪv/",
+      "definition": [
+        "v. 驱动",
+        "n. 驱动器"
+      ],
+      "example": "The external drive is not connected to the computer.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "name_it",
+      "word": "name",
+      "phonetic_us": "/neɪm/",
+      "phonetic_uk": "/neɪm/",
+      "definition": [
+        "n. 名，名称",
+        "vt. 命名"
+      ],
+      "example": "Enter your user name here to log in.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "record_it",
+      "word": "record",
+      "phonetic_us": "/ˈrekərd/",
+      "phonetic_uk": "/ˈrekɔːd/",
+      "definition": [
+        "n. 记录"
+      ],
+      "example": "The database stores every record safely.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "box_it",
+      "word": "box",
+      "phonetic_us": "/bɑːks/",
+      "phonetic_uk": "/bɒks/",
+      "definition": [
+        "n. 箱，匣，(逻辑)框"
+      ],
+      "example": "Check the dialog box for important warnings.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "help_it",
+      "word": "help",
+      "phonetic_us": "/help/",
+      "phonetic_uk": "/help/",
+      "definition": [
+        "v. &, n. 帮助"
+      ],
+      "example": "Click Help to see the usage instructions.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "memory_it",
+      "word": "memory",
+      "phonetic_us": "/ˈmeməri/",
+      "phonetic_uk": "/ˈmeməri/",
+      "definition": [
+        "n. 记忆存储，存储器"
+      ],
+      "example": "The computer needs more memory to run this app.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "copy_it",
+      "word": "copy",
+      "phonetic_us": "/ˈkɑːpi/",
+      "phonetic_uk": "/ˈkɒpi/",
+      "definition": [
+        "n. 复制",
+        "v. 拷贝"
+      ],
+      "example": "Copy the code into a new file for testing.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "shell_it",
+      "word": "shell",
+      "phonetic_us": "/ʃel/",
+      "phonetic_uk": "/ʃel/",
+      "definition": [
+        "n. 壳，外壳"
+      ],
+      "example": "Open a shell to run the deployment script.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "delete_it",
+      "word": "delete",
+      "phonetic_us": "/dɪˈliːt/",
+      "phonetic_uk": "/dɪˈliːt/",
+      "definition": [
+        "vt. 删除，删去，作废"
+      ],
+      "example": "Do not delete important system files by accident.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "enter_it",
+      "word": "enter",
+      "phonetic_us": "/ˈentər/",
+      "phonetic_uk": "/ˈentə(r)/",
+      "definition": [
+        "v. 键入，送入"
+      ],
+      "example": "Enter your password to access the system.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "margin_it",
+      "word": "margin",
+      "phonetic_us": "/ˈmɑːrdʒən/",
+      "phonetic_uk": "/ˈmɑːdʒɪn/",
+      "definition": [
+        "n. 余量，边缘，边际"
+      ],
+      "example": "Leave some margin in the layout design.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "mark_it",
+      "word": "mark",
+      "phonetic_us": "/mɑːrk/",
+      "phonetic_uk": "/mɑːk/",
+      "definition": [
+        "n. 标记",
+        "vt. 加标记"
+      ],
+      "example": "Mark this task as completed in the tracker.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "information_it",
+      "word": "information",
+      "phonetic_us": "/ˌɪnfərˈmeɪʃn/",
+      "phonetic_uk": "/ˌɪnfəˈmeɪʃn/",
+      "definition": [
+        "n. 信息，情报"
+      ],
+      "example": "The system displays useful information about the error.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "choose_it",
+      "word": "choose",
+      "phonetic_us": "/tʃuːz/",
+      "phonetic_uk": "/tʃuːz/",
+      "definition": [
+        "v. 挑选，选择，选定"
+      ],
+      "example": "Choose the correct option from the dropdown list.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "select_it",
+      "word": "select",
+      "phonetic_us": "/sɪˈlekt/",
+      "phonetic_uk": "/sɪˈlekt/",
+      "definition": [
+        "vt. 选择"
+      ],
+      "example": "Select all files in the destination folder.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "group_it",
+      "word": "group",
+      "phonetic_us": "/ɡruːp/",
+      "phonetic_uk": "/ɡruːp/",
+      "definition": [
+        "n. 组，群"
+      ],
+      "example": "Put these users into one permission group.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "field_it",
+      "word": "field",
+      "phonetic_us": "/fiːld/",
+      "phonetic_uk": "/fiːld/",
+      "definition": [
+        "n. 字段，域，栏，场"
+      ],
+      "example": "Each field in the form is required.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "procedure_it",
+      "word": "procedure",
+      "phonetic_us": "/prəˈsiːdʒər/",
+      "phonetic_uk": "/prəˈsiːdʒə(r)/",
+      "definition": [
+        "n. 过程，程序，工序"
+      ],
+      "example": "Follow the installation procedure step by step.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "print_it",
+      "word": "print",
+      "phonetic_us": "/prɪnt/",
+      "phonetic_uk": "/prɪnt/",
+      "definition": [
+        "v. 打印，印刷"
+      ],
+      "example": "Print the report before the team meeting.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "return_it",
+      "word": "return",
+      "phonetic_us": "/rɪˈtɜːrn/",
+      "phonetic_uk": "/rɪˈtɜːn/",
+      "definition": [
+        "v. 返回，回送"
+      ],
+      "example": "The function will return a calculated value.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "number_it",
+      "word": "number",
+      "phonetic_us": "/ˈnʌmbər/",
+      "phonetic_uk": "/ˈnʌmbə(r)/",
+      "definition": [
+        "n. 数字，号码",
+        "vt. 编号"
+      ],
+      "example": "Number each page of the document before upload.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "selected_it",
+      "word": "selected",
+      "phonetic_us": "/sɪˈlektɪd/",
+      "phonetic_uk": "/sɪˈlektɪd/",
+      "definition": [
+        "a. 精选的"
+      ],
+      "example": "The selected files will be moved to the archive.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "window_it",
+      "word": "window",
+      "phonetic_us": "/ˈwɪndoʊ/",
+      "phonetic_uk": "/ˈwɪndəʊ/",
+      "definition": [
+        "n. 窗口"
+      ],
+      "example": "Open a new browser window for the tutorial.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "message_it",
+      "word": "message",
+      "phonetic_us": "/ˈmesɪdʒ/",
+      "phonetic_uk": "/ˈmesɪdʒ/",
+      "definition": [
+        "n. 信息，消息，电文"
+      ],
+      "example": "The message was sent successfully to the server.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "dialog_it",
+      "word": "dialog",
+      "phonetic_us": "/ˈdaɪəlɔːɡ/",
+      "phonetic_uk": "/ˈdaɪəlɒɡ/",
+      "definition": [
+        "n. &, vt. 对话"
+      ],
+      "example": "A dialog opens when you click the Save button.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "example_it",
+      "word": "example",
+      "phonetic_us": "/ɪɡˈzæmpl/",
+      "phonetic_uk": "/ɪɡˈzɑːmpl/",
+      "definition": [
+        "n. 例子，实例"
+      ],
+      "example": "This example shows how the function works.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "create_it",
+      "word": "create",
+      "phonetic_us": "/kriˈeɪt/",
+      "phonetic_uk": "/kriˈeɪt/",
+      "definition": [
+        "vt. 创立，建立"
+      ],
+      "example": "Create a new project in the IDE to get started.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "insert_it",
+      "word": "insert",
+      "phonetic_us": "/ɪnˈsɜːrt/",
+      "phonetic_uk": "/ɪnˈsɜːt/",
+      "definition": [
+        "vt. 插入"
+      ],
+      "example": "Insert the USB drive carefully into the port.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "related_it",
+      "word": "related",
+      "phonetic_us": "/rɪˈleɪtɪd/",
+      "phonetic_uk": "/rɪˈleɪtɪd/",
+      "definition": [
+        "a. 相关的"
+      ],
+      "example": "These two tables are related by a foreign key.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "item_it",
+      "word": "item",
+      "phonetic_us": "/ˈaɪtəm/",
+      "phonetic_uk": "/ˈaɪtəm/",
+      "definition": [
+        "n. 项，项目，条款"
+      ],
+      "example": "The first item in the list is selected by default.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "position_it",
+      "word": "position",
+      "phonetic_us": "/pəˈzɪʃən/",
+      "phonetic_uk": "/pəˈzɪʃən/",
+      "definition": [
+        "n. 位置",
+        "vt. 定位"
+      ],
+      "example": "The cursor position determines where the text will appear on the screen.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "down_it",
+      "word": "down",
+      "phonetic_us": "/daʊn/",
+      "phonetic_uk": "/daʊn/",
+      "definition": [
+        "ad. 落下，降低，减少"
+      ],
+      "example": "The server is down, so users cannot access the website right now.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "task_it",
+      "word": "task",
+      "phonetic_us": "/tæsk/",
+      "phonetic_uk": "/tɑːsk/",
+      "definition": [
+        "n. 任务",
+        "v. 派给…任务"
+      ],
+      "example": "The operating system schedules each task to use the CPU efficiently.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "view_it",
+      "word": "view",
+      "phonetic_us": "/vju/",
+      "phonetic_uk": "/vjuː/",
+      "definition": [
+        "n. 视图，景象",
+        "v. 查看，视图"
+      ],
+      "example": "Switch to design view to see how the user interface will look.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "switch_it",
+      "word": "switch",
+      "phonetic_us": "/swɪtʃ/",
+      "phonetic_uk": "/swɪtʃ/",
+      "definition": [
+        "n. 开关，转换，切换",
+        "v. 开关，转换，切换"
+      ],
+      "example": "You can switch between light mode and dark mode in the settings.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "default_it",
+      "word": "default",
+      "phonetic_us": "/dɪˈfɔlt/",
+      "phonetic_uk": "/dɪˈfɔːlt/",
+      "definition": [
+        "v. 缺省（默认），预置，约定",
+        "n. 默认值，预设"
+      ],
+      "example": "If no theme is chosen, the app uses the default theme automatically.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "structure_it",
+      "word": "structure",
+      "phonetic_us": "/ˈstrʌktʃər/",
+      "phonetic_uk": "/ˈstrʌktʃər/",
+      "definition": [
+        "n. 结构，构造，构件"
+      ],
+      "example": "A clear folder structure makes the project easier to maintain.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "path_it",
+      "word": "path",
+      "phonetic_us": "/pæθ/",
+      "phonetic_uk": "/pɑːθ/",
+      "definition": [
+        "n. 路径，通路，轨道"
+      ],
+      "example": "The file path tells the computer where to find a document on disk.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "blank_it",
+      "word": "blank",
+      "phonetic_us": "/blæŋk/",
+      "phonetic_uk": "/blæŋk/",
+      "definition": [
+        "n. 空白，间隔",
+        "adj. 空白的"
+      ],
+      "example": "Please fill in the blank field before submitting the form.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "open_it",
+      "word": "open",
+      "phonetic_us": "/ˈoʊpən/",
+      "phonetic_uk": "/ˈəʊpən/",
+      "definition": [
+        "v. 打开，开启，断开",
+        "adj. 开放的，打开的"
+      ],
+      "example": "Double-click the icon to open the application.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "add_it",
+      "word": "add",
+      "phonetic_us": "/æd/",
+      "phonetic_uk": "/æd/",
+      "definition": [
+        "v. 加，增加，添",
+        "n. 加法，添加"
+      ],
+      "example": "Click the plus button to add a new item to the list.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "enable_it",
+      "word": "enable",
+      "phonetic_us": "/ɪˈneɪbəl/",
+      "phonetic_uk": "/ɪˈneɪbəl/",
+      "definition": [
+        "vt. 启动，恢复正常操作，使能够"
+      ],
+      "example": "You need to enable Bluetooth before pairing the wireless keyboard.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "operation_it",
+      "word": "operation",
+      "phonetic_us": "/ˌɑːpəˈreɪʃn/",
+      "phonetic_uk": "/ˌɒpəˈreɪʃn/",
+      "definition": [
+        "n. 操作，运算，动作"
+      ],
+      "example": "The database failed to complete the write operation.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "erase_it",
+      "word": "erase",
+      "phonetic_us": "/ɪˈreɪs/",
+      "phonetic_uk": "/ɪˈreɪz/",
+      "definition": [
+        "v. 擦除，取消，删除"
+      ],
+      "example": "Be careful: this command will erase all data on the drive.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "filename_it",
+      "word": "filename",
+      "phonetic_us": "/ˈfaɪlneɪm/",
+      "phonetic_uk": "/ˈfaɪlneɪm/",
+      "definition": [
+        "n. 文件名"
+      ],
+      "example": "The filename must not contain spaces or special characters.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "search_it",
+      "word": "search",
+      "phonetic_us": "/sɜːrtʃ/",
+      "phonetic_uk": "/sɜːtʃ/",
+      "definition": [
+        "v. 检索，查询，搜索",
+        "n. 搜索，查找"
+      ],
+      "example": "Use the search bar to find the document you need.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "column_it",
+      "word": "column",
+      "phonetic_us": "/ˈkɑːləm/",
+      "phonetic_uk": "/ˈkɒləm/",
+      "definition": [
+        "n. 列，柱，栏"
+      ],
+      "example": "Each column in the spreadsheet represents one data type.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "prompt_it",
+      "word": "prompt",
+      "phonetic_us": "/prɑːmpt/",
+      "phonetic_uk": "/prɒmpt/",
+      "definition": [
+        "n. 提示",
+        "v. 提示，促使"
+      ],
+      "example": "The terminal prompt shows the current directory path.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "execute_it",
+      "word": "execute",
+      "phonetic_us": "/ˈeksɪkjuːt/",
+      "phonetic_uk": "/ˈeksɪkjuːt/",
+      "definition": [
+        "v. 实行，实施，执行"
+      ],
+      "example": "The script will execute every night to back up the database.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "escape_it",
+      "word": "escape",
+      "phonetic_us": "/ɪˈskeɪp/",
+      "phonetic_uk": "/ɪˈskeɪp/",
+      "definition": [
+        "v. 逃避，逸出，换码",
+        "n. 退出，转义"
+      ],
+      "example": "Press the Escape key to cancel the current operation.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "error_it",
+      "word": "error",
+      "phonetic_us": "/ˈerər/",
+      "phonetic_uk": "/ˈerər/",
+      "definition": [
+        "n. 错误，误差，差错"
+      ],
+      "example": "The compiler stopped because of a syntax error in the code.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "extension_it",
+      "word": "extension",
+      "phonetic_us": "/ɪkˈstenʃn/",
+      "phonetic_uk": "/ɪkˈstenʃn/",
+      "definition": [
+        "n. 扩充，延伸，扩展名"
+      ],
+      "example": "A file with the .png extension is usually an image.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "status_it",
+      "word": "status",
+      "phonetic_us": "/ˈsteɪtəs/",
+      "phonetic_uk": "/ˈsteɪtəs/",
+      "definition": [
+        "n. 状态，态，状况"
+      ],
+      "example": "Check the status light to see if the device is connected.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "run_it",
+      "word": "run",
+      "phonetic_us": "/rʌn/",
+      "phonetic_uk": "/rʌn/",
+      "definition": [
+        "v. 运行，运转，操作",
+        "n. 运行，执行"
+      ],
+      "example": "Click the play button to run the program.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "argument_it",
+      "word": "argument",
+      "phonetic_us": "/ˈɑːrɡjumənt/",
+      "phonetic_uk": "/ˈɑːɡjumənt/",
+      "definition": [
+        "n. 变元，自变量，参数"
+      ],
+      "example": "The function requires one argument: the user's name.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "statement_it",
+      "word": "statement",
+      "phonetic_us": "/ˈsteɪtmənt/",
+      "phonetic_uk": "/ˈsteɪtmənt/",
+      "definition": [
+        "n. 语句，陈述，命题"
+      ],
+      "example": "Each statement in the program ends with a semicolon.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "shift_it",
+      "word": "shift",
+      "phonetic_us": "/ʃɪft/",
+      "phonetic_uk": "/ʃɪft/",
+      "definition": [
+        "v. 转义，换档，移位",
+        "n. 移位，轮班"
+      ],
+      "example": "Hold the Shift key to type an uppercase letter.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "store_it",
+      "word": "store",
+      "phonetic_us": "/stɔːr/",
+      "phonetic_uk": "/stɔːr/",
+      "definition": [
+        "n. 存储，存储器",
+        "vt. 存储"
+      ],
+      "example": "The cloud service lets you store files safely online.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "scroll_it",
+      "word": "scroll",
+      "phonetic_us": "/skroʊl/",
+      "phonetic_uk": "/skrəʊl/",
+      "definition": [
+        "vt. 上滚（卷）",
+        "n. 滚动，纸卷"
+      ],
+      "example": "Scroll down the page to see more search results.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "macro_it",
+      "word": "macro",
+      "phonetic_us": "/ˈmækroʊ/",
+      "phonetic_uk": "/ˈmækrəʊ/",
+      "definition": [
+        "n. 宏，宏功能，宏指令"
+      ],
+      "example": "You can record a macro to repeat common editing steps.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "page_it",
+      "word": "page",
+      "phonetic_us": "/peɪdʒ/",
+      "phonetic_uk": "/peɪdʒ/",
+      "definition": [
+        "n. 页面，页，版面"
+      ],
+      "example": "The home page loads in less than one second.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "quit_it",
+      "word": "quit",
+      "phonetic_us": "/kwɪt/",
+      "phonetic_uk": "/kwɪt/",
+      "definition": [
+        "v. 退出，结束"
+      ],
+      "example": "Select File and then Quit to close the program.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "define_it",
+      "word": "define",
+      "phonetic_us": "/dɪˈfaɪn/",
+      "phonetic_uk": "/dɪˈfaɪn/",
+      "definition": [
+        "vt. 定义，规定，分辨"
+      ],
+      "example": "You must define the variable before using it in the code.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "pressing_it",
+      "word": "pressing",
+      "phonetic_us": "/ˈpresɪŋ/",
+      "phonetic_uk": "/ˈpresɪŋ/",
+      "definition": [
+        "n. 压制",
+        "a. 紧急的，紧迫的"
+      ],
+      "example": "A pressing issue is causing the server to respond slowly.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "restore_it",
+      "word": "restore",
+      "phonetic_us": "/rɪˈstɔːr/",
+      "phonetic_uk": "/rɪˈstɔːr/",
+      "definition": [
+        "vt. 恢复，复原"
+      ],
+      "example": "Use the backup to restore the database after the crash.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "top_it",
+      "word": "top",
+      "phonetic_us": "/tɑːp/",
+      "phonetic_uk": "/tɒp/",
+      "definition": [
+        "n. 顶，尖端",
+        "adj. 顶部的"
+      ],
+      "example": "The navigation bar stays fixed at the top of the window.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "color_it",
+      "word": "color",
+      "phonetic_us": "/ˈkʌlər/",
+      "phonetic_uk": "/ˈkʌlə(r)/",
+      "definition": [
+        "n. 颜色，色彩，（彩）色"
+      ],
+      "example": "You can change the color theme in the settings panel.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "allow_it",
+      "word": "allow",
+      "phonetic_us": "/əˈlaʊ/",
+      "phonetic_uk": "/əˈlaʊ/",
+      "definition": [
+        "v. 允许，容许"
+      ],
+      "example": "The firewall rules allow only safe network traffic.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "block_it",
+      "word": "block",
+      "phonetic_us": "/blɑːk/",
+      "phonetic_uk": "/blɒk/",
+      "definition": [
+        "n. （字，信息，数据）块，障碍物",
+        "vt. 阻止，阻塞，限制，封盖"
+      ],
+      "example": "A block of data is read from the disk into memory.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "decimal_it",
+      "word": "decimal",
+      "phonetic_us": "/ˈdesɪml/",
+      "phonetic_uk": "/ˈdesɪml/",
+      "definition": [
+        "n. 十进制",
+        "a. 十进制的"
+      ],
+      "example": "The decimal system uses ten digits from 0 to 9.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "main_it",
+      "word": "main",
+      "phonetic_us": "/meɪn/",
+      "phonetic_uk": "/meɪn/",
+      "definition": [
+        "a. 主要的"
+      ],
+      "example": "The main function is the entry point of the program.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "definition_it",
+      "word": "definition",
+      "phonetic_us": "/ˌdefɪˈnɪʃn/",
+      "phonetic_uk": "/ˌdefɪˈnɪʃn/",
+      "definition": [
+        "n. 定义，确实，清晰"
+      ],
+      "example": "A high-resolution screen gives sharper image definition.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "optional_it",
+      "word": "optional",
+      "phonetic_us": "/ˈɑːpʃənl/",
+      "phonetic_uk": "/ˈɒpʃənl/",
+      "definition": [
+        "a. 任选的，可选的"
+      ],
+      "example": "This parameter is optional, so you may leave it empty.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "date_it",
+      "word": "date",
+      "phonetic_us": "/deɪt/",
+      "phonetic_uk": "/deɪt/",
+      "definition": [
+        "n. 日期"
+      ],
+      "example": "The file's creation date is shown in the properties dialog.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "remove_it",
+      "word": "remove",
+      "phonetic_us": "/rɪˈmuːv/",
+      "phonetic_uk": "/rɪˈmuːv/",
+      "definition": [
+        "v. 除去，移动，删除"
+      ],
+      "example": "Drag the icon to the trash to remove the old application.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "arrow_it",
+      "word": "arrow",
+      "phonetic_us": "/ˈæroʊ/",
+      "phonetic_uk": "/ˈærəʊ/",
+      "definition": [
+        "n. 箭头，指针"
+      ],
+      "example": "Click the arrow next to the folder to expand the list.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "issue_it",
+      "word": "issue",
+      "phonetic_us": "/ˈɪʃuː/",
+      "phonetic_uk": "/ˈɪʃuː/",
+      "definition": [
+        "v. 发行，出版，流出",
+        "n. 问题，流出，期号，发行物"
+      ],
+      "example": "The developer opened an issue to track the reported bug.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "returned_it",
+      "word": "returned",
+      "phonetic_us": "/rɪˈtɜːrnd/",
+      "phonetic_uk": "/rɪˈtɜːnd/",
+      "definition": [
+        "a. 退回的，返回的"
+      ],
+      "example": "The returned value from the function is stored in a variable.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "associate_it",
+      "word": "associate",
+      "phonetic_us": "/əˈsoʊʃieɪt/",
+      "phonetic_uk": "/əˈsəʊʃieɪt/",
+      "definition": [
+        "v. 相联，联想，关联"
+      ],
+      "example": "You can associate a file type with a specific application.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "attribute_it",
+      "word": "attribute",
+      "phonetic_us": "/ˈætrɪbjuːt/",
+      "phonetic_uk": "/ˈætrɪbjuːt/",
+      "definition": [
+        "n. 属性，标志，表征",
+        "vt. 归属，把…归于"
+      ],
+      "example": "The width attribute controls the size of the image on the page.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "order_it",
+      "word": "order",
+      "phonetic_us": "/ˈɔrdər/",
+      "phonetic_uk": "/ˈɔːdə/",
+      "definition": [
+        "n. 指令，次序",
+        "vt. 排序"
+      ],
+      "example": "The results are sorted in ascending order.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "modify_it",
+      "word": "modify",
+      "phonetic_us": "/ˈmɑdɪfaɪ/",
+      "phonetic_uk": "/ˈmɒdɪfaɪ/",
+      "definition": [
+        "vt. 修改，改变，变址"
+      ],
+      "example": "You need permission to modify this configuration.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "mouse_it",
+      "word": "mouse",
+      "phonetic_us": "/maʊs/",
+      "phonetic_uk": "/maʊs/",
+      "definition": [
+        "n. 鼠标器"
+      ],
+      "example": "Move the mouse to select the text.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "note_it",
+      "word": "note",
+      "phonetic_us": "/noʊt/",
+      "phonetic_uk": "/nəʊt/",
+      "definition": [
+        "n. 注解，注释"
+      ],
+      "example": "Add a note to explain this complex logic.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "locate_it",
+      "word": "locate",
+      "phonetic_us": "/ˈloʊkeɪt/",
+      "phonetic_uk": "/ləʊˈkeɪt/",
+      "definition": [
+        "vt. 定位"
+      ],
+      "example": "The IDE can locate the definition automatically.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "video_it",
+      "word": "video",
+      "phonetic_us": "/ˈvɪdioʊ/",
+      "phonetic_uk": "/ˈvɪdiəʊ/",
+      "definition": [
+        "n. 视频，电视"
+      ],
+      "example": "The app supports streaming video content.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "printer_it",
+      "word": "printer",
+      "phonetic_us": "/ˈprɪntər/",
+      "phonetic_uk": "/ˈprɪntə/",
+      "definition": [
+        "n. 打印机，印刷机"
+      ],
+      "example": "Connect the printer to the same network.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "bar_it",
+      "word": "bar",
+      "phonetic_us": "/bɑr/",
+      "phonetic_uk": "/bɑː/",
+      "definition": [
+        "n. 条，杆，棒"
+      ],
+      "example": "The progress bar shows the current upload status.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "bottom_it",
+      "word": "bottom",
+      "phonetic_us": "/ˈbɑtəm/",
+      "phonetic_uk": "/ˈbɒtəm/",
+      "definition": [
+        "n. 底，基础",
+        "a. 底下的"
+      ],
+      "example": "The status bar is fixed at the bottom of the screen.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "carriage_it",
+      "word": "carriage",
+      "phonetic_us": "/ˈkærɪdʒ/",
+      "phonetic_uk": "/ˈkærɪdʒ/",
+      "definition": [
+        "n. 滑架，托架"
+      ],
+      "example": "Carriage return moves the cursor to the line start.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "content_it",
+      "word": "content",
+      "phonetic_us": "/ˈkɑntent/",
+      "phonetic_uk": "/ˈkɒntent/",
+      "definition": [
+        "n. 含量，内容，目录"
+      ],
+      "example": "The page content is loaded dynamically.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "space_it",
+      "word": "space",
+      "phonetic_us": "/spes/",
+      "phonetic_uk": "/speɪs/",
+      "definition": [
+        "n. 空格键，空间"
+      ],
+      "example": "Press the space bar to pause the video.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "editor_it",
+      "word": "editor",
+      "phonetic_us": "/ˈɛdɪtər/",
+      "phonetic_uk": "/ˈɛdɪtə/",
+      "definition": [
+        "n. 编辑器"
+      ],
+      "example": "Open the file in your favorite code editor.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "exist_it",
+      "word": "exist",
+      "phonetic_us": "/ɪɡˈzɪst/",
+      "phonetic_uk": "/ɪɡˈzɪst/",
+      "definition": [
+        "vi. 存在，生存，有"
+      ],
+      "example": "Check whether the file exists before reading it.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "scope_it",
+      "word": "scope",
+      "phonetic_us": "/skoʊp/",
+      "phonetic_uk": "/skəʊp/",
+      "definition": [
+        "n. 范围，深度，作用域"
+      ],
+      "example": "The variable is only valid within its scope.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "paragraph_it",
+      "word": "paragraph",
+      "phonetic_us": "/ˈpærəgræf/",
+      "phonetic_uk": "/ˈpærəgrɑːf/",
+      "definition": [
+        "n. 段（落），节",
+        "vt. 分段"
+      ],
+      "example": "Format this paragraph as a code block.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "clear_it",
+      "word": "clear",
+      "phonetic_us": "/klɪr/",
+      "phonetic_uk": "/klɪə/",
+      "definition": [
+        "v. 清除，弄干净"
+      ],
+      "example": "Clear the cache to free up memory.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "exit_it",
+      "word": "exit",
+      "phonetic_us": "/ˈɛɡzɪt/",
+      "phonetic_uk": "/ˈɛksɪt/",
+      "definition": [
+        "n. 出口",
+        "vi. 退出"
+      ],
+      "example": "Use the exit command to close the terminal.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "report_it",
+      "word": "report",
+      "phonetic_us": "/rɪˈpɔrt/",
+      "phonetic_uk": "/rɪˈpɔːt/",
+      "definition": [
+        "vt. 报告",
+        "n. 报表"
+      ],
+      "example": "The tool can report memory usage every minute.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "execution_it",
+      "word": "execution",
+      "phonetic_us": "/ˌɛksɪˈkjuʃən/",
+      "phonetic_uk": "/ˌɛksɪˈkjuːʃən/",
+      "definition": [
+        "n. 执行"
+      ],
+      "example": "The execution of the script failed at line 12.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "backup_it",
+      "word": "backup",
+      "phonetic_us": "/ˈbækˌʌp/",
+      "phonetic_uk": "/ˈbækʌp/",
+      "definition": [
+        "n. 备份，后备，后援"
+      ],
+      "example": "Make a backup before upgrading the database.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "version_it",
+      "word": "version",
+      "phonetic_us": "/ˈvɜrʒn/",
+      "phonetic_uk": "/ˈvɜːʃən/",
+      "definition": [
+        "n. 版本"
+      ],
+      "example": "Check the software version in the about dialog.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "find_it",
+      "word": "find",
+      "phonetic_us": "/faɪnd/",
+      "phonetic_uk": "/faɪnd/",
+      "definition": [
+        "v. 寻找，发现"
+      ],
+      "example": "Use the search box to find the keyword quickly.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "subset_it",
+      "word": "subset",
+      "phonetic_us": "/ˈsʌbˌsɛt/",
+      "phonetic_uk": "/ˈsʌbsɛt/",
+      "definition": [
+        "n. 子集，子设备"
+      ],
+      "example": "This array is a subset of the original data.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "keyboard_it",
+      "word": "keyboard",
+      "phonetic_us": "/ˈkibɔrd/",
+      "phonetic_uk": "/ˈkiːbɔːd/",
+      "definition": [
+        "n. 键盘"
+      ],
+      "example": "Type the shortcut using the keyboard.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "full_it",
+      "word": "full",
+      "phonetic_us": "/fʊl/",
+      "phonetic_uk": "/fʊl/",
+      "definition": [
+        "a. 全（的）",
+        "ad. 完全地",
+        "n. 全部"
+      ],
+      "example": "The disk is almost full.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "check_it",
+      "word": "check",
+      "phonetic_us": "/tʃɛk/",
+      "phonetic_uk": "/tʃɛk/",
+      "definition": [
+        "v. 校对，检查，核算"
+      ],
+      "example": "Check the syntax before running the program.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "should_it",
+      "word": "should",
+      "phonetic_us": "/ʃʊd/",
+      "phonetic_uk": "/ʃʊd/",
+      "definition": [
+        "v. 应当，该"
+      ],
+      "example": "You should update your password regularly.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "single_it",
+      "word": "single",
+      "phonetic_us": "/ˈsɪŋɡl/",
+      "phonetic_uk": "/ˈsɪŋɡl/",
+      "definition": [
+        "a.&n. 单个的",
+        "a.&n. 一个，单"
+      ],
+      "example": "A single click selects the file in the interface.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "positioning_it",
+      "word": "positioning",
+      "phonetic_us": "/pəzɪʃnɪŋ/",
+      "phonetic_uk": "/pəzɪʃnɪŋ/",
+      "definition": [
+        "n. 定位"
+      ],
+      "example": "GPS positioning helps the app track your location.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "provide_it",
+      "word": "provide",
+      "phonetic_us": "/prəˈvaɪd/",
+      "phonetic_uk": "/prəˈvaɪd/",
+      "definition": [
+        "v. 提供"
+      ],
+      "example": "The server will provide data to all connected clients.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "title_it",
+      "word": "title",
+      "phonetic_us": "/ˈtaɪtl/",
+      "phonetic_uk": "/ˈtaɪtl/",
+      "definition": [
+        "n. 题目，标题"
+      ],
+      "example": "Set the page title in the HTML head section.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "expression_it",
+      "word": "expression",
+      "phonetic_us": "/ɪkˈsprɛʃən/",
+      "phonetic_uk": "/ɪkˈsprɛʃən/",
+      "definition": [
+        "n. 表达式"
+      ],
+      "example": "This expression calculates the total price automatically.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "toggle_it",
+      "word": "toggle",
+      "phonetic_us": "/ˈtɑːɡl/",
+      "phonetic_uk": "/ˈtɒɡl/",
+      "definition": [
+        "n.&v. 触发器",
+        "n.&v. 系紧"
+      ],
+      "example": "Click the button to toggle between dark and light mode.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "code_it",
+      "word": "code",
+      "phonetic_us": "/koʊd/",
+      "phonetic_uk": "/kəʊd/",
+      "definition": [
+        "n. 码，代码，编码"
+      ],
+      "example": "Write clean code that others can easily understand.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "such_it",
+      "word": "such",
+      "phonetic_us": "/sʌtʃ/",
+      "phonetic_uk": "/sʌtʃ/",
+      "definition": [
+        "a.&pron. 这样的，如此"
+      ],
+      "example": "Such errors usually happen when the input is invalid.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "beginning_it",
+      "word": "beginning",
+      "phonetic_us": "/bɪˈɡɪnɪŋ/",
+      "phonetic_uk": "/bɪˈɡɪnɪŋ/",
+      "definition": [
+        "n. 起点，初"
+      ],
+      "example": "The cursor moves to the beginning of the line.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "guide_it",
+      "word": "guide",
+      "phonetic_us": "/ɡaɪd/",
+      "phonetic_uk": "/ɡaɪd/",
+      "definition": [
+        "n. 向导，指南，入门"
+      ],
+      "example": "Follow the setup guide to configure the environment.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "tree_it",
+      "word": "tree",
+      "phonetic_us": "/tri/",
+      "phonetic_uk": "/triː/",
+      "definition": [
+        "n. 树，语法树"
+      ],
+      "example": "The compiler builds a syntax tree from the source code.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "environment_it",
+      "word": "environment",
+      "phonetic_us": "/ɪnˈvaɪrənmənt/",
+      "phonetic_uk": "/ɪnˈvaɪrənmənt/",
+      "definition": [
+        "n. 环境"
+      ],
+      "example": "Install the dependencies in your local environment.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "device_it",
+      "word": "device",
+      "phonetic_us": "/dɪˈvaɪs/",
+      "phonetic_uk": "/dɪˈvaɪs/",
+      "definition": [
+        "n. 设备，器件，装置"
+      ],
+      "example": "The app supports every mobile device.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "highlight_it",
+      "word": "highlight",
+      "phonetic_us": "/ˈhaɪˌlaɪt/",
+      "phonetic_uk": "/ˈhaɪlaɪt/",
+      "definition": [
+        "n. 增强亮度，提示区"
+      ],
+      "example": "The editor can highlight syntax errors in red.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "call_it",
+      "word": "call",
+      "phonetic_us": "/kɔl/",
+      "phonetic_uk": "/kɔːl/",
+      "definition": [
+        "v. 调用，访问，呼叫"
+      ],
+      "example": "This function will call the API to fetch user data.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "continue_it",
+      "word": "continue",
+      "phonetic_us": "/kənˈtɪnju/",
+      "phonetic_uk": "/kənˈtɪnjuː/",
+      "definition": [
+        "v. 连续，继续"
+      ],
+      "example": "Press Enter to continue the installation process.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "indicate_it",
+      "word": "indicate",
+      "phonetic_us": "/ˈɪndɪˌket/",
+      "phonetic_uk": "/ˈɪndɪkeɪt/",
+      "definition": [
+        "vt. 指示，表示"
+      ],
+      "example": "The green light indicates that the system is ready.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "until_it",
+      "word": "until",
+      "phonetic_us": "/ʌnˈtɪl/",
+      "phonetic_uk": "/ənˈtɪl/",
+      "definition": [
+        "prep. 到…为止，直到"
+      ],
+      "example": "Wait until the download finishes before opening the file.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "begin_it",
+      "word": "begin",
+      "phonetic_us": "/bɪˈɡɪn/",
+      "phonetic_uk": "/bɪˈɡɪn/",
+      "definition": [
+        "v. 开始，着手，开端"
+      ],
+      "example": "Click Start to begin the software update.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "place_it",
+      "word": "place",
+      "phonetic_us": "/ples/",
+      "phonetic_uk": "/pleɪs/",
+      "definition": [
+        "vt. 放，位，地点"
+      ],
+      "example": "Place the cursor where you want to insert text.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "rename_it",
+      "word": "rename",
+      "phonetic_us": "/ˌriːˈneɪm/",
+      "phonetic_uk": "/ˌriːˈneɪm/",
+      "definition": [
+        "vt. 更名，改名"
+      ],
+      "example": "Rename the file to match the project naming rules.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "swap_it",
+      "word": "swap",
+      "phonetic_us": "/swɑp/",
+      "phonetic_uk": "/swɒp/",
+      "definition": [
+        "v. 交换，调动"
+      ],
+      "example": "Swap the two values using a temporary variable.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "work_it",
+      "word": "work",
+      "phonetic_us": "/wɜrk/",
+      "phonetic_uk": "/wɜːk/",
+      "definition": [
+        "n. 工作"
+      ],
+      "example": "The scheduled work runs every hour in the background.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "remain_it",
+      "word": "remain",
+      "phonetic_us": "/rɪˈmen/",
+      "phonetic_uk": "/rɪˈmeɪn/",
+      "definition": [
+        "vi. 剩下，留下，仍然"
+      ],
+      "example": "Only three tasks remain in the queue.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "close_it",
+      "word": "close",
+      "phonetic_us": "/kloʊz/",
+      "phonetic_uk": "/kləʊz/",
+      "definition": [
+        "v.&a. 关闭，闭合；紧密"
+      ],
+      "example": "Close the dialog before you continue.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "combination_it",
+      "word": "combination",
+      "phonetic_us": "/ˌkɑmbɪˈneɪʃn/",
+      "phonetic_uk": "/ˌkɒmbɪˈneɪʃn/",
+      "definition": [
+        "n. 结合，组合"
+      ],
+      "example": "A strong password uses a combination of letters and numbers.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "profile_it",
+      "word": "profile",
+      "phonetic_us": "/ˈproʊfaɪl/",
+      "phonetic_uk": "/ˈprəʊfaɪl/",
+      "definition": [
+        "n. 简要，剖面，概貌"
+      ],
+      "example": "Update your user profile with a new avatar.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "turn_it",
+      "word": "turn",
+      "phonetic_us": "/tɜrn/",
+      "phonetic_uk": "/tɜːn/",
+      "definition": [
+        "v.&n. 转，转动；圈，匝"
+      ],
+      "example": "Turn off the machine before replacing the part.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "section_it",
+      "word": "section",
+      "phonetic_us": "/ˈsɛkʃən/",
+      "phonetic_uk": "/ˈsekʃn/",
+      "definition": [
+        "n. 节，段，区域"
+      ],
+      "example": "The config file has a section for database settings.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "follow_it",
+      "word": "follow",
+      "phonetic_us": "/ˈfɑloʊ/",
+      "phonetic_uk": "/ˈfɒləʊ/",
+      "definition": [
+        "v. 跟随，跟踪"
+      ],
+      "example": "Follow the instructions to complete the setup.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "split_it",
+      "word": "split",
+      "phonetic_us": "/splɪt/",
+      "phonetic_uk": "/splɪt/",
+      "definition": [
+        "v. 分开，分离"
+      ],
+      "example": "Split the string by commas to get each value.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "access_it",
+      "word": "access",
+      "phonetic_us": "/ˈæksɛs/",
+      "phonetic_uk": "/ˈækses/",
+      "definition": [
+        "n. 存取，选取，接近"
+      ],
+      "example": "You need permission to access this folder.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "cancel_it",
+      "word": "cancel",
+      "phonetic_us": "/ˈkænsəl/",
+      "phonetic_uk": "/ˈkænsl/",
+      "definition": [
+        "v. 删除，取消，作废"
+      ],
+      "example": "Click Cancel to abort the current operation.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "case_it",
+      "word": "case",
+      "phonetic_us": "/kes/",
+      "phonetic_uk": "/keɪs/",
+      "definition": [
+        "n. 情况，场合"
+      ],
+      "example": "In that case, the function returns zero.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "numeric_it",
+      "word": "numeric",
+      "phonetic_us": "/nuːˈmerɪk/",
+      "phonetic_uk": "/njuːˈmerɪk/",
+      "definition": [
+        "n.&a. 数字，数值，数字的"
+      ],
+      "example": "The field only accepts numeric input.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "size_it",
+      "word": "size",
+      "phonetic_us": "/saɪz/",
+      "phonetic_uk": "/saɪz/",
+      "definition": [
+        "n. 尺寸，大小，容量"
+      ],
+      "example": "Check the file size before uploading it.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "entire_it",
+      "word": "entire",
+      "phonetic_us": "/ɪnˈtaɪər/",
+      "phonetic_uk": "/ɪnˈtaɪə(r)/",
+      "definition": [
+        "a.&n. 完全的",
+        "a.&n. 总体"
+      ],
+      "example": "The entire database needs to be backed up.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "leave_it",
+      "word": "leave",
+      "phonetic_us": "/liv/",
+      "phonetic_uk": "/liːv/",
+      "definition": [
+        "v. 离开，留下"
+      ],
+      "example": "Leave the default value unchanged.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "history_it",
+      "word": "history",
+      "phonetic_us": "/ˈhɪstəri/",
+      "phonetic_uk": "/ˈhɪstri/",
+      "definition": [
+        "n. 历史"
+      ],
+      "example": "The browser stores your browsing history.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "reflow_it",
+      "word": "reflow",
+      "phonetic_us": "/ˈrifloʊ/",
+      "phonetic_uk": "/ˈriːfləʊ/",
+      "definition": [
+        "v.&n. 回流，逆流"
+      ],
+      "example": "Changing the layout may cause the page to reflow.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "output_it",
+      "word": "output",
+      "phonetic_us": "/ˈaʊtˌpʊt/",
+      "phonetic_uk": "/ˈaʊtpʊt/",
+      "definition": [
+        "n. 输出，输出设备"
+      ],
+      "example": "The output of the command is shown in the terminal.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "install_it",
+      "word": "install",
+      "phonetic_us": "/ɪnˈstɔl/",
+      "phonetic_uk": "/ɪnˈstɔːl/",
+      "definition": [
+        "vt. 安装"
+      ],
+      "example": "Install the package using the command line tool.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "source_it",
+      "word": "source",
+      "phonetic_us": "/sɔrs/",
+      "phonetic_uk": "/sɔːs/",
+      "definition": [
+        "n. 源，电源，源点"
+      ],
+      "example": "The source code is available on GitHub.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "assign_it",
+      "word": "assign",
+      "phonetic_us": "/əˈsaɪn/",
+      "phonetic_uk": "/əˈsaɪn/",
+      "definition": [
+        "vt. 赋值，指定，分派"
+      ],
+      "example": "Assign the result to a variable before using it.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "support_it",
+      "word": "support",
+      "phonetic_us": "/səˈpɔrt/",
+      "phonetic_uk": "/səˈpɔːt/",
+      "definition": [
+        "vt. 支援，支持，配套"
+      ],
+      "example": "This version does not support older devices.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "expand_it",
+      "word": "expand",
+      "phonetic_us": "/ɪkˈspænd/",
+      "phonetic_uk": "/ɪkˈspænd/",
+      "definition": [
+        "v. 扩充，扩展，展开"
+      ],
+      "example": "Click the arrow to expand the folder contents.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "diskette_it",
+      "word": "diskette",
+      "phonetic_us": "/dɪˈskɛt/",
+      "phonetic_uk": "/dɪˈsket/",
+      "definition": [
+        "n. 磁盘"
+      ],
+      "example": "The old diskette can only store a few files.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "skip_it",
+      "word": "skip",
+      "phonetic_us": "/skɪp/",
+      "phonetic_uk": "/skɪp/",
+      "definition": [
+        "v. 跳跃（定位），跳过"
+      ],
+      "example": "Skip this step if you already have an account.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "application_it",
+      "word": "application",
+      "phonetic_us": "/ˌæplɪˈkeʃən/",
+      "phonetic_uk": "/ˌæplɪˈkeɪʃn/",
+      "definition": [
+        "n. 应用"
+      ],
+      "example": "The mobile application runs on both iOS and Android.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "confirmation_it",
+      "word": "confirmation",
+      "phonetic_us": "/ˌkɑnfərˈmeɪʃn/",
+      "phonetic_uk": "/ˌkɒnfəˈmeɪʃn/",
+      "definition": [
+        "n. 认可"
+      ],
+      "example": "You will receive a confirmation email after signing up.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "hold_it",
+      "word": "hold",
+      "phonetic_us": "/hoʊld/",
+      "phonetic_uk": "/hoʊld/",
+      "definition": [
+        "v. 保持，维持"
+      ],
+      "example": "Please hold the current configuration until the test finishes.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "click_it",
+      "word": "click",
+      "phonetic_us": "/klɪk/",
+      "phonetic_uk": "/klɪk/",
+      "definition": [
+        "n. 单击",
+        "n. 滴答声",
+        "vt. 点击"
+      ],
+      "example": "Click the button to submit the form.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "write_it",
+      "word": "write",
+      "phonetic_us": "/raɪt/",
+      "phonetic_uk": "/raɪt/",
+      "definition": [
+        "v. 写，存入"
+      ],
+      "example": "The program will write the results to a log file.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "byte_it",
+      "word": "byte",
+      "phonetic_us": "/baɪt/",
+      "phonetic_uk": "/baɪt/",
+      "definition": [
+        "n. 字节"
+      ],
+      "example": "One byte consists of eight bits.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "show_it",
+      "word": "show",
+      "phonetic_us": "/ʃoʊ/",
+      "phonetic_uk": "/ʃoʊ/",
+      "definition": [
+        "v. 显示，呈现，出示"
+      ],
+      "example": "This command will show all active processes.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "working_it",
+      "word": "working",
+      "phonetic_us": "/ˈwɜrkɪŋ/",
+      "phonetic_uk": "/ˈwɜrkɪŋ/",
+      "definition": [
+        "n. 工作，操作，作业",
+        "adj. 运行中的"
+      ],
+      "example": "Check the working directory before running the script.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "delimiter_it",
+      "word": "delimiter",
+      "phonetic_us": "/dɪlɪmɪtə/",
+      "phonetic_uk": "/dɪlɪmɪtə/",
+      "definition": [
+        "n. 定界符，分界符"
+      ],
+      "example": "Use a comma as the delimiter between fields.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "location_it",
+      "word": "location",
+      "phonetic_us": "/loʊˈkeɪʃn/",
+      "phonetic_uk": "/loʊˈkeɪʃn/",
+      "definition": [
+        "n. 定位，(存储器)单元"
+      ],
+      "example": "The GPS location is stored in the database.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "perform_it",
+      "word": "perform",
+      "phonetic_us": "/pərˈfɔrm/",
+      "phonetic_uk": "/pərˈfɔrm/",
+      "definition": [
+        "v. 执行，完成"
+      ],
+      "example": "The function will perform the calculation quickly.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "graphic_it",
+      "word": "graphic",
+      "phonetic_us": "/ˈɡræfɪk/",
+      "phonetic_uk": "/ˈɡræfɪk/",
+      "definition": [
+        "n. 图形",
+        "adj. 图形的"
+      ],
+      "example": "The graphic card renders images faster.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "read_it",
+      "word": "read",
+      "phonetic_us": "/rid/",
+      "phonetic_uk": "/rid/",
+      "definition": [
+        "v. 读，读阅"
+      ],
+      "example": "The sensor reads data every second.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "confirm_it",
+      "word": "confirm",
+      "phonetic_us": "/kənˈfɜrm/",
+      "phonetic_uk": "/kənˈfɜrm/",
+      "definition": [
+        "vt. 证实，确认"
+      ],
+      "example": "Please confirm your email address.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "sort_it",
+      "word": "sort",
+      "phonetic_us": "/sɔrt/",
+      "phonetic_uk": "/sɔrt/",
+      "definition": [
+        "v. 分类，排序"
+      ],
+      "example": "The algorithm can sort the list in ascending order.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "clause_it",
+      "word": "clause",
+      "phonetic_us": "/klɔz/",
+      "phonetic_uk": "/klɔz/",
+      "definition": [
+        "n. 条款，项目，子句"
+      ],
+      "example": "The SQL query has a where clause.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "extend_it",
+      "word": "extend",
+      "phonetic_us": "/ɪkˈstɛnd/",
+      "phonetic_uk": "/ɪkˈstɛnd/",
+      "definition": [
+        "v. 扩充"
+      ],
+      "example": "We need to extend the storage capacity.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "starting_it",
+      "word": "starting",
+      "phonetic_us": "/stɑtɪŋ/",
+      "phonetic_uk": "/stɑtɪŋ/",
+      "definition": [
+        "adj. 起始的"
+      ],
+      "example": "Set the starting index to zero.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "original_it",
+      "word": "original",
+      "phonetic_us": "/əˈrɪdʒənəl/",
+      "phonetic_uk": "/əˈrɪdʒənəl/",
+      "definition": [
+        "n. 原创",
+        "adj. 原始的",
+        "adj. 创新的"
+      ],
+      "example": "Keep the original file as a backup.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "correspond_it",
+      "word": "correspond",
+      "phonetic_us": "/ˌkɔrəˈspɑnd/",
+      "phonetic_uk": "/ˌkɔrəˈspɑnd/",
+      "definition": [
+        "vi. 符合，一致",
+        "vi. 相应",
+        "vi. 通信"
+      ],
+      "example": "The two tables correspond to each other.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "property_it",
+      "word": "property",
+      "phonetic_us": "/ˈprɑpərti/",
+      "phonetic_uk": "/ˈprɑpərti/",
+      "definition": [
+        "n. 性质，性能",
+        "n. 财产",
+        "n. 所有权"
+      ],
+      "example": "Change the property of the object in the inspector.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "bracket_it",
+      "word": "bracket",
+      "phonetic_us": "/ˈbrækɪt/",
+      "phonetic_uk": "/ˈbrækɪt/",
+      "definition": [
+        "n. (方)括号，等级",
+        "vt. 括在一起",
+        "vt. 把…归入同一类",
+        "vt. 排除"
+      ],
+      "example": "Put the condition inside square brackets.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "omit_it",
+      "word": "omit",
+      "phonetic_us": "/oˈmɪt/",
+      "phonetic_uk": "/oˈmɪt/",
+      "definition": [
+        "vt. 省略，删去，遗漏"
+      ],
+      "example": "Do not omit the semicolon at the end.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "running_it",
+      "word": "running",
+      "phonetic_us": "/ˈrʌnɪŋ/",
+      "phonetic_uk": "/ˈrʌnɪŋ/",
+      "definition": [
+        "adj. 运行着的，游动的"
+      ],
+      "example": "Check all running services on the server.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "edge_it",
+      "word": "edge",
+      "phonetic_us": "/ɛdʒ/",
+      "phonetic_uk": "/ɛdʒ/",
+      "definition": [
+        "n. 棱，边，边缘，界限"
+      ],
+      "example": "The edge node processes data closer to users.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "form_it",
+      "word": "form",
+      "phonetic_us": "/fɔrm/",
+      "phonetic_uk": "/fɔrm/",
+      "definition": [
+        "n. 格式，表格，方式"
+      ],
+      "example": "Fill out the login form with your details.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "instruction_it",
+      "word": "instruction",
+      "phonetic_us": "/ɪnˈstrʌkʃən/",
+      "phonetic_uk": "/ɪnˈstrʌkʃən/",
+      "definition": [
+        "n. 指令，指导"
+      ],
+      "example": "The CPU executes one instruction per cycle.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "standard_it",
+      "word": "standard",
+      "phonetic_us": "/ˈstændərd/",
+      "phonetic_uk": "/ˈstændərd/",
+      "definition": [
+        "n. 标准"
+      ],
+      "example": "Follow the company coding standard.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "occurrence_it",
+      "word": "occurrence",
+      "phonetic_us": "/əˈkɜrəns/",
+      "phonetic_uk": "/əˈkɜrəns/",
+      "definition": [
+        "n. 出现，发生"
+      ],
+      "example": "Count the occurrence of each word.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "lock_it",
+      "word": "lock",
+      "phonetic_us": "/lɑk/",
+      "phonetic_uk": "/lɑk/",
+      "definition": [
+        "n. 锁，封闭",
+        "v. 锁，封闭",
+        "v. 自动跟踪"
+      ],
+      "example": "The database will lock the row during the update.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "append_it",
+      "word": "append",
+      "phonetic_us": "/əˈpɛnd/",
+      "phonetic_uk": "/əˈpɛnd/",
+      "definition": [
+        "vt. 附加，增补"
+      ],
+      "example": "Append new data to the end of the file.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "destination_it",
+      "word": "destination",
+      "phonetic_us": "/ˌdɛstəˈneʃən/",
+      "phonetic_uk": "/ˌdɛstəˈneʃən/",
+      "definition": [
+        "n. 目的地，接收站"
+      ],
+      "example": "Set the destination address for the packet.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "password_it",
+      "word": "password",
+      "phonetic_us": "/ˈpæswɜrd/",
+      "phonetic_uk": "/ˈpæswɜrd/",
+      "definition": [
+        "n. 口令，保密字"
+      ],
+      "example": "Enter your password to access the system.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "point_it",
+      "word": "point",
+      "phonetic_us": "/pɔɪnt/",
+      "phonetic_uk": "/pɔɪnt/",
+      "definition": [
+        "n. 点，小数点，句号"
+      ],
+      "example": "Move the cursor to the starting point.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "variety_it",
+      "word": "variety",
+      "phonetic_us": "/vəˈraɪɪti/",
+      "phonetic_uk": "/vəˈraɪɪti/",
+      "definition": [
+        "n. 变化，种类，品种"
+      ],
+      "example": "The library supports a variety of formats.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "useful_it",
+      "word": "useful",
+      "phonetic_us": "/ˈjusfəl/",
+      "phonetic_uk": "/ˈjusfəl/",
+      "definition": [
+        "adj. 有用的"
+      ],
+      "example": "This tool is useful for debugging.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "operating_it",
+      "word": "operating",
+      "phonetic_us": "/ˈɑpəˌretɪŋ/",
+      "phonetic_uk": "/ˈɑpəˌretɪŋ/",
+      "definition": [
+        "adj. 操作的，控制的"
+      ],
+      "example": "The operating system manages hardware.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "carry_it",
+      "word": "carry",
+      "phonetic_us": "/ˈkæri/",
+      "phonetic_uk": "/ˈkæri/",
+      "definition": [
+        "v. 进位，携带，搬运"
+      ],
+      "example": "The adder will carry the overflow bit.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "update_it",
+      "word": "update",
+      "phonetic_us": "/ʌpˈdet/",
+      "phonetic_uk": "/ʌpˈdet/",
+      "definition": [
+        "v. 更新，修改，校正"
+      ],
+      "example": "Update the package to the latest version.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "moving_it",
+      "word": "moving",
+      "phonetic_us": "/ˈmuvɪŋ/",
+      "phonetic_uk": "/ˈmuvɪŋ/",
+      "definition": [
+        "n. 活动",
+        "adj. 活动的，自动的"
+      ],
+      "example": "Avoid moving parts in solid-state drives.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "coprocessor_it",
+      "word": "coprocessor",
+      "phonetic_us": "/koʊˌproʊsesə/",
+      "phonetic_uk": "/koʊˌproʊsesə/",
+      "definition": [
+        "n. 协同处理器"
+      ],
+      "example": "The GPU acts as a graphics coprocessor.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "overlay_it",
+      "word": "overlay",
+      "phonetic_us": "/ˌoʊvərˈleɪ/",
+      "phonetic_uk": "/ˌoʊvərˈleɪ/",
+      "definition": [
+        "v. 覆盖，重叠",
+        "n. 覆盖，重叠"
+      ],
+      "example": "Overlay the image on the map layer.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "practice_it",
+      "word": "practice",
+      "phonetic_us": "/ˈpræktɪs/",
+      "phonetic_uk": "/ˈpræktɪs/",
+      "definition": [
+        "n. 实习，实践"
+      ],
+      "example": "Practice writing clean code every day.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "navigation_it",
+      "word": "navigation",
+      "phonetic_us": "/ˌnævɪˈɡeɪʃn/",
+      "phonetic_uk": "/ˌnævɪˈɡeɪʃn/",
+      "definition": [
+        "n. 导航"
+      ],
+      "example": "The navigation bar helps users move between pages.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "automatically_it",
+      "word": "automatically",
+      "phonetic_us": "/ˌɔtəˈmætɪklɪ/",
+      "phonetic_uk": "/ˌɔtəˈmætɪklɪ/",
+      "definition": [
+        "adv. 自动地，机械地"
+      ],
+      "example": "The script runs automatically every morning.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "total_it",
+      "word": "total",
+      "phonetic_us": "/ˈtoʊtl/",
+      "phonetic_uk": "/ˈtoʊtl/",
+      "definition": [
+        "n. 总数",
+        "v. 总计"
+      ],
+      "example": "The total memory usage is shown below.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "shortcut_it",
+      "word": "shortcut",
+      "phonetic_us": "/ˈʃɔrtˌkʌt/",
+      "phonetic_uk": "/ˈʃɔrtˌkʌt/",
+      "definition": [
+        "n. 近路，捷径"
+      ],
+      "example": "Use this keyboard shortcut to save time.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "unique_it",
+      "word": "unique",
+      "phonetic_us": "/juˈnik/",
+      "phonetic_uk": "/juˈnik/",
+      "definition": [
+        "adj. 唯一的，独特的"
+      ],
+      "example": "Each user has a unique identifier.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "updated_it",
+      "word": "updated",
+      "phonetic_us": "/ʌpdeɪtɪd/",
+      "phonetic_uk": "/ʌpdeɪtɪd/",
+      "definition": [
+        "adj. 适时的，更新的"
+      ],
+      "example": "The updated version fixes the bug.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "internal_it",
+      "word": "internal",
+      "phonetic_us": "/ɪnˈtɜrnl/",
+      "phonetic_uk": "/ɪnˈtɜrnl/",
+      "definition": [
+        "adj. 内部的"
+      ],
+      "example": "The error is caused by an internal function.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "basic_it",
+      "word": "basic",
+      "phonetic_us": "/ˈbesɪk/",
+      "phonetic_uk": "/ˈbesɪk/",
+      "definition": [
+        "n. 基本",
+        "adj. 基本的"
+      ],
+      "example": "Learn the basic syntax before writing apps.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "edit_it",
+      "word": "edit",
+      "phonetic_us": "/ˈedɪt/",
+      "phonetic_uk": "/ˈedɪt/",
+      "definition": [
+        "vt. 编辑",
+        "vt. 编排"
+      ],
+      "example": "Click the edit button to modify the configuration file.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "marked_it",
+      "word": "marked",
+      "phonetic_us": "/ˈmɑːrkɪd/",
+      "phonetic_uk": "/ˈmɑːkɪd/",
+      "definition": [
+        "adj. 有记号的",
+        "adj. 标记的"
+      ],
+      "example": "Marked items in the list are selected for batch deletion.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "area_it",
+      "word": "area",
+      "phonetic_us": "/ˈeriə/",
+      "phonetic_uk": "/ˈeəriə/",
+      "definition": [
+        "n. 区域",
+        "n. 面积",
+        "n. 领域"
+      ],
+      "example": "The text area allows users to input multiple lines of code.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "tab_it",
+      "word": "tab",
+      "phonetic_us": "/tæb/",
+      "phonetic_uk": "/tæb/",
+      "definition": [
+        "n. 制表键",
+        "n. 标签页"
+      ],
+      "example": "Press Tab to move the cursor to the next input field.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "active_it",
+      "word": "active",
+      "phonetic_us": "/ˈæktɪv/",
+      "phonetic_uk": "/ˈæktɪv/",
+      "definition": [
+        "adj. 激活的",
+        "adj. 活动的"
+      ],
+      "example": "The active window receives keyboard and mouse input.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "topic_it",
+      "word": "topic",
+      "phonetic_us": "/ˈtɑːpɪk/",
+      "phonetic_uk": "/ˈtɒpɪk/",
+      "definition": [
+        "n. 主题",
+        "n. 论题"
+      ],
+      "example": "Each message in the queue belongs to a specific topic.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "start_it",
+      "word": "start",
+      "phonetic_us": "/stɑːrt/",
+      "phonetic_uk": "/stɑːt/",
+      "definition": [
+        "v. 启动",
+        "v. 开始"
+      ],
+      "example": "Run the command to start the web server on port 8080.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "mode_it",
+      "word": "mode",
+      "phonetic_us": "/moʊd/",
+      "phonetic_uk": "/məʊd/",
+      "definition": [
+        "n. 模式",
+        "n. 方式"
+      ],
+      "example": "Switch to dark mode for better visibility at night.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "selection_it",
+      "word": "selection",
+      "phonetic_us": "/sɪˈlekʃən/",
+      "phonetic_uk": "/sɪˈlekʃn/",
+      "definition": [
+        "n. 选择",
+        "n. 选区"
+      ],
+      "example": "Copy the text from the current selection to the clipboard.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "word_it",
+      "word": "word",
+      "phonetic_us": "/wɜːrd/",
+      "phonetic_uk": "/wɜːd/",
+      "definition": [
+        "n. 字词",
+        "n. 单词"
+      ],
+      "example": "A word is the basic unit of data in processor architecture.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "value_it",
+      "word": "value",
+      "phonetic_us": "/ˈvæljuː/",
+      "phonetic_uk": "/ˈvæljuː/",
+      "definition": [
+        "n. 值",
+        "n. 数值"
+      ],
+      "example": "Assign a default value to the variable if none is provided.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "button_it",
+      "word": "button",
+      "phonetic_us": "/ˈbʌtn/",
+      "phonetic_uk": "/ˈbʌtn/",
+      "definition": [
+        "n. 按钮"
+      ],
+      "example": "Click the submit button to send the form data to the server.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "appear_it",
+      "word": "appear",
+      "phonetic_us": "/əˈpɪr/",
+      "phonetic_uk": "/əˈpɪə/",
+      "definition": [
+        "vi. 出现",
+        "vi. 显现"
+      ],
+      "example": "A confirmation dialog will appear after clicking OK.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "save_it",
+      "word": "save",
+      "phonetic_us": "/seɪv/",
+      "phonetic_uk": "/seɪv/",
+      "definition": [
+        "v. 保存"
+      ],
+      "example": "Press Ctrl+S to save the current file to disk.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "control_it",
+      "word": "control",
+      "phonetic_us": "/kənˈtroʊl/",
+      "phonetic_uk": "/kənˈtrəʊl/",
+      "definition": [
+        "v. 控制",
+        "n. 控件",
+        "v. 管理"
+      ],
+      "example": "Use the control panel to adjust system settings.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "user_it",
+      "word": "user",
+      "phonetic_us": "/ˈjuːzər/",
+      "phonetic_uk": "/ˈjuːzə/",
+      "definition": [
+        "n. 用户"
+      ],
+      "example": "The user must authenticate before accessing the dashboard.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "system_it",
+      "word": "system",
+      "phonetic_us": "/ˈsɪstəm/",
+      "phonetic_uk": "/ˈsɪstəm/",
+      "definition": [
+        "n. 系统"
+      ],
+      "example": "The operating system manages hardware and software resources.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "contain_it",
+      "word": "contain",
+      "phonetic_us": "/kənˈteɪn/",
+      "phonetic_uk": "/kənˈteɪn/",
+      "definition": [
+        "vt. 包含",
+        "vt. 包括"
+      ],
+      "example": "The array contains three elements of type string.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "letter_it",
+      "word": "letter",
+      "phonetic_us": "/ˈletər/",
+      "phonetic_uk": "/ˈletə/",
+      "definition": [
+        "n. 字母",
+        "n. 信件"
+      ],
+      "example": "Each letter in the string is stored as a character code.",
+      "frequency": 3,
+      "book_id": "it"
+    },
+    {
+      "id": "data_it",
+      "word": "data",
+      "phonetic_us": "/ˈdætə/",
+      "phonetic_uk": "/ˈdeɪtə/",
+      "definition": [
+        "n. 数据"
+      ],
+      "example": "The API returns data in JSON format for the frontend.",
+      "frequency": 5,
+      "book_id": "it"
+    },
+    {
+      "id": "setting_it",
+      "word": "setting",
+      "phonetic_us": "/ˈsetɪŋ/",
+      "phonetic_uk": "/ˈsetɪŋ/",
+      "definition": [
+        "n. 设置",
+        "n. 配置"
+      ],
+      "example": "Open the settings page to change the display resolution.",
+      "frequency": 4,
+      "book_id": "it"
+    },
+    {
+      "id": "desire_it",
+      "word": "desire",
+      "phonetic_us": "/dɪˈzaɪər/",
+      "phonetic_uk": "/dɪˈzaɪə/",
+      "definition": [
+        "v. 期望",
+        "n. 期望"
+      ],
+      "example": "The system retries until the desired state is reached.",
+      "frequency": 3,
+      "book_id": "it"
+    }
+  ]
+}

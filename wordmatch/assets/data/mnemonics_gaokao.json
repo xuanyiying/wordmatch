@@ -1,0 +1,3644 @@
+{
+  "mnemonics": [
+    {
+      "wordId": "abandon_gaokao",
+      "type": "story",
+      "content": "a+ban(禁令)+don(给)——有了禁令就放弃给出去"
+    },
+    {
+      "wordId": "ability_gaokao",
+      "type": "story",
+      "content": "able(能)+ility(名词后缀)——能做事情的本领"
+    },
+    {
+      "wordId": "abnormal_gaokao",
+      "type": "story",
+      "content": "ab(离开)+norm(正常)+al——偏离正常，反常的"
+    },
+    {
+      "wordId": "aboard_gaokao",
+      "type": "story",
+      "content": "a(在)+board(板)——在甲板上，在船上"
+    },
+    {
+      "wordId": "abolish_gaokao",
+      "type": "story",
+      "content": "ab(离开)+ol(生长)+ish——不让继续生长，废除"
+    },
+    {
+      "wordId": "abortion_gaokao",
+      "type": "story",
+      "content": "ab(离开)+ort(出生)+ion——离开出生过程，流产"
+    },
+    {
+      "wordId": "abrupt_gaokao",
+      "type": "story",
+      "content": "ab(离开)+rupt(断)——突然断开，突然的"
+    },
+    {
+      "wordId": "absence_gaokao",
+      "type": "story",
+      "content": "ab(离开)+senc(在)+e——不在场，缺席"
+    },
+    {
+      "wordId": "absent_gaokao",
+      "type": "story",
+      "content": "ab(离开)+sent(在)——不在现场，缺席"
+    },
+    {
+      "wordId": "absolute_gaokao",
+      "type": "story",
+      "content": "ab(离开)+solut(松开)——完全松开不受限，绝对的"
+    },
+    {
+      "wordId": "absorb_gaokao",
+      "type": "story",
+      "content": "ab(向)+sorb(吸)——吸收进去"
+    },
+    {
+      "wordId": "abstract_gaokao",
+      "type": "story",
+      "content": "abs(离开)+tract(拉)——从具体中拉开，抽象"
+    },
+    {
+      "wordId": "absurd_gaokao",
+      "type": "story",
+      "content": "ab(偏离)+surd(聋)——偏到聋了听不进，荒谬的"
+    },
+    {
+      "wordId": "abundant_gaokao",
+      "type": "story",
+      "content": "a+bound(边界)+ant——多到溢出边界，丰富的"
+    },
+    {
+      "wordId": "abuse_gaokao",
+      "type": "story",
+      "content": "ab(偏离)+use(用)——偏离正常使用，滥用"
+    },
+    {
+      "wordId": "academic_gaokao",
+      "type": "story",
+      "content": "academ(学院)+ic——学院的，学术的"
+    },
+    {
+      "wordId": "academy_gaokao",
+      "type": "story",
+      "content": "academ(学院)+y——学术机构，学院"
+    },
+    {
+      "wordId": "accelerate_gaokao",
+      "type": "story",
+      "content": "ac(向)+celer(快)+ate——使变快，加速"
+    },
+    {
+      "wordId": "accept_gaokao",
+      "type": "story",
+      "content": "ac(向)+cept——向+拿"
+    },
+    {
+      "wordId": "access_gaokao",
+      "type": "story",
+      "content": "ac(向)+cess(走)——走向某处，访问、进入"
+    },
+    {
+      "wordId": "accessible_gaokao",
+      "type": "story",
+      "content": "ac(向)+cess(走)+ible——能走过去的，可接近的"
+    },
+    {
+      "wordId": "accommodation_gaokao",
+      "type": "story",
+      "content": "ac(向)+commod(方便)+ation——提供方便的地方，住宿"
+    },
+    {
+      "wordId": "accompany_gaokao",
+      "type": "story",
+      "content": "ac(共同)+company(公司)——像同事一样陪伴"
+    },
+    {
+      "wordId": "accomplish_gaokao",
+      "type": "story",
+      "content": "ac(向)+compl(完整)+ish——使之完整，完成"
+    },
+    {
+      "wordId": "account_gaokao",
+      "type": "story",
+      "content": "ac(向)+count(计算)——算账的地方，账户"
+    },
+    {
+      "wordId": "accountant_gaokao",
+      "type": "story",
+      "content": "account(账户)+ant(人)——管账户的人，会计"
+    },
+    {
+      "wordId": "accumulate_gaokao",
+      "type": "story",
+      "content": "ac(向)+cumul(堆)+ate——堆积起来，积累"
+    },
+    {
+      "wordId": "accuracy_gaokao",
+      "type": "story",
+      "content": "ac(向)+cur(关心)+acy——非常关心细节，精确度"
+    },
+    {
+      "wordId": "accurate_gaokao",
+      "type": "story",
+      "content": "ac(向)+cur(关心)+ate——非常关心细节，精确"
+    },
+    {
+      "wordId": "accuse_gaokao",
+      "type": "story",
+      "content": "ac(向)+cuse——向"
+    },
+    {
+      "wordId": "accustomed_gaokao",
+      "type": "story",
+      "content": "ac(向)+custom(习惯)+ed——习惯了，习惯的"
+    },
+    {
+      "wordId": "achieve_gaokao",
+      "type": "story",
+      "content": "a+chieve(做到)——做到目标，达成"
+    },
+    {
+      "wordId": "achievement_gaokao",
+      "type": "story",
+      "content": "achieve(达成)+ment——达成的成果，成就"
+    },
+    {
+      "wordId": "acid_gaokao",
+      "type": "story",
+      "content": "ac(向)+id——向"
+    },
+    {
+      "wordId": "acknowledge_gaokao",
+      "type": "story",
+      "content": "ac(向)+knowledge(知道)——让人知道，承认"
+    },
+    {
+      "wordId": "acquaintance_gaokao",
+      "type": "story",
+      "content": "ac(向)+quaint(知道)+ance——知道的人，熟人"
+    },
+    {
+      "wordId": "acquire_gaokao",
+      "type": "story",
+      "content": "ac(向)+quir(寻求)+e——努力寻求而获得"
+    },
+    {
+      "wordId": "acquisition_gaokao",
+      "type": "story",
+      "content": "ac(向)+quis(寻求)+ition——寻求得到的东西，获得"
+    },
+    {
+      "wordId": "acre_gaokao",
+      "type": "story",
+      "content": "ac(向)+re——向"
+    },
+    {
+      "wordId": "active_gaokao",
+      "type": "story",
+      "content": "act(行动)+ive——善于行动的，积极的"
+    },
+    {
+      "wordId": "actress_gaokao",
+      "type": "story",
+      "content": "act(表演)+ress(女性)——表演的女性，女演员"
+    },
+    {
+      "wordId": "actual_gaokao",
+      "type": "story",
+      "content": "act(做)+ual——做出来的事实，实际的"
+    },
+    {
+      "wordId": "acute_gaokao",
+      "type": "story",
+      "content": "ac(向)+ute——向"
+    },
+    {
+      "wordId": "adapt_gaokao",
+      "type": "story",
+      "content": "ad(向)+apt(适合)——让自己适合新环境，适应"
+    },
+    {
+      "wordId": "adaptation_gaokao",
+      "type": "story",
+      "content": "adapt(适应)+ation——适应的过程，改编"
+    },
+    {
+      "wordId": "addicted_gaokao",
+      "type": "story",
+      "content": "ad(向)+dict(说)+ed——不停说要做的，上瘾的"
+    },
+    {
+      "wordId": "addition_gaokao",
+      "type": "story",
+      "content": "add(加)+ition——加上的东西，附加"
+    },
+    {
+      "wordId": "adequate_gaokao",
+      "type": "story",
+      "content": "ad(向)+equ(平等)+ate——够得上标准，充足的"
+    },
+    {
+      "wordId": "adjust_gaokao",
+      "type": "story",
+      "content": "ad(向)+just(正确)——调到正确的位置，调整"
+    },
+    {
+      "wordId": "adjustment_gaokao",
+      "type": "story",
+      "content": "adjust(调整)+ment——调整的行为，调节"
+    },
+    {
+      "wordId": "administration_gaokao",
+      "type": "story",
+      "content": "ad(向)+ministr(管理)+ation——管理的机构，行政"
+    },
+    {
+      "wordId": "admirable_gaokao",
+      "type": "story",
+      "content": "ad(向)+mir(惊奇)+able——令人惊奇的，令人钦佩的"
+    },
+    {
+      "wordId": "admire_gaokao",
+      "type": "story",
+      "content": "ad(向)+mir(惊奇)+e——对…感到惊奇，钦佩"
+    },
+    {
+      "wordId": "admission_gaokao",
+      "type": "story",
+      "content": "ad(向)+miss(送)+ion——被送进去，入场、承认"
+    },
+    {
+      "wordId": "admit_gaokao",
+      "type": "story",
+      "content": "ad(向)+mit——向+送"
+    },
+    {
+      "wordId": "adolescence_gaokao",
+      "type": "story",
+      "content": "adol(成长)+esc+ence——成长的时期，青春期"
+    },
+    {
+      "wordId": "adolescent_gaokao",
+      "type": "story",
+      "content": "adol(成长)+esc+ent——正在成长的，青少年"
+    },
+    {
+      "wordId": "adopt_gaokao",
+      "type": "story",
+      "content": "ad(向)+opt(选择)——选择接受，采用、收养"
+    },
+    {
+      "wordId": "adore_gaokao",
+      "type": "story",
+      "content": "ad(向)+ore——向+口"
+    },
+    {
+      "wordId": "advance_gaokao",
+      "type": "story",
+      "content": "ad(向前)+vance(走)——向前走，前进"
+    },
+    {
+      "wordId": "advantage_gaokao",
+      "type": "story",
+      "content": "advant(在前)+age——走在前面，优势"
+    },
+    {
+      "wordId": "adventure_gaokao",
+      "type": "story",
+      "content": "ad(向)+vent(来)+ure——向未知走去，冒险"
+    },
+    {
+      "wordId": "advertise_gaokao",
+      "type": "story",
+      "content": "ad(向)+vertise——向+转"
+    },
+    {
+      "wordId": "advocate_gaokao",
+      "type": "story",
+      "content": "ad(向)+voc(叫喊)+ate——替人喊话，提倡、拥护"
+    },
+    {
+      "wordId": "affair_gaokao",
+      "type": "story",
+      "content": "af(向)+fair——向"
+    },
+    {
+      "wordId": "affect_gaokao",
+      "type": "story",
+      "content": "af(向)+fect——向+做"
+    },
+    {
+      "wordId": "affection_gaokao",
+      "type": "story",
+      "content": "af(向)+fect(做)+ion——做出来的感情，喜爱"
+    },
+    {
+      "wordId": "afford_gaokao",
+      "type": "story",
+      "content": "af(向)+ford(承担)——承担得起费用，买得起"
+    },
+    {
+      "wordId": "agenda_gaokao",
+      "type": "story",
+      "content": "ag(向)+enda——向"
+    },
+    {
+      "wordId": "agent_gaokao",
+      "type": "story",
+      "content": "ag(向)+ent——向"
+    },
+    {
+      "wordId": "aggressive_gaokao",
+      "type": "story",
+      "content": "ag(向)+gress(走)+ive——走向别人，有进取心或好斗"
+    },
+    {
+      "wordId": "agricultural_gaokao",
+      "type": "story",
+      "content": "agri(田地)+cult(耕种)+ural——田地耕种的，农业的"
+    },
+    {
+      "wordId": "agriculture_gaokao",
+      "type": "story",
+      "content": "agri(田地)+cult(耕种)+ure——田地耕种，农业"
+    },
+    {
+      "wordId": "ahead_gaokao",
+      "type": "story",
+      "content": "a(加强)+head——加强"
+    },
+    {
+      "wordId": "aid_gaokao",
+      "type": "story",
+      "content": "a(加强)+id——加强"
+    },
+    {
+      "wordId": "aim_gaokao",
+      "type": "story",
+      "content": "a(加强)+im——加强"
+    },
+    {
+      "wordId": "airmail_gaokao",
+      "type": "story",
+      "content": "a(加强)+irmail——加强"
+    },
+    {
+      "wordId": "alarm_gaokao",
+      "type": "story",
+      "content": "al(向)+arm——向"
+    },
+    {
+      "wordId": "album_gaokao",
+      "type": "story",
+      "content": "al(向)+bum——向"
+    },
+    {
+      "wordId": "alcohol_gaokao",
+      "type": "story",
+      "content": "al(向)+cohol——向"
+    },
+    {
+      "wordId": "alcoholic_gaokao",
+      "type": "story",
+      "content": "alcohol(酒精)+ic——酒精的，酗酒者"
+    },
+    {
+      "wordId": "algebra_gaokao",
+      "type": "story",
+      "content": "al(向)+gebra——向"
+    },
+    {
+      "wordId": "alike_gaokao",
+      "type": "story",
+      "content": "al(向)+ike——向"
+    },
+    {
+      "wordId": "allergic_gaokao",
+      "type": "story",
+      "content": "allerg(过敏)+ic——过敏的"
+    },
+    {
+      "wordId": "alley_gaokao",
+      "type": "story",
+      "content": "all(窄)+ey——窄窄的小路，小巷"
+    },
+    {
+      "wordId": "allocate_gaokao",
+      "type": "story",
+      "content": "al(向)+loc(地方)+ate——放到各个地方，分配"
+    },
+    {
+      "wordId": "allow_gaokao",
+      "type": "story",
+      "content": "al(向)+low(低)——放低要求，允许"
+    },
+    {
+      "wordId": "allowance_gaokao",
+      "type": "story",
+      "content": "allow(允许)+ance——允许给的零用钱，津贴"
+    },
+    {
+      "wordId": "alongside_gaokao",
+      "type": "story",
+      "content": "al(向)+ongside——向+坐"
+    },
+    {
+      "wordId": "alphabet_gaokao",
+      "type": "story",
+      "content": "al(向)+phabet——向+持有"
+    },
+    {
+      "wordId": "alternative_gaokao",
+      "type": "story",
+      "content": "alter(改变)+nativ(出生)+e——改变路线的选择，替代方案"
+    },
+    {
+      "wordId": "altitude_gaokao",
+      "type": "story",
+      "content": "al(向)+titude——向"
+    },
+    {
+      "wordId": "altogether_gaokao",
+      "type": "story",
+      "content": "al(完全)+together(一起)——完全在一起，总共"
+    },
+    {
+      "wordId": "amateur_gaokao",
+      "type": "story",
+      "content": "a(加强)+mateur——加强"
+    },
+    {
+      "wordId": "amaze_gaokao",
+      "type": "story",
+      "content": "a+maze(迷宫)——像进了迷宫一样惊奇"
+    },
+    {
+      "wordId": "amazing_gaokao",
+      "type": "story",
+      "content": "a(加强)——maz+ing(正在…)——加强+正在…"
+    },
+    {
+      "wordId": "ambition_gaokao",
+      "type": "story",
+      "content": "amb(周围)+it(走)+ion——四处奔走的雄心"
+    },
+    {
+      "wordId": "amount_gaokao",
+      "type": "story",
+      "content": "a+mount(山)——堆积如山，数量"
+    },
+    {
+      "wordId": "analyze_gaokao",
+      "type": "story",
+      "content": "ana(向上)+lyz(松开)——拆开来研究，分析"
+    },
+    {
+      "wordId": "anchor_gaokao",
+      "type": "story",
+      "content": "anch(弯曲)+or——弯钩固定船，锚"
+    },
+    {
+      "wordId": "ancient_gaokao",
+      "type": "story",
+      "content": "anci(古老)+ent——古老的，古代的"
+    },
+    {
+      "wordId": "angle_gaokao",
+      "type": "story",
+      "content": "an(向)+gle——向"
+    },
+    {
+      "wordId": "announce_gaokao",
+      "type": "story",
+      "content": "an(向)+nounc(说)+e——向大家说，宣布"
+    },
+    {
+      "wordId": "annual_gaokao",
+      "type": "story",
+      "content": "ann(年)+ual——每年的，年度的"
+    },
+    {
+      "wordId": "anxiety_gaokao",
+      "type": "story",
+      "content": "anx(焦急)+iety——焦急不安，焦虑"
+    },
+    {
+      "wordId": "anyhow_gaokao",
+      "type": "story",
+      "content": "an(向)+yhow——向"
+    },
+    {
+      "wordId": "apparent_gaokao",
+      "type": "story",
+      "content": "ap(向)+par(出现)+ent——出现在眼前的，明显的"
+    },
+    {
+      "wordId": "appeal_gaokao",
+      "type": "story",
+      "content": "ap(向)+peal(呼喊)——向人呼喊，呼吁、上诉"
+    },
+    {
+      "wordId": "appendix_gaokao",
+      "type": "story",
+      "content": "ap(向)+pendix——向+悬挂"
+    },
+    {
+      "wordId": "appetite_gaokao",
+      "type": "story",
+      "content": "ap(向)+petite——向+追求"
+    },
+    {
+      "wordId": "apply_gaokao",
+      "type": "story",
+      "content": "ap(向)+ply(折叠)——把申请表折好递交，申请"
+    },
+    {
+      "wordId": "appoint_gaokao",
+      "type": "story",
+      "content": "ap(向)+point——向+指"
+    },
+    {
+      "wordId": "appreciate_gaokao",
+      "type": "story",
+      "content": "ap(向)+preci(价格)+ate——觉得有价值，欣赏、感激"
+    },
+    {
+      "wordId": "appreciation_gaokao",
+      "type": "story",
+      "content": "ap(向)+preci(价格)+ation——觉得有价值，感激"
+    },
+    {
+      "wordId": "approach_gaokao",
+      "type": "story",
+      "content": "ap(向)+proach(接近)——靠近，方法"
+    },
+    {
+      "wordId": "appropriate_gaokao",
+      "type": "story",
+      "content": "ap(向)+propr(适当)+iate——适合的，恰当的"
+    },
+    {
+      "wordId": "approve_gaokao",
+      "type": "story",
+      "content": "ap(向)+prov(证明)+e——证明可行，批准、赞成"
+    },
+    {
+      "wordId": "approximately_gaokao",
+      "type": "story",
+      "content": "ap(向)+proxim(接近)+ately——接近的，大约"
+    },
+    {
+      "wordId": "arise_gaokao",
+      "type": "story",
+      "content": "ar(向)+ise——向"
+    },
+    {
+      "wordId": "arrange_gaokao",
+      "type": "story",
+      "content": "ar(向)+range(排列)——排列整齐，安排"
+    },
+    {
+      "wordId": "artificial_gaokao",
+      "type": "story",
+      "content": "arti(技巧)+fic(做)+ial——用技巧做出来的，人工的"
+    },
+    {
+      "wordId": "assess_gaokao",
+      "type": "story",
+      "content": "as(向)+sess(坐)——坐下来评估，评定"
+    },
+    {
+      "wordId": "assessment_gaokao",
+      "type": "story",
+      "content": "assess(评定)+ment——评定的结果，估价"
+    },
+    {
+      "wordId": "associate_gaokao",
+      "type": "story",
+      "content": "as(向)+soci(同伴)+ate——结成同伴，交往"
+    },
+    {
+      "wordId": "association_gaokao",
+      "type": "story",
+      "content": "as(向)+soci(同伴)+ation——结成同伴关系，协会"
+    },
+    {
+      "wordId": "assume_gaokao",
+      "type": "story",
+      "content": "as(向)+sum(拿)+e——先拿一个看法，假设"
+    },
+    {
+      "wordId": "atmosphere_gaokao",
+      "type": "story",
+      "content": "atmo(气)+sphere(球)——包裹地球的气层，大气层"
+    },
+    {
+      "wordId": "attach_gaokao",
+      "type": "story",
+      "content": "at(向)+tach(钉)——钉在上面，附上、依恋"
+    },
+    {
+      "wordId": "attain_gaokao",
+      "type": "story",
+      "content": "at(向)+tain——向+持"
+    },
+    {
+      "wordId": "attempt_gaokao",
+      "type": "story",
+      "content": "at(向)+tempt(尝试)——尝试去做"
+    },
+    {
+      "wordId": "attend_gaokao",
+      "type": "story",
+      "content": "at(向)+tend(伸展)——伸头去看，出席、参加"
+    },
+    {
+      "wordId": "attitude_gaokao",
+      "type": "story",
+      "content": "atti(姿态)+tude——做事的姿态，态度"
+    },
+    {
+      "wordId": "attract_gaokao",
+      "type": "story",
+      "content": "at(向)+tract(拉)——拉向自己，吸引"
+    },
+    {
+      "wordId": "authority_gaokao",
+      "type": "story",
+      "content": "author(作者)+ity——作者的权力，权威"
+    },
+    {
+      "wordId": "autonomous_gaokao",
+      "type": "story",
+      "content": "auto(自己)——nom+ous(充满)——自己+充满"
+    },
+    {
+      "wordId": "available_gaokao",
+      "type": "story",
+      "content": "a(加强)——vail+able(能…的)——加强+能…的"
+    },
+    {
+      "wordId": "average_gaokao",
+      "type": "story",
+      "content": "a(加强)+verage——加强"
+    },
+    {
+      "wordId": "avoid_gaokao",
+      "type": "story",
+      "content": "a(加强)+void——加强"
+    },
+    {
+      "wordId": "awkward_gaokao",
+      "type": "homophone",
+      "content": "谐音'拗口'——拗口难说的，尴尬的"
+    },
+    {
+      "wordId": "bachelor_gaokao",
+      "type": "story",
+      "content": "bachel+or(做…的人)+bachel——做…的人"
+    },
+    {
+      "wordId": "balance_gaokao",
+      "type": "story",
+      "content": "bal+ance(名词)+bal——名词"
+    },
+    {
+      "wordId": "balcony_gaokao",
+      "type": "story",
+      "content": "balcon+y(…的/名词)+balcon——…的/名词"
+    },
+    {
+      "wordId": "ban_gaokao",
+      "type": "story",
+      "content": "ban(禁令)——禁止，取缔"
+    },
+    {
+      "wordId": "barbecue_gaokao",
+      "type": "homophone",
+      "content": "谐音'巴巴Q'——烤巴巴再Q一下，烧烤"
+    },
+    {
+      "wordId": "bargain_gaokao",
+      "type": "story",
+      "content": "bar(酒吧)+gain(获得)——酒吧里讨价还价获得便宜货"
+    },
+    {
+      "wordId": "barrier_gaokao",
+      "type": "story",
+      "content": "barri+er(做…的人)+barri——做…的人"
+    },
+    {
+      "wordId": "basis_gaokao",
+      "type": "story",
+      "content": "bas(底)+is——底部的基础，基础"
+    },
+    {
+      "wordId": "battle_gaokao",
+      "type": "story",
+      "content": "bat(打)+tle——打斗，战斗"
+    },
+    {
+      "wordId": "behave_gaokao",
+      "type": "story",
+      "content": "be(使)+have——使"
+    },
+    {
+      "wordId": "belong_gaokao",
+      "type": "story",
+      "content": "be(使)+long——使"
+    },
+    {
+      "wordId": "bench_gaokao",
+      "type": "story",
+      "content": "be(使)+nch——使"
+    },
+    {
+      "wordId": "beneath_gaokao",
+      "type": "story",
+      "content": "be(使)+neath——使"
+    },
+    {
+      "wordId": "benefit_gaokao",
+      "type": "story",
+      "content": "bene(好)+fit(做)——做好事，利益、受益"
+    },
+    {
+      "wordId": "betray_gaokao",
+      "type": "story",
+      "content": "be(使)+tray(盘)——把秘密端出来，背叛"
+    },
+    {
+      "wordId": "beyond_gaokao",
+      "type": "story",
+      "content": "be(使)+yond——使"
+    },
+    {
+      "wordId": "birthplace_gaokao",
+      "type": "story",
+      "content": "bi(双)+rthplace——双+平静"
+    },
+    {
+      "wordId": "blame_gaokao",
+      "type": "homophone",
+      "content": "谐音'不累'——出了错怪别人，自己不累"
+    },
+    {
+      "wordId": "bonus_gaokao",
+      "type": "story",
+      "content": "bon(好)+us——给我们的好处，奖金"
+    },
+    {
+      "wordId": "boom_gaokao",
+      "type": "homophone",
+      "content": "谐音'蹦'——蹦起来繁荣，繁荣"
+    },
+    {
+      "wordId": "bored_gaokao",
+      "type": "story",
+      "content": "bor+ed(…的)+bor——…的"
+    },
+    {
+      "wordId": "bound_gaokao",
+      "type": "story",
+      "content": "bound(绑)——被绑住受约束，一定的"
+    },
+    {
+      "wordId": "boundary_gaokao",
+      "type": "story",
+      "content": "bound(边界)+ary——边界线，界限"
+    },
+    {
+      "wordId": "brake_gaokao",
+      "type": "story",
+      "content": "brak(断)+e——使车断停，刹车"
+    },
+    {
+      "wordId": "breakthrough_gaokao",
+      "type": "story",
+      "content": "break(打破)+through(通过)——打破障碍通过，突破"
+    },
+    {
+      "wordId": "breathless_gaokao",
+      "type": "story",
+      "content": "breath+less(无)+breath——无"
+    },
+    {
+      "wordId": "bridegroom_gaokao",
+      "type": "story",
+      "content": "bride(新娘)+groom(马夫)——新娘的马夫，新郎"
+    },
+    {
+      "wordId": "brief_gaokao",
+      "type": "story",
+      "content": "brief(短)——短的，简短的"
+    },
+    {
+      "wordId": "broadcast_gaokao",
+      "type": "story",
+      "content": "broad(广泛)+cast(投)——广泛投送信号，广播"
+    },
+    {
+      "wordId": "brochure_gaokao",
+      "type": "story",
+      "content": "broch+ure(名词)+broch——名词"
+    },
+    {
+      "wordId": "budget_gaokao",
+      "type": "story",
+      "content": "budg(钱包)+et——钱包里的计划，预算"
+    },
+    {
+      "wordId": "buffet_gaokao",
+      "type": "homophone",
+      "content": "谐音'不肥'——自助餐不肥才怪，自助餐"
+    },
+    {
+      "wordId": "bungalow_gaokao",
+      "type": "story",
+      "content": "bung(低)+alow——低矮的房子，平房"
+    },
+    {
+      "wordId": "burden_gaokao",
+      "type": "story",
+      "content": "burd(背负)+en——背负的东西，负担"
+    },
+    {
+      "wordId": "cab_gaokao",
+      "type": "story",
+      "content": "cab(马车)——出租马车，出租车"
+    },
+    {
+      "wordId": "calculate_gaokao",
+      "type": "story",
+      "content": "calc(石头)+ul+ate——用石子计数，计算"
+    },
+    {
+      "wordId": "campaign_gaokao",
+      "type": "story",
+      "content": "camp(营地)+aign——在营地展开活动，运动"
+    },
+    {
+      "wordId": "candidate_gaokao",
+      "type": "story",
+      "content": "candid(白)+ate——穿白衣的竞选者，候选人"
+    },
+    {
+      "wordId": "capable_gaokao",
+      "type": "story",
+      "content": "cap(抓)+able——能抓住机会的，有能力的"
+    },
+    {
+      "wordId": "capacity_gaokao",
+      "type": "story",
+      "content": "cap(抓)+acity——能抓住的量，容量、能力"
+    },
+    {
+      "wordId": "caption_gaokao",
+      "type": "story",
+      "content": "cap+tion(名词)+cap——名词"
+    },
+    {
+      "wordId": "capture_gaokao",
+      "type": "story",
+      "content": "capt(抓)+ure——抓住，捕获"
+    },
+    {
+      "wordId": "carve_gaokao",
+      "type": "story",
+      "content": "carv(切)+e——切出形状，雕刻"
+    },
+    {
+      "wordId": "cash_gaokao",
+      "type": "story",
+      "content": "cash(箱子)——装钱的箱子，现金"
+    },
+    {
+      "wordId": "cassette_gaokao",
+      "type": "story",
+      "content": "cass(盒)+ette(小)——小盒子，磁带盒"
+    },
+    {
+      "wordId": "casual_gaokao",
+      "type": "story",
+      "content": "cas+ual(…的)+cas——…的"
+    },
+    {
+      "wordId": "category_gaokao",
+      "type": "story",
+      "content": "categor+y(…的/名词)+categor——…的/名词"
+    },
+    {
+      "wordId": "catholic_gaokao",
+      "type": "story",
+      "content": "cathol+ic(…的)+cathol——…的"
+    },
+    {
+      "wordId": "cause_gaokao",
+      "type": "story",
+      "content": "caus(理由)+e——做某事的理由，原因"
+    },
+    {
+      "wordId": "caution_gaokao",
+      "type": "story",
+      "content": "caut(小心)+ion——小心行事，谨慎"
+    },
+    {
+      "wordId": "celebrate_gaokao",
+      "type": "story",
+      "content": "celebr(荣誉)+ate——为荣誉而庆贺，庆祝"
+    },
+    {
+      "wordId": "chain_gaokao",
+      "type": "story",
+      "content": "chain(链)——一环扣一环，链、连锁"
+    },
+    {
+      "wordId": "challenge_gaokao",
+      "type": "story",
+      "content": "chall(叫)+enge——叫阵挑战，挑战"
+    },
+    {
+      "wordId": "champion_gaokao",
+      "type": "story",
+      "content": "champ(田野)+ion——田野上获胜的人，冠军"
+    },
+    {
+      "wordId": "characteristic_gaokao",
+      "type": "story",
+      "content": "characterist+ic(…的)+characterist——…的"
+    },
+    {
+      "wordId": "charge_gaokao",
+      "type": "story",
+      "content": "charg(装)——装上责任或费用，收费、指控"
+    },
+    {
+      "wordId": "childhood_gaokao",
+      "type": "story",
+      "content": "child+hood(状态)+child——状态"
+    },
+    {
+      "wordId": "circumstance_gaokao",
+      "type": "story",
+      "content": "circum(周围)+stance(站)——站在周围的情况，环境"
+    },
+    {
+      "wordId": "citizen_gaokao",
+      "type": "story",
+      "content": "citiz+en(使之)+citiz——使之"
+    },
+    {
+      "wordId": "civil_gaokao",
+      "type": "story",
+      "content": "civ(城市)+il——城市公民的，公民的"
+    },
+    {
+      "wordId": "claim_gaokao",
+      "type": "story",
+      "content": "claim(叫喊)——大声叫喊要求，声称、主张"
+    },
+    {
+      "wordId": "classify_gaokao",
+      "type": "story",
+      "content": "class(类别)+ify(使)——使之归类，分类"
+    },
+    {
+      "wordId": "claw_gaokao",
+      "type": "story",
+      "content": "cl(抓)+aw——抓东西的爪子，爪"
+    },
+    {
+      "wordId": "clay_gaokao",
+      "type": "story",
+      "content": "cla+y(…的/名词)+cla——…的/名词"
+    },
+    {
+      "wordId": "climate_gaokao",
+      "type": "story",
+      "content": "clim(倾斜)+ate——地球倾斜影响天气，气候"
+    },
+    {
+      "wordId": "coincidence_gaokao",
+      "type": "story",
+      "content": "co(共同)+incid(发生)+ence——同时发生，巧合"
+    },
+    {
+      "wordId": "collapse_gaokao",
+      "type": "story",
+      "content": "col(共同)+laps(滑)+e——一起滑落，倒塌"
+    },
+    {
+      "wordId": "combine_gaokao",
+      "type": "story",
+      "content": "com(共同)+bine——共同"
+    },
+    {
+      "wordId": "comfort_gaokao",
+      "type": "story",
+      "content": "com(共同)+fort(力量)——一起给予力量，安慰"
+    },
+    {
+      "wordId": "command_gaokao",
+      "type": "story",
+      "content": "com(共同)+mand(命令)——统一号令，命令"
+    },
+    {
+      "wordId": "comment_gaokao",
+      "type": "story",
+      "content": "com(共同)+ment(思考)——一起思考后发言，评论"
+    },
+    {
+      "wordId": "commit_gaokao",
+      "type": "story",
+      "content": "com(共同)+mit(送)——把自己送出去，承诺、犯罪"
+    },
+    {
+      "wordId": "commitment_gaokao",
+      "type": "story",
+      "content": "commit(承诺)+ment——承诺的事，义务"
+    },
+    {
+      "wordId": "communicate_gaokao",
+      "type": "story",
+      "content": "com(共同)+muni(服务)+cate——互相服务，交流"
+    },
+    {
+      "wordId": "community_gaokao",
+      "type": "story",
+      "content": "com(共同)+muni(服务)+ty——共同服务的群体，社区"
+    },
+    {
+      "wordId": "compare_gaokao",
+      "type": "story",
+      "content": "com(共同)+par(平等)+e——放在一起看是否平等，比较"
+    },
+    {
+      "wordId": "compete_gaokao",
+      "type": "story",
+      "content": "com(共同)+pet(追求)+e——一起追求同一个目标，竞争"
+    },
+    {
+      "wordId": "complaint_gaokao",
+      "type": "story",
+      "content": "com(共同)+plaint(抱怨)——一起抱怨，投诉"
+    },
+    {
+      "wordId": "complex_gaokao",
+      "type": "story",
+      "content": "com(共同)+plex(折叠)——折叠在一起，复杂的"
+    },
+    {
+      "wordId": "compromise_gaokao",
+      "type": "story",
+      "content": "com(共同)+promis(承诺)——互相承诺让步，妥协"
+    },
+    {
+      "wordId": "compulsory_gaokao",
+      "type": "story",
+      "content": "com(共同)+puls(推)+ory——被推动必须做的，必修的"
+    },
+    {
+      "wordId": "concentrate_gaokao",
+      "type": "story",
+      "content": "con(共同)+centr(中心)+ate——集中到中心，专注"
+    },
+    {
+      "wordId": "concept_gaokao",
+      "type": "story",
+      "content": "con(共同)+cept(抓)——抓住共同要点，概念"
+    },
+    {
+      "wordId": "concern_gaokao",
+      "type": "story",
+      "content": "con(共同)+cern(分离)——与大家分开关注的事，关心"
+    },
+    {
+      "wordId": "conclude_gaokao",
+      "type": "story",
+      "content": "con(共同)+clud(关闭)+e——一起关上，结束、结论"
+    },
+    {
+      "wordId": "concrete_gaokao",
+      "type": "story",
+      "content": "con(共同)+cret(生长)——长在一起的实体，具体的"
+    },
+    {
+      "wordId": "conduct_gaokao",
+      "type": "story",
+      "content": "con(共同)+duct(引导)——引导大家，指挥、行为"
+    },
+    {
+      "wordId": "confident_gaokao",
+      "type": "story",
+      "content": "con(加强)+fid(信任)+ent——充分信任自己，自信的"
+    },
+    {
+      "wordId": "confirm_gaokao",
+      "type": "story",
+      "content": "con(加强)+firm(坚定)——使之坚定，确认"
+    },
+    {
+      "wordId": "conflict_gaokao",
+      "type": "story",
+      "content": "con(共同)+flict(打击)——互相打击，冲突"
+    },
+    {
+      "wordId": "confuse_gaokao",
+      "type": "story",
+      "content": "con(共同)+fus(流)+e——流到一起分不清，使困惑"
+    },
+    {
+      "wordId": "congratulation_gaokao",
+      "type": "story",
+      "content": "con(共同)+gratul(高兴)+ation——一起高兴，祝贺"
+    },
+    {
+      "wordId": "consequence_gaokao",
+      "type": "story",
+      "content": "con(共同)+sequ(跟随)+ence——跟随而来的，后果"
+    },
+    {
+      "wordId": "conserve_gaokao",
+      "type": "story",
+      "content": "con(共同)+serv(保持)+e——共同保持，保护、节约"
+    },
+    {
+      "wordId": "consider_gaokao",
+      "type": "story",
+      "content": "con(共同)+sider(星)——观察星象来思考，考虑"
+    },
+    {
+      "wordId": "consist_gaokao",
+      "type": "story",
+      "content": "con(共同)+sist(站)——站在一起，由…组成"
+    },
+    {
+      "wordId": "constant_gaokao",
+      "type": "story",
+      "content": "con(加强)+st(站)+ant——一直站着不动，恒定的"
+    },
+    {
+      "wordId": "construct_gaokao",
+      "type": "story",
+      "content": "con(共同)+struct(建造)——一起建造，构建"
+    },
+    {
+      "wordId": "consult_gaokao",
+      "type": "story",
+      "content": "con(共同)+sult(坐)——坐在一起讨论，咨询"
+    },
+    {
+      "wordId": "consume_gaokao",
+      "type": "story",
+      "content": "con(完全)+sum(拿)+e——全部拿走，消耗"
+    },
+    {
+      "wordId": "contradict_gaokao",
+      "type": "story",
+      "content": "contra(反对)+dict(说)——反着说，反驳、矛盾"
+    },
+    {
+      "wordId": "contradictory_gaokao",
+      "type": "story",
+      "content": "contra(反对)+dict(说)+ory——反着说的，矛盾的"
+    },
+    {
+      "wordId": "contribute_gaokao",
+      "type": "story",
+      "content": "con(共同)+tribut(给予)+e——共同给予，贡献"
+    },
+    {
+      "wordId": "convenient_gaokao",
+      "type": "story",
+      "content": "con(加强)+ven(来)+ient——随叫随到，方便的"
+    },
+    {
+      "wordId": "conventional_gaokao",
+      "type": "story",
+      "content": "convent(集会)+ion+al——集会约定俗成的，传统的"
+    },
+    {
+      "wordId": "convince_gaokao",
+      "type": "story",
+      "content": "con(加强)+vinc(征服)——彻底征服对方，说服"
+    },
+    {
+      "wordId": "cooperate_gaokao",
+      "type": "story",
+      "content": "co(共同)+oper(工作)+ate——一起工作，合作"
+    },
+    {
+      "wordId": "courage_gaokao",
+      "type": "story",
+      "content": "cour(心)+age——心里有力量，勇气"
+    },
+    {
+      "wordId": "crash_gaokao",
+      "type": "homophone",
+      "content": "谐音'克垃石'——撞上碎石，碰撞"
+    },
+    {
+      "wordId": "creative_gaokao",
+      "type": "story",
+      "content": "cre(创造)+at+ive——有创造力的，创造性的"
+    },
+    {
+      "wordId": "crisis_gaokao",
+      "type": "story",
+      "content": "cris(判断)+is——需要做出判断的时刻，危机"
+    },
+    {
+      "wordId": "criticize_gaokao",
+      "type": "story",
+      "content": "crit(判断)+icize——做出判断，批评"
+    },
+    {
+      "wordId": "cuisine_gaokao",
+      "type": "homophone",
+      "content": "谐音'趣烹'——有趣地烹饪，烹调法"
+    },
+    {
+      "wordId": "cultivate_gaokao",
+      "type": "story",
+      "content": "cult(耕种)+iv+ate——耕种培养，培养"
+    },
+    {
+      "wordId": "curious_gaokao",
+      "type": "story",
+      "content": "cur(关心)+ious——太关心周围，好奇的"
+    },
+    {
+      "wordId": "currency_gaokao",
+      "type": "story",
+      "content": "curr(流)+ency——流通的东西，货币"
+    },
+    {
+      "wordId": "current_gaokao",
+      "type": "story",
+      "content": "curr(跑)+ent——正在跑的，当前的、水流"
+    },
+    {
+      "wordId": "custom_gaokao",
+      "type": "story",
+      "content": "cust(习惯)+om——长期形成的习惯，习俗"
+    },
+    {
+      "wordId": "database_gaokao",
+      "type": "story",
+      "content": "data(数据)+base(基地)——数据的基地，数据库"
+    },
+    {
+      "wordId": "deadline_gaokao",
+      "type": "story",
+      "content": "dead(死)+line(线)——过了这条线就死定了，截止期限"
+    },
+    {
+      "wordId": "debate_gaokao",
+      "type": "story",
+      "content": "de(向下)+bat(打)+e——用言语互相打击，辩论"
+    },
+    {
+      "wordId": "decade_gaokao",
+      "type": "story",
+      "content": "dec(十)+ade——十个一组，十年"
+    },
+    {
+      "wordId": "decline_gaokao",
+      "type": "story",
+      "content": "de(向下)+clin(倾斜)+e——向下倾斜，下降、拒绝"
+    },
+    {
+      "wordId": "decorate_gaokao",
+      "type": "story",
+      "content": "decor(装饰)+ate——使之美观，装饰"
+    },
+    {
+      "wordId": "decoration_gaokao",
+      "type": "story",
+      "content": "decor(装饰)+ation——装饰的行为或物品，装饰品"
+    },
+    {
+      "wordId": "decrease_gaokao",
+      "type": "story",
+      "content": "de(向下)+creas(增长)+e——向下增长，减少"
+    },
+    {
+      "wordId": "deed_gaokao",
+      "type": "story",
+      "content": "deed(做)——做过的事，行动"
+    },
+    {
+      "wordId": "defeat_gaokao",
+      "type": "story",
+      "content": "de(向下)+feat(做)——做得不如人，击败"
+    },
+    {
+      "wordId": "defend_gaokao",
+      "type": "story",
+      "content": "de(向下)+fend(打击)——挡住打击，防御"
+    },
+    {
+      "wordId": "define_gaokao",
+      "type": "story",
+      "content": "de(向下)+fin(界限)+e——划清界限，定义"
+    },
+    {
+      "wordId": "delay_gaokao",
+      "type": "story",
+      "content": "de(向下)+lay(放)——把事情放下不办，延迟"
+    },
+    {
+      "wordId": "delicate_gaokao",
+      "type": "story",
+      "content": "de(加强)+lic(诱惑)+ate——精致到诱人，精美的、易碎的"
+    },
+    {
+      "wordId": "deliver_gaokao",
+      "type": "story",
+      "content": "de(向下)+liver(释放)——释放出来，递送"
+    },
+    {
+      "wordId": "demand_gaokao",
+      "type": "story",
+      "content": "de(加强)+mand(命令)——强烈要求，需求"
+    },
+    {
+      "wordId": "demonstrate_gaokao",
+      "type": "story",
+      "content": "de(加强)+monstr(展示)+ate——展示出来，证明、演示"
+    },
+    {
+      "wordId": "deny_gaokao",
+      "type": "story",
+      "content": "de(向下)+ny(说)——说不是，否认"
+    },
+    {
+      "wordId": "depend_gaokao",
+      "type": "story",
+      "content": "de(向下)+pend(悬挂)——挂在下面，依赖"
+    },
+    {
+      "wordId": "depressed_gaokao",
+      "type": "story",
+      "content": "de(向下)+press(压)+ed——被压下去，沮丧的"
+    },
+    {
+      "wordId": "describe_gaokao",
+      "type": "story",
+      "content": "de(向下)+scrib(写)+e——写下来，描述"
+    },
+    {
+      "wordId": "deserve_gaokao",
+      "type": "story",
+      "content": "de(加强)+serv(服务)+e——付出了服务就应得，值得"
+    },
+    {
+      "wordId": "design_gaokao",
+      "type": "story",
+      "content": "de(加强)+sign(标记)——做出标记来规划，设计"
+    },
+    {
+      "wordId": "desire_gaokao",
+      "type": "story",
+      "content": "de(加强)+sir(渴望)+e——强烈渴望，欲望"
+    },
+    {
+      "wordId": "desperate_gaokao",
+      "type": "story",
+      "content": "de(去掉)+sper(希望)+ate——没有希望的，绝望的"
+    },
+    {
+      "wordId": "despite_gaokao",
+      "type": "story",
+      "content": "de(向下)+spit(看)——看不起但仍然，尽管"
+    },
+    {
+      "wordId": "destroy_gaokao",
+      "type": "story",
+      "content": "de(去掉)+stroy(建造)——去掉建造，破坏"
+    },
+    {
+      "wordId": "detect_gaokao",
+      "type": "story",
+      "content": "de(去掉)+tect(遮盖)——去掉遮盖，发现、察觉"
+    },
+    {
+      "wordId": "determine_gaokao",
+      "type": "story",
+      "content": "de(加强)+termin(界限)+e——划清界限，决定"
+    },
+    {
+      "wordId": "develop_gaokao",
+      "type": "story",
+      "content": "de(打开)+velop(包)——打开包裹，发展"
+    },
+    {
+      "wordId": "devote_gaokao",
+      "type": "story",
+      "content": "de(加强)+vot(发誓)+e——发誓投入，奉献"
+    },
+    {
+      "wordId": "devotion_gaokao",
+      "type": "story",
+      "content": "devot(奉献)+ion——奉献的状态，献身"
+    },
+    {
+      "wordId": "dial_gaokao",
+      "type": "story",
+      "content": "di(日)+al——日晷上的刻度盘，拨号"
+    },
+    {
+      "wordId": "differ_gaokao",
+      "type": "story",
+      "content": "dif(分开)+fer(带)——带向不同方向，不同"
+    },
+    {
+      "wordId": "digest_gaokao",
+      "type": "story",
+      "content": "di(分开)+gest(带)——分开带入体内，消化"
+    },
+    {
+      "wordId": "dilemma_gaokao",
+      "type": "story",
+      "content": "di(两)+lemma(假设)——两个假设都不好选，困境"
+    },
+    {
+      "wordId": "dimension_gaokao",
+      "type": "story",
+      "content": "di(分开)+mens(测量)+ion——分开测量的结果，维度"
+    },
+    {
+      "wordId": "dinosaur_gaokao",
+      "type": "story",
+      "content": "dino(恐怖)+saur(蜥蜴)——恐怖的蜥蜴，恐龙"
+    },
+    {
+      "wordId": "diploma_gaokao",
+      "type": "story",
+      "content": "dipl(双)+oma——对折的证书，毕业证书"
+    },
+    {
+      "wordId": "direction_gaokao",
+      "type": "story",
+      "content": "direct(指引)+ion——指引的方向，方向"
+    },
+    {
+      "wordId": "disability_gaokao",
+      "type": "story",
+      "content": "dis(否定)+ability(能力)——没有能力，残疾"
+    },
+    {
+      "wordId": "disappoint_gaokao",
+      "type": "story",
+      "content": "dis(否定)+appoint(任命)——未被任命，使失望"
+    },
+    {
+      "wordId": "discipline_gaokao",
+      "type": "story",
+      "content": "discip(学习)+line(线)——学习的规矩，纪律"
+    },
+    {
+      "wordId": "discount_gaokao",
+      "type": "story",
+      "content": "dis(去掉)+count(计算)——去掉一部分计算，折扣"
+    },
+    {
+      "wordId": "discover_gaokao",
+      "type": "story",
+      "content": "dis(去掉)+cover(覆盖)——去掉覆盖物，发现"
+    },
+    {
+      "wordId": "discrimination_gaokao",
+      "type": "story",
+      "content": "dis(分开)+crimin(判断)+ation——分开判断对待，歧视"
+    },
+    {
+      "wordId": "discuss_gaokao",
+      "type": "story",
+      "content": "dis(分开)+cuss(敲)——敲开话题来谈，讨论"
+    },
+    {
+      "wordId": "distant_gaokao",
+      "type": "story",
+      "content": "di(分开)+st(站)+ant——站得很远，遥远的"
+    },
+    {
+      "wordId": "distinguish_gaokao",
+      "type": "story",
+      "content": "di(分开)+sting(刺)+uish——刺出不同标记，区分"
+    },
+    {
+      "wordId": "distribute_gaokao",
+      "type": "story",
+      "content": "dis(分开)+tribut(给予)+e——分开发给，分配"
+    },
+    {
+      "wordId": "disturb_gaokao",
+      "type": "story",
+      "content": "dis(分开)+turb(搅动)——搅乱开来，打扰"
+    },
+    {
+      "wordId": "diverse_gaokao",
+      "type": "story",
+      "content": "di(分开)+vers(转)+e——转向不同方向，多样的"
+    },
+    {
+      "wordId": "divide_gaokao",
+      "type": "story",
+      "content": "di(分开)+vid(看)+e——看成不同部分，划分"
+    },
+    {
+      "wordId": "domestic_gaokao",
+      "type": "story",
+      "content": "dom(家)+estic——家里的，国内的、家庭的"
+    },
+    {
+      "wordId": "donate_gaokao",
+      "type": "story",
+      "content": "don(给)+ate——给出去，捐赠"
+    },
+    {
+      "wordId": "doubt_gaokao",
+      "type": "story",
+      "content": "dou(双)+bt——心里有两种想法，怀疑"
+    },
+    {
+      "wordId": "dramatic_gaokao",
+      "type": "story",
+      "content": "drama(戏剧)+tic——戏剧般的，戏剧性的"
+    },
+    {
+      "wordId": "drawback_gaokao",
+      "type": "story",
+      "content": "draw(拉)+back(回)——把人拉回来的因素，缺点"
+    },
+    {
+      "wordId": "durable_gaokao",
+      "type": "story",
+      "content": "dur(持续)+able——能持续的，耐用的"
+    },
+    {
+      "wordId": "dusk_gaokao",
+      "type": "story",
+      "content": "dus(暗)+k——天暗下来，黄昏"
+    },
+    {
+      "wordId": "dusty_gaokao",
+      "type": "story",
+      "content": "dust(灰尘)+y——满是灰尘的，落满灰尘的"
+    },
+    {
+      "wordId": "duty_gaokao",
+      "type": "story",
+      "content": "du(双)+ty——双重责任，义务"
+    },
+    {
+      "wordId": "dynamic_gaokao",
+      "type": "story",
+      "content": "dynam(力量)+ic——充满力量的，动态的"
+    },
+    {
+      "wordId": "dynasty_gaokao",
+      "type": "story",
+      "content": "dyn(力量)+asty——靠力量传承的，王朝"
+    },
+    {
+      "wordId": "eager_gaokao",
+      "type": "homophone",
+      "content": "谐音'一哥'——想当一哥，渴望的"
+    },
+    {
+      "wordId": "ecology_gaokao",
+      "type": "story",
+      "content": "eco(生态)+logy(学科)——研究生态的学科，生态学"
+    },
+    {
+      "wordId": "economy_gaokao",
+      "type": "story",
+      "content": "eco(家)+nomy(管理)——管理家庭开支，经济"
+    },
+    {
+      "wordId": "effective_gaokao",
+      "type": "story",
+      "content": "effect(效果)+ive——有效果的，有效的"
+    },
+    {
+      "wordId": "efficient_gaokao",
+      "type": "story",
+      "content": "ef(出)+fic(做)+ient——做得出色，高效的"
+    },
+    {
+      "wordId": "elaborate_gaokao",
+      "type": "story",
+      "content": "e(出)+labor(劳动)+ate——付出大量劳动，精心制作的"
+    },
+    {
+      "wordId": "eliminate_gaokao",
+      "type": "story",
+      "content": "e(出)+limin(门槛)+ate——赶出门外，消除、淘汰"
+    },
+    {
+      "wordId": "embassy_gaokao",
+      "type": "story",
+      "content": "embass(送)+y——派送代表的机构，大使馆"
+    },
+    {
+      "wordId": "embrace_gaokao",
+      "type": "story",
+      "content": "em(进入)+brace(手臂)——进入手臂中，拥抱"
+    },
+    {
+      "wordId": "emerge_gaokao",
+      "type": "story",
+      "content": "e(出)+merg(沉)+e——从沉没中出来，出现"
+    },
+    {
+      "wordId": "emergency_gaokao",
+      "type": "story",
+      "content": "emerg(出现)+ency——突然出现的事，紧急情况"
+    },
+    {
+      "wordId": "emotion_gaokao",
+      "type": "story",
+      "content": "e(出)+mot(动)+ion——内心的波动流露出来，情感"
+    },
+    {
+      "wordId": "emphasize_gaokao",
+      "type": "story",
+      "content": "em(进入)+phas(显示)+ize——着重显示，强调"
+    },
+    {
+      "wordId": "employ_gaokao",
+      "type": "story",
+      "content": "em(进入)+ploy(折叠)——纳入编制中，雇用"
+    },
+    {
+      "wordId": "enable_gaokao",
+      "type": "story",
+      "content": "en(使)+able(能)——使之能够，使能够"
+    },
+    {
+      "wordId": "encounter_gaokao",
+      "type": "story",
+      "content": "en(进入)+counter(对面)——走到对面遇到，遭遇"
+    },
+    {
+      "wordId": "encourage_gaokao",
+      "type": "story",
+      "content": "en(使)+courage(勇气)——使有勇气，鼓励"
+    },
+    {
+      "wordId": "endure_gaokao",
+      "type": "story",
+      "content": "en(进入)+dur(持续)+e——持续下去，忍受"
+    },
+    {
+      "wordId": "engage_gaokao",
+      "type": "story",
+      "content": "en(进入)+gage(保证)——做出保证，参与、订婚"
+    },
+    {
+      "wordId": "enhance_gaokao",
+      "type": "story",
+      "content": "en(使)+hance(高)——使之提高，增强"
+    },
+    {
+      "wordId": "enormous_gaokao",
+      "type": "story",
+      "content": "e(超出)+norm(正常)+ous——超出正常范围，巨大的"
+    },
+    {
+      "wordId": "enquiry_gaokao",
+      "type": "story",
+      "content": "en(进入)+quir(问)+y——进去问，询问"
+    },
+    {
+      "wordId": "ensure_gaokao",
+      "type": "story",
+      "content": "en(使)+sure(确定)——使之确定，确保"
+    },
+    {
+      "wordId": "enterprise_gaokao",
+      "type": "story",
+      "content": "enter(进入)+pris(抓住)+e——抓住机会进入，企业"
+    },
+    {
+      "wordId": "enthusiasm_gaokao",
+      "type": "story",
+      "content": "enthus(神)+iasm——像被神附体一样，热情"
+    },
+    {
+      "wordId": "entire_gaokao",
+      "type": "story",
+      "content": "en(加强)+tir(拉)——全部拉到一起，整个的"
+    },
+    {
+      "wordId": "entrance_gaokao",
+      "type": "story",
+      "content": "entr(进入)+ance——进入的地方，入口"
+    },
+    {
+      "wordId": "environment_gaokao",
+      "type": "story",
+      "content": "en(围绕)+viron(周围)+ment——围绕在周围的，环境"
+    },
+    {
+      "wordId": "establish_gaokao",
+      "type": "story",
+      "content": "e(出)+stabl(稳定)+ish——使之稳定，建立"
+    },
+    {
+      "wordId": "evaluate_gaokao",
+      "type": "story",
+      "content": "e(出)+valu(价值)+ate——算出价值，评估"
+    },
+    {
+      "wordId": "evidence_gaokao",
+      "type": "story",
+      "content": "e(出)+vid(看)+ence——看得出来的东西，证据"
+    },
+    {
+      "wordId": "evident_gaokao",
+      "type": "story",
+      "content": "e(出)+vid(看)+ent——看得出来的，明显的"
+    },
+    {
+      "wordId": "evolve_gaokao",
+      "type": "story",
+      "content": "e(出)+volv(转)+e——向外旋转展开，进化"
+    },
+    {
+      "wordId": "exaggerate_gaokao",
+      "type": "story",
+      "content": "ex(出)+agger(堆)+ate——堆得超出，夸张"
+    },
+    {
+      "wordId": "examine_gaokao",
+      "type": "story",
+      "content": "ex(出)+amin(检查)——检查出来，检查"
+    },
+    {
+      "wordId": "exceed_gaokao",
+      "type": "story",
+      "content": "ex(出)+ceed(走)——走出去超过，超过"
+    },
+    {
+      "wordId": "exception_gaokao",
+      "type": "story",
+      "content": "ex(出)+cept(拿)+ion——拿出去不算，例外"
+    },
+    {
+      "wordId": "exchange_gaokao",
+      "type": "story",
+      "content": "ex(出)+change(换)——换出去再换回来，交换"
+    },
+    {
+      "wordId": "exist_gaokao",
+      "type": "story",
+      "content": "ex(出)+ist(站)——站出来，存在"
+    },
+    {
+      "wordId": "expand_gaokao",
+      "type": "story",
+      "content": "ex(出)+pand(展开)——向外展开，扩大"
+    },
+    {
+      "wordId": "expect_gaokao",
+      "type": "story",
+      "content": "ex(出)+pect(看)——向外看等待，期望"
+    },
+    {
+      "wordId": "expense_gaokao",
+      "type": "story",
+      "content": "ex(出)+pens(花费)+e——花出去的钱，开支"
+    },
+    {
+      "wordId": "experiment_gaokao",
+      "type": "story",
+      "content": "ex(出)+peri(尝试)+ment——尝试出来的过程，实验"
+    },
+    {
+      "wordId": "expert_gaokao",
+      "type": "story",
+      "content": "ex(出)+pert(尝试)——尝试出来经验的人，专家"
+    },
+    {
+      "wordId": "explode_gaokao",
+      "type": "story",
+      "content": "ex(出)+plod(拍手)+e——拍手轰出去，爆炸"
+    },
+    {
+      "wordId": "exploit_gaokao",
+      "type": "story",
+      "content": "ex(出)+ploit(折叠)——展开折叠来用，开发、利用"
+    },
+    {
+      "wordId": "explore_gaokao",
+      "type": "story",
+      "content": "ex(出)+plor(哭喊)——喊出来发现，探索"
+    },
+    {
+      "wordId": "expose_gaokao",
+      "type": "story",
+      "content": "ex(出)+pos(放)+e——放在外面，暴露"
+    },
+    {
+      "wordId": "extend_gaokao",
+      "type": "story",
+      "content": "ex(出)+tend(伸展)——向外伸展，延伸"
+    },
+    {
+      "wordId": "extension_gaokao",
+      "type": "story",
+      "content": "extens(延伸)+ion——延伸的部分，延长"
+    },
+    {
+      "wordId": "extent_gaokao",
+      "type": "story",
+      "content": "ex(出)+tent(伸展)——伸展的范围，程度"
+    },
+    {
+      "wordId": "extraordinary_gaokao",
+      "type": "story",
+      "content": "extra(超出)+ordinary(普通)——超出普通的，非凡的"
+    },
+    {
+      "wordId": "extreme_gaokao",
+      "type": "story",
+      "content": "extr(超出)+eme——到最外面的，极端的"
+    },
+    {
+      "wordId": "facility_gaokao",
+      "type": "story",
+      "content": "fac(做)+ility——能做事的地方，设施"
+    },
+    {
+      "wordId": "faith_gaokao",
+      "type": "story",
+      "content": "fai(忠实)+th——忠实的心，信仰"
+    },
+    {
+      "wordId": "familiar_gaokao",
+      "type": "story",
+      "content": "famili(家庭)+ar——像家人一样，熟悉的"
+    },
+    {
+      "wordId": "fancy_gaokao",
+      "type": "story",
+      "content": "fan(幻想)+cy——幻想出来的，想象、奇特的"
+    },
+    {
+      "wordId": "fascinate_gaokao",
+      "type": "story",
+      "content": "fascin(魔力)+ate——被魔力吸引，使着迷"
+    },
+    {
+      "wordId": "fasten_gaokao",
+      "type": "story",
+      "content": "fast(牢固)+en——使之牢固，扎牢"
+    },
+    {
+      "wordId": "fatal_gaokao",
+      "type": "story",
+      "content": "fat(命运)+al——命中注定的，致命的"
+    },
+    {
+      "wordId": "fault_gaokao",
+      "type": "story",
+      "content": "faul(失败)+t——失败的原因，错误"
+    },
+    {
+      "wordId": "favor_gaokao",
+      "type": "story",
+      "content": "fav(好感)+or——对人有好感，支持"
+    },
+    {
+      "wordId": "feature_gaokao",
+      "type": "story",
+      "content": "feat(做)+ure——做出来的特点，特征"
+    },
+    {
+      "wordId": "federal_gaokao",
+      "type": "story",
+      "content": "feder(联盟)+al——联盟的，联邦的"
+    },
+    {
+      "wordId": "fierce_gaokao",
+      "type": "story",
+      "content": "fier(凶猛)+ce——凶猛的，激烈的"
+    },
+    {
+      "wordId": "fine_gaokao",
+      "type": "story",
+      "content": "fin(结束)+e——事情结束要罚款，罚款"
+    },
+    {
+      "wordId": "firm_gaokao",
+      "type": "story",
+      "content": "firm(坚固)——坚固的，公司"
+    },
+    {
+      "wordId": "flame_gaokao",
+      "type": "story",
+      "content": "flam(火)+e——火焰"
+    },
+    {
+      "wordId": "flexible_gaokao",
+      "type": "story",
+      "content": "flex(弯曲)+ible——能弯曲的，灵活的"
+    },
+    {
+      "wordId": "fluent_gaokao",
+      "type": "story",
+      "content": "flu(流)+ent——流利的，流畅的"
+    },
+    {
+      "wordId": "fond_gaokao",
+      "type": "story",
+      "content": "fon(喜欢)+d——喜欢的，喜爱的"
+    },
+    {
+      "wordId": "forecast_gaokao",
+      "type": "story",
+      "content": "fore(前)+cast(投)——提前投出预测，预报"
+    },
+    {
+      "wordId": "foresee_gaokao",
+      "type": "story",
+      "content": "fore(前)+see(看)——提前看到，预见"
+    },
+    {
+      "wordId": "former_gaokao",
+      "type": "story",
+      "content": "form(形式)+er——之前的那个形式，从前的"
+    },
+    {
+      "wordId": "fortnight_gaokao",
+      "type": "story",
+      "content": "fort(十四)+night(夜)——十四个夜晚，两星期"
+    },
+    {
+      "wordId": "fortune_gaokao",
+      "type": "story",
+      "content": "fort(运气)+une——运气带来的，财富、运气"
+    },
+    {
+      "wordId": "foundation_gaokao",
+      "type": "story",
+      "content": "found(建立)+ation——建立的基础，基础"
+    },
+    {
+      "wordId": "fragile_gaokao",
+      "type": "story",
+      "content": "frag(碎)+ile——容易碎的，脆弱的"
+    },
+    {
+      "wordId": "fragrant_gaokao",
+      "type": "story",
+      "content": "frag(碎)+rant——碎花散发的香味，芳香的"
+    },
+    {
+      "wordId": "framework_gaokao",
+      "type": "story",
+      "content": "frame(框架)+work(结构)——框架结构，框架"
+    },
+    {
+      "wordId": "freeway_gaokao",
+      "type": "story",
+      "content": "free(自由)+way(路)——自由通行的路，高速公路"
+    },
+    {
+      "wordId": "freezing_gaokao",
+      "type": "story",
+      "content": "freez(冻)+ing——正在冻结的，冰冻的"
+    },
+    {
+      "wordId": "frequent_gaokao",
+      "type": "story",
+      "content": "frequ(频繁)+ent——经常发生的，频繁的"
+    },
+    {
+      "wordId": "frustrate_gaokao",
+      "type": "story",
+      "content": "frustr(徒劳)+ate——使努力徒劳，使沮丧"
+    },
+    {
+      "wordId": "fulfill_gaokao",
+      "type": "story",
+      "content": "ful(满)+fill(填)——填满完成，履行"
+    },
+    {
+      "wordId": "function_gaokao",
+      "type": "story",
+      "content": "func(执行)+tion——执行的作用，功能"
+    },
+    {
+      "wordId": "fundamental_gaokao",
+      "type": "story",
+      "content": "fund(基础)+ament+al——基础的，根本的"
+    },
+    {
+      "wordId": "garment_gaokao",
+      "type": "story",
+      "content": "gar(穿)+ment——穿在身上的，衣服"
+    },
+    {
+      "wordId": "generous_gaokao",
+      "type": "story",
+      "content": "gener(产生)+ous——不断产生善意的，慷慨的"
+    },
+    {
+      "wordId": "genuine_gaokao",
+      "type": "story",
+      "content": "genu(膝盖)+ine——古人在膝盖上发誓真诚，真正的"
+    },
+    {
+      "wordId": "global_gaokao",
+      "type": "story",
+      "content": "glob(球)+al——全球的"
+    },
+    {
+      "wordId": "glory_gaokao",
+      "type": "story",
+      "content": "glor(光荣)+y——光荣，荣誉"
+    },
+    {
+      "wordId": "goods_gaokao",
+      "type": "story",
+      "content": "good(好)+s——好的东西拿来卖，商品"
+    },
+    {
+      "wordId": "govern_gaokao",
+      "type": "story",
+      "content": "govern(掌舵)——掌舵管理，统治"
+    },
+    {
+      "wordId": "gradual_gaokao",
+      "type": "story",
+      "content": "grad(步)+ual——一步一步的，逐渐的"
+    },
+    {
+      "wordId": "grasp_gaokao",
+      "type": "story",
+      "content": "gr(抓)+asp——一把抓住，抓住、领会"
+    },
+    {
+      "wordId": "greedy_gaokao",
+      "type": "story",
+      "content": "greed(贪婪)+y——贪婪的"
+    },
+    {
+      "wordId": "greengrocer_gaokao",
+      "type": "story",
+      "content": "green(绿色)+grocer(杂货商)——卖绿色蔬菜的，蔬菜水果商"
+    },
+    {
+      "wordId": "growth_gaokao",
+      "type": "story",
+      "content": "grow(生长)+th——生长的结果，增长"
+    },
+    {
+      "wordId": "guarantee_gaokao",
+      "type": "story",
+      "content": "guar(保护)+ant+ee——保护承诺，保证"
+    },
+    {
+      "wordId": "guidance_gaokao",
+      "type": "story",
+      "content": "guid(引导)+ance——引导的行为，指导"
+    },
+    {
+      "wordId": "gymnastics_gaokao",
+      "type": "story",
+      "content": "gymn(裸)+astics——古希腊裸体锻炼，体操"
+    },
+    {
+      "wordId": "handy_gaokao",
+      "type": "story",
+      "content": "hand(手)+y——手边的，便利的"
+    },
+    {
+      "wordId": "hardship_gaokao",
+      "type": "story",
+      "content": "hard(艰难)+ship(状态)——艰难的状态，困苦"
+    },
+    {
+      "wordId": "hatch_gaokao",
+      "type": "story",
+      "content": "h(护)+atch——护着蛋孵化，孵化"
+    },
+    {
+      "wordId": "helicopter_gaokao",
+      "type": "story",
+      "content": "helic(螺旋)+opter(翼)——螺旋翼飞行器，直升机"
+    },
+    {
+      "wordId": "homeland_gaokao",
+      "type": "story",
+      "content": "home(家)+land(土地)——家的土地，祖国"
+    },
+    {
+      "wordId": "hopeful_gaokao",
+      "type": "story",
+      "content": "hope(希望)+ful——充满希望的"
+    },
+    {
+      "wordId": "host_gaokao",
+      "type": "story",
+      "content": "host(主人)——招待客人的主人"
+    },
+    {
+      "wordId": "howl_gaokao",
+      "type": "homophone",
+      "content": "谐音'嚎'——嚎叫，咆哮"
+    },
+    {
+      "wordId": "incident_gaokao",
+      "type": "story",
+      "content": "in(进入)+cid(落下)+ent——突然降临的事，事件"
+    },
+    {
+      "wordId": "inform_gaokao",
+      "type": "story",
+      "content": "in(进入)+form(形式)——把消息形成文字告知，通知"
+    },
+    {
+      "wordId": "initial_gaokao",
+      "type": "story",
+      "content": "init(开始)+ial——开始的，最初的"
+    },
+    {
+      "wordId": "innocent_gaokao",
+      "type": "story",
+      "content": "in(无)+noc(伤害)+ent——没有伤害别人的，无辜的"
+    },
+    {
+      "wordId": "inspect_gaokao",
+      "type": "story",
+      "content": "in(进入)+spect(看)——进去仔细看，检查"
+    },
+    {
+      "wordId": "insurance_gaokao",
+      "type": "story",
+      "content": "in(进入)+sur(确保)+ance——确保安全的方式，保险"
+    },
+    {
+      "wordId": "intelligence_gaokao",
+      "type": "story",
+      "content": "intel(在…之间)+lig(选择)+ence——善于选择的能力，智力"
+    },
+    {
+      "wordId": "laughter_gaokao",
+      "type": "story",
+      "content": "laugh(笑)+ter——笑的声音，笑声"
+    },
+    {
+      "wordId": "laundry_gaokao",
+      "type": "story",
+      "content": "lau(洗)+ndry——洗衣服的地方，洗衣店"
+    },
+    {
+      "wordId": "local_gaokao",
+      "type": "story",
+      "content": "loc(地方)+al——地方的，当地的"
+    },
+    {
+      "wordId": "maid_gaokao",
+      "type": "story",
+      "content": "maid(少女)——做家务的少女，女仆"
+    },
+    {
+      "wordId": "marble_gaokao",
+      "type": "story",
+      "content": "marb(大理石)+le——大理石，弹珠"
+    },
+    {
+      "wordId": "march_gaokao",
+      "type": "homophone",
+      "content": "谐音'马驰'——战马奔驰行军，三月行军"
+    },
+    {
+      "wordId": "merciful_gaokao",
+      "type": "story",
+      "content": "merci(仁慈)+ful——充满仁慈的"
+    },
+    {
+      "wordId": "mercy_gaokao",
+      "type": "story",
+      "content": "merc(报酬)+y——不求报酬的宽恕，仁慈"
+    },
+    {
+      "wordId": "messy_gaokao",
+      "type": "story",
+      "content": "mess(混乱)+y——混乱的，凌乱的"
+    },
+    {
+      "wordId": "minimum_gaokao",
+      "type": "story",
+      "content": "minim(最小)+um——最小的量，最小值"
+    },
+    {
+      "wordId": "ministry_gaokao",
+      "type": "story",
+      "content": "ministr(管理)+y——管理部门，部"
+    },
+    {
+      "wordId": "miss_gaokao",
+      "type": "story",
+      "content": "miss(错过)——错过的人，小姐"
+    },
+    {
+      "wordId": "motivation_gaokao",
+      "type": "story",
+      "content": "mot(动)+iv+ation——推动行动的力量，动机"
+    },
+    {
+      "wordId": "motto_gaokao",
+      "type": "homophone",
+      "content": "谐音'默托'——默默托付的信条，座右铭"
+    },
+    {
+      "wordId": "mourn_gaokao",
+      "type": "story",
+      "content": "mourn(悲伤)——悲伤哀悼"
+    },
+    {
+      "wordId": "nation_gaokao",
+      "type": "story",
+      "content": "nat(出生)+ion——同一片土地出生的人，国家"
+    },
+    {
+      "wordId": "nationwide_gaokao",
+      "type": "story",
+      "content": "nation(国家)+wide(广泛)——遍及全国的"
+    },
+    {
+      "wordId": "nowhere_gaokao",
+      "type": "story",
+      "content": "no(无)+where(哪里)——没有任何地方，无处"
+    },
+    {
+      "wordId": "offshore_gaokao",
+      "type": "story",
+      "content": "off(离开)+shore(岸)——离岸的，近海的"
+    },
+    {
+      "wordId": "operator_gaokao",
+      "type": "story",
+      "content": "oper(操作)+at+or——操作的人，操作员"
+    },
+    {
+      "wordId": "oppose_gaokao",
+      "type": "story",
+      "content": "op(对面)+pos(放)+e——放在对面，反对"
+    },
+    {
+      "wordId": "outspoken_gaokao",
+      "type": "story",
+      "content": "out(出)+spoken(说)——说出来的，坦率的"
+    },
+    {
+      "wordId": "pace_gaokao",
+      "type": "story",
+      "content": "pac(步)+e——一步的距离，步速"
+    },
+    {
+      "wordId": "pain_gaokao",
+      "type": "story",
+      "content": "pain(惩罚)——受惩罚的痛苦，疼痛"
+    },
+    {
+      "wordId": "parcel_gaokao",
+      "type": "story",
+      "content": "parc(部分)+el——分成部分打包，包裹"
+    },
+    {
+      "wordId": "personal_gaokao",
+      "type": "story",
+      "content": "person(人)+al——个人的"
+    },
+    {
+      "wordId": "physical_gaokao",
+      "type": "story",
+      "content": "phys(自然)+ical——与身体自然相关的，身体的"
+    },
+    {
+      "wordId": "pole_gaokao",
+      "type": "story",
+      "content": "pol(极)+e——地球的极点，杆"
+    },
+    {
+      "wordId": "possess_gaokao",
+      "type": "story",
+      "content": "pos(能)+sess(坐)——能坐拥的，拥有"
+    },
+    {
+      "wordId": "poster_gaokao",
+      "type": "story",
+      "content": "post(张贴)+er——张贴的东西，海报"
+    },
+    {
+      "wordId": "prejudice_gaokao",
+      "type": "story",
+      "content": "pre(前)+judic(判断)+e——提前判断，偏见"
+    },
+    {
+      "wordId": "pulse_gaokao",
+      "type": "story",
+      "content": "puls(跳动)+e——跳动的脉搏，脉冲"
+    },
+    {
+      "wordId": "punishment_gaokao",
+      "type": "story",
+      "content": "punish(惩罚)+ment——惩罚的行为，惩罚"
+    },
+    {
+      "wordId": "quilt_gaokao",
+      "type": "story",
+      "content": "quil(垫)+t——垫在身上的，被子"
+    },
+    {
+      "wordId": "rainbow_gaokao",
+      "type": "story",
+      "content": "rain(雨)+bow(弓)——雨后天空的弓，彩虹"
+    },
+    {
+      "wordId": "rainfall_gaokao",
+      "type": "story",
+      "content": "rain(雨)+fall(落)——雨水落下，降雨量"
+    },
+    {
+      "wordId": "random_gaokao",
+      "type": "story",
+      "content": "rand(边缘)+om——随意到边缘，随机的"
+    },
+    {
+      "wordId": "rank_gaokao",
+      "type": "story",
+      "content": "rank(排列)——排列的等级，等级"
+    },
+    {
+      "wordId": "rare_gaokao",
+      "type": "story",
+      "content": "rar(稀少)+e——稀少的，稀有的"
+    },
+    {
+      "wordId": "reality_gaokao",
+      "type": "story",
+      "content": "real(真实)+ity——真实的状态，现实"
+    },
+    {
+      "wordId": "rebuild_gaokao",
+      "type": "story",
+      "content": "re(再)+build(建造)——再次建造，重建"
+    },
+    {
+      "wordId": "reception_gaokao",
+      "type": "story",
+      "content": "re(回)+cept(拿)+ion——接回来的地方，接待"
+    },
+    {
+      "wordId": "receptionist_gaokao",
+      "type": "story",
+      "content": "reception(接待)+ist(人)——做接待工作的人，接待员"
+    },
+    {
+      "wordId": "recover_gaokao",
+      "type": "story",
+      "content": "re(回)+cover(覆盖)——重新覆盖好，恢复"
+    },
+    {
+      "wordId": "referee_gaokao",
+      "type": "story",
+      "content": "refer(参考)+ee(人)——做参考判断的人，裁判"
+    },
+    {
+      "wordId": "reform_gaokao",
+      "type": "story",
+      "content": "re(再)+form(形式)——重新成形，改革"
+    },
+    {
+      "wordId": "refresh_gaokao",
+      "type": "story",
+      "content": "re(再)+fresh(新鲜)——使重新新鲜，更新"
+    },
+    {
+      "wordId": "regret_gaokao",
+      "type": "story",
+      "content": "re(回)+gret(哭)——回想起来想哭，后悔"
+    },
+    {
+      "wordId": "regular_gaokao",
+      "type": "story",
+      "content": "reg(规则)+ul+ar——按规则的，定期的"
+    },
+    {
+      "wordId": "reliable_gaokao",
+      "type": "story",
+      "content": "reli(依靠)+able——可以依靠的，可靠的"
+    },
+    {
+      "wordId": "rely_gaokao",
+      "type": "story",
+      "content": "re(再)+ly(绑)——再次绑在一起，依靠"
+    },
+    {
+      "wordId": "remark_gaokao",
+      "type": "story",
+      "content": "re(再)+mark(标记)——再次标记评论，评论"
+    },
+    {
+      "wordId": "remove_gaokao",
+      "type": "story",
+      "content": "re(回)+mov(移动)+e——移走，移动"
+    },
+    {
+      "wordId": "replace_gaokao",
+      "type": "story",
+      "content": "re(再)+place(放)——重新放一个，取代"
+    },
+    {
+      "wordId": "representative_gaokao",
+      "type": "story",
+      "content": "re(再)+present(呈现)+at+ive——代表呈现的人，代表"
+    },
+    {
+      "wordId": "respond_gaokao",
+      "type": "story",
+      "content": "re(回)+spond(承诺)——回应承诺，回答"
+    },
+    {
+      "wordId": "responsibility_gaokao",
+      "type": "story",
+      "content": "respons(负责)+ibility——负责的状态，责任"
+    },
+    {
+      "wordId": "revolution_gaokao",
+      "type": "story",
+      "content": "re(再)+volut(滚)+ion——再次翻滚，革命"
+    },
+    {
+      "wordId": "ripe_gaokao",
+      "type": "story",
+      "content": "rip(裂开)+e——果实裂开成熟，成熟的"
+    },
+    {
+      "wordId": "routine_gaokao",
+      "type": "story",
+      "content": "rout(路)+ine——走老路的，日常的、例行公事"
+    },
+    {
+      "wordId": "sceptical_gaokao",
+      "type": "story",
+      "content": "scept(看)+ical——看了又看不敢信，怀疑的"
+    },
+    {
+      "wordId": "schedule_gaokao",
+      "type": "story",
+      "content": "sched(片)+ule——写在纸片上的安排，时间表"
+    },
+    {
+      "wordId": "scratch_gaokao",
+      "type": "story",
+      "content": "scr(抓)+atch——抓出痕迹，抓、刮"
+    },
+    {
+      "wordId": "seal_gaokao",
+      "type": "story",
+      "content": "seal(封印)——封住盖印，密封、海豹"
+    },
+    {
+      "wordId": "seaweed_gaokao",
+      "type": "story",
+      "content": "sea(海)+weed(草)——海里的草，海藻"
+    },
+    {
+      "wordId": "section_gaokao",
+      "type": "story",
+      "content": "sect(切)+ion——切出来的部分，部分"
+    },
+    {
+      "wordId": "secure_gaokao",
+      "type": "story",
+      "content": "se(离开)+cur(关心)——不用再担心的，安全的"
+    },
+    {
+      "wordId": "seize_gaokao",
+      "type": "story",
+      "content": "se(抓住)+ize——一把抓住，夺取"
+    },
+    {
+      "wordId": "select_gaokao",
+      "type": "story",
+      "content": "se(分开)+lect(选)——分开来挑选，选择"
+    },
+    {
+      "wordId": "selfish_gaokao",
+      "type": "story",
+      "content": "self(自己)+ish——只顾自己的，自私的"
+    },
+    {
+      "wordId": "sensitive_gaokao",
+      "type": "story",
+      "content": "sens(感觉)+it+ive——感觉敏锐的，敏感的"
+    },
+    {
+      "wordId": "shabby_gaokao",
+      "type": "story",
+      "content": "shab(碎屑)+by——只剩碎屑的，破旧的"
+    },
+    {
+      "wordId": "shortcoming_gaokao",
+      "type": "story",
+      "content": "short(短)+coming(到来)——到来的不够，缺点"
+    },
+    {
+      "wordId": "signature_gaokao",
+      "type": "story",
+      "content": "sign(标记)+ature——做标记的方式，签名"
+    },
+    {
+      "wordId": "simplify_gaokao",
+      "type": "story",
+      "content": "simpl(简单)+ify(使)——使之简单，简化"
+    },
+    {
+      "wordId": "sink_gaokao",
+      "type": "story",
+      "content": "s(下)+ink——向下沉入墨水，下沉"
+    },
+    {
+      "wordId": "socialism_gaokao",
+      "type": "story",
+      "content": "social(社会)+ism(主义)——社会主义"
+    },
+    {
+      "wordId": "spear_gaokao",
+      "type": "story",
+      "content": "s(尖)+pear(梨)——尖如梨形的，矛"
+    },
+    {
+      "wordId": "stadium_gaokao",
+      "type": "story",
+      "content": "stad(站)+ium——站着看比赛的地方，体育场"
+    },
+    {
+      "wordId": "style_gaokao",
+      "type": "story",
+      "content": "sty(柱)+le——标新立异的柱子，风格"
+    },
+    {
+      "wordId": "survive_gaokao",
+      "type": "story",
+      "content": "sur(超过)+viv(活)+e——活得超过别人，幸存"
+    },
+    {
+      "wordId": "swift_gaokao",
+      "type": "story",
+      "content": "sw(转)+ift——快速转动的，迅速的"
+    },
+    {
+      "wordId": "technology_gaokao",
+      "type": "story",
+      "content": "techno(技艺)+logy(学科)——研究技艺的学科，技术"
+    },
+    {
+      "wordId": "trial_gaokao",
+      "type": "story",
+      "content": "tri(三)+al——三次尝试，试验、审讯"
+    },
+    {
+      "wordId": "troop_gaokao",
+      "type": "story",
+      "content": "troop(群)——成群的军队，军队"
+    },
+    {
+      "wordId": "tube_gaokao",
+      "type": "story",
+      "content": "tub(管)+e——管状物，管"
+    },
+    {
+      "wordId": "universal_gaokao",
+      "type": "story",
+      "content": "univers(宇宙)+al——全宇宙的，普遍的"
+    },
+    {
+      "wordId": "valuable_gaokao",
+      "type": "story",
+      "content": "valu(价值)+able——有价值的"
+    },
+    {
+      "wordId": "volunteer_gaokao",
+      "type": "story",
+      "content": "volunt(意愿)+eer——出于意愿的人，志愿者"
+    },
+    {
+      "wordId": "worth_gaokao",
+      "type": "story",
+      "content": "worth(价值)——值得的，价值"
+    },
+    {
+      "wordId": "able_gaokao",
+      "type": "homophone",
+      "content": "able谐音「诶宝」→诶，宝贝真有能力的！"
+    },
+    {
+      "wordId": "about_gaokao",
+      "type": "homophone",
+      "content": "about谐音「阿豹它」→关于阿豹它的故事，大约如此"
+    },
+    {
+      "wordId": "above_gaokao",
+      "type": "homophone",
+      "content": "above谐音「阿霸夫」→阿霸王站在上面，俯视众人"
+    },
+    {
+      "wordId": "abroad_gaokao",
+      "type": "homophone",
+      "content": "abroad谐音「饿不饶的」→饿得不饶人，只好出国谋生"
+    },
+    {
+      "wordId": "accent_gaokao",
+      "type": "homophone",
+      "content": "accent谐音「艾克森特」→艾克说话特别有口音"
+    },
+    {
+      "wordId": "accident_gaokao",
+      "type": "association",
+      "content": "accident→ac+cid(切)+ent→意外切断，出了事故"
+    },
+    {
+      "wordId": "ache_gaokao",
+      "type": "homophone",
+      "content": "ache谐音「诶克」→诶，克不住地疼痛"
+    },
+    {
+      "wordId": "across_gaokao",
+      "type": "association",
+      "content": "across→a+cross(十字)→十字形穿过马路"
+    },
+    {
+      "wordId": "act_gaokao",
+      "type": "homophone",
+      "content": "act谐音「艾克特」→艾克特擅长表演行动戏"
+    },
+    {
+      "wordId": "action_gaokao",
+      "type": "association",
+      "content": "action→act(行动)+ion(名词)→行动的结果就是行动"
+    },
+    {
+      "wordId": "activity_gaokao",
+      "type": "association",
+      "content": "activity→activ(活跃)+ity(名词)→活跃的状态即活动"
+    },
+    {
+      "wordId": "actor_gaokao",
+      "type": "association",
+      "content": "actor→act(表演)+or(人)→表演的人就是男演员"
+    },
+    {
+      "wordId": "ad_gaokao",
+      "type": "homophone",
+      "content": "AD谐音「爱的」→爱的广告，打动人心"
+    },
+    {
+      "wordId": "add_gaokao",
+      "type": "homophone",
+      "content": "add谐音「爱的」→爱得深，就不断增加付出"
+    },
+    {
+      "wordId": "address_gaokao",
+      "type": "homophone",
+      "content": "address谐音「阿德瑞斯」→阿德按地址寄信并发表演讲"
+    },
+    {
+      "wordId": "adult_gaokao",
+      "type": "homophone",
+      "content": "adult谐音「阿大特」→阿大特别成熟，已是成年人"
+    },
+    {
+      "wordId": "advertisement_gaokao",
+      "type": "association",
+      "content": "advertisement→advert(注意)+ise+ment→引起注意的东西即广告"
+    },
+    {
+      "wordId": "advice_gaokao",
+      "type": "homophone",
+      "content": "advice谐音「阿德歪斯」→阿德给歪了的建议"
+    },
+    {
+      "wordId": "advise_gaokao",
+      "type": "association",
+      "content": "advise→ad(加强)+vis(看)+e→多看看再建议"
+    },
+    {
+      "wordId": "aeroplane_gaokao",
+      "type": "association",
+      "content": "aeroplane→aero(空气)+plane(平面)→空中平面即飞机"
+    },
+    {
+      "wordId": "afraid_gaokao",
+      "type": "homophone",
+      "content": "afraid谐音「阿弗雷德」→阿弗雷德害怕得发抖"
+    },
+    {
+      "wordId": "africa_gaokao",
+      "type": "homophone",
+      "content": "Africa谐音「阿非利卡」→阿非利卡就是非洲"
+    },
+    {
+      "wordId": "african_gaokao",
+      "type": "association",
+      "content": "African→Africa(非洲)+n(后缀)→非洲的人或事物"
+    },
+    {
+      "wordId": "after_gaokao",
+      "type": "homophone",
+      "content": "after谐音「阿夫特」→阿夫特在之后才赶到"
+    },
+    {
+      "wordId": "afternoon_gaokao",
+      "type": "association",
+      "content": "afternoon→after(之后)+noon(正午)→正午之后就是下午"
+    },
+    {
+      "wordId": "afterward_gaokao",
+      "type": "association",
+      "content": "afterward→after(之后)+ward(方向)→朝后的方向即后来"
+    },
+    {
+      "wordId": "again_gaokao",
+      "type": "homophone",
+      "content": "again谐音「阿根」→阿根又来了，再一次出现"
+    },
+    {
+      "wordId": "against_gaokao",
+      "type": "homophone",
+      "content": "against谐音「阿甘斯特」→阿甘反对斯特，靠墙而立"
+    },
+    {
+      "wordId": "age_gaokao",
+      "type": "homophone",
+      "content": "age谐音「诶吉」→诶，吉时已到，年龄到了"
+    },
+    {
+      "wordId": "agency_gaokao",
+      "type": "association",
+      "content": "agency→ag(做)+ency(名词)→代为做事的地方即代理处"
+    },
+    {
+      "wordId": "aggression_gaokao",
+      "type": "association",
+      "content": "aggression→ag(朝)+gress(走)+ion→走向别人就是侵略"
+    },
+    {
+      "wordId": "ago_gaokao",
+      "type": "homophone",
+      "content": "ago谐音「阿狗」→阿狗很久以前就跑掉了"
+    },
+    {
+      "wordId": "agree_gaokao",
+      "type": "homophone",
+      "content": "agree谐音「阿格里」→阿格同意了里面的意见"
+    },
+    {
+      "wordId": "agreement_gaokao",
+      "type": "association",
+      "content": "agreement→agree(同意)+ment(名词)→同意达成的即协议"
+    },
+    {
+      "wordId": "aids_gaokao",
+      "type": "homophone",
+      "content": "AIDS谐音「诶滋」→诶，滋生病菌就是艾滋病"
+    },
+    {
+      "wordId": "air_gaokao",
+      "type": "homophone",
+      "content": "air谐音「哎儿」→哎儿，空气真好，深呼吸"
+    },
+    {
+      "wordId": "aircraft_gaokao",
+      "type": "association",
+      "content": "aircraft→air(空气)+craft(工艺)→空中飞行的航空器"
+    },
+    {
+      "wordId": "airline_gaokao",
+      "type": "association",
+      "content": "airline→air(空气)+line(线)→空中的线路即航线"
+    },
+    {
+      "wordId": "airplane_gaokao",
+      "type": "association",
+      "content": "airplane→air(空气)+plane(平面)→空中平面即飞机"
+    },
+    {
+      "wordId": "airport_gaokao",
+      "type": "association",
+      "content": "airport→air(空气)+port(港口)→空中港口即机场"
+    },
+    {
+      "wordId": "airspace_gaokao",
+      "type": "association",
+      "content": "airspace→air(空气)+space(空间)→空气的空间即领空"
+    },
+    {
+      "wordId": "alive_gaokao",
+      "type": "homophone",
+      "content": "alive谐音「阿来夫」→阿来夫还活着，活蹦乱跳的"
+    },
+    {
+      "wordId": "all_gaokao",
+      "type": "homophone",
+      "content": "all谐音「奥」→奥，全部都来了！"
+    },
+    {
+      "wordId": "almost_gaokao",
+      "type": "association",
+      "content": "almost→al(全部)+most(最)→几乎全部，差不多"
+    },
+    {
+      "wordId": "alone_gaokao",
+      "type": "homophone",
+      "content": "alone谐音「阿龙」→阿龙独自一人，好孤独"
+    },
+    {
+      "wordId": "along_gaokao",
+      "type": "homophone",
+      "content": "along谐音「阿浪」→阿浪沿着河边向前走"
+    },
+    {
+      "wordId": "aloud_gaokao",
+      "type": "association",
+      "content": "aloud→a(加强)+loud(大声)→大声地出声地读出来"
+    },
+    {
+      "wordId": "already_gaokao",
+      "type": "association",
+      "content": "already→al(全部)+ready(准备好)→全部准备好了，已经就绪"
+    },
+    {
+      "wordId": "also_gaokao",
+      "type": "homophone",
+      "content": "also谐音「奥搜」→奥，搜一下也知道"
+    },
+    {
+      "wordId": "although_gaokao",
+      "type": "homophone",
+      "content": "although谐音「奥搜」→奥，尽管困难也搜索前进"
+    },
+    {
+      "wordId": "aluminium_gaokao",
+      "type": "homophone",
+      "content": "阿鲁米泥姆→阿鲁用泥巴做铝，铝就是aluminium"
+    },
+    {
+      "wordId": "always_gaokao",
+      "type": "association",
+      "content": "al(所有)+ways(路)→所有的路上都一直、总是"
+    },
+    {
+      "wordId": "ambassador_gaokao",
+      "type": "homophone",
+      "content": "俺摆设的→大使只是俺摆设的门面"
+    },
+    {
+      "wordId": "ambiguous_gaokao",
+      "type": "homophone",
+      "content": "俺必乖偶死→说法模糊，俺必乖否则偶死"
+    },
+    {
+      "wordId": "ambulance_gaokao",
+      "type": "homophone",
+      "content": "俺不能死→救护车来了，俺不能死！"
+    },
+    {
+      "wordId": "america_gaokao",
+      "type": "homophone",
+      "content": "阿美莉加→阿美莉加大陆就是美洲"
+    },
+    {
+      "wordId": "american_gaokao",
+      "type": "association",
+      "content": "America(美国)+n(人)→美国的人就是美国人"
+    },
+    {
+      "wordId": "among_gaokao",
+      "type": "homophone",
+      "content": "啊猛→啊！在猛人之中混真难"
+    },
+    {
+      "wordId": "ample_gaokao",
+      "type": "homophone",
+      "content": "安颇→安排颇多，资源丰富充足"
+    },
+    {
+      "wordId": "amuse_gaokao",
+      "type": "homophone",
+      "content": "阿缪斯→阿缪斯觉得好笑，被逗乐了"
+    },
+    {
+      "wordId": "amusement_gaokao",
+      "type": "association",
+      "content": "amuse(逗乐)+ment(名词后缀)→逗乐的事就是娱乐"
+    },
+    {
+      "wordId": "analysis_gaokao",
+      "type": "homophone",
+      "content": "阿纳立分析→阿纳仔细分析数据，做分析"
+    },
+    {
+      "wordId": "ancestor_gaokao",
+      "type": "association",
+      "content": "an+cest(行走)+or(人)→走在前面的人就是祖先"
+    },
+    {
+      "wordId": "and_gaokao",
+      "type": "homophone",
+      "content": "安的→安的事和我的事，和就是and"
+    },
+    {
+      "wordId": "anecdote_gaokao",
+      "type": "homophone",
+      "content": "安妮可逗特→安妮特别逗的轶事秘史"
+    },
+    {
+      "wordId": "anger_gaokao",
+      "type": "homophone",
+      "content": "安哥→安哥被惹怒了，满腔愤怒"
+    },
+    {
+      "wordId": "angry_gaokao",
+      "type": "association",
+      "content": "anger(愤怒)+y(形容词后缀)→愤怒的、生气的"
+    },
+    {
+      "wordId": "animal_gaokao",
+      "type": "association",
+      "content": "anim(生命/灵魂)+al→有生命的就是动物"
+    },
+    {
+      "wordId": "ankle_gaokao",
+      "type": "homophone",
+      "content": "安扣→安扣扣在脚踝上，踝关节"
+    },
+    {
+      "wordId": "anniversary_gaokao",
+      "type": "association",
+      "content": "anni(年)+vers(转)+ary→年年转到那天就是周年纪念"
+    },
+    {
+      "wordId": "announcement_gaokao",
+      "type": "association",
+      "content": "announce(宣布)+ment(名词后缀)→宣布的内容即公告"
+    },
+    {
+      "wordId": "annoy_gaokao",
+      "type": "homophone",
+      "content": "懊恼→懊恼就是被骚扰惹恼了"
+    },
+    {
+      "wordId": "another_gaokao",
+      "type": "association",
+      "content": "an(一个)+other(别的)→另一个、又一"
+    },
+    {
+      "wordId": "answer_gaokao",
+      "type": "homophone",
+      "content": "安瑟→安瑟冷静地给出回答和答案"
+    },
+    {
+      "wordId": "ant_gaokao",
+      "type": "homophone",
+      "content": "安特→安特蹲在地上观察小蚂蚁"
+    },
+    {
+      "wordId": "antique_gaokao",
+      "type": "association",
+      "content": "anti(反/旧)+que→反新即旧→古老的古董"
+    },
+    {
+      "wordId": "anxious_gaokao",
+      "type": "homophone",
+      "content": "安克审→安克审查让人焦虑担忧"
+    },
+    {
+      "wordId": "any_gaokao",
+      "type": "association",
+      "content": "an(一个)+y→任何一个都行→任何的"
+    },
+    {
+      "wordId": "anyone_gaokao",
+      "type": "association",
+      "content": "any(任何)+one(一个)→任何一个→任何人"
+    },
+    {
+      "wordId": "anything_gaokao",
+      "type": "association",
+      "content": "any(任何)+thing(事/物)→任何事物"
+    },
+    {
+      "wordId": "anyway_gaokao",
+      "type": "association",
+      "content": "any(任何)+way(路/方式)→无论哪条路→无论如何"
+    },
+    {
+      "wordId": "anywhere_gaokao",
+      "type": "association",
+      "content": "any(任何)+where(哪里)→无论哪里→任何地方"
+    },
+    {
+      "wordId": "apart_gaokao",
+      "type": "association",
+      "content": "a(一)+part(部分)→分成一部分→分离、相距"
+    },
+    {
+      "wordId": "apartment_gaokao",
+      "type": "association",
+      "content": "apart(分开)+ment→分开的房间→公寓"
+    },
+    {
+      "wordId": "apologize_gaokao",
+      "type": "homophone",
+      "content": "阿菠萝盒子→阿菠萝打翻盒子连忙道歉"
+    },
+    {
+      "wordId": "apology_gaokao",
+      "type": "association",
+      "content": "apologize的名词形式→道歉、谢罪"
+    },
+    {
+      "wordId": "appear_gaokao",
+      "type": "association",
+      "content": "ap(向)+pear(出现)→向眼前出现→出现、显得"
+    },
+    {
+      "wordId": "appearance_gaokao",
+      "type": "association",
+      "content": "appear(出现)+ance(名词后缀)→出现的样子→外貌"
+    },
+    {
+      "wordId": "applaud_gaokao",
+      "type": "homophone",
+      "content": "阿普劳的→阿普劳的表演赢得鼓掌称赞"
+    },
+    {
+      "wordId": "apple_gaokao",
+      "type": "homophone",
+      "content": "阿婆→阿婆爱吃苹果，apple苹果"
+    },
+    {
+      "wordId": "applicant_gaokao",
+      "type": "association",
+      "content": "apply(申请)+cant(人)→申请的人即申请人"
+    },
+    {
+      "wordId": "application_gaokao",
+      "type": "association",
+      "content": "apply的名词形式→申请、应用程序"
+    },
+    {
+      "wordId": "appointment_gaokao",
+      "type": "association",
+      "content": "appoint(指定)+ment→指定的时间即约定、任命"
+    },
+    {
+      "wordId": "april_gaokao",
+      "type": "homophone",
+      "content": "哎普柔→哎，四月蒲公英柔柔地开了"
+    },
+    {
+      "wordId": "apron_gaokao",
+      "type": "homophone",
+      "content": "哎普伦→哎，普伦穿上围裙做饭了"
+    },
+    {
+      "wordId": "arabic_gaokao",
+      "type": "homophone",
+      "content": "阿拉比克→阿拉比克说阿拉伯语"
+    },
+    {
+      "wordId": "arbitrary_gaokao",
+      "type": "homophone",
+      "content": "阿比拽瑞→阿比太拽了，做事武断任意"
+    },
+    {
+      "wordId": "arch_gaokao",
+      "type": "homophone",
+      "content": "阿奇→阿奇穿过拱门，弯成弓形"
+    },
+    {
+      "wordId": "architect_gaokao",
+      "type": "association",
+      "content": "arch(拱)+i+tect(技艺)→造拱门的技艺者→建筑师"
+    },
+    {
+      "wordId": "architecture_gaokao",
+      "type": "association",
+      "content": "architect(建筑师)+ure→建筑师的学问即建筑学"
+    },
+    {
+      "wordId": "arctic_gaokao",
+      "type": "homophone",
+      "content": "\"阿克提克\"→北极冷得阿克克服严寒直哆嗦"
+    },
+    {
+      "wordId": "are_gaokao",
+      "type": "story",
+      "content": "be动词三兄弟am/is/are，你我们他们都用are"
+    },
+    {
+      "wordId": "area_gaokao",
+      "type": "homophone",
+      "content": "\"爱热啊\"→爱热的地方就是区域，面积大"
+    },
+    {
+      "wordId": "argue_gaokao",
+      "type": "homophone",
+      "content": "\"阿Q\"→阿Q总爱跟人争论不休"
+    },
+    {
+      "wordId": "argument_gaokao",
+      "type": "association",
+      "content": "argue(争论)+ment(名词)→争论的结果是论据和争吵"
+    },
+    {
+      "wordId": "arithmetic_gaokao",
+      "type": "association",
+      "content": "arith(计算)+metic→算术就是精确计算的方法"
+    },
+    {
+      "wordId": "arm_gaokao",
+      "type": "homophone",
+      "content": "\"阿姆\"→阿姆用手臂拿起武器保家卫国"
+    },
+    {
+      "wordId": "armchair_gaokao",
+      "type": "association",
+      "content": "arm(手臂)+chair(椅子)→放手臂的椅子=扶手椅"
+    },
+    {
+      "wordId": "army_gaokao",
+      "type": "association",
+      "content": "arm(武器)+y→拿着武器的队伍就是军队"
+    },
+    {
+      "wordId": "around_gaokao",
+      "type": "association",
+      "content": "a+round(圆)→绕着画个圆圈，围在周围"
+    },
+    {
+      "wordId": "arrangement_gaokao",
+      "type": "association",
+      "content": "arrange(安排)+ment(名词)→精心安排的布置和准备"
+    },
+    {
+      "wordId": "arrest_gaokao",
+      "type": "association",
+      "content": "ar(加强)+rest(休息)→被抓后就别想休息了=逮捕"
+    },
+    {
+      "wordId": "arrival_gaokao",
+      "type": "association",
+      "content": "arrive去e+al(名词后缀)→到达的状态或到达者"
+    },
+    {
+      "wordId": "arrive_gaokao",
+      "type": "association",
+      "content": "a+rive(r河)→到达河对岸=到达目的地"
+    },
+    {
+      "wordId": "arrow_gaokao",
+      "type": "homophone",
+      "content": "\"爱肉\"→为爱吃肉，弯弓射箭去打猎"
+    },
+    {
+      "wordId": "art_gaokao",
+      "type": "homophone",
+      "content": "\"阿特\"→阿特从小就有艺术天赋"
+    },
+    {
+      "wordId": "article_gaokao",
+      "type": "association",
+      "content": "art(技巧)+icle(小)→用小技巧写成的文章和条款"
+    },
+    {
+      "wordId": "artist_gaokao",
+      "type": "association",
+      "content": "art(艺术)+ist(专家)→搞艺术的专家就是艺术家"
+    },
+    {
+      "wordId": "ash_gaokao",
+      "type": "homophone",
+      "content": "\"哀嘘\"→哀嘘一声，一切化为灰烬"
+    },
+    {
+      "wordId": "ashamed_gaokao",
+      "type": "association",
+      "content": "a+shamed(羞耻)→感到羞耻就是惭愧的"
+    },
+    {
+      "wordId": "asia_gaokao",
+      "type": "story",
+      "content": "亚细亚简称Asia，音译亚洲，世界最大洲"
+    },
+    {
+      "wordId": "asian_gaokao",
+      "type": "association",
+      "content": "Asia(亚洲)+n后缀→亚洲人或亚洲的"
+    },
+    {
+      "wordId": "aside_gaokao",
+      "type": "association",
+      "content": "a+side(边)→推到一边去=在旁边撇开"
+    },
+    {
+      "wordId": "ask_gaokao",
+      "type": "homophone",
+      "content": "\"阿斯克\"→阿斯克好学，总爱问为什么"
+    },
+    {
+      "wordId": "asleep_gaokao",
+      "type": "association",
+      "content": "a+sleep(睡觉)→进入梦乡=睡着的"
+    },
+    {
+      "wordId": "aspect_gaokao",
+      "type": "association",
+      "content": "a+spect(看)→看事物的各个方面和形势"
+    },
+    {
+      "wordId": "assist_gaokao",
+      "type": "association",
+      "content": "as+sist(站)→站在旁边帮忙=协助出席"
+    },
+    {
+      "wordId": "assistance_gaokao",
+      "type": "association",
+      "content": "assist(帮助)+ance(名词)→援助帮助"
+    },
+    {
+      "wordId": "assistant_gaokao",
+      "type": "association",
+      "content": "assist(帮助)+ant(人)→帮助你的人=助手助教"
+    },
+    {
+      "wordId": "assumption_gaokao",
+      "type": "association",
+      "content": "assume(假定)+ption→先假定设想再验证"
+    },
+    {
+      "wordId": "astonish_gaokao",
+      "type": "association",
+      "content": "a+ston(e石头)+ish→惊得像石头呆住=使惊讶"
+    },
+    {
+      "wordId": "astronaut_gaokao",
+      "type": "association",
+      "content": "astro(星)+naut(航行者)→星际航行者=宇航员"
+    },
+    {
+      "wordId": "astronomer_gaokao",
+      "type": "association",
+      "content": "astro(星)+nom(法则)+er(人)→研究星象法则的人"
+    },
+    {
+      "wordId": "astronomy_gaokao",
+      "type": "association",
+      "content": "astro(星)+nomy(学科)→研究星星的学科=天文学"
+    },
+    {
+      "wordId": "athlete_gaokao",
+      "type": "story",
+      "content": "运动员在赛道上全力冲刺，athlete是力量与速度的化身"
+    },
+    {
+      "wordId": "athletic_gaokao",
+      "type": "association",
+      "content": "athlete(运动员)+ic(形缀)→运动员般的=健壮的"
+    },
+    {
+      "wordId": "athletics_gaokao",
+      "type": "association",
+      "content": "athlete+ics(学科)→运动学科=田径竞技运动"
+    },
+    {
+      "wordId": "atlantic_gaokao",
+      "type": "story",
+      "content": "Atlantic大西洋，亚特兰蒂斯传说沉没于此"
+    },
+    {
+      "wordId": "atom_gaokao",
+      "type": "association",
+      "content": "a(不)+tom(切割)→不可再分的最小微粒=原子"
+    },
+    {
+      "wordId": "attention_gaokao",
+      "type": "association",
+      "content": "at+tent(伸展)+ion→伸展心思去关注=注意力"
+    },
+    {
+      "wordId": "attentively_gaokao",
+      "type": "association",
+      "content": "attentive(注意的)+ly(副词)→聚精会神地"
+    },
+    {
+      "wordId": "attraction_gaokao",
+      "type": "association",
+      "content": "at+tract(拉)+ion→拉你过来的力量=吸引力"
+    },
+    {
+      "wordId": "attractive_gaokao",
+      "type": "association",
+      "content": "attract(吸引)+ive(形缀)→有吸引力的=迷人的"
+    },
+    {
+      "wordId": "audience_gaokao",
+      "type": "association",
+      "content": "audi(听)+ence→来听的人=观众和听众"
+    },
+    {
+      "wordId": "august_gaokao",
+      "type": "story",
+      "content": "八月以奥古斯都大帝命名，August兼表威严令人敬畏"
+    },
+    {
+      "wordId": "aunt_gaokao",
+      "type": "homophone",
+      "content": "\"昂特\"→阿姨昂首走来特有范儿"
+    },
+    {
+      "wordId": "australia_gaokao",
+      "type": "story",
+      "content": "Australia音译澳大利亚，袋鼠考拉的故乡"
+    },
+    {
+      "wordId": "australian_gaokao",
+      "type": "association",
+      "content": "Australia(澳大利亚)+n→澳大利亚人或的"
+    },
+    {
+      "wordId": "authentic_gaokao",
+      "type": "association",
+      "content": "authen(真实)+tic→原始真实的就是真正可信的"
+    },
+    {
+      "wordId": "author_gaokao",
+      "type": "association",
+      "content": "auth(创造)+or(人)→创造作品的人=作者作家"
+    },
+    {
+      "wordId": "automatic_gaokao",
+      "type": "association",
+      "content": "auto(自动)+matic→自动机械，无需人操作就是自动的"
+    },
+    {
+      "wordId": "autumn_gaokao",
+      "type": "homophone",
+      "content": "奥特姆→秋天来了，奥特姆在落叶中漫步"
+    },
+    {
+      "wordId": "avenue_gaokao",
+      "type": "homophone",
+      "content": "爱吻尤→林荫大道上爱吻你，大街好浪漫"
+    },
+    {
+      "wordId": "awake_gaokao",
+      "type": "association",
+      "content": "a(加强)+wake(醒)→醒来，醒着的"
+    },
+    {
+      "wordId": "award_gaokao",
+      "type": "homophone",
+      "content": "额我滴→额我滴奖！被授予奖品太开心"
+    },
+    {
+      "wordId": "aware_gaokao",
+      "type": "homophone",
+      "content": "额喂→额喂！意识到你在看我"
+    },
+    {
+      "wordId": "away_gaokao",
+      "type": "association",
+      "content": "a(一)+way(路)→一路离开，在远处"
+    },
+    {
+      "wordId": "awesome_gaokao",
+      "type": "association",
+      "content": "awe(敬畏)+some(一些)→令人敬畏的，极好的"
+    },
+    {
+      "wordId": "awful_gaokao",
+      "type": "association",
+      "content": "awe(畏惧)+ful(充满)→充满可怕的，极坏的"
+    },
+    {
+      "wordId": "baby_gaokao",
+      "type": "homophone",
+      "content": "北鼻→婴儿叫声北鼻，小宝贝好可爱"
+    },
+    {
+      "wordId": "back_gaokao",
+      "type": "homophone",
+      "content": "败克→打败克星，退回到后面"
+    },
+    {
+      "wordId": "backache_gaokao",
+      "type": "association",
+      "content": "back(背)+ache(痛)→背痛，腰痛"
+    },
+    {
+      "wordId": "background_gaokao",
+      "type": "association",
+      "content": "back(后面)+ground(地面)→后面的地面，就是背景"
+    },
+    {
+      "wordId": "backward_gaokao",
+      "type": "association",
+      "content": "back(后)+ward(方向)→向后的方向，反向的"
+    },
+    {
+      "wordId": "bacon_gaokao",
+      "type": "homophone",
+      "content": "被啃→咸肉熏肉被啃得精光"
+    },
+    {
+      "wordId": "bacterium_gaokao",
+      "type": "homophone",
+      "content": "白可提儿→白色细菌可提起来观察"
+    },
+    {
+      "wordId": "bad_gaokao",
+      "type": "homophone",
+      "content": "摆的→摆出来的都是坏东西"
+    },
+    {
+      "wordId": "badly_gaokao",
+      "type": "association",
+      "content": "bad(坏)+ly(副词)→严重地，恶劣地"
+    },
+    {
+      "wordId": "badminton_gaokao",
+      "type": "homophone",
+      "content": "白的明顿→羽毛球白得明显"
+    },
+    {
+      "wordId": "bag_gaokao",
+      "type": "homophone",
+      "content": "呗格→袋子呗，格格不入装进去"
+    },
+    {
+      "wordId": "baggage_gaokao",
+      "type": "association",
+      "content": "bag(包)+gage→一包一包的，就是行李"
+    },
+    {
+      "wordId": "bake_gaokao",
+      "type": "homophone",
+      "content": "贝克→贝克汉姆在烤面包"
+    },
+    {
+      "wordId": "bakery_gaokao",
+      "type": "association",
+      "content": "bake(烤)+ry(场所)→烤面包的店，面包店"
+    },
+    {
+      "wordId": "ball_gaokao",
+      "type": "homophone",
+      "content": "波→球像波浪滚来滚去"
+    },
+    {
+      "wordId": "ballet_gaokao",
+      "type": "homophone",
+      "content": "芭蕾→芭蕾舞，直接音译词"
+    },
+    {
+      "wordId": "balloon_gaokao",
+      "type": "homophone",
+      "content": "拨弄→拨弄气球越吹越大"
+    },
+    {
+      "wordId": "ballpoint_gaokao",
+      "type": "association",
+      "content": "ball(球)+point(点)→笔尖有圆球，圆珠笔"
+    },
+    {
+      "wordId": "bamboo_gaokao",
+      "type": "homophone",
+      "content": "帮木→竹子帮木头一起生长"
+    },
+    {
+      "wordId": "banana_gaokao",
+      "type": "homophone",
+      "content": "巴拿拿→巴拿马拿香蕉吃"
+    },
+    {
+      "wordId": "band_gaokao",
+      "type": "homophone",
+      "content": "班的→班里的乐队在表演"
+    },
+    {
+      "wordId": "bandage_gaokao",
+      "type": "association",
+      "content": "band(带)+age→包扎用带子，就是绷带"
+    },
+    {
+      "wordId": "bang_gaokao",
+      "type": "homophone",
+      "content": "砰→重击砰一声巨响"
+    },
+    {
+      "wordId": "bank_gaokao",
+      "type": "homophone",
+      "content": "办客→银行给人办客户业务"
+    },
+    {
+      "wordId": "bar_gaokao",
+      "type": "homophone",
+      "content": "吧→酒吧吧台，也是障碍拦住你"
+    },
+    {
+      "wordId": "barber_gaokao",
+      "type": "homophone",
+      "content": "巴伯→理发师巴伯手艺好"
+    },
+    {
+      "wordId": "barbershop_gaokao",
+      "type": "association",
+      "content": "barber(理发师)+shop(店)→理发店"
+    },
+    {
+      "wordId": "bare_gaokao",
+      "type": "homophone",
+      "content": "贝尔→贝尔赤裸上身出镜"
+    },
+    {
+      "wordId": "base_gaokao",
+      "type": "homophone",
+      "content": "贝斯→贝斯是乐队的基础"
+    },
+    {
+      "wordId": "basement_gaokao",
+      "type": "association",
+      "content": "base(底部)+ment→底部空间，地下室"
+    },
+    {
+      "wordId": "basic_gaokao",
+      "type": "association",
+      "content": "base(基础)+ic(的)→基本的，基础的"
+    },
+    {
+      "wordId": "basin_gaokao",
+      "type": "association",
+      "content": "base(底)+in(里)→底在里面的盆，水盆"
+    },
+    {
+      "wordId": "basket_gaokao",
+      "type": "homophone",
+      "content": "八十颗→篮子里装八十颗蛋"
+    },
+    {
+      "wordId": "basketball_gaokao",
+      "type": "association",
+      "content": "basket(篮)+ball(球)→投篮的球，篮球"
+    },
+    {
+      "wordId": "bat_gaokao",
+      "type": "homophone",
+      "content": "拔特→蝙蝠特别爱倒挂"
+    },
+    {
+      "wordId": "bath_gaokao",
+      "type": "homophone",
+      "content": "巴斯→巴斯洗了个热水澡"
+    },
+    {
+      "wordId": "bathe_gaokao",
+      "type": "association",
+      "content": "bath(洗澡)+e→动词沐浴，用水洗"
+    },
+    {
+      "wordId": "bathrobe_gaokao",
+      "type": "association",
+      "content": "bath(浴)+robe(袍)→浴袍睡衣"
+    },
+    {
+      "wordId": "bathroom_gaokao",
+      "type": "association",
+      "content": "bath(浴)+room(室)→浴室厕所"
+    },
+    {
+      "wordId": "bathtub_gaokao",
+      "type": "association",
+      "content": "bath(浴)+tub(缸)→浴缸"
+    },
+    {
+      "wordId": "battery_gaokao",
+      "type": "homophone",
+      "content": "白特瑞→白特瑞牌蓄电池"
+    }
+  ]
+}

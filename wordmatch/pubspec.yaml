@@ -1,0 +1,108 @@
+name: wordmatch
+description: "单词消消乐 - 游戏化+AI+间隔重复的高效背词APP"
+publish_to: 'none'
+version: 1.0.0+11
+
+environment:
+  # 与 pubspec.lock 锁定的 SDK 版本对齐，避免在过旧/未来的 SDK 上构建
+  sdk: '>=3.12.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # 状态管理
+  flutter_riverpod: ^3.3.2
+
+  # 音频
+  audioplayers: ^6.1.0
+
+  # 应用内购买
+  in_app_purchase: ^3.2.0
+
+  # 数据库
+  drift: ^2.22.1
+  sqlite3_flutter_libs: ^0.5.24
+
+  # 工具
+  shared_preferences: ^2.3.4
+  flutter_secure_storage: ^9.2.4
+  path_provider: ^2.1.5
+  path: ^1.9.0
+  json_annotation: ^4.9.0
+
+  cupertino_icons: ^1.0.8
+  http: ^1.6.0
+  flutter_svg: ^2.0.17
+  flutter_tts: ^4.2.5
+
+  # 离线 TTS 引擎：解决国产 ROM（小米/华为等）系统 TTS 缺英文语音包导致无声
+  # sherpa_onnx 自带预编译 onnxruntime 二进制，不依赖系统 TTS
+  # Piper VITS 模型内置在 assets/tts/ 中，首次启动复制到应用目录，完全离线
+  sherpa_onnx: ^1.13.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  drift_dev: ^2.22.1
+  build_runner: ^2.4.13
+
+# sqlite3 3.x bundles a copy of SQLite by downloading a pre-compiled binary
+# from GitHub releases at build time. That download is unreliable in China
+# (HttpException: Connection closed before full header was received).
+# Since we already depend on sqlite3_flutter_libs (which bundles libsqlite3
+# via Maven on Android and the `sqlite3` CocoaPod on iOS), we instruct the
+# sqlite3 build hook to look up the system-provided library at runtime
+# (DynamicLibrary.open) instead of downloading a redundant copy.
+# See https://pub.dev/documentation/sqlite3/latest/topics/hook-topic.html
+hooks:
+  user_defines:
+    sqlite3:
+      source: system
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/data/
+    - assets/audio/
+    - assets/images/
+    # 离线 TTS 模型（Piper VITS，~64MB，首次启动复制到文件系统）
+    # Flutter 目录资产声明不会递归包含子目录，必须逐个声明 espeak-ng-data 下的各层目录
+    - assets/tts/vits-piper-en_US-lessac-medium/
+    - assets/tts/vits-piper-en_US-lessac-medium/espeak-ng-data/
+    - assets/tts/vits-piper-en_US-lessac-medium/espeak-ng-data/lang/
+    - assets/tts/vits-piper-en_US-lessac-medium/espeak-ng-data/lang/aav/
+    - assets/tts/vits-piper-en_US-lessac-medium/espeak-ng-data/lang/art/
+    - assets/tts/vits-piper-en_US-lessac-medium/espeak-ng-data/lang/azc/
+    - assets/tts/vits-piper-en_US-lessac-medium/espeak-ng-data/lang/bat/
+    - assets/tts/vits-piper-en_US-lessac-medium/espeak-ng-data/lang/bnt/
+    - assets/tts/vits-piper-en_US-lessac-medium/espeak-ng-data/lang/ccs/
+    - assets/tts/vits-piper-en_US-lessac-medium/espeak-ng-data/lang/cel/
+    - assets/tts/vits-piper-en_US-lessac-medium/espeak-ng-data/lang/cus/
+    - assets/tts/vits-piper-en_US-lessac-medium/espeak-ng-data/lang/dra/
+    - assets/tts/vits-piper-en_US-lessac-medium/espeak-ng-data/lang/esx/
+    - assets/tts/vits-piper-en_US-lessac-medium/espeak-ng-data/lang/gmq/
+    - assets/tts/vits-piper-en_US-lessac-medium/espeak-ng-data/lang/gmw/
+    - assets/tts/vits-piper-en_US-lessac-medium/espeak-ng-data/lang/grk/
+    - assets/tts/vits-piper-en_US-lessac-medium/espeak-ng-data/lang/inc/
+    - assets/tts/vits-piper-en_US-lessac-medium/espeak-ng-data/lang/ine/
+    - assets/tts/vits-piper-en_US-lessac-medium/espeak-ng-data/lang/ira/
+    - assets/tts/vits-piper-en_US-lessac-medium/espeak-ng-data/lang/iro/
+    - assets/tts/vits-piper-en_US-lessac-medium/espeak-ng-data/lang/itc/
+    - assets/tts/vits-piper-en_US-lessac-medium/espeak-ng-data/lang/jpx/
+    - assets/tts/vits-piper-en_US-lessac-medium/espeak-ng-data/lang/map/
+    - assets/tts/vits-piper-en_US-lessac-medium/espeak-ng-data/lang/miz/
+    - assets/tts/vits-piper-en_US-lessac-medium/espeak-ng-data/lang/myn/
+    - assets/tts/vits-piper-en_US-lessac-medium/espeak-ng-data/lang/poz/
+    - assets/tts/vits-piper-en_US-lessac-medium/espeak-ng-data/lang/roa/
+    - assets/tts/vits-piper-en_US-lessac-medium/espeak-ng-data/lang/sai/
+    - assets/tts/vits-piper-en_US-lessac-medium/espeak-ng-data/lang/sem/
+    - assets/tts/vits-piper-en_US-lessac-medium/espeak-ng-data/lang/sit/
+    - assets/tts/vits-piper-en_US-lessac-medium/espeak-ng-data/lang/tai/
+    - assets/tts/vits-piper-en_US-lessac-medium/espeak-ng-data/lang/trk/
+    - assets/tts/vits-piper-en_US-lessac-medium/espeak-ng-data/lang/urj/
+    - assets/tts/vits-piper-en_US-lessac-medium/espeak-ng-data/lang/zle/
+    - assets/tts/vits-piper-en_US-lessac-medium/espeak-ng-data/lang/zls/
+    - assets/tts/vits-piper-en_US-lessac-medium/espeak-ng-data/lang/zlw/
