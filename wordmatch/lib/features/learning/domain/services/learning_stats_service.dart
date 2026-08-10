@@ -1,51 +1,78 @@
-import 'dart:math';
+import 'package:wordmatch/features/learning/data/repositories/progress_storage.dart';
 
+/// 每日学习统计项
 class DailyLearningStat {
   final DateTime date;
   final int newWords;
   final int reviewWords;
   final int minutes;
-  const DailyLearningStat({required this.date, required this.newWords, required this.reviewWords, required this.minutes});
+  const DailyLearningStat({
+    required this.date,
+    required this.newWords,
+    required this.reviewWords,
+    required this.minutes,
+  });
   int get total => newWords + reviewWords;
+
+  /// 从持久化的每日历史记录构建
+  factory DailyLearningStat.fromHistory(DailyLearningHistory h) =>
+      DailyLearningStat(
+        date: h.date,
+        newWords: h.newWords,
+        reviewWords: h.reviewWords,
+        minutes: h.minutes,
+      );
 }
 
+/// 学习统计汇总
+class LearningSummary {
+  final int totalWords;
+  final int streakDays;
+  final int totalMinutes;
+  const LearningSummary({
+    required this.totalWords,
+    required this.streakDays,
+    required this.totalMinutes,
+  });
+}
+
+/// 学习统计服务：基于 [ProgressStorage] 的真实学习记录生成统计。
 class LearningStatsService {
   LearningStatsService._();
 
-  static Future<List<DailyLearningStat>> fetchRecentDays(int days) async {
-    final now = DateTime.now();
-    final result = <DailyLearningStat>[];
-    for (int i = days - 1; i >= 0; i--) {
-      final d = DateTime(now.year, now.month, now.day).subtract(Duration(days: i));
-      final seed = d.year * 10000 + d.month * 100 + d.day;
-      final r = Random(seed);
-      final learned = r.nextDouble() < 0.6;
-      result.add(DailyLearningStat(
-        date: d,
-        newWords: learned ? r.nextInt(18) : 0,
-        reviewWords: learned ? (8 + r.nextInt(40)) : 0,
-        minutes: learned ? (3 + r.nextInt(45)) : 0,
-      ));
-    }
-    return result;
+  /// 获取最近 [days] 天的每日学习统计（从早到晚）。
+  static Future<List<DailyLearningStat>> fetchRecentDays(
+    ProgressStorage storage,
+    int days,
+  ) async {
+    if (!storage.isInitialized) await storage.init();
+    return storage
+        .getDailyHistory(days)
+        .map(DailyLearningStat.fromHistory)
+        .toList();
   }
 
-  static Future<(int totalWords, int streakDays, int totalMinutes)> fetchSummary() async {
-    final list = await fetchRecentDays(365);
+  /// 获取累计统计：累计消灭词数、连续坚持天数、累计分钟数。
+  static Future<LearningSummary> fetchSummary(ProgressStorage storage) async {
+    if (!storage.isInitialized) await storage.init();
+
+    final history = storage.getAllDailyHistory();
+
+    // 累计消灭词数（新词 + 复习）
     int totalWords = 0;
     int totalMinutes = 0;
-    int streak = 0;
-    int cur = 0;
-    for (final d in list) {
-      totalWords += d.total;
-      totalMinutes += d.minutes;
-      if (d.total > 0) {
-        cur++;
-        if (cur > streak) streak = cur;
-      } else {
-        cur = 0;
-      }
+    for (final h in history) {
+      totalWords += h.total;
+      totalMinutes += h.minutes;
     }
-    return (totalWords, streak, totalMinutes);
+
+    // 连续坚持天数（使用真实 streak 记录）
+    final streakDays = storage.getStreakDays();
+
+    return LearningSummary(
+      totalWords: totalWords,
+      streakDays: streakDays,
+      totalMinutes: totalMinutes,
+    );
   }
 }

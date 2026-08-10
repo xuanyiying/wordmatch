@@ -1,21 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:wordmatch/core/constants/app_colors.dart';
 import 'package:wordmatch/core/theme/app_color_scheme.dart';
+import 'package:wordmatch/features/game/data/repositories/game_provider.dart';
 import 'package:wordmatch/features/learning/domain/services/learning_stats_service.dart';
+import 'package:wordmatch/shared/widgets/gradient_page_header.dart';
 
-class StatsScreen extends StatefulWidget {
+/// 学习统计页面
+class StatsScreen extends ConsumerStatefulWidget {
   const StatsScreen({super.key});
 
   @override
-  State<StatsScreen> createState() => _StatsScreenState();
+  ConsumerState<StatsScreen> createState() => _StatsScreenState();
 }
 
-class _StatsScreenState extends State<StatsScreen> {
+class _StatsScreenState extends ConsumerState<StatsScreen> {
   List<DailyLearningStat> _recent30Days = [];
   List<DailyLearningStat> _recent7Days = [];
-  int _totalWords = 0;
-  int _streakDays = 0;
-  int _totalMinutes = 0;
+  LearningSummary? _summary;
   bool _isLoading = true;
 
   @override
@@ -25,10 +27,11 @@ class _StatsScreenState extends State<StatsScreen> {
   }
 
   Future<void> _loadData() async {
+    final storage = ref.read(progressStorageProvider);
     final results = await Future.wait([
-      LearningStatsService.fetchRecentDays(30),
-      LearningStatsService.fetchRecentDays(7),
-      LearningStatsService.fetchSummary(),
+      LearningStatsService.fetchRecentDays(storage, 30),
+      LearningStatsService.fetchRecentDays(storage, 7),
+      LearningStatsService.fetchSummary(storage),
     ]);
 
     if (!mounted) return;
@@ -36,10 +39,7 @@ class _StatsScreenState extends State<StatsScreen> {
     setState(() {
       _recent30Days = results[0] as List<DailyLearningStat>;
       _recent7Days = results[1] as List<DailyLearningStat>;
-      final summary = results[2] as (int, int, int);
-      _totalWords = summary.$1;
-      _streakDays = summary.$2;
-      _totalMinutes = summary.$3;
+      _summary = results[2] as LearningSummary;
       _isLoading = false;
     });
   }
@@ -92,96 +92,44 @@ class _StatsScreenState extends State<StatsScreen> {
     final colors = context.appColors;
     return Scaffold(
       backgroundColor: colors.background,
-      body: _isLoading
-          ? const Center(child: CircularProgressIndicator())
-          : SingleChildScrollView(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  _buildHeader(),
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(20, 0, 20, 24),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        _buildSummaryCards(),
-                        const SizedBox(height: 28),
-                        _buildHeatmapSection(),
-                        const SizedBox(height: 28),
-                        _buildCurveSection(),
-                        const SizedBox(height: 24),
-                        Center(
-                          child: Text(
-                            '数据将在后续版本接入真实学习记录 🚀',
-                            style: TextStyle(
-                              fontSize: 12,
-                              color: colors.inkSoft,
-                            ),
-                          ),
+      body: SafeArea(
+        child: Column(
+          children: [
+            const GradientPageHeader(
+              title: '学习统计',
+              subtitle: '每一次坚持都值得纪念',
+            ),
+            Expanded(
+              child: _isLoading
+                  ? const Center(child: CircularProgressIndicator())
+                  : SingleChildScrollView(
+                      child: Padding(
+                        padding: const EdgeInsets.fromLTRB(20, 20, 20, 24),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            _buildSummaryCards(),
+                            const SizedBox(height: 28),
+                            _buildHeatmapSection(),
+                            const SizedBox(height: 28),
+                            _buildCurveSection(),
+                            const SizedBox(height: 16),
+                          ],
                         ),
-                        const SizedBox(height: 16),
-                      ],
+                      ),
                     ),
-                  ),
-                ],
-              ),
             ),
-    );
-  }
-
-  Widget _buildHeader() {
-    final colors = context.appColors;
-    return Container(
-      width: double.infinity,
-      padding: const EdgeInsets.fromLTRB(20, 60, 20, 40),
-      decoration: BoxDecoration(
-        gradient: colors.headerGradient,
-        borderRadius: const BorderRadius.only(
-          bottomLeft: Radius.circular(28),
-          bottomRight: Radius.circular(28),
+          ],
         ),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Container(
-            width: 40,
-            height: 40,
-            decoration: BoxDecoration(
-              color: Colors.white.withValues(alpha: 0.2),
-              borderRadius: BorderRadius.circular(12),
-            ),
-            child: IconButton(
-              onPressed: () => Navigator.of(context).pop(),
-              icon: const Icon(Icons.arrow_back_rounded,
-                  color: Colors.white, size: 20),
-              padding: EdgeInsets.zero,
-              constraints: const BoxConstraints(),
-            ),
-          ),
-          const SizedBox(height: 24),
-          const Text(
-            '学习统计',
-            style: TextStyle(
-              fontSize: 22,
-              fontWeight: FontWeight.bold,
-              color: Colors.white,
-            ),
-          ),
-          const SizedBox(height: 8),
-          Text(
-            '每一次坚持都值得纪念',
-            style: TextStyle(
-              fontSize: 13,
-              color: Colors.white.withValues(alpha: 0.82),
-            ),
-          ),
-        ],
       ),
     );
   }
 
   Widget _buildSummaryCards() {
+    final summary = _summary;
+    final totalWords = summary?.totalWords ?? 0;
+    final streakDays = summary?.streakDays ?? 0;
+    final totalMinutes = summary?.totalMinutes ?? 0;
     final colors = context.appColors;
     return Row(
       children: [
@@ -189,7 +137,7 @@ class _StatsScreenState extends State<StatsScreen> {
           child: _buildSummaryCard(
             icon: Icons.auto_awesome,
             color: colors.mintDeep,
-            number: '$_totalWords',
+            number: '$totalWords',
             label: '累计消灭',
             unit: '词',
           ),
@@ -199,7 +147,7 @@ class _StatsScreenState extends State<StatsScreen> {
           child: _buildSummaryCard(
             icon: Icons.local_fire_department,
             color: AppColors.accentOrange,
-            number: '$_streakDays',
+            number: '$streakDays',
             label: '连续坚持',
             unit: '天',
           ),
@@ -209,7 +157,7 @@ class _StatsScreenState extends State<StatsScreen> {
           child: _buildSummaryCard(
             icon: Icons.schedule,
             color: const Color(0xFF7C3AED),
-            number: '$_totalMinutes',
+            number: '$totalMinutes',
             label: '累计分钟',
             unit: '分',
           ),
@@ -292,6 +240,7 @@ class _StatsScreenState extends State<StatsScreen> {
 
   Widget _buildHeatmapSection() {
     final colors = context.appColors;
+    final hasData = _recent30Days.any((s) => s.total > 0);
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -344,15 +293,17 @@ class _StatsScreenState extends State<StatsScreen> {
               ),
             ],
           ),
-          child: GridView.count(
-            crossAxisCount: 7,
-            mainAxisSpacing: 4,
-            crossAxisSpacing: 4,
-            childAspectRatio: 1,
-            shrinkWrap: true,
-            physics: const NeverScrollableScrollPhysics(),
-            children: _buildHeatmapCells(),
-          ),
+          child: hasData
+              ? GridView.count(
+                  crossAxisCount: 7,
+                  mainAxisSpacing: 4,
+                  crossAxisSpacing: 4,
+                  childAspectRatio: 1,
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics(),
+                  children: _buildHeatmapCells(),
+                )
+              : _buildEmptyState('完成学习后，这里会点亮你的坚持足迹'),
         ),
       ],
     );
@@ -360,6 +311,7 @@ class _StatsScreenState extends State<StatsScreen> {
 
   Widget _buildCurveSection() {
     final colors = context.appColors;
+    final hasData = _recent7Days.any((s) => s.total > 0);
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -393,35 +345,62 @@ class _StatsScreenState extends State<StatsScreen> {
               ),
             ],
           ),
-          child: Column(
-            children: [
-              SizedBox(
-                width: double.infinity,
-                height: 180,
-                child: CustomPaint(
-                  painter: _LearningCurvePainter(
-                    stats: _recent7Days,
-                    colors: colors,
-                  ),
-                ),
-              ),
-              const SizedBox(height: 8),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: _recent7Days.map((s) {
-                  return Text(
-                    _formatDate(s.date),
-                    style: TextStyle(
-                      fontSize: 10,
-                      color: colors.inkSoft,
+          child: hasData
+              ? Column(
+                  children: [
+                    SizedBox(
+                      width: double.infinity,
+                      height: 180,
+                      child: CustomPaint(
+                        painter: _LearningCurvePainter(
+                          stats: _recent7Days,
+                          colors: colors,
+                        ),
+                      ),
                     ),
-                  );
-                }).toList(),
-              ),
-            ],
-          ),
+                    const SizedBox(height: 8),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: _recent7Days.map((s) {
+                        return Text(
+                          _formatDate(s.date),
+                          style: TextStyle(
+                            fontSize: 10,
+                            color: colors.inkSoft,
+                          ),
+                        );
+                      }).toList(),
+                    ),
+                  ],
+                )
+              : _buildEmptyState('完成学习后，这里会呈现你的进步曲线'),
         ),
       ],
+    );
+  }
+
+  Widget _buildEmptyState(String message) {
+    final colors = context.appColors;
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 32),
+      child: Column(
+        children: [
+          Icon(
+            Icons.hourglass_empty_rounded,
+            size: 36,
+            color: colors.inkSoft.withValues(alpha: 0.4),
+          ),
+          const SizedBox(height: 12),
+          Text(
+            message,
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: 13,
+              color: colors.inkSoft,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

@@ -12,6 +12,7 @@ class ProgressStorage {
   static const _wrongWordsKey = 'wrong_words';
   static const _dailyTaskStateKey = 'daily_task_state';
   static const _streakKey = 'learning_streak';
+  static const _dailyHistoryKey = 'daily_learning_history';
 
   SharedPreferences? _prefs;
 
@@ -19,6 +20,7 @@ class ProgressStorage {
   bool get isInitialized => _prefs != null;
   Map<String, WordProgress> _cache = {};
   Map<String, WrongWord> _wrongWordsCache = {};
+  Map<String, DailyLearningHistory> _dailyHistoryCache = {};
 
   /// 初始化
   Future<void> init() async {
@@ -46,6 +48,20 @@ class ProgressStorage {
             WrongWord.fromJson(v as Map<String, dynamic>),
           ));
     }
+
+    // 加载每日学习历史
+    final dailyJsonStr = _prefs?.getString(_dailyHistoryKey);
+    if (dailyJsonStr != null) {
+      try {
+        final map = json.decode(dailyJsonStr) as Map<String, dynamic>;
+        _dailyHistoryCache = map.map((k, v) => MapEntry(
+              k,
+              DailyLearningHistory.fromJson(v as Map<String, dynamic>),
+            ));
+      } catch (_) {
+        _dailyHistoryCache = {};
+      }
+    }
   }
 
   /// 保存到磁盘
@@ -56,6 +72,11 @@ class ProgressStorage {
     // 保存错词数据
     final wrongMap = _wrongWordsCache.map((k, v) => MapEntry(k, v.toJson()));
     await _prefs?.setString(_wrongWordsKey, json.encode(wrongMap));
+
+    // 保存每日学习历史
+    final dailyMap =
+        _dailyHistoryCache.map((k, v) => MapEntry(k, v.toJson()));
+    await _prefs?.setString(_dailyHistoryKey, json.encode(dailyMap));
   }
 
   /// 获取单词进度
@@ -263,6 +284,62 @@ class ProgressStorage {
   String _dateStr(DateTime d) =>
       '${d.year}-${d.month.toString().padLeft(2, '0')}-${d.day.toString().padLeft(2, '0')}';
 
+  // ==================== 每日学习历史 ====================
+
+  /// 记录一次学习活动（新词/复习），累计到当天。
+  ///
+  /// [newWords] 本日新增已学新词数，[reviewWords] 本日完成复习数，
+  /// [minutes] 本日累计学习分钟数（追加）。
+  Future<void> recordDailyActivity({
+    int newWords = 0,
+    int reviewWords = 0,
+    int minutes = 0,
+  }) async {
+    if (newWords == 0 && reviewWords == 0 && minutes == 0) return;
+    final dateStr = _dateStr(DateTime.now());
+    final today = DateTime.now();
+    final existing = _dailyHistoryCache[dateStr];
+    final updated = DailyLearningHistory(
+      date: DateTime(today.year, today.month, today.day),
+      newWords: (existing?.newWords ?? 0) + newWords,
+      reviewWords: (existing?.reviewWords ?? 0) + reviewWords,
+      minutes: (existing?.minutes ?? 0) + minutes,
+    );
+    _dailyHistoryCache[dateStr] = updated;
+    await _saveToDisk();
+    // 学习活动同时累计连续打卡
+    await _recordStreak();
+  }
+
+  /// 按日期范围获取每日学习历史（含当天）。
+  ///
+  /// 返回最近 [days] 天的记录（从早到晚），无记录的天数返回空统计。
+  List<DailyLearningHistory> getDailyHistory(int days) {
+    final now = DateTime.now();
+    final todayStart = DateTime(now.year, now.month, now.day);
+    final result = <DailyLearningHistory>[];
+    for (int i = days - 1; i >= 0; i--) {
+      final d = todayStart.subtract(Duration(days: i));
+      final key = _dateStr(d);
+      final record = _dailyHistoryCache[key];
+      result.add(record ??
+          DailyLearningHistory(
+            date: d,
+            newWords: 0,
+            reviewWords: 0,
+            minutes: 0,
+          ));
+    }
+    return result;
+  }
+
+  /// 获取全部每日学习历史（按日期从早到晚）
+  List<DailyLearningHistory> getAllDailyHistory() {
+    final list = _dailyHistoryCache.values.toList();
+    list.sort((a, b) => a.date.compareTo(b.date));
+    return list;
+  }
+
   // 序列化辅助
   Map<String, dynamic> _progressToJson(WordProgress p) => {
         'wordId': p.wordId,
@@ -286,5 +363,50 @@ class ProgressStorage {
         lastQuality: json['lastQuality'] as int,
         isMastered: json['isMastered'] as bool,
         reviewDebt: json['reviewDebt'] as int? ?? 0,
+      );
+}
+
+/// 每日学习历史记录
+class DailyLearningHistory {
+  final DateTime date;
+  final int newWords;
+  final int reviewWords;
+  final int minutes;
+
+  const DailyLearningHistory({
+    required this.date,
+    this.newWords = 0,
+    this.reviewWords = 0,
+    this.minutes = 0,
+  });
+
+  int get total => newWords + reviewWords;
+
+  DailyLearningHistory copyWith({
+    DateTime? date,
+    int? newWords,
+    int? reviewWords,
+    int? minutes,
+  }) =>
+      DailyLearningHistory(
+        date: date ?? this.date,
+        newWords: newWords ?? this.newWords,
+        reviewWords: reviewWords ?? this.reviewWords,
+        minutes: minutes ?? this.minutes,
+      );
+
+  Map<String, dynamic> toJson() => {
+        'date': date.toIso8601String(),
+        'newWords': newWords,
+        'reviewWords': reviewWords,
+        'minutes': minutes,
+      };
+
+  factory DailyLearningHistory.fromJson(Map<String, dynamic> json) =>
+      DailyLearningHistory(
+        date: DateTime.parse(json['date'] as String),
+        newWords: json['newWords'] as int? ?? 0,
+        reviewWords: json['reviewWords'] as int? ?? 0,
+        minutes: json['minutes'] as int? ?? 0,
       );
 }

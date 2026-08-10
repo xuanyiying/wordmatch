@@ -1058,9 +1058,12 @@ class _LearnTabState extends ConsumerState<LearnTab> {
     await storage.init();
     final bookId = ref.read(currentBookIdProvider);
 
-    for (var i = 0;
-        i < _dailyTask!.newWords.length && i < recognizedList.length;
-        i++) {
+    final learnedCount =
+        recognizedList.length > _dailyTask!.newWords.length
+            ? _dailyTask!.newWords.length
+            : recognizedList.length;
+
+    for (var i = 0; i < learnedCount; i++) {
       final word = _dailyTask!.newWords[i];
       final recognized = recognizedList[i];
       var progress = storage.getProgress(word.id);
@@ -1070,6 +1073,14 @@ class _LearnTabState extends ConsumerState<LearnTab> {
       final quality = recognized ? 4 : 0;
       progress = Sm2Service.updateProgress(progress, quality);
       await storage.updateProgress(progress);
+    }
+
+    // 记录今日新词学习量（每个新词约 0.7 分钟）
+    if (learnedCount > 0) {
+      await storage.recordDailyActivity(
+        newWords: learnedCount,
+        minutes: (learnedCount * 0.7).round(),
+      );
     }
   }
 

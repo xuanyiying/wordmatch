@@ -461,6 +461,16 @@ class GameNotifier extends Notifier<GameState> {
         await storage.removeWrongWord(itemId);
       }
     }
+
+    // 记录今日复习活动（游戏/复习完成的单词数 + 实际用时分钟）
+    if (matchedItemIds.isNotEmpty) {
+      final elapsedSeconds = _stopwatch?.elapsed.inSeconds ?? 0;
+      final minutes = elapsedSeconds ~/ 60;
+      await storage.recordDailyActivity(
+        reviewWords: matchedItemIds.length,
+        minutes: minutes > 0 ? minutes : (matchedItemIds.length * 0.3).round(),
+      );
+    }
   }
 
   /// 重置游戏
