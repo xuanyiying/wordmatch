@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:wordmatch/core/constants/app_sizes.dart';
 import 'package:wordmatch/core/theme/app_color_scheme.dart';
+import 'package:wordmatch/shared/widgets/gradient_page_header.dart';
 
 /// 用户协议页面
 class UserAgreementScreen extends StatelessWidget {
@@ -11,23 +12,22 @@ class UserAgreementScreen extends StatelessWidget {
     final colors = context.appColors;
     return Scaffold(
       backgroundColor: colors.background,
-      appBar: AppBar(
-        title: const Text('用户协议'),
-        backgroundColor: colors.mintDeep,
-        foregroundColor: Colors.white,
-        elevation: 0,
-      ),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.fromLTRB(
-          AppSizes.pagePaddingH,
-          20,
-          AppSizes.pagePaddingH,
-          32,
-        ),
+      body: SafeArea(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            _buildSection(
+            const GradientPageHeader(title: '用户协议', subtitle: '使用前请仔细阅读'),
+            Expanded(
+              child: SingleChildScrollView(
+                padding: const EdgeInsets.fromLTRB(
+                  AppSizes.pagePaddingH,
+                  20,
+                  AppSizes.pagePaddingH,
+                  32,
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    _buildSection(
               context,
               title: '用户协议',
               content: '更新日期：2025年1月1日\n\n'
@@ -97,6 +97,10 @@ class UserAgreementScreen extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 13,
                   color: colors.inkSoft,
+                ),
+              ),
+            ),
+                  ],
                 ),
               ),
             ),

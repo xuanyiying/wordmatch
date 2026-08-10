@@ -11,6 +11,7 @@ import 'package:wordmatch/features/learning/presentation/screens/dialogue_practi
 import 'package:wordmatch/features/learning/presentation/screens/new_word_screen.dart';
 import 'package:wordmatch/features/learning/presentation/screens/report_screen.dart';
 import 'package:wordmatch/features/learning/presentation/screens/stats_screen.dart';
+import 'package:wordmatch/features/learning/presentation/screens/study_reminder_screen.dart';
 import 'package:wordmatch/features/learning/presentation/screens/word_chain_story_screen.dart';
 import 'package:wordmatch/features/learning/presentation/screens/word_network_screen.dart';
 import 'package:wordmatch/features/learning/presentation/screens/word_stream_screen.dart';
@@ -94,6 +95,8 @@ class AppRouter {
         return _buildRoute(const SettingsScreen(), settings);
       case '/ai_settings':
         return _buildRoute(const AiSettingsScreen(), settings);
+      case '/study_reminder':
+        return _buildRoute(const StudyReminderScreen(), settings);
       case '/privacy_policy':
         return _buildRoute(const PrivacyPolicyScreen(), settings);
       case '/user_agreement':
@@ -127,6 +130,7 @@ class AppRouter {
   static const String stats = '/stats';
   static const String settings = '/settings';
   static const String aiSettings = '/ai_settings';
+  static const String studyReminder = '/study_reminder';
   static const String privacyPolicy = '/privacy_policy';
   static const String userAgreement = '/user_agreement';
 }

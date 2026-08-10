@@ -13,6 +13,7 @@ import 'package:wordmatch/core/theme/font_scale_provider.dart';
 import 'package:wordmatch/core/theme/skin_theme_provider.dart';
 import 'package:wordmatch/core/theme/theme_mode_provider.dart';
 import 'package:wordmatch/features/ai/data/services/ai_response_cache.dart';
+import 'package:wordmatch/features/learning/data/providers/study_reminder_provider.dart';
 import 'package:wordmatch/features/wordbook/data/services/ai_clean_service.dart';
 import 'package:wordmatch/shared/widgets/splash_screen.dart';
 
@@ -69,6 +70,8 @@ class _WordMatchAppState extends ConsumerState<WordMatchApp>
   void initState() {
     super.initState();
     WidgetsBinding.instance.addObserver(this);
+    // 初始化通知服务并恢复学习提醒设置（非阻塞）
+    unawaited(ref.read(studyReminderProvider.notifier).init());
   }
 
   @override

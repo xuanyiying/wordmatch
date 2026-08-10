@@ -6,6 +6,7 @@ import 'package:wordmatch/features/ai/data/services/ai_client.dart';
 import 'package:wordmatch/features/ai/data/services/ai_learning_service.dart';
 import 'package:wordmatch/features/wordbook/data/models/word.dart';
 import 'package:wordmatch/features/wordbook/data/repositories/word_repository.dart';
+import 'package:wordmatch/shared/widgets/gradient_page_header.dart';
 
 /// 同义词/反义词网络页面参数
 class WordNetworkArgs {
@@ -91,14 +92,16 @@ class _WordNetworkScreenState extends State<WordNetworkScreen> {
 
     return Scaffold(
       backgroundColor: colors.background,
-      appBar: AppBar(
-        title: const Text('同反义词网络'),
-      ),
       body: SafeArea(
-        child: CustomScrollView(
-          slivers: [
-            // 头部：目标单词
-            SliverToBoxAdapter(
+        child: Column(
+          children: [
+            const GradientPageHeader(
+                title: '同反义词网络', subtitle: '点击单词可跳转学习卡片'),
+          Expanded(
+            child: CustomScrollView(
+              slivers: [
+                // 头部：目标单词
+                SliverToBoxAdapter(
               child: Padding(
                 padding: const EdgeInsets.all(AppSizes.pagePaddingH),
                 child: Column(
@@ -257,7 +260,10 @@ class _WordNetworkScreenState extends State<WordNetworkScreen> {
           ],
         ),
       ),
-    );
+    ],
+    ),
+  ),
+);
   }
 
   Widget _buildSection(

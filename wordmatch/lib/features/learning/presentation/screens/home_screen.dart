@@ -14,6 +14,7 @@ import 'package:wordmatch/features/wordbook/data/datasources/local_word_datasour
 import 'package:wordmatch/features/wordbook/data/models/word.dart';
 import 'package:wordmatch/shared/utils/haptic_util.dart';
 import 'package:wordmatch/shared/widgets/app_logo.dart';
+import 'package:wordmatch/shared/widgets/gradient_page_header.dart';
 
 /// 学习 Tab（底部导航「学习」页内容）
 class LearnTab extends ConsumerStatefulWidget {
@@ -135,199 +136,195 @@ class _LearnTabState extends ConsumerState<LearnTab> {
       body: SafeArea(
         child: _isLoading
             ? const Center(child: CircularProgressIndicator())
-            : RefreshIndicator(
-                onRefresh: _initPlan,
-                child: SingleChildScrollView(
-                  physics: const AlwaysScrollableScrollPhysics(),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      // 渐变头部（紧凑）
-                      _buildHeader(context),
-                      const SizedBox(height: 12),
+            : Column(
+                children: [
+                  // 渐变头部（固定顶部，统一规格）
+                  _buildHeader(context),
+                  const SizedBox(height: 12),
 
-                      // 内容区（紧凑间距）
-                      Padding(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: AppSizes.pagePaddingH,
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            // 词库选择面板（标签快切 + 自定义导入）
-                            _buildBookTagPanel(context),
-                            const SizedBox(height: 10),
-
-                            // 整合卡：进度统计 + 今日任务（合并为一张绿色渐变卡）
-                            _buildUnifiedCard(context),
-                            const SizedBox(height: 12),
-
-                            // 每局配对数选择
-                            _buildPairCountSelector(),
-                            const SizedBox(height: 10),
-
-                            // 主按钮（根据任务状态切换，标签与图标对齐设计稿）
-                            if (_dailyTask?.canAdvancePlan == true)
-                              _buildGradientButton(
-                                onPressed: () {
-                                  HapticUtil.buttonTap();
-                                  _advanceToNextPlan();
-                                },
-                                icon: Icons.arrow_forward_rounded,
-                                label: '进入下一计划 →',
-                              )
-                            else if (_dailyTask?.canPlayGame == true)
-                              _buildGradientButton(
-                                onPressed: () {
-                                  HapticUtil.buttonTap();
-                                  _startNewWordGame();
-                                },
-                                icon: Icons.sports_esports_rounded,
-                                label: '开始消消乐 →',
-                              )
-                            else if (_dailyTask != null &&
-                                _dailyTask!.newWords.isNotEmpty &&
-                                !(_dailyTask?.hasLearnedToday ?? false))
-                              _buildGradientButton(
-                                onPressed: () {
-                                  HapticUtil.buttonTap();
-                                  _startNewWordLearning(context);
-                                },
-                                icon: Icons.auto_stories_rounded,
-                                label:
-                                    '开始学习 (${_dailyTask?.newWordsTarget ?? 0}词) →',
-                              )
-                            else if (_dailyTask != null &&
-                                _dailyTask!.reviewWords.isNotEmpty)
-                              _buildGradientButton(
-                                onPressed: () {
-                                  HapticUtil.buttonTap();
-                                  _startReview(context);
-                                },
-                                icon: Icons.refresh_rounded,
-                                label: '开始复习 →',
-                              )
-                            else
-                              _buildGradientButton(
-                                onPressed: null,
-                                icon: Icons.check_circle_rounded,
-                                label: '今日任务已完成 ✓',
-                              ),
-
-                            // 今日词串烧（次要 ghost 按钮，仅在有新词时显示）
-                            if (_dailyTask?.newWords.isNotEmpty == true) ...[
+                  // 内容区（自适应剩余高度，超长时内部滚动）
+                  Expanded(
+                    child: RefreshIndicator(
+                      onRefresh: _initPlan,
+                      child: SingleChildScrollView(
+                        physics: const AlwaysScrollableScrollPhysics(),
+                        padding: const EdgeInsets.only(bottom: 8),
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: AppSizes.pagePaddingH,
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              // 词库选择面板（标签快切 + 自定义导入）
+                              _buildBookTagPanel(context),
                               const SizedBox(height: 10),
-                              _buildGhostButton(
-                                onPressed: () {
-                                  HapticUtil.buttonTap();
-                                  Navigator.of(context).pushNamed(
-                                    AppRouter.wordChainStory,
-                                    arguments: WordChainStoryArgs(
-                                      todaysWords: _dailyTask!.newWords,
-                                      bookName: _bookName(
-                                          ref.read(currentBookIdProvider)),
-                                    ),
-                                  );
-                                },
-                                icon: Icons.menu_book_rounded,
-                                label:
-                                    '今日词串烧 (${_dailyTask!.newWords.length}词)',
-                              ),
-                            ],
 
-                            // 摸鱼刷词（次要 ghost 按钮，有词时显示）
-                            if ((_dailyTask?.reviewWords.isNotEmpty ==
-                                        true) ||
-                                (_dailyTask?.newWords.isNotEmpty == true)) ...[
-                              const SizedBox(height: 10),
-                              _buildGhostButton(
-                                onPressed: () {
-                                  HapticUtil.buttonTap();
-                                  final words = [
-                                    ...?_dailyTask?.reviewWords,
-                                    ...?_dailyTask?.newWords,
-                                  ];
-                                  Navigator.of(context).pushNamed(
-                                    AppRouter.wordStream,
-                                    arguments: WordStreamArgs(
-                                      words: words,
-                                      mode: 'today',
-                                    ),
-                                  );
-                                },
-                                icon: Icons.swipe_rounded,
-                                label: '摸鱼刷词 (${[
-                                  ...?_dailyTask?.reviewWords,
-                                  ...?_dailyTask?.newWords,
-                                ].length}词)',
-                              ),
-                            ],
+                              // 整合卡：进度统计 + 今日任务（合并为一张绿色渐变卡）
+                              _buildUnifiedCard(context),
+                              const SizedBox(height: 12),
 
-                            const SizedBox(height: 16),
-                          ],
+                              // 每局配对数选择
+                              _buildPairCountSelector(),
+                            ],
+                          ),
                         ),
                       ),
-                    ],
+                    ),
                   ),
-                ),
+
+                  // 底部固定操作区（SafeArea 底部，保证不被 Home 指示条遮挡）
+                  _buildBottomActions(context),
+                ],
               ),
       ),
     );
   }
 
-  /// 渐变头部区域（紧凑）
-  Widget _buildHeader(BuildContext context) {
+  /// 底部固定操作区：主按钮 + 次要按钮，固定在底部并避开 Home 指示条。
+  Widget _buildBottomActions(BuildContext context) {
     final colors = context.appColors;
     return Container(
       width: double.infinity,
-      padding: const EdgeInsets.fromLTRB(20, 12, 20, 14),
-      decoration: BoxDecoration(
-        gradient: colors.headerGradient,
-        borderRadius: BorderRadius.only(
-          bottomLeft: Radius.circular(24),
-          bottomRight: Radius.circular(24),
-        ),
+      padding: EdgeInsets.fromLTRB(
+        AppSizes.pagePaddingH,
+        4,
+        AppSizes.pagePaddingH,
+        8,
       ),
-      child: Column(
-        children: [
-          // 标题行
-          Row(
-            children: [
-              // Logo（紧凑）
-              Container(
-                width: 40,
-                height: 40,
-                margin: const EdgeInsets.only(right: 10),
-                child: const AppLogoStatic(size: 40),
-              ),
-              const Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      AppStrings.appName,
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        letterSpacing: 0.8,
-                      ),
-                    ),
-                    SizedBox(height: 1),
-                    Text(
-                      '玩着玩着，单词就记住了',
-                      style: TextStyle(
-                        color: Colors.white70,
-                        fontSize: 12,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
+      decoration: BoxDecoration(
+        color: colors.background,
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withValues(alpha: 0.04),
+            blurRadius: 12,
+            offset: const Offset(0, -3),
           ),
         ],
       ),
+      child: SafeArea(
+        top: false,
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            // 主按钮（根据任务状态切换，标签与图标对齐设计稿）
+            if (_dailyTask?.canAdvancePlan == true)
+              _buildGradientButton(
+                onPressed: () {
+                  HapticUtil.buttonTap();
+                  _advanceToNextPlan();
+                },
+                icon: Icons.arrow_forward_rounded,
+                label: '进入下一计划 →',
+              )
+            else if (_dailyTask?.canPlayGame == true)
+              _buildGradientButton(
+                onPressed: () {
+                  HapticUtil.buttonTap();
+                  _startNewWordGame();
+                },
+                icon: Icons.sports_esports_rounded,
+                label: '开始消消乐 →',
+              )
+            else if (_dailyTask != null &&
+                _dailyTask!.newWords.isNotEmpty &&
+                !(_dailyTask?.hasLearnedToday ?? false))
+              _buildGradientButton(
+                onPressed: () {
+                  HapticUtil.buttonTap();
+                  _startNewWordLearning(context);
+                },
+                icon: Icons.auto_stories_rounded,
+                label:
+                    '开始学习 (${_dailyTask?.newWordsTarget ?? 0}词) →',
+              )
+            else if (_dailyTask != null &&
+                _dailyTask!.reviewWords.isNotEmpty)
+              _buildGradientButton(
+                onPressed: () {
+                  HapticUtil.buttonTap();
+                  _startReview(context);
+                },
+                icon: Icons.refresh_rounded,
+                label: '开始复习 →',
+              )
+            else
+              _buildGradientButton(
+                onPressed: null,
+                icon: Icons.check_circle_rounded,
+                label: '今日任务已完成 ✓',
+              ),
+
+            // 次要按钮（词串烧 + 摸鱼刷词），可横向并排节省纵向空间
+            if ((_dailyTask?.newWords.isNotEmpty == true) ||
+                (_dailyTask?.reviewWords.isNotEmpty == true)) ...[
+              const SizedBox(height: 8),
+              Row(
+                children: [
+                  if (_dailyTask?.newWords.isNotEmpty == true) ...[
+                    Expanded(
+                      child: _buildGhostButton(
+                        onPressed: () {
+                          HapticUtil.buttonTap();
+                          Navigator.of(context).pushNamed(
+                            AppRouter.wordChainStory,
+                            arguments: WordChainStoryArgs(
+                              todaysWords: _dailyTask!.newWords,
+                              bookName: _bookName(
+                                  ref.read(currentBookIdProvider)),
+                            ),
+                          );
+                        },
+                        icon: Icons.menu_book_rounded,
+                        label:
+                            '词串烧 (${_dailyTask!.newWords.length}词)',
+                      ),
+                    ),
+                  ],
+                  if ((_dailyTask?.reviewWords.isNotEmpty == true) ||
+                      (_dailyTask?.newWords.isNotEmpty == true)) ...[
+                    if (_dailyTask?.newWords.isNotEmpty == true)
+                      const SizedBox(width: 8),
+                    Expanded(
+                      child: _buildGhostButton(
+                        onPressed: () {
+                          HapticUtil.buttonTap();
+                          final words = [
+                            ...?_dailyTask?.reviewWords,
+                            ...?_dailyTask?.newWords,
+                          ];
+                          Navigator.of(context).pushNamed(
+                            AppRouter.wordStream,
+                            arguments: WordStreamArgs(
+                              words: words,
+                              mode: 'today',
+                            ),
+                          );
+                        },
+                        icon: Icons.swipe_rounded,
+                        label: '摸鱼刷词 (${[
+                          ...?_dailyTask?.reviewWords,
+                          ...?_dailyTask?.newWords,
+                        ].length}词)',
+                      ),
+                    ),
+                  ],
+                ],
+              ),
+            ],
+          ],
+        ),
+      ),
+    );
+  }
+
+  /// 渐变头部区域（统一规格，与各子页面 header 一致）
+  Widget _buildHeader(BuildContext context) {
+    return const GradientPageHeader(
+      title: AppStrings.appName,
+      subtitle: '玩着玩着，单词就记住了',
+      showBackButton: false,
+      leading: AppLogoStatic(size: 40),
     );
   }
 

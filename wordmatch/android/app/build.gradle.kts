@@ -29,6 +29,9 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
+        // flutter_local_notifications 的 zonedSchedule 依赖 java.time，
+        // 需启用 core library desugaring（含时间 API 的向后兼容）。
+        isCoreLibraryDesugaringEnabled = true
     }
 
     defaultConfig {
@@ -93,6 +96,11 @@ kotlin {
     compilerOptions {
         jvmTarget = org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17
     }
+}
+
+dependencies {
+    // core library desugaring：支持 java.time 等 API 在低版本 Android 运行
+    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.4")
 }
 
 flutter {

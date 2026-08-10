@@ -6,6 +6,7 @@ import 'package:wordmatch/features/ai/data/services/ai_client.dart';
 import 'package:wordmatch/features/ai/data/services/ai_learning_service.dart';
 import 'package:wordmatch/shared/utils/audio_player.dart';
 import 'package:wordmatch/shared/utils/haptic_util.dart';
+import 'package:wordmatch/shared/widgets/gradient_page_header.dart';
 
 /// 口语对话练习页面参数
 class DialoguePracticeArgs {
@@ -97,29 +98,40 @@ class _DialoguePracticeScreenState extends State<DialoguePracticeScreen> {
 
     return Scaffold(
       backgroundColor: colors.background,
-      appBar: AppBar(
-        title: const Text('口语对话练习'),
-        actions: [
-          if (!_isLoading && _result.lines.isNotEmpty)
-            IconButton(
-              icon: const Icon(Icons.playlist_play_rounded),
-              tooltip: '播放全部',
-              onPressed: _speakAll,
-            ),
-        ],
-      ),
       body: SafeArea(
         child: Column(
           children: [
-            // 头部：目标单词与情景
-            _buildHeader(args),
+            GradientPageHeader(
+            title: '口语对话练习',
+            subtitle: '和 AI 来一场地道对话',
+            trailing: !_isLoading && _result.lines.isNotEmpty
+                ? Container(
+                    width: 40,
+                    height: 40,
+                    decoration: BoxDecoration(
+                      color: Colors.white.withValues(alpha: 0.2),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: IconButton(
+                      icon: const Icon(Icons.playlist_play_rounded),
+                      color: Colors.white,
+                      tooltip: '播放全部',
+                      onPressed: _speakAll,
+                      padding: EdgeInsets.zero,
+                      constraints: const BoxConstraints(),
+                    ),
+                  )
+                : null,
+          ),
+          // 头部：目标单词与情景
+          _buildHeader(args),
 
-            // 对话内容
-            Expanded(
-              child: _isLoading ? _buildLoading() : _buildContent(),
-            ),
-          ],
-        ),
+          // 对话内容
+          Expanded(
+            child: _isLoading ? _buildLoading() : _buildContent(),
+          ),
+        ],
+      ),
       ),
     );
   }

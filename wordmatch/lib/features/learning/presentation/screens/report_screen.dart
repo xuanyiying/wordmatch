@@ -3,11 +3,11 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:wordmatch/core/constants/app_colors.dart';
 import 'package:wordmatch/core/theme/app_color_scheme.dart';
 import 'package:wordmatch/core/constants/app_sizes.dart';
-import 'package:wordmatch/core/constants/app_strings.dart';
 import 'package:wordmatch/features/ai/data/services/ai_client.dart';
 import 'package:wordmatch/features/ai/data/services/ai_report_service.dart';
 import 'package:wordmatch/features/game/data/repositories/game_provider.dart';
 import 'package:wordmatch/features/learning/domain/services/plan_service.dart';
+import 'package:wordmatch/shared/widgets/gradient_page_header.dart';
 
 /// 今日学习报告页面
 class ReportScreen extends ConsumerStatefulWidget {
@@ -87,14 +87,20 @@ class _ReportScreenState extends ConsumerState<ReportScreen> {
     final colors = context.appColors;
     return Scaffold(
       backgroundColor: colors.background,
-      appBar: AppBar(
-        title: const Text(AppStrings.dailyReport),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(AppSizes.pagePaddingH),
+      body: SafeArea(
         child: Column(
           children: [
-            const SizedBox(height: 32),
+            const GradientPageHeader(
+              title: '今日报告',
+              subtitle: '看看今天的学习战果',
+            ),
+          Expanded(
+            child: SingleChildScrollView(
+              child: Padding(
+                padding: const EdgeInsets.all(AppSizes.pagePaddingH),
+                child: Column(
+                  children: [
+                    const SizedBox(height: 8),
 
             // 完成图标
             Container(
@@ -231,7 +237,7 @@ class _ReportScreenState extends ConsumerState<ReportScreen> {
             // AI 每日总结
             _buildAiReportCard(),
 
-            const Spacer(),
+            const SizedBox(height: 16),
 
             // 提示休息
             Container(
@@ -267,10 +273,15 @@ class _ReportScreenState extends ConsumerState<ReportScreen> {
                 child: const Text('返回首页'),
               ),
             ),
-          ],
+              ],
+              ),
+            ),
+          ),
         ),
-      ),
-    );
+      ],
+    ),
+    ),
+);
   }
 
   Widget _buildAiReportCard() {

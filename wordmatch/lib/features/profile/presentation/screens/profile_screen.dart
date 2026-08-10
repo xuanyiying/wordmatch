@@ -8,6 +8,7 @@ import 'package:wordmatch/core/subscription/subscription_tier.dart';
 import 'package:wordmatch/core/subscription/upgrade_pro_dialog.dart';
 import 'package:wordmatch/features/game/data/repositories/game_provider.dart';
 import 'package:wordmatch/shared/utils/haptic_util.dart';
+import 'package:wordmatch/shared/widgets/gradient_page_header.dart';
 
 /// 我的页：统计卡 + Pro 会员 + 功能入口列表
 class ProfileScreen extends ConsumerStatefulWidget {
@@ -87,45 +88,18 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
 
   Widget _buildHeader() {
     final colors = context.appColors;
-    return Container(
-      padding: const EdgeInsets.fromLTRB(20, 12, 20, 14),
-      decoration: BoxDecoration(
-        gradient: colors.headerGradient,
-        borderRadius: const BorderRadius.only(
-          bottomLeft: Radius.circular(24),
-          bottomRight: Radius.circular(24),
+    return GradientPageHeader(
+      title: '学习者',
+      subtitle: _streak > 0 ? '已陪伴你 $_streak 天' : '开始你的学习之旅',
+      showBackButton: false,
+      leading: Container(
+        width: 40,
+        height: 40,
+        decoration: BoxDecoration(
+          gradient: LinearGradient(colors: [colors.mintLight, colors.mintDeep]),
+          shape: BoxShape.circle,
         ),
-      ),
-      child: Row(
-        children: [
-          Container(
-            width: 40,
-            height: 40,
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                  colors: [colors.mintLight, colors.mintDeep]),
-              shape: BoxShape.circle,
-            ),
-            child: const Icon(Icons.person, color: Colors.white, size: 28),
-          ),
-          const SizedBox(width: 12),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const Text('学习者',
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.w700)),
-              const SizedBox(height: 2),
-              Text(
-                _streak > 0 ? '已陪伴你 $_streak 天' : '开始你的学习之旅',
-                style: TextStyle(
-                    color: Colors.white.withValues(alpha: 0.82), fontSize: 12),
-              ),
-            ],
-          ),
-        ],
+        child: const Icon(Icons.person, color: Colors.white, size: 28),
       ),
     );
   }
@@ -283,12 +257,7 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
         bg: colors.amberBg,
         iconColor: const Color(0xFFD4900A),
         title: '学习提醒',
-        onTap: () {
-          ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-            content: Text('学习提醒功能即将上线'),
-            duration: Duration(seconds: 2),
-          ));
-        },
+        onTap: () => Navigator.pushNamed(context, AppRouter.studyReminder),
       ),
       _listItem(
         icon: Icons.settings,

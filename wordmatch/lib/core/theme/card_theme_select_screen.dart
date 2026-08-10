@@ -8,6 +8,7 @@ import 'package:wordmatch/core/theme/card_theme_providers.dart';
 import 'package:wordmatch/core/theme/card_theme_registry.dart';
 import 'package:wordmatch/features/game/data/models/game_card.dart';
 import 'package:wordmatch/features/game/presentation/widgets/card_widget.dart';
+import 'package:wordmatch/shared/widgets/gradient_page_header.dart';
 
 /// 卡片主题选择屏幕：3 套主题横向对比 + 一键应用
 class CardThemeSelectScreen extends ConsumerWidget {
@@ -21,20 +22,26 @@ class CardThemeSelectScreen extends ConsumerWidget {
 
     return Scaffold(
       backgroundColor: colors.background,
-      appBar: AppBar(title: const Text('选择卡片主题')),
-      body: ListView(
-        padding: const EdgeInsets.all(AppSizes.pagePaddingH),
-        children: [
-          Text(
-            '选择一套你喜欢的卡片主题，应用全局生效',
-            style: TextStyle(color: colors.inkSoft, fontSize: 13),
-          ),
-          const SizedBox(height: 16),
-          for (final t in themes) ...[
-            _buildThemeCard(context, ref, t, isCurrent: t.type == current),
-            const SizedBox(height: 16),
+      body: SafeArea(
+        child: Column(
+          children: [
+            const GradientPageHeader(
+              title: '选择卡片主题',
+              subtitle: '选择一套你喜欢的卡片主题，应用全局生效',
+            ),
+            Expanded(
+              child: ListView(
+                padding: const EdgeInsets.all(AppSizes.pagePaddingH),
+                children: [
+                  for (final t in themes) ...[
+                    _buildThemeCard(context, ref, t, isCurrent: t.type == current),
+                    const SizedBox(height: 16),
+                  ],
+                ],
+              ),
+            ),
           ],
-        ],
+        ),
       ),
     );
   }

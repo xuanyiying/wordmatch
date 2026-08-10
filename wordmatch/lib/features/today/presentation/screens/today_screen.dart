@@ -9,6 +9,7 @@ import 'package:wordmatch/features/today/domain/models/daily_word.dart';
 import 'package:wordmatch/features/today/presentation/providers/daily_content_provider.dart';
 import 'package:wordmatch/shared/utils/audio_player.dart';
 import 'package:wordmatch/shared/utils/haptic_util.dart';
+import 'package:wordmatch/shared/widgets/gradient_page_header.dart';
 import 'package:wordmatch/shared/widgets/speak_button.dart';
 
 /// 今日页：连续打卡 + 今日进度 + 每日一词 + 每日一句
@@ -273,27 +274,10 @@ class _TodayScreenState extends ConsumerState<TodayScreen> {
   }
 
   Widget _buildHeader(String subtitle) {
-    final colors = context.appColors;
-    return Container(
-      padding: const EdgeInsets.fromLTRB(14, 12, 14, 14),
-      decoration: BoxDecoration(
-        gradient: colors.headerGradient,
-        borderRadius: BorderRadius.only(
-          bottomLeft: Radius.circular(24),
-          bottomRight: Radius.circular(24),
-        ),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text('今日',
-              style: TextStyle(
-                  color: Colors.white, fontSize: 20, fontWeight: FontWeight.w700)),
-          const SizedBox(height: 2),
-          Text(subtitle,
-              style: TextStyle(color: Colors.white.withValues(alpha: 0.82), fontSize: 12)),
-        ],
-      ),
+    return GradientPageHeader(
+      title: '今日',
+      subtitle: subtitle,
+      showBackButton: false,
     );
   }
 

@@ -1,3 +1,7 @@
+import 'dart:convert';
+import 'dart:io';
+
+import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -7,6 +11,7 @@ import 'package:wordmatch/core/theme/app_color_scheme.dart';
 import 'package:wordmatch/features/game/data/repositories/game_provider.dart';
 import 'package:wordmatch/features/wordbook/data/services/ai_clean_service.dart';
 import 'package:wordmatch/features/wordbook/data/services/custom_wordbook_importer.dart';
+import 'package:wordmatch/shared/widgets/gradient_page_header.dart';
 
 /// 自定义词库导入屏幕（支持 AI 清洗）
 class ImportWordbookScreen extends ConsumerStatefulWidget {
@@ -209,22 +214,93 @@ class _ImportWordbookScreenState extends ConsumerState<ImportWordbookScreen> {
     }
   }
 
+  /// 从本地文件选择并读取词库内容。
+  ///
+  /// 支持 .txt / .json / .csv 文件：
+  /// - `.json` / `.csv`：读取后自动识别格式并填入内容框，方便直接预览/导入
+  /// - `.txt`：读取原始文本，适合用 AI 清洗
+  Future<void> _pickFile() async {
+    try {
+      final result = await FilePicker.platform.pickFiles(
+        type: FileType.custom,
+        allowedExtensions: ['txt', 'json', 'csv'],
+        allowMultiple: false,
+        withData: true,
+      );
+      if (result == null || result.files.isEmpty) return; // 用户取消
+
+      final file = result.files.single;
+      if (file.bytes == null && file.path == null) {
+        setState(() => _error = '无法读取所选文件');
+        return;
+      }
+
+      // 优先用内存 bytes，否则从路径读取
+      String content;
+      if (file.bytes != null) {
+        content = utf8.decode(file.bytes!);
+      } else {
+        final data = await File(file.path!).readAsBytes();
+        content = utf8.decode(data);
+      }
+      content = content.trim();
+      if (content.isEmpty) {
+        setState(() => _error = '所选文件内容为空');
+        return;
+      }
+
+      // 根据扩展名判定格式
+      final ext = (file.extension ?? '').toLowerCase();
+      final format = ext == 'json' ? 'json' : (ext == 'csv' ? 'csv' : null);
+
+      // 重置旧状态，填入内容
+      setState(() {
+        _error = null;
+        _success = null;
+        _parsedCount = 0;
+        _detectedFormat = null;
+        _aiStatus = AiCleanStatus.idle;
+        _aiCleanedWords = [];
+        _aiStatusMessage = null;
+        _contentController.text = content;
+        // 未填名称时，用文件名作默认名称（去扩展名）
+        if (_nameController.text.trim().isEmpty && file.name.isNotEmpty) {
+          final base = file.name.contains('.')
+              ? file.name.substring(0, file.name.lastIndexOf('.'))
+              : file.name;
+          _nameController.text = base.trim();
+        }
+      });
+
+      // JSON / CSV 自动走传统解析；txt 提示用户用 AI 清洗
+      if (format == 'json' || format == 'csv') {
+        _onParse();
+      } else {
+        setState(() => _aiStatusMessage = '已读取 ${file.name}，点击「AI 清洗」提取词汇');
+      }
+    } catch (e) {
+      setState(() => _error = '读取文件失败：$e');
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final colors = context.appColors;
     return Scaffold(
       backgroundColor: context.appColors.background,
-      appBar: AppBar(title: const Text('导入自定义词库')),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.all(AppSizes.pagePaddingH),
+      body: SafeArea(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              '支持 JSON / CSV 格式，或粘贴杂乱文本使用 AI 清洗',
-              style: TextStyle(color: colors.inkSoft, fontSize: 13),
+            const GradientPageHeader(
+              title: '导入自定义词库',
+              subtitle: '支持文件 / 粘贴 / JSON / CSV，可用 AI 清洗',
             ),
-            const SizedBox(height: 16),
+            Expanded(
+              child: SingleChildScrollView(
+                padding: const EdgeInsets.all(AppSizes.pagePaddingH),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
 
             // 词库名
             TextField(
@@ -245,9 +321,14 @@ class _ImportWordbookScreenState extends ConsumerState<ImportWordbookScreen> {
                     style: TextStyle(fontWeight: FontWeight.w600)),
                 const Spacer(),
                 TextButton.icon(
+                  onPressed: _pickFile,
+                  icon: const Icon(Icons.folder_open, size: 16),
+                  label: const Text('从文件导入'),
+                ),
+                TextButton.icon(
                   onPressed: _pasteFromClipboard,
                   icon: const Icon(Icons.paste, size: 16),
-                  label: const Text('从剪贴板粘贴'),
+                  label: const Text('剪贴板'),
                 ),
               ],
             ),
@@ -361,6 +442,10 @@ class _ImportWordbookScreenState extends ConsumerState<ImportWordbookScreen> {
                   message: _success!,
                 ),
               ),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ),
