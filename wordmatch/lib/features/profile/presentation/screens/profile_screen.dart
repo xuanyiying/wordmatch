@@ -33,7 +33,6 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
 
   Future<void> _initData() async {
     final storage = ref.read(progressStorageProvider);
-    if (!storage.isInitialized) await storage.init();
     if (mounted) {
       setState(() {
         _learned = storage.getLearnedCount();
@@ -154,7 +153,7 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
         final tierAsync = ref.watch(tierProvider);
         return tierAsync.when(
           loading: () => const SizedBox.shrink(),
-          error: (_, __) => const SizedBox.shrink(),
+          error: (_, _) => const SizedBox.shrink(),
           data: (tier) {
             if (tier.isPro) return const SizedBox.shrink();
             return InkWell(

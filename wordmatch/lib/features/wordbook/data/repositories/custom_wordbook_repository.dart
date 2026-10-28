@@ -25,6 +25,12 @@ class CustomWordbookFile {
 class CustomWordbookRepository {
   static const String _folder = 'custom_wordbooks';
 
+  /// 阅读生词本固定 bookId（资讯阅读页划词收藏写入此库）
+  static const String readingBookId = 'custom_reading_vocab';
+
+  /// 阅读生词本显示名
+  static const String readingBookName = '阅读生词本';
+
   Future<Directory> _dir() async {
     final docs = await getApplicationDocumentsDirectory();
     final dir = Directory(p.join(docs.path, _folder));
@@ -39,10 +45,74 @@ class CustomWordbookRepository {
     required String name,
     required List<ImportedWord> words,
   }) async {
-    final dir = await _dir();
     // 时间戳 + 随机后缀，避免快速连续导入时同毫秒碰撞覆盖
     final bookId =
         'custom_${DateTime.now().millisecondsSinceEpoch}_${_randomSuffix()}';
+    return _writeBook(bookId: bookId, name: name, words: words);
+  }
+
+  /// 获取阅读生词本；不存在则创建空词库
+  Future<CustomWordbookFile> getOrCreateReadingBook() async {
+    final books = await list();
+    for (final book in books) {
+      if (book.bookId == readingBookId) return book;
+    }
+    return _writeBook(
+      bookId: readingBookId,
+      name: readingBookName,
+      words: const [],
+    );
+  }
+
+  /// 向指定词库追加词条（按 word 小写去重：已存在的不动，新的追加）。
+  ///
+  /// 词库不存在时先创建（name 优先使用阅读生词本名，否则用 bookId）。
+  /// 成功返回 true；bookId 非法或读写异常返回 false。
+  Future<bool> appendWords(String bookId, List<ImportedWord> words) async {
+    final safeId = _sanitizeBookId(bookId);
+    if (safeId == null) return false;
+    try {
+      final dir = await _dir();
+      final file = File(p.join(dir.path, '$safeId.json'));
+      final Map<String, dynamic> raw;
+      if (file.existsSync()) {
+        raw = json.decode(await file.readAsString()) as Map<String, dynamic>;
+      } else {
+        raw = {
+          'book_id': safeId,
+          'name': safeId == readingBookId ? readingBookName : safeId,
+          'imported_at': DateTime.now().toIso8601String(),
+          'words': <dynamic>[],
+        };
+      }
+      final existing = (raw['words'] as List? ?? [])
+          .whereType<Map<String, dynamic>>()
+          .toList();
+      final seen = <String>{
+        for (final e in existing)
+          if (e['word'] is String) (e['word'] as String).trim().toLowerCase(),
+      };
+      for (final w in words) {
+        final key = w.word.trim().toLowerCase();
+        if (key.isEmpty || seen.contains(key)) continue;
+        seen.add(key);
+        existing.add(w.toJson());
+      }
+      raw['words'] = existing;
+      await file.writeAsString(json.encode(raw), flush: true);
+      return true;
+    } catch (_) {
+      return false;
+    }
+  }
+
+  /// 按 [bookId] 写入词库文件（save 与阅读生词本共用）
+  Future<CustomWordbookFile> _writeBook({
+    required String bookId,
+    required String name,
+    required List<ImportedWord> words,
+  }) async {
+    final dir = await _dir();
     final file = File(p.join(dir.path, '$bookId.json'));
     final data = {
       'book_id': bookId,

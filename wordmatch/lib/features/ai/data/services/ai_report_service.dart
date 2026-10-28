@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:wordmatch/core/subscription/subscription_service.dart';
 import 'package:wordmatch/features/ai/data/prompts/ai_prompts.dart';
 import 'package:wordmatch/features/ai/data/services/ai_client.dart';
@@ -54,7 +56,8 @@ class AiReportService {
         ttl: const Duration(days: 7),
       );
       return _parseReport(result);
-    } catch (_) {
+    } catch (e) {
+      log('AiReportService: 学习报告生成失败 (cacheKey=$cacheKey)', error: e);
       return null;
     }
   }

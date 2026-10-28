@@ -4,6 +4,7 @@ import 'package:wordmatch/core/constants/app_colors.dart';
 import 'package:wordmatch/core/theme/app_color_scheme.dart';
 import 'package:wordmatch/features/game/data/repositories/game_provider.dart';
 import 'package:wordmatch/features/learning/domain/services/learning_stats_service.dart';
+import 'package:wordmatch/features/wordbook/data/database/app_database.dart';
 import 'package:wordmatch/shared/widgets/gradient_page_header.dart';
 
 /// 学习统计页面
@@ -18,6 +19,8 @@ class _StatsScreenState extends ConsumerState<StatsScreen> {
   List<DailyLearningStat> _recent30Days = [];
   List<DailyLearningStat> _recent7Days = [];
   LearningSummary? _summary;
+  GameStats? _gameStats;
+  List<GameSession> _recentSessions = [];
   bool _isLoading = true;
 
   @override
@@ -28,10 +31,13 @@ class _StatsScreenState extends ConsumerState<StatsScreen> {
 
   Future<void> _loadData() async {
     final storage = ref.read(progressStorageProvider);
+    final sessionRepo = ref.read(gameSessionRepositoryProvider);
     final results = await Future.wait([
       LearningStatsService.fetchRecentDays(storage, 30),
       LearningStatsService.fetchRecentDays(storage, 7),
       LearningStatsService.fetchSummary(storage),
+      sessionRepo.stats(),
+      sessionRepo.recentSessions(limit: 5),
     ]);
 
     if (!mounted) return;
@@ -40,6 +46,8 @@ class _StatsScreenState extends ConsumerState<StatsScreen> {
       _recent30Days = results[0] as List<DailyLearningStat>;
       _recent7Days = results[1] as List<DailyLearningStat>;
       _summary = results[2] as LearningSummary;
+      _gameStats = results[3] as GameStats;
+      _recentSessions = results[4] as List<GameSession>;
       _isLoading = false;
     });
   }
@@ -113,6 +121,8 @@ class _StatsScreenState extends ConsumerState<StatsScreen> {
                             _buildHeatmapSection(),
                             const SizedBox(height: 28),
                             _buildCurveSection(),
+                            const SizedBox(height: 28),
+                            _buildGameStatsSection(),
                             const SizedBox(height: 16),
                           ],
                         ),
@@ -377,6 +387,180 @@ class _StatsScreenState extends ConsumerState<StatsScreen> {
         ),
       ],
     );
+  }
+
+  Widget _buildGameStatsSection() {
+    final colors = context.appColors;
+    final stats = _gameStats;
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          children: [
+            Icon(Icons.sports_esports_rounded,
+                size: 18, color: colors.mintDeep),
+            const SizedBox(width: 8),
+            Text(
+              '游戏战绩',
+              style: TextStyle(
+                fontSize: 15,
+                fontWeight: FontWeight.w600,
+                color: colors.ink,
+              ),
+            ),
+          ],
+        ),
+        const SizedBox(height: 14),
+        Container(
+          width: double.infinity,
+          padding: const EdgeInsets.all(16),
+          decoration: BoxDecoration(
+            color: colors.card,
+            borderRadius: BorderRadius.circular(16),
+            boxShadow: [
+              BoxShadow(
+                color: colors.mintDeep.withValues(alpha: 0.06),
+                blurRadius: 12,
+                offset: const Offset(0, 2),
+              ),
+            ],
+          ),
+          child: stats != null && stats.totalGames > 0
+              ? Column(
+                  children: [
+                    Row(
+                      children: [
+                        Expanded(
+                          child: _buildGameMetric(
+                            value: '${stats.totalGames}',
+                            label: '累计对局',
+                          ),
+                        ),
+                        Expanded(
+                          child: _buildGameMetric(
+                            value: '${stats.avgScore}',
+                            label: '平均得分',
+                          ),
+                        ),
+                        Expanded(
+                          child: _buildGameMetric(
+                            value: '${stats.maxCombo}',
+                            label: '最高连击',
+                          ),
+                        ),
+                      ],
+                    ),
+                    if (_recentSessions.isNotEmpty) ...[
+                      const SizedBox(height: 14),
+                      Divider(
+                        height: 1,
+                        color: colors.border.withValues(alpha: 0.6),
+                      ),
+                      const SizedBox(height: 12),
+                      Row(
+                        children: [
+                          Text(
+                            '最近对局',
+                            style: TextStyle(
+                              fontSize: 12,
+                              fontWeight: FontWeight.w600,
+                              color: colors.inkSoft,
+                            ),
+                          ),
+                          const Spacer(),
+                          Text(
+                            '累计 ${_formatDuration(stats.totalDurationMs)}',
+                            style: TextStyle(
+                              fontSize: 11,
+                              color: colors.inkSoft,
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 4),
+                      ..._recentSessions.map(_buildSessionRow),
+                    ],
+                  ],
+                )
+              : _buildEmptyState('完成一局消消乐后，这里会记录你的战绩'),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildGameMetric({required String value, required String label}) {
+    final colors = context.appColors;
+    return Column(
+      children: [
+        Text(
+          value,
+          style: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            color: colors.mintDeep,
+          ),
+        ),
+        const SizedBox(height: 4),
+        Text(
+          label,
+          style: TextStyle(
+            fontSize: 11,
+            color: colors.inkSoft,
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildSessionRow(GameSession session) {
+    final colors = context.appColors;
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 7),
+      child: Row(
+        children: [
+          Text(
+            _formatDateTime(session.startTime),
+            style: TextStyle(fontSize: 11, color: colors.inkSoft),
+          ),
+          const SizedBox(width: 10),
+          Expanded(
+            child: Text(
+              '${session.matchCount} 词 · 连击 ${session.maxCombo}',
+              style: TextStyle(fontSize: 12, color: colors.ink),
+            ),
+          ),
+          Text(
+            '${session.score} 分',
+            style: TextStyle(
+              fontSize: 12,
+              fontWeight: FontWeight.w600,
+              color: colors.mintDeep,
+            ),
+          ),
+          const SizedBox(width: 10),
+          Text(
+            _formatDuration(session.durationMs),
+            style: TextStyle(fontSize: 11, color: colors.inkSoft),
+          ),
+        ],
+      ),
+    );
+  }
+
+  String _formatDateTime(DateTime d) {
+    final mm = d.month.toString().padLeft(2, '0');
+    final dd = d.day.toString().padLeft(2, '0');
+    final hh = d.hour.toString().padLeft(2, '0');
+    final min = d.minute.toString().padLeft(2, '0');
+    return '$mm-$dd $hh:$min';
+  }
+
+  /// 毫秒格式化为 m:ss
+  String _formatDuration(int ms) {
+    final totalSeconds = (ms / 1000).round();
+    final m = totalSeconds ~/ 60;
+    final s = totalSeconds % 60;
+    return '$m:${s.toString().padLeft(2, '0')}';
   }
 
   Widget _buildEmptyState(String message) {

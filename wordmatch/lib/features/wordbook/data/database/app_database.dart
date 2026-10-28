@@ -100,7 +100,7 @@ class GameSessions extends Table {
   /// 游戏模式 (word/domain)
   TextColumn get gameMode => text().withDefault(const Constant('word'))();
 
-  /// 网格大小 (3x3/4x4/5x5)
+  /// 网格规模（本局卡片配对数，如 8 / 12）
   IntColumn get gridSize => integer()();
 
   /// 匹配成功数
@@ -303,35 +303,30 @@ class AppDatabase extends _$AppDatabase {
   }
 
   /// 获取用户统计数据
+  ///
+  /// 用 SQL 聚合函数直接在数据库内完成计算，避免把全部对局记录载入内存后
+  /// 再逐行累加——记录会随使用不断增长，全量载入的开销会同步变大。
   Future<GameStats> getGameStats() async {
-    final sessions = await select(gameSessions).get();
+    final query = selectOnly(gameSessions)
+      ..addColumns([
+        gameSessions.id.count(),
+        gameSessions.matchCount.sum(),
+        gameSessions.errorCount.sum(),
+        gameSessions.durationMs.sum(),
+        gameSessions.score.avg(),
+        gameSessions.maxCombo.max(),
+      ]);
 
-    if (sessions.isEmpty) {
-      return GameStats(
-        totalGames: 0,
-        totalMatches: 0,
-        totalErrors: 0,
-        totalDurationMs: 0,
-        avgScore: 0,
-        maxCombo: 0,
-      );
-    }
-
-    final totalMatches = sessions.fold(0, (sum, s) => sum + s.matchCount);
-    final totalErrors = sessions.fold(0, (sum, s) => sum + s.errorCount);
-    final totalDurationMs = sessions.fold(0, (sum, s) => sum + s.durationMs);
-    final avgScore =
-        sessions.fold(0, (sum, s) => sum + s.score) / sessions.length;
-    final maxCombo =
-        sessions.fold(0, (max, s) => s.maxCombo > max ? s.maxCombo : max);
+    final row = await query.getSingle();
 
     return GameStats(
-      totalGames: sessions.length,
-      totalMatches: totalMatches,
-      totalErrors: totalErrors,
-      totalDurationMs: totalDurationMs,
-      avgScore: avgScore.round(),
-      maxCombo: maxCombo,
+      totalGames: row.read(gameSessions.id.count()) ?? 0,
+      totalMatches: row.read(gameSessions.matchCount.sum()) ?? 0,
+      totalErrors: row.read(gameSessions.errorCount.sum()) ?? 0,
+      totalDurationMs: row.read(gameSessions.durationMs.sum()) ?? 0,
+      // 无记录时 avg/max 为 NULL，统一回退 0
+      avgScore: (row.read(gameSessions.score.avg()) ?? 0).round(),
+      maxCombo: row.read(gameSessions.maxCombo.max()) ?? 0,
     );
   }
 

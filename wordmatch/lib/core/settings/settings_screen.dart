@@ -4,6 +4,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:wordmatch/core/constants/app_colors.dart';
 import 'package:wordmatch/core/constants/app_sizes.dart';
 import 'package:wordmatch/core/router/app_router.dart';
+import 'package:wordmatch/core/settings/learner_profile.dart';
 import 'package:wordmatch/core/theme/app_color_scheme.dart';
 import 'package:wordmatch/core/theme/font_scale_provider.dart';
 import 'package:wordmatch/core/theme/theme_mode_provider.dart';
@@ -19,11 +20,18 @@ class SettingsScreen extends ConsumerStatefulWidget {
 class _SettingsScreenState extends ConsumerState<SettingsScreen> {
   static const _kZenMode = 'zen_mode';
   bool _zenMode = true;
+  String _identityDesc = LearnerProfile.defaultPreset.desc;
 
   @override
   void initState() {
     super.initState();
     _loadZenMode();
+    _loadIdentity();
+  }
+
+  Future<void> _loadIdentity() async {
+    final desc = await LearnerProfile.load();
+    if (mounted) setState(() => _identityDesc = desc);
   }
 
   Future<void> _loadZenMode() async {
@@ -78,6 +86,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                     // —— 学习 ——
                     _buildSectionHeader('学习', Icons.school_outlined),
                     _buildSettingsGroup([
+                      _buildIdentityTile(),
                       _buildZenModeTile(),
                       ListTile(
                         leading: Icon(Icons.insights_rounded,
@@ -249,6 +258,202 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
         borderRadius: BorderRadius.circular(16),
         clipBehavior: Clip.antiAlias,
         child: Column(children: children),
+      ),
+    );
+  }
+
+  /// 我的身份入口：AI 按此画像挑选生词与释义
+  Widget _buildIdentityTile() {
+    return ListTile(
+      leading:
+          Icon(Icons.person_outline_rounded, color: context.appColors.mintDeep),
+      title: Text('我的身份',
+          style: TextStyle(
+              fontSize: 15,
+              fontWeight: FontWeight.w600,
+              color: context.appColors.ink)),
+      subtitle: Text(
+        'AI 按此画像标注生词 · 当前「${LearnerProfile.labelFor(_identityDesc)}」',
+        style: TextStyle(fontSize: 12, color: context.appColors.inkSoft),
+      ),
+      trailing: Icon(Icons.chevron_right_rounded, color: Colors.grey[400]),
+      onTap: _showIdentityPicker,
+    );
+  }
+
+  /// 身份选择面板：预设 + 自定义，选择后即时生效
+  void _showIdentityPicker() {
+    showModalBottomSheet<void>(
+      context: context,
+      backgroundColor: context.appColors.card,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+      ),
+      builder: (ctx) {
+        return SafeArea(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Padding(
+                padding: const EdgeInsets.fromLTRB(20, 18, 12, 4),
+                child: Row(
+                  children: [
+                    Icon(Icons.person_outline_rounded,
+                        size: 20, color: ctx.appColors.mintDeep),
+                    const SizedBox(width: 8),
+                    Text('我的身份',
+                        style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.w700,
+                            color: ctx.appColors.mintDeep)),
+                    const Spacer(),
+                    TextButton(
+                      onPressed: () => Navigator.pop(ctx),
+                      child: const Text('完成'),
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(20, 0, 20, 8),
+                child: Text('AI 会根据你的身份挑选真正妨碍你理解的生词',
+                    style:
+                        TextStyle(fontSize: 12, color: ctx.appColors.inkSoft)),
+              ),
+              ...LearnerProfile.presets.map((p) {
+                final selected = p.desc == _identityDesc;
+                return InkWell(
+                  onTap: () async {
+                    await LearnerProfile.save(p.desc);
+                    if (mounted) setState(() => _identityDesc = p.desc);
+                    if (ctx.mounted) Navigator.pop(ctx);
+                  },
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 20, vertical: 14),
+                    decoration: BoxDecoration(
+                      border: Border(
+                        bottom: BorderSide(
+                            color: ctx.appColors.divider, width: 0.5),
+                      ),
+                    ),
+                    child: Row(
+                      children: [
+                        Expanded(
+                          child: Text(p.label,
+                              style: TextStyle(
+                                  fontSize: 15,
+                                  fontWeight: selected
+                                      ? FontWeight.w700
+                                      : FontWeight.w500,
+                                  color: ctx.appColors.ink)),
+                        ),
+                        const SizedBox(width: 12),
+                        Icon(
+                          selected
+                              ? Icons.check_circle_rounded
+                              : Icons.radio_button_unchecked,
+                          size: 22,
+                          color:
+                              selected ? ctx.appColors.mintDeep : Colors.grey,
+                        ),
+                      ],
+                    ),
+                  ),
+                );
+              }),
+              // 自定义入口：当前身份不在预设中时视为已选自定义
+              InkWell(
+                onTap: () async {
+                  final custom = await _promptCustomIdentity();
+                  if (custom == null) return; // 取消
+                  await LearnerProfile.save(custom);
+                  if (mounted) setState(() => _identityDesc = custom);
+                  if (ctx.mounted) Navigator.pop(ctx);
+                },
+                child: Container(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text('自定义',
+                                style: TextStyle(
+                                    fontSize: 15,
+                                    fontWeight:
+                                        _isCustomIdentity ? FontWeight.w700 : FontWeight.w500,
+                                    color: ctx.appColors.ink)),
+                            if (_isCustomIdentity) ...[
+                              const SizedBox(height: 2),
+                              Text(_identityDesc,
+                                  style: TextStyle(
+                                      fontSize: 12,
+                                      color: ctx.appColors.inkSoft)),
+                            ],
+                          ],
+                        ),
+                      ),
+                      const SizedBox(width: 12),
+                      Icon(
+                        _isCustomIdentity
+                            ? Icons.check_circle_rounded
+                            : Icons.edit_outlined,
+                        size: 22,
+                        color: _isCustomIdentity
+                            ? ctx.appColors.mintDeep
+                            : Colors.grey,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              const SizedBox(height: 8),
+            ],
+          ),
+        );
+      },
+    );
+  }
+
+  bool get _isCustomIdentity =>
+      LearnerProfile.presets.every((p) => p.desc != _identityDesc);
+
+  /// 自定义身份输入弹窗，返回 null 表示取消
+  Future<String?> _promptCustomIdentity() {
+    final controller = TextEditingController(
+        text: _isCustomIdentity ? _identityDesc : '');
+    return showDialog<String>(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        shape:
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+        title: const Text('自定义身份'),
+        content: TextField(
+          controller: controller,
+          autofocus: true,
+          maxLength: 40,
+          decoration: const InputDecoration(
+            hintText: '如：后端开发工程师 / 出国读研 / 外贸从业者…',
+          ),
+        ),
+        actions: [
+          TextButton(
+              onPressed: () => Navigator.pop(ctx), child: const Text('取消')),
+          TextButton(
+            style: TextButton.styleFrom(
+                foregroundColor: context.appColors.mintDeep),
+            onPressed: () {
+              final v = controller.text.trim();
+              if (v.isEmpty) return;
+              Navigator.pop(ctx, v);
+            },
+            child: const Text('确定'),
+          ),
+        ],
       ),
     );
   }

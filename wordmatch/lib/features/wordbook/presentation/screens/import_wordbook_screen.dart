@@ -563,7 +563,7 @@ class _ImportWordbookScreenState extends ConsumerState<ImportWordbookScreen> {
             physics: const NeverScrollableScrollPhysics(),
             itemCount:
                 _aiCleanedWords.length > 20 ? 20 : _aiCleanedWords.length,
-            separatorBuilder: (_, __) =>
+            separatorBuilder: (_, _) =>
                 const Divider(height: 1, indent: 16, endIndent: 16),
             itemBuilder: (context, index) {
               final w = _aiCleanedWords[index];

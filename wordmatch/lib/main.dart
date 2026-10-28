@@ -14,6 +14,7 @@ import 'package:wordmatch/core/theme/skin_theme_provider.dart';
 import 'package:wordmatch/core/theme/theme_mode_provider.dart';
 import 'package:wordmatch/features/ai/data/services/ai_response_cache.dart';
 import 'package:wordmatch/features/learning/data/providers/study_reminder_provider.dart';
+import 'package:wordmatch/features/learning/data/repositories/progress_storage.dart';
 import 'package:wordmatch/features/wordbook/data/services/ai_clean_service.dart';
 import 'package:wordmatch/shared/widgets/splash_screen.dart';
 
@@ -43,6 +44,10 @@ Future<void> _runApp() async {
 
   // 检查是否首次启动（未完成引导）
   final onboardingCompleted = prefs.getBool('onboarding_completed') ?? false;
+
+  // 加载本地学习进度（词书进度 / 错词本 / 打卡 / 每日历史）到内存。
+  // 启动时一次性完成，之后各页面可安全地同步读取，不会重复读盘。
+  await ProgressStorage.instance.init();
 
   // 后台预下载离线 TTS 引擎（非阻塞；模型已就绪则立即返回，否则静默下载）
   // 解决国产 ROM（小米/华为等）系统 TTS 缺英文语音包导致发音无声的问题
@@ -85,6 +90,8 @@ class _WordMatchAppState extends ConsumerState<WordMatchApp>
     // 应用进入后台时暂停发音，恢复时释放已停的引擎资源，降低后台内存占用
     if (state == AppLifecycleState.paused) {
       SherpaTtsEngine.instance.stop();
+      // 退到后台时把合并中的学习进度立即落盘，避免进程被回收导致进度丢失
+      unawaited(ProgressStorage.instance.flush());
     } else if (state == AppLifecycleState.detached) {
       // 引擎即将销毁，释放离线 TTS 常驻模型（约 63MB）与购买流订阅
       SherpaTtsEngine.instance.dispose();

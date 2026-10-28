@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:developer';
 import 'package:flutter/services.dart';
 import 'package:wordmatch/features/today/domain/models/daily_word.dart';
 import 'package:wordmatch/features/today/domain/models/daily_quote.dart';
@@ -66,7 +67,9 @@ class DailyContentService {
       _wordsCache = list
           .map((e) => DailyWord.fromJson(e as Map<String, dynamic>))
           .toList();
-    } catch (_) {
+    } catch (e) {
+      // 资产缺失或格式错误会导致「今日」页没有内容，需要显式记录以便排查
+      log('DailyContentService: 每日单词加载失败', error: e);
       _wordsCache = [];
     }
     return _wordsCache!;
@@ -80,7 +83,8 @@ class DailyContentService {
       _quotesCache = list
           .map((e) => DailyQuote.fromJson(e as Map<String, dynamic>))
           .toList();
-    } catch (_) {
+    } catch (e) {
+      log('DailyContentService: 每日金句加载失败', error: e);
       _quotesCache = [];
     }
     return _quotesCache!;

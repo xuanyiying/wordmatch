@@ -5,6 +5,7 @@ import 'package:wordmatch/core/settings/settings_screen.dart';
 import 'package:wordmatch/core/settings/user_agreement_screen.dart';
 import 'package:wordmatch/core/theme/card_theme_select_screen.dart';
 import 'package:wordmatch/core/theme/skin_theme_settings_screen.dart';
+import 'package:wordmatch/features/feed/presentation/screens/article_reader_screen.dart';
 import 'package:wordmatch/features/game/presentation/screens/game_screen.dart';
 import 'package:wordmatch/features/learning/domain/services/plan_service.dart';
 import 'package:wordmatch/features/learning/presentation/screens/dialogue_practice_screen.dart';
@@ -56,6 +57,12 @@ class AppRouter {
         final args = settings.arguments as DailyTask?;
         if (args != null) {
           return _buildRoute(ReportScreen(dailyTask: args), settings);
+        }
+        return _buildRoute(const MainShell(), settings);
+      case '/feed_article':
+        final args = settings.arguments as ArticleReaderArgs?;
+        if (args != null) {
+          return _buildRoute(ArticleReaderScreen(args: args), settings);
         }
         return _buildRoute(const MainShell(), settings);
       case '/wordbook_select':
@@ -116,6 +123,7 @@ class AppRouter {
   static const String home = '/';
   static const String onboarding = '/onboarding';
   static const String game = '/game';
+  static const String feedArticle = '/feed_article';
   static const String newWord = '/new_word';
   static const String report = '/report';
   static const String wordbookSelect = '/wordbook_select';

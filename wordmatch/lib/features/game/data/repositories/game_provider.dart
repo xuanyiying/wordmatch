@@ -5,6 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:wordmatch/features/game/data/models/game_card.dart';
 import 'package:wordmatch/features/game/data/models/game_state.dart';
+import 'package:wordmatch/features/game/data/repositories/game_session_repository.dart';
 import 'package:wordmatch/features/game/domain/services/difficulty_service.dart';
 import 'package:wordmatch/features/game/domain/services/match_service.dart';
 import 'package:wordmatch/features/learning/data/repositories/progress_storage.dart';
@@ -65,8 +66,15 @@ final wordListProvider = FutureProvider<List<Word>>((ref) async {
 });
 
 /// 进度存储 Provider
+///
+/// 使用全局单例，保证进程内只有一份进度缓存与写盘队列。
 final progressStorageProvider = Provider<ProgressStorage>((ref) {
-  return ProgressStorage();
+  return ProgressStorage.instance;
+});
+
+/// 游戏战绩仓库 Provider（SQLite 对局记录）
+final gameSessionRepositoryProvider = Provider<GameSessionRepository>((ref) {
+  return GameSessionRepository.instance;
 });
 
 /// 游戏状态 Provider
@@ -91,6 +99,8 @@ class GameNotifier extends Notifier<GameState> {
   // 游戏计时器
   Stopwatch? _stopwatch;
   Timer? _elapsedTimer;
+  // 本局开始时间（用于对局记录）
+  DateTime? _gameStartTime;
 
   @override
   GameState build() {
@@ -104,6 +114,7 @@ class GameNotifier extends Notifier<GameState> {
 
   /// 启动游戏计时器
   void _startTimer() {
+    _gameStartTime = DateTime.now();
     _stopwatch = Stopwatch()..start();
     _elapsedTimer?.cancel();
     _elapsedTimer = Timer.periodic(const Duration(seconds: 1), (_) {
@@ -430,7 +441,6 @@ class GameNotifier extends Notifier<GameState> {
   /// 游戏完成后保存 SM-2 进度
   Future<void> _saveGameProgress() async {
     final storage = ref.read(progressStorageProvider);
-    await storage.init();
 
     // 在 await 之前捕获当前状态，避免自依赖问题
     final currentState = ref.container.read(gameNotifierProvider);
@@ -438,6 +448,9 @@ class GameNotifier extends Notifier<GameState> {
 
     // 为每个匹配的单词更新 SM-2 进度
     final bookId = ref.read(currentBookIdProvider);
+    final updatedProgress = <WordProgress>[];
+    final clearedWrongWords = <String>[];
+
     for (final itemId in matchedItemIds) {
       var progress = storage.getProgress(itemId);
       progress ??= WordProgress.newWord(itemId, bookId);
@@ -453,13 +466,20 @@ class GameNotifier extends Notifier<GameState> {
         aiMnemonicTapCount: perf?.aiMnemonicTapCount ?? 0,
       );
 
-      progress = Sm2Service.updateProgress(progress, quality);
-      await storage.updateProgress(progress);
+      updatedProgress.add(Sm2Service.updateProgress(progress, quality));
 
       // 错题重练模式中，匹配成功则从错词本移除
       if (currentState.domainId?.startsWith('wrong_words_') == true) {
-        await storage.removeWrongWord(itemId);
+        clearedWrongWords.add(itemId);
       }
+    }
+
+    // 整局进度一次性落盘，避免逐词写入把整份 JSON 反复序列化
+    if (updatedProgress.isNotEmpty) {
+      await storage.updateAllProgress(updatedProgress);
+    }
+    if (clearedWrongWords.isNotEmpty) {
+      await storage.removeWrongWords(clearedWrongWords);
     }
 
     // 记录今日复习活动（游戏/复习完成的单词数 + 实际用时分钟）
@@ -471,6 +491,26 @@ class GameNotifier extends Notifier<GameState> {
         minutes: minutes > 0 ? minutes : (matchedItemIds.length * 0.3).round(),
       );
     }
+
+    // 对局记录写入 SQLite（战绩历史会持续增长，用 SQLite 单行增量写入）
+    final hintCount =
+        currentState.wordPerformance.values.where((p) => p.usedHint).length;
+    await ref.read(gameSessionRepositoryProvider).recordSession(
+          bookId: bookId,
+          domainId: currentState.domainId,
+          gameMode: currentState.domainId?.startsWith('wrong_words_') == true
+              ? 'domain'
+              : 'word',
+          gridSize: currentState.pairCount,
+          matchCount: currentState.matchedCount,
+          errorCount: currentState.wrongCount,
+          hintCount: hintCount,
+          durationMs: _stopwatch?.elapsed.inMilliseconds ?? 0,
+          maxCombo: currentState.maxCombo,
+          score: currentState.score,
+          startTime: _gameStartTime ?? DateTime.now(),
+          endTime: DateTime.now(),
+        );
   }
 
   /// 重置游戏
@@ -503,7 +543,6 @@ class GameNotifier extends Notifier<GameState> {
   Future<void> _recordWrongWords(
       GameCard firstCard, GameCard secondCard) async {
     final storage = ref.read(progressStorageProvider);
-    if (!storage.isInitialized) await storage.init();
 
     final bookId = ref.read(currentBookIdProvider);
 
@@ -521,7 +560,6 @@ class GameNotifier extends Notifier<GameState> {
     _startTimer();
     final gridSize = gridSizeFromPairs(pairCount);
     final storage = ref.read(progressStorageProvider);
-    if (!storage.isInitialized) await storage.init();
 
     final wrongWords = storage.getWrongWords();
     if (wrongWords.isEmpty) {

@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:wordmatch/core/subscription/subscription_service.dart';
 import 'package:wordmatch/features/ai/data/prompts/ai_prompts.dart';
 import 'package:wordmatch/features/ai/data/services/ai_client.dart';
@@ -70,7 +72,8 @@ class AiLearningService {
 
       await AiResponseCache.set('mnemonic', wordId, result);
       return _parseMnemonic(wordId, result);
-    } catch (_) {
+    } catch (e) {
+      log('AiLearningService: 助记生成失败 (wordId=$wordId)', error: e);
       return null;
     }
   }
@@ -143,8 +146,9 @@ class AiLearningService {
 
       await AiResponseCache.set('examples', wordId, result);
       return _parseExampleSentences(result);
-    } catch (_) {
+    } catch (e) {
       // 异常：返回空，由 UI 提示，避免重复展示本地例句
+      log('AiLearningService: 例句生成失败 (wordId=$wordId)', error: e);
       return const [];
     }
   }
@@ -208,7 +212,8 @@ class AiLearningService {
 
       await AiResponseCache.set('network', wordId, result);
       return _parseWordNetwork(result);
-    } catch (_) {
+    } catch (e) {
+      log('AiLearningService: 同反义词网络生成失败 (wordId=$wordId)', error: e);
       return const WordNetworkResult();
     }
   }
@@ -274,7 +279,8 @@ class AiLearningService {
         ttl: const Duration(days: 30),
       );
       return parseDialogue(result);
-    } catch (_) {
+    } catch (e) {
+      log('AiLearningService: 口语对话生成失败 (wordId=$wordId)', error: e);
       return const DialogueResult();
     }
   }
@@ -394,7 +400,8 @@ $wordsList
       await AiResponseCache.set('word_chain', cacheId, result,
           ttl: const Duration(days: 7));
       return _parseWordChainStory(result);
-    } catch (_) {
+    } catch (e) {
+      log('AiLearningService: 词串故事生成失败 (cacheId=$cacheId)', error: e);
       return null;
     }
   }

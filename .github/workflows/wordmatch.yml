@@ -1,0 +1,58 @@
+name: WordMatch CI
+
+on:
+  push:
+    branches: [main, develop]
+    paths:
+      - 'wordmatch/**'
+  pull_request:
+    branches: [main, develop]
+    paths:
+      - 'wordmatch/**'
+
+defaults:
+  run:
+    working-directory: wordmatch
+
+jobs:
+  analyze-and-test:
+    name: Analyze & Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.24.0'
+          channel: 'stable'
+          cache: true
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Verify formatting
+        run: dart format --output=none --set-exit-if-changed .
+
+      - name: Analyze project source
+        run: flutter analyze --fatal-infos
+
+      - name: Run tests
+        run: flutter test
+
+  check-secrets:
+    name: Check for leaked secrets
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Ensure signing files are ignored
+        run: |
+          if git ls-files | grep -E 'wordmatch/android/(keystore\.properties|key\.properties|.*\.jks|.*\.keystore)$'; then
+            echo "Signing secrets must not be tracked by git"
+            exit 1
+          fi

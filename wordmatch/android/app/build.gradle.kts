@@ -38,24 +38,18 @@ android {
         applicationId = "com.wordmatch.wordmatch"
         minSdk = 24
         targetSdk = 34
-        // versionCode / versionName 由 Flutter Gradle 插件从 pubspec.yaml 自动注入，
-        // 无需在此硬编码。如需修改版本，请编辑 ../pubspec.yaml。
+        // 从 pubspec.yaml 的 version 读取（flutter 插件解析），如需修改版本请编辑 ../pubspec.yaml。
+        // 注意：Flutter 插件不会自动注入，缺省会导致 "Manifest versionCode not found" 构建失败。
+        versionCode = flutter.versionCode
+        versionName = flutter.versionName
     }
 
-    // 仅保留 arm64-v8a 架构的 native 库。
-    // sherpa_onnx 为每个 ABI 各打包一份 onnxruntime.so（arm64 21MB + armeabi 14MB + x86_64 24MB），
-    // ndk.abiFilters 对 Flutter 插件 .so 不生效，必须用 packaging.jniLibs.excludes 直接排除。
-    // 现代手机（含目标小米）均为 arm64，可安全排除旧架构。
-    packaging {
-        jniLibs {
-            excludes += setOf(
-                "lib/armeabi-v7a/**",
-                "lib/x86/**",
-                "lib/x86_64/**",
-            )
-        }
-    }
-
+    // release 仅保留 arm64-v8a 架构的 native 库（现代手机均为 arm64，减包约 38MB）。
+    // sherpa_onnx 为每个 ABI 各打包一份 onnxruntime.so，ndk.abiFilters 对 Flutter 插件
+    // .so 不生效，必须用 packaging.jniLibs.excludes 排除。
+    // 注意：excludes 不能放在 android{} 顶层——那会连 debug 的 x86_64 libflutter.so
+    // 一起排掉，导致模拟器（x86_64）启动即 UnsatisfiedLinkError。因此用 Variant API
+    // 只对 release 生效，debug/模拟器保留全部 ABI。
     signingConfigs {
         create("release") {
             val storeFileProp = resolveSecret("storeFile")
@@ -105,4 +99,19 @@ dependencies {
 
 flutter {
     source = "../.."
+}
+
+// release 变体排除非 arm64 的 native 库（见 android{} 内 packaging 注释）
+androidComponents {
+    onVariants { variant ->
+        if (variant.buildType == "release") {
+            variant.packaging.jniLibs.excludes.addAll(
+                listOf(
+                    "lib/armeabi-v7a/**",
+                    "lib/x86/**",
+                    "lib/x86_64/**",
+                )
+            )
+        }
+    }
 }

@@ -716,7 +716,8 @@ class _GameScreenState extends ConsumerState<GameScreen>
                 HapticUtil.buttonTap();
                 await _markGameCompletedIfNeeded();
                 if (!mounted) return;
-                Navigator.of(context).popUntil((route) => route.isFirst);
+                // 返回 'advance_next' 信号，由调用方（学习首页）推进计划并直接进入新词学习
+                Navigator.of(context).pop('advance_next');
               },
               style: ElevatedButton.styleFrom(
                 minimumSize: const Size.fromHeight(50),
@@ -791,7 +792,6 @@ class _GameScreenState extends ConsumerState<GameScreen>
   Future<void> _markGameCompletedIfNeeded() async {
     if (!widget.args.markDailyGameCompleted) return;
     final storage = ref.read(progressStorageProvider);
-    if (!storage.isInitialized) await storage.init();
     final taskState = storage.getDailyTaskState();
     if (taskState != null &&
         taskState.learningCompleted &&

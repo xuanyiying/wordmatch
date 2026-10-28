@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:convert';
+import 'dart:developer';
 import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -132,7 +133,9 @@ class AiResponseCache {
       }
       _hits[type] = (_hits[type] ?? 0) + 1;
       return data;
-    } catch (_) {
+    } catch (e) {
+      // 缓存条目损坏：移除后按未命中处理
+      log('AiResponseCache: 缓存条目损坏已移除 ($type/$id)', error: e);
       await remove(type, id);
       _misses[type] = (_misses[type] ?? 0) + 1;
       return null;

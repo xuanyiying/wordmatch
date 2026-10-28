@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:wordmatch/core/theme/app_color_scheme.dart';
+import 'package:wordmatch/features/feed/presentation/screens/feed_screen.dart';
 import 'package:wordmatch/features/learning/presentation/screens/home_screen.dart';
 import 'package:wordmatch/features/profile/presentation/screens/profile_screen.dart';
 import 'package:wordmatch/features/today/presentation/screens/today_screen.dart';
 
-/// 应用主框架：底部导航三 Tab（学习 / 今日 / 我的）
+/// 应用主框架：底部导航四 Tab（学习 / 今日 / 资讯 / 我的）
 class MainShell extends StatefulWidget {
   const MainShell({super.key});
 
@@ -15,10 +16,11 @@ class MainShell extends StatefulWidget {
 class _MainShellState extends State<MainShell> {
   int _index = 0;
 
-  /// 三个 Tab 页面（保持常驻，IndexedStack 保留状态）
+  /// 四个 Tab 页面（保持常驻，IndexedStack 保留状态）
   final List<Widget> _screens = const [
     LearnTab(),
     TodayScreen(),
+    FeedScreen(),
     ProfileScreen(),
   ];
 
@@ -52,7 +54,8 @@ class _MainShellState extends State<MainShell> {
               children: [
                 _navItem(0, Icons.menu_book_outlined, Icons.menu_book, '学习'),
                 _navItem(1, Icons.star_outline, Icons.star, '今日'),
-                _navItem(2, Icons.person_outline, Icons.person, '我的'),
+                _navItem(2, Icons.article_outlined, Icons.article, '资讯'),
+                _navItem(3, Icons.person_outline, Icons.person, '我的'),
               ],
             ),
           ),

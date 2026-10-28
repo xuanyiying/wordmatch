@@ -28,7 +28,7 @@ dependencies:
   shared_preferences: ^2.3.4
   flutter_secure_storage: ^9.2.4
   path_provider: ^2.1.5
-  file_picker: ^10.1.2
+  file_picker: ^8.1.4
   flutter_local_notifications: ^17.2.3
   timezone: ^0.9.4
   path: ^1.9.0
@@ -38,6 +38,14 @@ dependencies:
   http: ^1.6.0
   flutter_svg: ^2.0.17
   flutter_tts: ^4.2.5
+
+  # 资讯频道：文章 Markdown 渲染（纯 Dart，划词标注基于其 MarkdownElementBuilder）
+  flutter_markdown: ^0.7.7
+  # 划词标注范围用 markdown AST 判定（段落 vs 代码块/表格等）
+  markdown: ^7.3.1
+
+  # 资讯频道：外链跳转（GitHub 仓库 / 原文链接在应用内 WebView 打开）
+  webview_flutter: ^4.10.0
 
   # 离线 TTS 引擎：解决国产 ROM（小米/华为等）系统 TTS 缺英文语音包导致无声
   # sherpa_onnx 自带预编译 onnxruntime 二进制，不依赖系统 TTS
@@ -50,6 +58,9 @@ dev_dependencies:
   flutter_lints: ^6.0.0
   drift_dev: ^2.22.1
   build_runner: ^2.4.13
+  # 已在依赖树中（shared_preferences 的传递依赖），此处显式声明以便测试中
+  # 注入可计数的内存存储，断言「写合并」确实减少了落盘次数
+  shared_preferences_platform_interface: ^2.4.1
 
 # sqlite3 3.x bundles a copy of SQLite by downloading a pre-compiled binary
 # from GitHub releases at build time. That download is unreliable in China
@@ -71,6 +82,8 @@ flutter:
     - assets/data/
     - assets/audio/
     - assets/images/
+    # 资讯频道离线查词词典（ECDICT 高频子集，由 scripts/build_mini_ecdict.py 生成）
+    - assets/dict/
     # 离线 TTS 模型（Piper VITS，~64MB，首次启动复制到文件系统）
     # Flutter 目录资产声明不会递归包含子目录，必须逐个声明 espeak-ng-data 下的各层目录
     - assets/tts/vits-piper-en_US-lessac-medium/

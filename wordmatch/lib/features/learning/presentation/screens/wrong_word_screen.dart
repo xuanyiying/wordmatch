@@ -32,7 +32,6 @@ class _WrongWordScreenState extends ConsumerState<WrongWordScreen> {
 
   Future<void> _loadData() async {
     final storage = ref.read(progressStorageProvider);
-    if (!storage.isInitialized) await storage.init();
 
     final wrongWords = storage.getWrongWords();
 

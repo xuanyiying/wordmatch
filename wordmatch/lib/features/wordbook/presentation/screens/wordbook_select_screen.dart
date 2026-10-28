@@ -18,6 +18,7 @@ class WordbookSelectScreen extends ConsumerStatefulWidget {
 
 class _WordbookSelectScreenState extends ConsumerState<WordbookSelectScreen> {
   late Future<List<BookInfo>> _booksFuture;
+  late Future<List<BookInfo>> _removedBooksFuture;
 
   @override
   void initState() {
@@ -28,16 +29,23 @@ class _WordbookSelectScreenState extends ConsumerState<WordbookSelectScreen> {
   void _refresh() {
     setState(() {
       _booksFuture = ref.read(wordbookRepositoryProvider).getAvailableBooks();
+      _removedBooksFuture =
+          ref.read(wordbookRepositoryProvider).getRemovedBuiltinBooks();
     });
   }
 
-  Future<void> _onDeleteCustom(BookInfo book) async {
+  Future<void> _onDeleteBook(BookInfo book) async {
+    final isCustom = book.isCustom;
     final confirm = await showDialog<bool>(
       context: context,
       builder: (ctx) => AlertDialog(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
         title: const Text('删除词库？'),
-        content: Text('确定要删除「${book.name}」吗？此操作不可撤销。'),
+        content: Text(
+          isCustom
+              ? '确定要删除「${book.name}」吗？此操作不可撤销。'
+              : '确定要删除「${book.name}」吗？删除后将不再显示在词库列表中，可随时在页面底部恢复。',
+        ),
         actions: [
           TextButton(
               onPressed: () => Navigator.pop(ctx, false),
@@ -51,9 +59,22 @@ class _WordbookSelectScreenState extends ConsumerState<WordbookSelectScreen> {
       ),
     );
     if (confirm == true) {
-      await ref.read(wordbookRepositoryProvider).customRepo.remove(book.id);
-      ref.read(wordbookRepositoryProvider).clearCache();
+      final repo = ref.read(wordbookRepositoryProvider);
+      await repo.removeBook(book.id);
+      repo.clearCache();
       _refresh();
+      // 若删除的是当前使用的词库，切换到其它可用词库
+      final currentBookId = ref.read(currentBookIdProvider);
+      if (book.id == currentBookId) {
+        final available = await repo.getAvailableBooks();
+        if (available.isNotEmpty) {
+          final fallback = available.firstWhere(
+            (b) => b.available,
+            orElse: () => available.first,
+          );
+          await ref.read(currentBookIdProvider.notifier).setBookId(fallback.id);
+        }
+      }
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(content: Text('已删除「${book.name}」')),
@@ -119,6 +140,20 @@ class _WordbookSelectScreenState extends ConsumerState<WordbookSelectScreen> {
                         ),
                         const SizedBox(height: 10),
                       ],
+
+                      // 已删除（隐藏）词库恢复入口
+                      if (builtIn.isNotEmpty) const SizedBox(height: 12),
+                      FutureBuilder<List<BookInfo>>(
+                        future: _removedBooksFuture,
+                        builder: (context, removedSnapshot) {
+                          final removed =
+                              removedSnapshot.data ?? const <BookInfo>[];
+                          if (removed.isEmpty) {
+                            return const SizedBox.shrink();
+                          }
+                          return _buildRestoreSection(context, removed);
+                        },
+                      ),
                     ],
                   ),
                 ),
@@ -187,6 +222,65 @@ class _WordbookSelectScreenState extends ConsumerState<WordbookSelectScreen> {
           ),
         ],
       ),
+    );
+  }
+
+  /// 已删除（隐藏）词库的恢复区块
+  Widget _buildRestoreSection(BuildContext context, List<BookInfo> removed) {
+    final colors = context.appColors;
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        _buildSectionHeader('已删除词库', count: removed.length),
+        const SizedBox(height: 10),
+        Container(
+          width: double.infinity,
+          padding: const EdgeInsets.all(12),
+          decoration: BoxDecoration(
+            color: colors.card,
+            borderRadius: BorderRadius.circular(16),
+            border: Border.all(color: colors.border, width: 1),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              for (final b in removed) ...[
+                Row(
+                  children: [
+                    Icon(Icons.restore_rounded,
+                        size: 18, color: colors.inkSoft),
+                    const SizedBox(width: 8),
+                    Expanded(
+                      child: Text(
+                        b.name,
+                        style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w500,
+                            color: colors.inkSoft),
+                      ),
+                    ),
+                    TextButton(
+                      onPressed: () async {
+                        await ref
+                            .read(wordbookRepositoryProvider)
+                            .restoreBook(b.id);
+                        _refresh();
+                      },
+                      style: TextButton.styleFrom(
+                        foregroundColor: colors.mintDeep,
+                        visualDensity: VisualDensity.compact,
+                      ),
+                      child: const Text('恢复'),
+                    ),
+                  ],
+                ),
+                if (b != removed.last)
+                  Divider(height: 1, color: colors.border),
+              ],
+            ],
+          ),
+        ),
+      ],
     );
   }
 
@@ -320,7 +414,7 @@ class _WordbookSelectScreenState extends ConsumerState<WordbookSelectScreen> {
           color: Colors.transparent,
           child: InkWell(
             onTap: disabled ? null : () => Navigator.of(context).pop(book.id),
-            onLongPress: isCustom ? () => _onDeleteCustom(book) : null,
+            onLongPress: () => _onDeleteBook(book),
             borderRadius: BorderRadius.circular(16),
             child: Padding(
               padding: const EdgeInsets.all(16),
@@ -372,22 +466,13 @@ class _WordbookSelectScreenState extends ConsumerState<WordbookSelectScreen> {
                       ],
                     ),
                   ),
-                  // 词数/操作
-                  if (isCustom)
-                    IconButton(
-                      onPressed: () => _onDeleteCustom(book),
-                      icon: Icon(Icons.delete_outline_rounded,
-                          size: 20, color: colors.inkSoft),
-                      tooltip: '删除',
-                    )
-                  else
+                  // 词数 + 删除操作
+                  if (!isCustom && disabled)
                     Container(
                       padding: const EdgeInsets.symmetric(
                           horizontal: 10, vertical: 5),
                       decoration: BoxDecoration(
-                        color: disabled
-                            ? Colors.grey[200]
-                            : config.color.withValues(alpha: 0.08),
+                        color: Colors.grey[200],
                         borderRadius: BorderRadius.circular(8),
                       ),
                       child: Text(
@@ -395,10 +480,38 @@ class _WordbookSelectScreenState extends ConsumerState<WordbookSelectScreen> {
                         style: TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.bold,
-                          color:
-                              disabled ? colors.inkSoft : config.color,
+                          color: colors.inkSoft,
                         ),
                       ),
+                    )
+                  else
+                    Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        if (!isCustom)
+                          Container(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 10, vertical: 5),
+                            decoration: BoxDecoration(
+                              color: config.color.withValues(alpha: 0.08),
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                            child: Text(
+                              '${book.wordCount}',
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold,
+                                color: config.color,
+                              ),
+                            ),
+                          ),
+                        IconButton(
+                          onPressed: () => _onDeleteBook(book),
+                          icon: Icon(Icons.delete_outline_rounded,
+                              size: 20, color: colors.inkSoft),
+                          tooltip: '删除',
+                        ),
+                      ],
                     ),
                 ],
               ),

@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:wordmatch/core/constants/app_colors.dart';
@@ -73,7 +75,6 @@ class _WordStreamScreenState extends ConsumerState<WordStreamScreen>
 
   Future<void> _applyProgressFor(Word word, int q) async {
     final storage = ref.read(progressStorageProvider);
-    await storage.init();
     var progress = storage.getProgress(word.id);
     progress ??= WordProgress.newWord(word.id, word.bookId);
     progress = Sm2Service.updateProgress(progress, q);
@@ -82,7 +83,6 @@ class _WordStreamScreenState extends ConsumerState<WordStreamScreen>
 
   Future<void> _addWrongWord(Word word) async {
     final storage = ref.read(progressStorageProvider);
-    await storage.init();
     await storage.addWrongWord(
       wordId: word.id,
       bookId: word.bookId,
@@ -173,6 +173,8 @@ class _WordStreamScreenState extends ConsumerState<WordStreamScreen>
 
   void _showCompletion() {
     final colors = context.appColors;
+    // 一轮刷完立即落盘，避免中途被系统回收进程时丢失本轮进度
+    unawaited(ref.read(progressStorageProvider).flush());
     showDialog(
       context: context,
       barrierDismissible: false,

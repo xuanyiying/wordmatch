@@ -87,17 +87,18 @@ class _WordChainStoryScreenState extends ConsumerState<WordChainStoryScreen> {
     HapticUtil.levelComplete();
 
     final storage = ref.read(progressStorageProvider);
-    await storage.init();
 
+    final updated = <WordProgress>[];
     for (final word in widget.args.todaysWords) {
       var progress = storage.getProgress(word.id);
       progress ??= WordProgress.newWord(word.id, word.bookId);
 
       final baseQ = progress.lastQuality.clamp(2, 5);
       final newQ = (baseQ + 0.5).clamp(2.0, 5.0).round();
-      progress = Sm2Service.updateProgress(progress, newQ);
-      await storage.updateProgress(progress);
+      updated.add(Sm2Service.updateProgress(progress, newQ));
     }
+    // 一次性落盘，避免逐词写入反复序列化整份进度
+    await storage.updateAllProgress(updated);
 
     setState(() => _rewarded = true);
 

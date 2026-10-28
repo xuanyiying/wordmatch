@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'dart:developer';
-import 'package:http/http.dart' as http;
+import 'package:wordmatch/core/network/http_client.dart';
 
 /// AI 请求异常
 class AiClientException implements Exception {
@@ -134,7 +134,7 @@ class AiClient {
               useThinking: useThinking,
             );
 
-      final response = await http
+      final response = await appHttpClient
           .post(
             Uri.parse(apiUrl),
             headers: {

@@ -61,9 +61,8 @@ class _LearnTabState extends ConsumerState<LearnTab> {
 
   Future<void> _initPlan() async {
     try {
-      // 初始化进度存储
+      // 读取本地学习进度（启动时已加载到内存）
       final storage = ref.read(progressStorageProvider);
-      await storage.init();
       _masteredCount = storage.getMasteredCount();
       _learnedCount = storage.getLearnedCount();
 
@@ -997,7 +996,7 @@ class _LearnTabState extends ConsumerState<LearnTab> {
   }
 
   void _startNewWordLearning(BuildContext context) {
-    if (_dailyTask == null) return;
+    if (_dailyTask == null || _dailyTask!.newWords.isEmpty) return;
     Navigator.of(context).pushNamed(
       AppRouter.newWord,
       arguments: NewWordArgs(
@@ -1038,7 +1037,7 @@ class _LearnTabState extends ConsumerState<LearnTab> {
   Future<void> _startNewWordGame() async {
     if (_dailyTask == null || _taskState == null) return;
     final wordIds = _taskState!.learnedWordIds.toSet();
-    await Navigator.of(context).pushNamed(
+    final result = await Navigator.of(context).pushNamed(
       AppRouter.game,
       arguments: GameScreenArgs(
         pairCount: _pairCount,
@@ -1047,7 +1046,14 @@ class _LearnTabState extends ConsumerState<LearnTab> {
         markDailyGameCompleted: true,
       ),
     );
-    // 游戏返回后刷新状态
+    // 游戏完成后点击「进入下一个学习任务」：推进到下一计划并直接进入新词学习
+    if (result == 'advance_next') {
+      await _advanceToNextPlan();
+      if (!mounted) return;
+      _startNewWordLearning(context);
+      return;
+    }
+    // 其它情况：返回后刷新状态
     _initPlan();
   }
 
@@ -1055,7 +1061,6 @@ class _LearnTabState extends ConsumerState<LearnTab> {
   Future<void> _saveNewWordRecognition(List<bool> recognizedList) async {
     if (_dailyTask == null) return;
     final storage = ref.read(progressStorageProvider);
-    await storage.init();
     final bookId = ref.read(currentBookIdProvider);
 
     final learnedCount =
@@ -1063,6 +1068,7 @@ class _LearnTabState extends ConsumerState<LearnTab> {
             ? _dailyTask!.newWords.length
             : recognizedList.length;
 
+    final updated = <WordProgress>[];
     for (var i = 0; i < learnedCount; i++) {
       final word = _dailyTask!.newWords[i];
       final recognized = recognizedList[i];
@@ -1071,9 +1077,10 @@ class _LearnTabState extends ConsumerState<LearnTab> {
 
       // "认识"→ Q=4（初步了解但还需巩固），"不认识"→ Q=0（完全陌生）
       final quality = recognized ? 4 : 0;
-      progress = Sm2Service.updateProgress(progress, quality);
-      await storage.updateProgress(progress);
+      updated.add(Sm2Service.updateProgress(progress, quality));
     }
+    // 一次性落盘，避免逐词写入反复序列化整份进度
+    await storage.updateAllProgress(updated);
 
     // 记录今日新词学习量（每个新词约 0.7 分钟）
     if (learnedCount > 0) {

@@ -34,7 +34,6 @@ class _TodayScreenState extends ConsumerState<TodayScreen> {
 
   Future<void> _initData() async {
     final storage = ref.read(progressStorageProvider);
-    if (!storage.isInitialized) await storage.init();
     final taskState = storage.getDailyTaskState();
     final settings = storage.getPlanSettings();
     final due = storage
@@ -155,7 +154,7 @@ class _TodayScreenState extends ConsumerState<TodayScreen> {
                         shrinkWrap: true,
                         padding: const EdgeInsets.fromLTRB(18, 0, 18, 20),
                         itemCount: words.length,
-                        separatorBuilder: (_, __) =>
+                        separatorBuilder: (_, _) =>
                             Container(height: 1, color: colors.divider),
                         itemBuilder: (ctx, i) {
                           final w = words[i];
@@ -250,7 +249,7 @@ class _TodayScreenState extends ConsumerState<TodayScreen> {
                                     child: Center(
                                         child: CircularProgressIndicator()),
                                   ),
-                                  error: (_, __) => const SizedBox.shrink(),
+                                  error: (_, _) => const SizedBox.shrink(),
                                 ),
                           const SizedBox(height: 8),
                           quoteAsync.when(
@@ -260,7 +259,7 @@ class _TodayScreenState extends ConsumerState<TodayScreen> {
                               child:
                                   Center(child: CircularProgressIndicator()),
                             ),
-                            error: (_, __) => const SizedBox.shrink(),
+                            error: (_, _) => const SizedBox.shrink(),
                           ),
                           const SizedBox(height: 16),
                         ],
@@ -292,18 +291,18 @@ class _TodayScreenState extends ConsumerState<TodayScreen> {
     final colors = context.appColors;
     return ValueListenableBuilder<bool>(
       valueListenable: SherpaTtsEngine.instance.ready,
-      builder: (_, isReady, __) {
+      builder: (_, isReady, _) {
         if (isReady) return const SizedBox.shrink();
         return ValueListenableBuilder<String?>(
           valueListenable: SherpaTtsEngine.instance.status,
-          builder: (_, status, ___) {
+          builder: (_, status, _) {
             final isError = status != null && status.contains('失败');
             if (isError) {
               return _buildTtsErrorBanner(status);
             }
             return ValueListenableBuilder<double>(
               valueListenable: SherpaTtsEngine.instance.progress,
-              builder: (_, p, __) {
+              builder: (_, p, _) {
                 final pct = (p * 100).clamp(0, 100).toInt();
                 return Container(
                   margin: const EdgeInsets.fromLTRB(12, 10, 12, 0),
