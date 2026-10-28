@@ -11,10 +11,10 @@ class AppSizes {
   /// 网格间距
   static const double gridSpacing = 10.0;
 
-  /// 4x4 网格卡牌尺寸
+  /// 小网格模式卡牌参考尺寸
   static const double cardSizeSmall = 90.0;
 
-  /// 6x6 网格卡牌尺寸
+  /// 大网格模式卡牌参考尺寸
   static const double cardSizeLarge = 68.0;
 
   /// 页面水平边距
