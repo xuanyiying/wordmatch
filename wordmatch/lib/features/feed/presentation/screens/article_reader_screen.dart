@@ -14,6 +14,7 @@ import 'package:wordmatch/features/feed/domain/services/annotation_models.dart';
 import 'package:wordmatch/features/feed/domain/services/article_markdown_parser.dart';
 import 'package:wordmatch/features/feed/domain/services/local_annotation_engine.dart';
 import 'package:wordmatch/features/feed/presentation/widgets/annotated_paragraph.dart';
+import 'package:wordmatch/features/feed/presentation/widgets/feed_brand.dart';
 import 'package:wordmatch/features/feed/presentation/widgets/word_lookup_sheet.dart';
 import 'package:wordmatch/features/game/data/repositories/game_provider.dart';
 import 'package:wordmatch/features/wordbook/data/repositories/custom_wordbook_repository.dart';
@@ -26,7 +27,15 @@ class ArticleReaderArgs {
   final FeedSource source;
   final String id;
 
-  const ArticleReaderArgs({required this.source, required this.id});
+  /// 列表项附加信息（GitHub → stars/forks/language），用于仓库头徽章，
+  /// 避免阅读页重复请求；空则省略徽章行。
+  final Map<String, String> extra;
+
+  const ArticleReaderArgs({
+    required this.source,
+    required this.id,
+    this.extra = const {},
+  });
 }
 
 /// 文章阅读页（掰it 式划词标注）：
@@ -472,24 +481,28 @@ class _ArticleReaderScreenState extends ConsumerState<ArticleReaderScreen> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // 头部信息
-          Text(
-            article.title,
-            style: TextStyle(
-              fontSize: 24,
-              height: 1.3,
-              fontWeight: FontWeight.w800,
-              color: colors.ink,
+          // 头部信息：GitHub 仓库用官方风格仓库头，其余源用标题+meta
+          if (article.source == FeedSource.github)
+            _githubRepoHeader(context, article, colors)
+          else ...[
+            Text(
+              article.title,
+              style: TextStyle(
+                fontSize: 24,
+                height: 1.3,
+                fontWeight: FontWeight.w800,
+                color: colors.ink,
+              ),
             ),
-          ),
-          const SizedBox(height: 8),
-          Text(
-            [
-              if (article.author.isNotEmpty) article.author,
-              if (article.publishedAt.isNotEmpty) article.publishedAt,
-            ].join(' · '),
-            style: TextStyle(fontSize: 12, color: colors.inkFaint),
-          ),
+            const SizedBox(height: 8),
+            Text(
+              [
+                if (article.author.isNotEmpty) article.author,
+                if (article.publishedAt.isNotEmpty) article.publishedAt,
+              ].join(' · '),
+              style: TextStyle(fontSize: 12, color: colors.inkFaint),
+            ),
+          ],
           const SizedBox(height: 20),
 
           // 正文
@@ -526,8 +539,97 @@ class _ArticleReaderScreenState extends ConsumerState<ArticleReaderScreen> {
 
   // ============ section 渲染 ============
 
-  /// 不支持的 markdown 结构（代码块/表格/HTML 等）保留原渲染
+  /// GitHub 仓库头：repo 图标 + owner / repo（链接蓝）+ star/fork/语言徽章行。
+  /// 徽章数据来自列表页传入的 args.extra，缺失时省略对应元素。
+  Widget _githubRepoHeader(
+      BuildContext context, ArticleContent article, AppColorScheme colors) {
+    final link = FeedBrand.githubLink(Theme.of(context).brightness);
+    final slash = article.id.indexOf('/');
+    final owner = slash > 0 ? article.id.substring(0, slash) : '';
+    final repo = slash > 0 ? article.id.substring(slash + 1) : article.title;
+    final extra = widget.args.extra;
+    final metaStyle = TextStyle(fontSize: 12, color: colors.inkSoft);
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Icon(Icons.book_outlined, size: 20, color: link),
+            const SizedBox(width: 8),
+            Expanded(
+              child: Text.rich(
+                TextSpan(
+                  children: [
+                    if (owner.isNotEmpty)
+                      TextSpan(
+                        text: '$owner / ',
+                        style: TextStyle(fontSize: 17, color: colors.inkSoft),
+                      ),
+                    TextSpan(
+                      text: repo,
+                      style: TextStyle(
+                        fontSize: 19,
+                        fontWeight: FontWeight.w700,
+                        color: link,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+        if ((extra['stars'] ?? '').isNotEmpty ||
+            (extra['forks'] ?? '').isNotEmpty ||
+            (extra['language'] ?? '').isNotEmpty) ...[
+          const SizedBox(height: 8),
+          Wrap(
+            spacing: 14,
+            runSpacing: 6,
+            crossAxisAlignment: WrapCrossAlignment.center,
+            children: [
+              if ((extra['language'] ?? '').isNotEmpty)
+                LanguageDot(
+                  extra['language']!,
+                  fallback: colors.inkFaint,
+                  textStyle: metaStyle,
+                ),
+              if ((extra['stars'] ?? '').isNotEmpty)
+                Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Icon(Icons.star_border, size: 14, color: colors.inkSoft),
+                    const SizedBox(width: 3),
+                    Text(extra['stars']!, style: metaStyle),
+                  ],
+                ),
+              if ((extra['forks'] ?? '').isNotEmpty)
+                Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Icon(Icons.account_tree_outlined,
+                        size: 13, color: colors.inkSoft),
+                    const SizedBox(width: 3),
+                    Text(extra['forks']!, style: metaStyle),
+                  ],
+                ),
+            ],
+          ),
+        ],
+      ],
+    );
+  }
+
+  /// 不支持的 markdown 结构（代码块/表格/HTML 等）保留原渲染。
+  /// GitHub 源链接用官方蓝、引用块灰色左线（与 GitHub 一致）；
+  /// 其他源维持 app 的 mint 系配色。
   Widget _fallbackMarkdown(String raw, AppColorScheme colors) {
+    final isGithub = widget.args.source == FeedSource.github;
+    final linkColor = isGithub
+        ? FeedBrand.githubLink(Theme.of(context).brightness)
+        : colors.mintDeep;
     return MarkdownBody(
       data: raw,
       extensionSet: md.ExtensionSet.gitHubFlavored,
@@ -541,9 +643,9 @@ class _ArticleReaderScreenState extends ConsumerState<ArticleReaderScreen> {
         a: TextStyle(
           fontSize: 15,
           height: 1.6,
-          color: colors.mintDeep,
+          color: linkColor,
           decoration: TextDecoration.underline,
-          decorationColor: colors.mintDeep,
+          decorationColor: linkColor,
         ),
         code: TextStyle(
             fontSize: 13, color: colors.ink, backgroundColor: colors.mintBg),
@@ -554,7 +656,9 @@ class _ArticleReaderScreenState extends ConsumerState<ArticleReaderScreen> {
         ),
         blockquoteDecoration: BoxDecoration(
           border: Border(
-              left: BorderSide(color: colors.mintLight, width: 3)),
+              left: BorderSide(
+                  color: isGithub ? colors.border : colors.mintLight,
+                  width: 3)),
         ),
         blockquote:
             TextStyle(fontSize: 15, height: 1.6, color: colors.inkSoft),
@@ -575,17 +679,29 @@ class _ArticleReaderScreenState extends ConsumerState<ArticleReaderScreen> {
     }
     if (section is ReaderHeading) {
       const sizes = {1: 22.0, 2: 18.0, 3: 16.0, 4: 15.0, 5: 14.0, 6: 14.0};
+      final big = section.level <= 2;
       return Padding(
-        padding: const EdgeInsets.only(top: 4, bottom: 2),
-        child: Text(
-          section.text,
-          style: TextStyle(
-            fontSize: sizes[section.level],
-            height: 1.35,
-            fontWeight:
-                section.level <= 2 ? FontWeight.w800 : FontWeight.w700,
-            color: colors.ink,
-          ),
+        padding: EdgeInsets.only(
+            top: big ? 14 : 4, bottom: big ? 8 : 2),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              section.text,
+              style: TextStyle(
+                fontSize: sizes[section.level],
+                height: 1.35,
+                fontWeight:
+                    section.level <= 2 ? FontWeight.w800 : FontWeight.w700,
+                color: colors.ink,
+              ),
+            ),
+            // GitHub 标志性 h1/h2 底部分隔线
+            if (big) ...[
+              const SizedBox(height: 6),
+              Container(height: 1, color: colors.border),
+            ],
+          ],
         ),
       );
     }
@@ -596,10 +712,13 @@ class _ArticleReaderScreenState extends ConsumerState<ArticleReaderScreen> {
       );
     }
     if (section is ReaderQuote) {
+      final quoteColor = widget.args.source == FeedSource.github
+          ? colors.border
+          : colors.mintLight;
       return Container(
         decoration: BoxDecoration(
           border:
-              Border(left: BorderSide(color: colors.mintLight, width: 3)),
+              Border(left: BorderSide(color: quoteColor, width: 3)),
         ),
         padding: const EdgeInsets.fromLTRB(12, 2, 0, 2),
         child: Column(

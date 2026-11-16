@@ -145,6 +145,7 @@ void main() {
       expect(first.extra['language'], 'Dart');
       // svg 图标内的数字不干扰，取链接末尾的 star 数
       expect(first.extra['stars'], '170k');
+      expect(first.extra['forks'], '28k');
       expect(first.extra['starsPeriod'], '+1.2k 本周');
     });
 
@@ -154,6 +155,7 @@ void main() {
       expect(second.id, 'zlib/minizip');
       expect(second.excerpt, isEmpty);
       expect(second.extra.containsKey('language'), isFalse);
+      expect(second.extra.containsKey('forks'), isFalse);
       expect(second.extra['starsPeriod'], '+321 今日');
     });
 

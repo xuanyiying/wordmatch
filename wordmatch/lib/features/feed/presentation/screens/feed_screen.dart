@@ -4,7 +4,10 @@ import 'package:wordmatch/core/theme/app_color_scheme.dart';
 import 'package:wordmatch/features/feed/domain/models/feed_models.dart';
 import 'package:wordmatch/features/feed/presentation/providers/feed_providers.dart';
 import 'package:wordmatch/features/feed/presentation/screens/article_reader_screen.dart';
-import 'package:wordmatch/shared/utils/external_link.dart';
+import 'package:wordmatch/features/feed/presentation/widgets/devto_card.dart';
+import 'package:wordmatch/features/feed/presentation/widgets/github_repo_card.dart';
+import 'package:wordmatch/features/feed/presentation/widgets/hackernews_card.dart';
+import 'package:wordmatch/features/feed/presentation/widgets/producthunt_card.dart';
 
 /// 资讯 Tab 页：热门文章（dev.to）/ 热门仓库（GitHub）
 class FeedScreen extends ConsumerWidget {
@@ -106,17 +109,7 @@ class FeedScreen extends ConsumerWidget {
                               itemCount: result.items.length,
                               itemBuilder: (context, i) => Padding(
                                 padding: const EdgeInsets.only(bottom: 10),
-                                child: switch (result.items[i].source) {
-                                  FeedSource.github =>
-                                    _githubCard(context, result.items[i]),
-                                  FeedSource.hackernews => _statCard(context,
-                                      result.items[i],
-                                      _hnMeta(context, result.items[i])),
-                                  FeedSource.producthunt => _statCard(context,
-                                      result.items[i],
-                                      _phMeta(context, result.items[i])),
-                                  _ => _devToCard(context, result.items[i]),
-                                },
+                                child: _itemCard(context, result.items[i]),
                               ),
                             ),
                           ),
@@ -128,6 +121,30 @@ class FeedScreen extends ConsumerWidget {
         ),
       ),
     );
+  }
+
+  /// 按 source 分发到各源的官方风格卡片
+  Widget _itemCard(BuildContext context, FeedItem item) {
+    void open() {
+      Navigator.pushNamed(
+        context,
+        '/feed_article',
+        arguments: ArticleReaderArgs(
+          source: item.source,
+          id: item.id,
+          extra: item.extra,
+        ),
+      );
+    }
+    return switch (item.source) {
+      FeedSource.github =>
+        GithubRepoCard(item: item, onTap: open),
+      FeedSource.hackernews =>
+        HackerNewsCard(item: item, onTap: open),
+      FeedSource.producthunt =>
+        ProductHuntCard(item: item, onTap: open),
+      _ => DevToCard(item: item, onTap: open),
+    };
   }
 
   // ============ 筛选 chip（资讯源 / GitHub 时间窗共用） ============
@@ -154,294 +171,6 @@ class FeedScreen extends ConsumerWidget {
       ),
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
       visualDensity: VisualDensity.compact,
-    );
-  }
-
-  // ============ 卡片 ============
-
-  /// 统一卡片容器：card 背景 + border + 圆角 14 + InkWell
-  Widget _card(BuildContext context, FeedItem item, Widget child) {
-    final colors = context.appColors;
-    return Container(
-      decoration: BoxDecoration(
-        color: colors.card,
-        borderRadius: BorderRadius.circular(14),
-        border: Border.all(color: colors.border),
-      ),
-      clipBehavior: Clip.antiAlias,
-      child: InkWell(
-        onTap: () => Navigator.pushNamed(
-          context,
-          '/feed_article',
-          arguments: ArticleReaderArgs(source: item.source, id: item.id),
-        ),
-        child: child,
-      ),
-    );
-  }
-
-  /// dev.to 文章卡片：封面 + 标题 + 摘要 + 作者·时间·tag
-  Widget _devToCard(BuildContext context, FeedItem item) {
-    final colors = context.appColors;
-    final metaParts = [
-      if (item.author.isNotEmpty) item.author,
-      if (item.publishedAt.isNotEmpty) item.publishedAt,
-      if ((item.extra['tag'] ?? '').isNotEmpty) '#${item.extra['tag']}',
-    ];
-    return _card(
-      context,
-      item,
-      Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          if (item.coverImage != null && item.coverImage!.isNotEmpty)
-            Image.network(
-              item.coverImage!,
-              height: 140,
-              width: double.infinity,
-              fit: BoxFit.cover,
-              errorBuilder: (_, _, _) => const SizedBox.shrink(),
-            ),
-          Padding(
-            padding: const EdgeInsets.all(12),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  item.title,
-                  maxLines: 2,
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w700,
-                    color: colors.ink,
-                    height: 1.3,
-                  ),
-                ),
-                if (item.excerpt.isNotEmpty) ...[
-                  const SizedBox(height: 6),
-                  Text(
-                    item.excerpt,
-                    maxLines: 2,
-                    overflow: TextOverflow.ellipsis,
-                    style: TextStyle(
-                      fontSize: 13,
-                      color: colors.inkSoft,
-                      height: 1.4,
-                    ),
-                  ),
-                ],
-                if (metaParts.isNotEmpty) ...[
-                  const SizedBox(height: 10),
-                  Text(
-                    metaParts.join(' · '),
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                    style: TextStyle(fontSize: 11, color: colors.inkFaint),
-                  ),
-                ],
-              ],
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  /// GitHub 仓库卡片：标题 + 星标 + 摘要 + language·仓库外链
-  Widget _githubCard(BuildContext context, FeedItem item) {
-    final colors = context.appColors;
-    return _card(
-      context,
-      item,
-      Padding(
-        padding: const EdgeInsets.all(12),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Expanded(
-                  child: Text(
-                    item.title,
-                    maxLines: 2,
-                    overflow: TextOverflow.ellipsis,
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w700,
-                      color: colors.ink,
-                      height: 1.3,
-                    ),
-                  ),
-                ),
-                const SizedBox(width: 8),
-                Icon(Icons.star, size: 14, color: colors.amber),
-                const SizedBox(width: 3),
-                Text(
-                  item.extra['stars'] ?? '',
-                  style: TextStyle(
-                    fontSize: 12,
-                    fontWeight: FontWeight.w600,
-                    color: colors.amber,
-                  ),
-                ),
-              ],
-            ),
-            if (item.excerpt.isNotEmpty) ...[
-              const SizedBox(height: 6),
-              Text(
-                item.excerpt,
-                maxLines: 2,
-                overflow: TextOverflow.ellipsis,
-                style: TextStyle(
-                  fontSize: 13,
-                  color: colors.inkSoft,
-                  height: 1.4,
-                ),
-              ),
-            ],
-            const SizedBox(height: 10),
-            Row(
-              children: [
-                if ((item.extra['language'] ?? '').isNotEmpty) ...[
-                  Flexible(
-                    child: Text(
-                      item.extra['language']!,
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                      style: TextStyle(fontSize: 11, color: colors.inkFaint),
-                    ),
-                  ),
-                  const SizedBox(width: 10),
-                ],
-                // 周期 star 增速（如 "+1.2k 本周"，来自 trending 榜单页）
-                if ((item.extra['starsPeriod'] ?? '').isNotEmpty) ...[
-                  Flexible(
-                    child: Text(
-                      item.extra['starsPeriod']!,
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                      style: TextStyle(
-                        fontSize: 11,
-                        fontWeight: FontWeight.w600,
-                        color: colors.amber,
-                      ),
-                    ),
-                  ),
-                  const SizedBox(width: 10),
-                ],
-                // 点击在应用内打开 GitHub 仓库
-                _openLink(context, item),
-              ],
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-
-  /// 外链入口：小图标 + 高亮文字，点击应用内 WebView 打开（如 GitHub 仓库）
-  Widget _openLink(BuildContext context, FeedItem item) {
-    final colors = context.appColors;
-    return InkWell(
-      onTap: () => openInAppBrowser(context, item.url, title: item.title),
-      borderRadius: BorderRadius.circular(6),
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 2, vertical: 2),
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Icon(Icons.open_in_new, size: 12, color: colors.mintDeep),
-            const SizedBox(width: 3),
-            Text(
-              'GitHub 仓库',
-              style: TextStyle(
-                fontSize: 11,
-                fontWeight: FontWeight.w600,
-                color: colors.mintDeep,
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-
-  /// 统计型卡片（HN / Product Hunt 共用）：标题 + 摘要 + 统计 meta 行
-  Widget _statCard(BuildContext context, FeedItem item, Widget metaRow) {
-    final colors = context.appColors;
-    return _card(
-      context,
-      item,
-      Padding(
-        padding: const EdgeInsets.all(12),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              item.title,
-              maxLines: 2,
-              overflow: TextOverflow.ellipsis,
-              style: TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.w700,
-                color: colors.ink,
-                height: 1.3,
-              ),
-            ),
-            if (item.excerpt.isNotEmpty) ...[
-              const SizedBox(height: 6),
-              Text(
-                item.excerpt,
-                maxLines: 2,
-                overflow: TextOverflow.ellipsis,
-                style: TextStyle(
-                  fontSize: 13,
-                  color: colors.inkSoft,
-                  height: 1.4,
-                ),
-              ),
-            ],
-            const SizedBox(height: 10),
-            metaRow,
-          ],
-        ),
-      ),
-    );
-  }
-
-  /// HN meta：▲ 分数 · 评论数 · 来源名
-  Widget _hnMeta(BuildContext context, FeedItem item) {
-    final colors = context.appColors;
-    return Row(
-      children: [
-        Icon(Icons.arrow_upward, size: 13, color: colors.amber),
-        const SizedBox(width: 2),
-        Text(
-          '${item.extra['points'] ?? 0} 分 · ${item.extra['comments'] ?? 0} 评论 · Hacker News',
-          maxLines: 1,
-          overflow: TextOverflow.ellipsis,
-          style: TextStyle(fontSize: 11, color: colors.inkFaint),
-        ),
-      ],
-    );
-  }
-
-  /// PH meta：▲ 票数 · 来源名
-  Widget _phMeta(BuildContext context, FeedItem item) {
-    final colors = context.appColors;
-    return Row(
-      children: [
-        Icon(Icons.arrow_upward, size: 13, color: colors.amber),
-        const SizedBox(width: 2),
-        Text(
-          '${item.extra['votes'] ?? 0} · Product Hunt',
-          maxLines: 1,
-          overflow: TextOverflow.ellipsis,
-          style: TextStyle(fontSize: 11, color: colors.inkFaint),
-        ),
-      ],
     );
   }
 

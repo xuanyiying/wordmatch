@@ -150,6 +150,8 @@ class GithubService {
         url: 'https://github.com/$fullName',
         extra: {
           'stars': _formatStars(_numAfter(body, '/stargazers"')),
+          if (_numAfter(body, '/forks"') > 0)
+            'forks': _formatStars(_numAfter(body, '/forks"')),
           if (langMatch != null) 'language': langMatch.group(1)!.trim(),
           if (periodMatch != null)
             'starsPeriod':
@@ -199,6 +201,7 @@ class GithubService {
       url: _str(raw, 'html_url'),
       extra: {
         'stars': _formatStars(stars),
+        'forks': _formatStars((raw['forks_count'] as num?)?.toInt() ?? 0),
         'language': _str(raw, 'language'),
       },
     );
