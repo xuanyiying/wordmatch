@@ -544,9 +544,10 @@ class _ArticleReaderScreenState extends ConsumerState<ArticleReaderScreen> {
   Widget _githubRepoHeader(
       BuildContext context, ArticleContent article, AppColorScheme colors) {
     final link = FeedBrand.githubLink(Theme.of(context).brightness);
-    final slash = article.id.indexOf('/');
-    final owner = slash > 0 ? article.id.substring(0, slash) : '';
-    final repo = slash > 0 ? article.id.substring(slash + 1) : article.title;
+    final (:owner, :repo) = FeedBrand.parseRepoId(
+      article.id,
+      fallbackRepo: article.title,
+    );
     final extra = widget.args.extra;
     final metaStyle = TextStyle(fontSize: 12, color: colors.inkSoft);
 

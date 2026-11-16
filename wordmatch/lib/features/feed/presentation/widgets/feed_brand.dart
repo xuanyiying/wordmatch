@@ -21,6 +21,19 @@ abstract final class FeedBrand {
 
   static Color githubLink(Brightness brightness) =>
       brightness == Brightness.dark ? githubLinkDark : githubLinkLight;
+
+  /// 从 GitHub 仓库 id（`owner/repo`）解析 owner 与 repo。
+  ///
+  /// id 不含有效斜杠时回退到 [fallbackOwner] / [fallbackRepo]。
+  static ({String owner, String repo}) parseRepoId(
+    String id, {
+    String fallbackOwner = '',
+    String fallbackRepo = '',
+  }) {
+    final slash = id.indexOf('/');
+    if (slash <= 0) return (owner: fallbackOwner, repo: fallbackRepo);
+    return (owner: id.substring(0, slash), repo: id.substring(slash + 1));
+  }
 }
 
 /// GitHub Linguist 官方语言色（常用语言子集），未知语言返回 null。
@@ -77,7 +90,14 @@ class LanguageDot extends StatelessWidget {
           ),
         ),
         const SizedBox(width: 4),
-        Text(language, style: textStyle),
+        Flexible(
+          child: Text(
+            language,
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+            style: textStyle,
+          ),
+        ),
       ],
     );
   }
